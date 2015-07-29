@@ -11,7 +11,7 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage{stmaryrd}
 \usepackage{romannum}
-\usepackage{esvect}
+%\usepackage{esvect}%
 \usepackage{paralist}
 
 \usepackage{hyperref}
@@ -27,16 +27,30 @@
 %  pdfproducer = {LaTeX with hyperref}
 %}
 
-\parindent 0pt
+% für Faktorraum. Beispiel: Z/3Z <=> \QR{Z}{3Z}
+\newcommand{\QR}[2]{
+\raisebox{1ex}{\ensuremath{#1}}
+\ensuremath{\mkern-3mu}\big/\ensuremath{\mkern-3mu}
+\raisebox{-1ex}{\ensuremath{#2}}}
+
+% Befehl \im für Bild
+\newcommand{\im}[0]{
+\text{im}
+}
+
+\renewcommand{\itemize}{\compactitem}
 
 \parindent 0pt
 
-\title{Lineare Algebra}
-\author{}
+\parindent 0pt
+
+\title{Zusammenfassung Lineare Algebra I und II}
+\author{Felix Mößbauer \and Melanie Michels}
 \date{}
 \begin{document}
 \maketitle
-\include{chapter/LinAlg_1}
+%\include{chapter/LinAlg_1}%
+\include{chapter/linalg_2_part1}
 \end{document}
 
 
