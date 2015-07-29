@@ -55,9 +55,36 @@ Eine Menge $M \neq \emptyset$ ist ein R-(Links-) Modul, falls es eine Verknüpfu
 	\item $(r_1,r_2)m = r_1 m + r_2 m$\\$r(m_1+_m2) = rm_1+rm_2$
 	\item $1_R m = m$
 \end{itemize}
+Bemerkungen: Sei R HIR
+\begin{itemize}
+	\item Sei $ M \subseteq F = R^n$ ein R-Untermodul. Dann ist $M \simeq R^k$ mit $k \leq n$
+	\item Sei $M=<m_1,...,m_n>$ e-e. Modul. Dann gilt: M frei $\Leftrightarrow$ M torsionsfrei
+	\item Ist M e-e. R-Modul, so ist $M \simeq T(M) \oplus F, F \simeq R^k$
+\end{itemize}
 
 \subsection{freier Modul}
+\begin{enumerate}
+	\item Sei $F = \bigoplus \limits_{i \in I} R e_i $ (F ist freier Modul und die $e_i$ sind eine "Basis" von F, d.h. $r e_i = 0 \Leftrightarrow r=0$)
+	Für $i\in I$ sei ein Element $m_i \in M$ gegeben, wobei M ein R-Modul ist.
+	Dann gibt es genau einen Modulhom. $f:F \rightarrow M $ mit $f(e_i) = m_i$
+	\item Sei $f:M \twoheadrightarrow F$ ein surjektiver Modulhom., wobei $F = \bigoplus \limits_{i \in I}R e_i$ frei ist. Dann gibt es einen Teilmodul $N \subseteq M$ mit
+	\begin{itemize}
+		\item $M = N \oplus \ker(f)$
+		\item $N \simeq F$
+	\end{itemize}
+\end{enumerate}
 \subsection{Torsionselement}
+Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R\\\{0\}$ gibt mit $rm=0$.
+
+Sei $T(M) := \{m \in M | m \text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei, falls $T(M) = 0$. Es gilt:
+\begin{itemize}
+	\item $T(M) \subseteq M$ ist Teilmodul
+	\item $\QR{M}{T(M)}$ ist torsionsfrei
+\end{itemize}
+
+\subsection{$\pi$-Torsionselement}
+Sei $\pi \in R$ irreduzibel und M ein R-Modul. Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
+%TODO: inhaltlich prüfen$
 
 \subsection{R-Modulhomomorphismus}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
@@ -69,9 +96,28 @@ Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., fall
 \subsection{Untermoduln}
 Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 \begin{enumerate}
-	\item $(N,+) ist Untergruppe$
+	\item $(N,+)$ ist Untergruppe
 	\item $rn \in N, \forall r \in R, n\in N$
 \end{enumerate}
 Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
-Bemerkung: $(\ker(f),\im(f))$ sind Untermoduln
+Bemerkung: $\ker(f),\im(f)$ sind Untermoduln
 
+\section{Elementarteiler}
+Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^x$ (Elementarteiler) mit
+\begin{enumerate}
+	\item $M \simeq R^k \oplus \bigoplus \limits_{i=1}^m \QR{R}{\epsilon_i R}$
+	\item $\epsilon_1 | \epsilon_2 | ... | \epsilon_m$
+\end{enumerate}
+\textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt\\
+\textbf{Anwendung}: Seien $M_1,M_2$ zwei e-e. Moduln, $\epsilon_1,...,\epsilon_m$ die Elementarteiler von $M_1$, $\mu_1,...,\mu_n$, die Elementarteiler von $M_2$. Dann gilt:
+\begin{itemize}
+	\item $M_1 \simeq M_2 \Leftrightarrow rg(M_1) = rg(M_2)$
+	\item $\epsilon_1 = \mu_1,...,\epsilon_m = \mu_m$ (insbes. $l=m$) %TODO: inhaltlich prüfen$
+\end{itemize}
+Bemerkung: Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^x$ gibt mit $a=ub$.
+
+\section{Invariantenteiler}
+%TODO
+
+\section{Äquivalent und Ähnlich}
+%TODO
