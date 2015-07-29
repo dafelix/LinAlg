@@ -1,0 +1,147 @@
+\documentclass[fontsize=10pt]{scrartcl}
+ 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{stmaryrd}
+\usepackage{romannum}
+\usepackage{esvect}
+\usepackage{paralist}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
+
+%\hypersetup{
+%  pdftitle    = {Titel},
+%  pdfsubject  = {Um was geht es },
+%  pdfauthor   = {Autor bzw. Autoren},
+%  pdfkeywords = {Stichwort1, Stichwort2 ...} ,
+%  pdfcreator  = {Mit welcher Anwendung i.d.R. pdflatex},
+%  pdfproducer = {LaTeX with hyperref}
+%}
+
+\parindent 0pt
+
+\parindent 0pt
+
+\title{Lineare Algebra}
+\author{}
+\date{}
+\begin{document}
+\pagenumbering{arabic}
+\addtokomafont{section}{\center}
+
+\maketitle
+
+\section{mehr zu positiv und positiv definit}
+\begin{compactitem}
+\item Sei A $\in M_n(\mathbb{R})$ symmetrisch. Dann heißt A positiv definit, falls $x^tAx > 0$ $\forall x \neq 0$
+\item Sei V K-VR mit ( , ) und dim(V) = n < $\infty$. Dann gilt für $f \in End(V)$:\\
+f ist positiv $\Leftrightarrow$ $\exists u \in Gl(V)$ mit $f = u^*u$
+\item A positiv $\Leftrightarrow$ \={A} positiv\\
+f positiv $\Leftrightarrow$ A positiv
+\item Sei B $\in M_n(\mathbb{C})$.\\
+B positiv $\Leftrightarrow$ B = B$^*$ und det(B$^{(k)}$) > 0 für alle 1 $\le$ k $\le$ n
+\end{compactitem}
+
+\section{Erhaltung innerer Produkte}
+\begin{compactitem}
+\item Eine lineare Abbildung $f: V \to W$ erhält innere Produkte, falls gilt: $(f(v_1), f(v_2))_W = (v_1, v_2)_V$
+\item f erhält innere Produkte $\Rightarrow$ $||f(v)||_W = \sqrt{(f(v), f(v))_W} = \sqrt{(v,v)_V} = ||v||_V$
+\item f erhält innere Produkte und ist bijektiv $\Rightarrow$ f$^{-1}$ erhält ebenfalls innere Produkte, denn: $(f^{-1}(w_1), f^{-1}(w_2))_V = (w_1, w_2)_W$
+\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. FASÄ:\\
+1) f erhält das innere Produkt\\
+2) f ist ein Isom. zwischen VR mit innerem Produkt\\
+3) f bildet jede ON-Basis von V auf eine ON-Basis von W ab\\
+4) f bildet eine ON-Basis von V auf eine ON-Basis von W ab
+\item Eine unitäre Abbildung ist ein Isom. $u: V \to V$, der innere Produkte erhält.\\
+Die unitären Abbildungen bilden eine Gruppe U(V). Für u $\in$ U(V) gilt:\\
+1) Sei dim(V) = n < $\infty$. Dann gilt: u $\in$ U(V) $\Leftrightarrow$ u(ON-Basis) = ON-Basis\\
+2) u $\in$ U(V) $\Leftrightarrow$ $\exists u^*$ mit $u^*u=uu^*=id$
+\end{compactitem}
+
+\section{unitäre Matrizen}
+Eine Matrix A $\in M_n(K)$ heißt unitär, falls AA$^*$ = E\\
+Falls K = $\mathbb{R}$ heißt A orthogonal und A$^{-1}$ = A$^t$\\
+$\Rightarrow$ Jede unitäre Matrix ist invertierbar und A$^*$ = A$^{-1}$\\
+A ist unitär $\Leftrightarrow$ die Spalten von A bilden eine ON-Basis des K$^n$ bez. des Standardskalarprodukts\\
+\hspace*{18mm} $\Leftrightarrow$ die Zeilen von A bilden eine ON-Basis des K$^n$ bez. des Standardskalarprodukts\\
+
+\section{Orthogonale Matrizen}
+A $\in M_n(K)$ heißt orthogonal, falls A$^t$A = E
+
+\section{zu orthogonal und unitär}
+Seien A, B $\in M_n(K)$.\\
+A ist unitär ähnlich zu B, falls es eine unitäre Matrix U gibt mit B = U$^*$AU\\
+A ist orthogonal ähnlich zu B, falls es eine orthogonale Matrix O gibt mit B = O$^t$AO
+
+\section{Normale Endomorphismen}
+$f: V \to V$ heißt normal, falls $ff^*=f^*f$\\
+Beispiele:\\
+1) Selbstadjungierte, also $f = f^*$\\
+2) Unitäre, also $f^{-1} = f^*$\\
+3) f normal, $\alpha \in K$ $\Rightarrow$ $\alpha f$ normal\\
+Lemma:\\
+Sei $f = f^*$. Dann ist jeder Eigenwert von f reell. Die Eigenvektoren zu verschiedenen Eigenwerten sind zueinander orthogonal.
+
+\section{Invariante Unterräume}
+Sei f $\in$ End(V) beliebig. Sei W $\subseteq$ V ein f invarianter Unterraum, d.h. f(W) $\subseteq$ W. Dann ist W$^{\perp}$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^{\perp}$ $\forall w' \in W^{\perp}$.
+
+\section{zu selbstadjungiert}
+Sei dim(V) = n < $\infty$ und $f = f^*$ ($\Rightarrow$ f normal).\\
+Dann gibt es eine ON-Basis von V, die aus Eigenvektoren zu f besteht (d.h. f ist unitär diagonalisierbar).\\
+Anders ausgedrückt: Es gibt eine ON-Basis, sodass die darstellende Matrix Diagonalgestalt hat.
+
+\section{Folgerung}
+Sei A $\in M_n(\mathbb{C})$ hermitesch, d.h. A$^*$=A. Dann gibt es eine unitäre Matrix U, sodass U$^*$AU Diagonalgestalt hat.\\
+Sei A $\in M_n(\mathbb{R})$ symm., d.h. A$^t$=A, dann gibt es eine orthogonale Matrix O, sodass O$^t$AO Diagonalgestalt hat.\\
+
+\section{Zusammenfassung im Fall K=$\mathbb{R}$}
+ZU f $\exists$ ON-Basis aus Eigenvektoren $\Leftrightarrow$ f = f$^*$\\
+A $\in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ A = A$^t$\\
+
+\section{Eigenwerte von f}
+Sei f normal, dann gilt:\\
+v ist EV von f  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von f$^*$ zum EW $\overline{\alpha}$
+
+\section{Matrix normal}
+Eine Matrix A $\in M_n(\mathbb{C})$ heißt normal, falls AA$^*$ = A$^*$A. Folgerung: Dann gilt für A:\\
+$\exists$ unitäre Matrix U mit U$^*$AU hat Diagonalgestalt $\Leftrightarrow$ A ist normal
+
+\section{Projektionen}
+$p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
+\begin{compactitem}
+\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und p: V $\to$ V Projektion. FASÄ:\\
+1) p ist normal, d.h. p$^*$p = pp$^*$\\
+2) p ist selbstadjungiert, d.h. p = p$^*$\\
+3) p ist eine Orthogonalprojektion, d.h. $im(p)^{\perp} = ker(p)$
+\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. FASÄ:\\
+1) $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe\\
+2) $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$\\
+3) Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
+\item Lemma: Sei $f: V \to V$ normal. Dann gilt:\\
+1) $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$\\
+2) $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal\\
+3) Das Minimalpolynom hat keine mehrfachen Nullstellen
+\item Theorem: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:\\
+1) $f = \alpha_1p_1 + … + \alpha_kp_k$\\
+2) $id_V = p_1 + … + p_k$\\
+3) $p_ip_j = 0$ für $i \neq j$\\
+Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.\\
+Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist f normal.\\
+
+\end{compactitem}
+
+\end{document}
+
+
+
+
+
