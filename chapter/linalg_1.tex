@@ -242,13 +242,15 @@ Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterr√
 Theorem 5.9 (Homomorphiesatz)\\
 Seien V,W K-Vektorr√§ume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
-\item[(a)] Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert\\
-\\
-\\
-\\
-\\
-\\
-\\
+\item[(a)] Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert:
+\begin{align*}
+\begin{xy}
+  \xymatrix{
+      V \ar[r]^f \ar[d]_q &  W \\
+      V \backslash \ker(f) \ar[ru]_{\overline{f}}& &
+  }
+\end{xy}
+\end{align*}
 Hierbei ist q: V $\to$ V/Kern(f) die kanonische Projektion definiert durch q(a) := a + Kern(f).
 \item[(b)] Ist dim$_K$ V = n < $\infty$, so gilt die Formel: \\
 dimV = dimKern(f) + dimBild(f).\\
