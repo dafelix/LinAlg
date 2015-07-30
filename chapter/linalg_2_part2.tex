@@ -1,156 +1,201 @@
+\section{Lineare Funktionale und adjungierte Abbildungen}
+$V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
+\begin{itemize}
+\item Sei dim(V) = n < $\infty$ und $f \in V^*$ $\Rightarrow$ $\exists ! w \in V$ mit $f(v) = (v,w)$ $\forall v \in V$
+\item Sei dim(V) = n < $\infty$ mit innerem Produkt und $ f \in End_K(V)$ $\Rightarrow$ $\exists ! f^* \in End_K(V)$ mit $(f(v_1), v_2) = (v_1, f^*(v_2))$
+\item Sei dim(V) = n < $\infty$ mit innerem Produkt ( , ).
+\begin{enumerate}
+\item Sei $f: V \to V$ linear und $a_1, …, a_n$ eine ON-Basis von $V$. Sei $A = (\alpha_{ij})$ die darstellende Matrix von $f$ bez. $a_1, …, a_n$. Dann gilt: $\alpha_{ij} = (f(a_j), a_i)$
+\item Sei $B = (\beta_{ij})$ die darstellende Matrix von $f^*$. Dann gilt: $B = A^*$
+\end{enumerate}
+\item Bemerkungen:
+\begin{enumerate}
+\item Falls dim(V) < $\infty$, so gibt es stets $f^*$
+\item $f^*$ ist eindeutig durch $f$ bestimmt
+\end{enumerate}
+\item $f \in End(V)$ heißt \textbf{selbstadjungiert}, falls $f = f^*$\\
+$f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
+\item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$\\
+Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt\\
+Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
+\item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\Phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\Phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
+\item Bemerkung: Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\Phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\Phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
+Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
+\end{itemize}
+
 \section{mehr zu positiv und positiv definit}
 \begin{compactitem}
-\item Sei A $\in M_n(\mathbb{R})$ symmetrisch. Dann heißt A positiv definit, falls $x^tAx > 0$ $\forall x \neq 0$
+\item Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
 \item Sei V K-VR mit ( , ) und dim(V) = n < $\infty$. Dann gilt für $f \in End(V)$:\\
 f ist positiv $\Leftrightarrow$ $\exists u \in Gl(V)$ mit $f = u^*u$
 \item A positiv $\Leftrightarrow$ \={A} positiv\\
 f positiv $\Leftrightarrow$ A positiv
-\item Sei B $\in M_n(\mathbb{C})$.\\
-B positiv $\Leftrightarrow$ B = B$^*$ und det(B$^{(k)}$) > 0 für alle 1 $\le$ k $\le$ n
+\item Sei $B \in M_n(\mathbb{C})$.\\
+$B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le k \le n$
 \end{compactitem}
 
 \section{Erhaltung innerer Produkte}
 \begin{compactitem}
 \item Eine lineare Abbildung $f: V \to W$ erhält innere Produkte, falls gilt: $(f(v_1), f(v_2))_W = (v_1, v_2)_V$
 \item f erhält innere Produkte $\Rightarrow$ $||f(v)||_W = \sqrt{(f(v), f(v))_W} = \sqrt{(v,v)_V} = ||v||_V$
-\item f erhält innere Produkte und ist bijektiv $\Rightarrow$ f$^{-1}$ erhält ebenfalls innere Produkte, denn: $(f^{-1}(w_1), f^{-1}(w_2))_V = (w_1, w_2)_W$
-\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. FASÄ:\\
-1) f erhält das innere Produkt\\
-2) f ist ein Isom. zwischen VR mit innerem Produkt\\
-3) f bildet jede ON-Basis von V auf eine ON-Basis von W ab\\
-4) f bildet eine ON-Basis von V auf eine ON-Basis von W ab
-\item Eine unitäre Abbildung ist ein Isom. $u: V \to V$, der innere Produkte erhält.\\
-Die unitären Abbildungen bilden eine Gruppe U(V). Für u $\in$ U(V) gilt:\\
-1) Sei dim(V) = n < $\infty$. Dann gilt: u $\in$ U(V) $\Leftrightarrow$ u(ON-Basis) = ON-Basis\\
-2) u $\in$ U(V) $\Leftrightarrow$ $\exists u^*$ mit $u^*u=uu^*=id$
+\item $f$ erhält innere Produkte und ist bijektiv $\Rightarrow$ $f^{-1}$ erhält ebenfalls innere Produkte, denn: $(f^{-1}(w_1), f^{-1}(w_2))_V = (w_1, w_2)_W$
+\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. FASÄ:
+\begin{enumerate}
+\item f erhält das innere Produkt
+\item f ist ein Isom. zwischen VR mit innerem Produkt
+\item f bildet jede ON-Basis von V auf eine ON-Basis von W ab
+\item f bildet eine ON-Basis von V auf eine ON-Basis von W ab
+\end{enumerate}
+Eine unitäre Abbildung ist ein Isom. $u: V \to V$, der innere Produkte erhält.
+Die unitären Abbildungen bilden eine Gruppe U(V). Für $u \in U(V)$ gilt:
+\begin{enumerate}
+\item Sei dim(V) = n < $\infty$. Dann gilt: $u \in U(V)$ $\Leftrightarrow$ $u$(ON-Basis) = ON-Basis
+\item $u \in U(V)$ $\Leftrightarrow$ $\exists u^*$ mit $u^*u=uu^*=id$
+\end{enumerate}
 \end{compactitem}
 
 \section{unitäre Matrizen}
-Eine Matrix A $\in M_n(K)$ heißt unitär, falls AA$^*$ = E\\
-Falls K = $\mathbb{R}$ heißt A orthogonal und A$^{-1}$ = A$^t$\\
-$\Rightarrow$ Jede unitäre Matrix ist invertierbar und A$^*$ = A$^{-1}$\\
-A ist unitär $\Leftrightarrow$ die Spalten von A bilden eine ON-Basis des K$^n$ bez. des Standardskalarprodukts\\
-\hspace*{18mm} $\Leftrightarrow$ die Zeilen von A bilden eine ON-Basis des K$^n$ bez. des Standardskalarprodukts\\
+Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
+Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$\\
+$\Rightarrow$ Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$\\
+A ist unitär $\Leftrightarrow$ die Spalten von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts\\
+\hspace*{18mm} $\Leftrightarrow$ die Zeilen von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts\\
 
 \section{Orthogonale Matrizen}
-A $\in M_n(K)$ heißt orthogonal, falls A$^t$A = E
+$A \in M_n(K)$ heißt orthogonal, falls $A^tA = E$
 
 \section{zu orthogonal und unitär}
-Seien A, B $\in M_n(K)$.\\
-A ist unitär ähnlich zu B, falls es eine unitäre Matrix U gibt mit B = U$^*$AU\\
-A ist orthogonal ähnlich zu B, falls es eine orthogonale Matrix O gibt mit B = O$^t$AO
+Seien $A, B \in M_n(K)$.\\
+$A$ ist \textbf{unitär ähnlich} zu $B$, falls es eine unitäre Matrix $U$ gibt mit $B = U^*AU$\\
+$A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O$ gibt mit $B = O^tAO$
 
 \section{Normale Endomorphismen}
-$f: V \to V$ heißt normal, falls $ff^*=f^*f$\\
-Beispiele:\\
-1) Selbstadjungierte, also $f = f^*$\\
-2) Unitäre, also $f^{-1} = f^*$\\
-3) f normal, $\alpha \in K$ $\Rightarrow$ $\alpha f$ normal\\
-Lemma:\\
-Sei $f = f^*$. Dann ist jeder Eigenwert von f reell. Die Eigenvektoren zu verschiedenen Eigenwerten sind zueinander orthogonal.
+$f: V \to V$ heißt normal, falls $ff^*=f^*f$.\\
+Beispiele:
+\begin{enumerate}
+\item Selbstadjungierte, also $f = f^*$
+\item Unitäre, also $f^{-1} = f^*$
+\item f normal, $\alpha \in K$ $\Rightarrow$ $\alpha f$ normal
+\end{enumerate}
+Lemma: Sei $f = f^*$. Dann ist jeder Eigenwert von f reell. Die Eigenvektoren zu verschiedenen Eigenwerten sind zueinander orthogonal.
 
 \section{Invariante Unterräume}
-Sei f $\in$ End(V) beliebig. Sei W $\subseteq$ V ein f invarianter Unterraum, d.h. f(W) $\subseteq$ W. Dann ist W$^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
+Sei $f \in End(V)$ beliebig. Sei $W \subseteq V$ ein $f$ invarianter Unterraum, d.h. $f(W) \subseteq W$. Dann ist $W^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
 
 \section{zu selbstadjungiert}
 Sei dim(V) = n < $\infty$ und $f = f^*$ ($\Rightarrow$ f normal).\\
-Dann gibt es eine ON-Basis von V, die aus Eigenvektoren zu f besteht (d.h. f ist unitär diagonalisierbar).\\
+Dann gibt es eine ON-Basis von V, die aus Eigenvektoren zu $f$ besteht (d.h. $f$ ist unitär diagonalisierbar).\\
 Anders ausgedrückt: Es gibt eine ON-Basis, sodass die darstellende Matrix Diagonalgestalt hat.
 
 \section{Folgerung}
-Sei A $\in M_n(\mathbb{C})$ hermitesch, d.h. A$^*$=A. Dann gibt es eine unitäre Matrix U, sodass U$^*$AU Diagonalgestalt hat.\\
-Sei A $\in M_n(\mathbb{R})$ symm., d.h. A$^t$=A, dann gibt es eine orthogonale Matrix O, sodass O$^t$AO Diagonalgestalt hat.\\
+Sei $A \in M_n(\mathbb{C})$ \textbf{hermitesch}, d.h. $A^*=A$. Dann gibt es eine unitäre Matrix $U$, sodass $U^*AU$ Diagonalgestalt hat.\\
+Sei $A \in M_n(\mathbb{R})$ symm., d.h. $A^t=A$, dann gibt es eine orthogonale Matrix $O$, sodass $O^tAO$ Diagonalgestalt hat.\\
 
-\section{Zusammenfassung im Fall K=$\mathbb{R}$}
-ZU f $\exists$ ON-Basis aus Eigenvektoren $\Leftrightarrow$ f = f$^*$\\
-A $\in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ A = A$^t$\\
+\section{Zusammenfassung im Fall $K=\mathbb{R}$}
+Zu $f$ $\exists$ ON-Basis aus Eigenvektoren $\Leftrightarrow$ $f = f^*$\\
+$A \in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ $A = A^t$\\
 
 \section{Eigenwerte von f}
-Sei f normal, dann gilt:\\
-v ist EV von f  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von f$^*$ zum EW $\overline{\alpha}$
+Sei f normal, dann gilt: v ist EV von $f$  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von $f^*$ zum EW $\overline{\alpha}$
 
 \section{Matrix normal}
-Eine Matrix A $\in M_n(\mathbb{C})$ heißt normal, falls AA$^*$ = A$^*$A. Folgerung: Dann gilt für A:\\
-$\exists$ unitäre Matrix U mit U$^*$AU hat Diagonalgestalt $\Leftrightarrow$ A ist normal
+Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal, falls $AA^* = A^*A$.\\
+Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
 
 \section{Projektionen}
 $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
 \begin{compactitem}
-\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und p: V $\to$ V Projektion. FASÄ:\\
-1) p ist normal, d.h. p$^*$p = pp$^*$\\
-2) p ist selbstadjungiert, d.h. p = p$^*$\\
-3) p ist eine Orthogonalprojektion, d.h. $im(p)^\perp = ker(p)$
-\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. FASÄ:\\
-1) $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe\\
-2) $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$\\
-3) Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
-\item Lemma: Sei $f: V \to V$ normal. Dann gilt:\\
-1) $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$\\
-2) $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal\\
-3) Das Minimalpolynom hat keine mehrfachen Nullstellen
-\item Theorem: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:\\
-1) $f = \alpha_1p_1 + … + \alpha_kp_k$\\
-2) $id_V = p_1 + … + p_k$\\
-3) $p_ip_j = 0$ für $i \neq j$\\
+\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und $p: V \to V$ Projektion. FASÄ:
+\begin{enumerate}
+\item $p$ ist normal, d.h. $p^*p = pp^*$
+\item $p$ ist selbstadjungiert, d.h. $p = p^*$
+\item $p$ ist eine \textbf{Orthogonalprojektion}, d.h. $im(p)^\perp = ker(p)$
+\end{enumerate}
+\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. FASÄ:
+\begin{enumerate}
+\item $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe
+\item $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$
+\item Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
+\end{enumerate}
+\item Lemma: Sei $f: V \to V$ normal. Dann gilt:
+\begin{enumerate}
+\item $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$
+\item $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal
+\item Das Minimalpolynom hat keine mehrfachen Nullstellen
+\end{enumerate}
+\item Theorem: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
+\begin{enumerate}
+\item $f = \alpha_1p_1 + … + \alpha_kp_k$
+\item $id_V = p_1 + … + p_k$
+\item $p_ip_j = 0$ für $i \neq j$
+\end{enumerate}
 Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.\\
-Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist f normal.
+Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
 \end{compactitem}
 
 \section{Dualräume}
 $V^* = Hom(V, K)$ heißt Dualraum.
 \begin{compactitem}
-\item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_k(V,W)$.
-\item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
-Falls $0 = \alpha_1 f_1 + … + \alpha_n f_n$ so fogt $0 = \alpha_i$.\\
-Insbesondere: Falls dim(V) < $\infty$, so gilt: dim(V$^*$) = dim(V).\\
-\item Lemma: Sei $U \subseteq V$ ein linearer Unterraum und %$v \in \QR{V}{U}$. 
+\item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_K(V,W)$.
+\item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta_{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
+Falls $0 = \alpha_1 f_1 + … + \alpha_n f_n$, so folgt $0 = \alpha_i$.\\
+Insbesondere: Falls dim(V) < $\infty$, so gilt: dim(V$^*$) = dim(V).
+\item Lemma: Sei $U \subseteq V$ ein linearer Unterraum und $v \in \QR{V}{U}$. 
 Dann gibt es $f \in V^*$ mit $f(u) = 0$ $\forall u \in u$ und $f(v) \neq 0$
-\item Proposition: Sei ${V^*}^* = Hom(Hom(V,K), K)$. Setzte $T: V \to V^*, v \mapsto T(v)$ mit $T(v)(f) := f(v)$ $\forall f \in V^*$. Dann gilt:\\
-1) T ist linear und injektiv\\
-2) Falls dim(V) < $\infty$, so ist T ein Isomorphismus
+\item Proposition: Sei ${V^*}^* = Hom(Hom(V,K), K)$. Setzte $T: V \to V^*, v \mapsto T(v)$ mit $T(v)(f) := f(v)$ $\forall f \in V^*$. Dann gilt:
+\begin{enumerate}
+\item T ist linear und injektiv
+\item Falls dim(V) < $\infty$, so ist T ein Isomorphismus
+\end{enumerate}
 \end{compactitem}
 
 \section{Restriktion und Inflation}
-Sei $W \subseteq V$ ein lin. UR.\\
-1) $R: V^* \to W^*, f \mapsto f|_W$ heißt Restriktion\\
-2) %$I: (\QR{V}{W})^* \to V^*, f \mapsto If$
-mit $If(v) := f(v + W)$ heißt Inflation von f\\
-3) Sei $M \subseteq V$ eine Teilmenge. $M^\perp := \{ f \in V^* | f(m) = 0$ $\forall m \in M \}$. Also: $M^\perp \subseteq V^*$ (lin. UR)\\
-4) Sei $S \subseteq V^*$ eine Teilmenge. $S^\top := \{ v \in V | s(v) = 0$ $\forall s \in S \}$. $S^\top$ ist lin. UR von V.\\
-Lemma: Sei $W \subseteq V$ ein lin. UR.\\
-1) $R: V^* \to W^*$ ist linear und es gilt ker(R) = W$^\perp$\\
-2) Falls dim(V) = n < $\infty$, so gilt: dim(W$^\perp$) = dim(V) - dim(W)\\
-3) %$I: (\QR{V}{W})^* \to W^\perp$ ist ein Isom.
+Sei $W \subseteq V$ ein lin. UR.
+\begin{enumerate}
+\item $R: V^* \to W^*, f \mapsto f|_W$ heißt Restriktion
+\item $I: \big(\QR{V}{W}\big)^* \to V^*, f \mapsto If$ mit $If(v) := f(v + W)$ heißt Inflation von f
+\item Sei $M \subseteq V$ eine Teilmenge. $M^\perp := \{ f \in V^* | f(m) = 0$ $\forall m \in M \}$. Also: $M^\perp \subseteq V^*$ (lin. UR)
+\item Sei $S \subseteq V^*$ eine Teilmenge. $S^\top := \{ v \in V | s(v) = 0$ $\forall s \in S \}$. $S^\top$ ist lin. UR von V.
+\end{enumerate}
+Lemma: Sei $W \subseteq V$ ein lin. UR.
+\begin{enumerate}
+\item $R: V^* \to W^*$ ist linear und es gilt ker(R) = W$^\perp$
+\item Falls dim(V) = n < $\infty$, so gilt: dim(W$^\perp$) = dim(V) - dim(W)
+\item $I: \big(\QR{V}{W}\big)^* \to W^\perp$ ist ein Isom.
+\end{enumerate}
 
 \section{Dualitätssatz}
-1) Ist $W \subseteq V$ ein lin. UR, so ist $W^{\perp \top} = W$\\
-2) Sei dim(V) < $\infty$ und $S \subseteq V^*$ ein lin. UR, so gilt  $S^{\top \perp} = S$\\
-3) Seien $W_1, W_2 \subseteq V$ lin. UR (V beliebig). Dann gilt:\\
-\hspace*{3mm} $(W_1 + W_2)^\perp = W_1^\perp \cap W_2^\perp$\\
-\hspace*{3mm} Falls dim(V) < $\infty$, so gilt auch: $(W_1 \cap W_2)^\perp ) W_1^\perp + W_2^\perp$
+\begin{enumerate}
+\item Ist $W \subseteq V$ ein lin. UR, so ist $W^{\perp \top} = W$
+\item Sei dim(V) < $\infty$ und $S \subseteq V^*$ ein lin. UR, so gilt  $S^{\top \perp} = S$
+\item Seien $W_1, W_2 \subseteq V$ lin. UR (V beliebig). Dann gilt:\\
+$(W_1 + W_2)^\perp = W_1^\perp \cap W_2^\perp$\\
+Falls dim(V) < $\infty$, so gilt auch: $(W_1 \cap W_2)^\perp = W_1^\perp + W_2^\perp$
+\end{enumerate}
 
 \section{Affine Hyperebene}
 Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.\\
-Erinnerung affiner Unterraum: Ein m-dim. affiner Unterraum von V ist eine Menge M = v + W mit  v $\in$ V und W $\subseteq$ V ein m-dim. linearer Unterraum.\\
+Erinnerung affiner Unterraum: Ein m-dim. affiner Unterraum von V ist eine Menge M = v + W mit  $v \in V$ und $W \subseteq V$ ein m-dim. linearer Unterraum.\\
 Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt von n-m affinen Hyperebenen.
 
 \section{zu Linearformen}
 Sei $g: V \to W$ linear und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei A = ($\alpha_{ij}$) die Matrix von g bez. dieser Basen, d.h. $g(v_j) ) \sum\limits_{i=1}^m \alpha_{ij} w_i$, j = 1, …, n. Seien $f_1, …, f_n$ bzw. $g_1, …, g_m$ die dualen Basen, d.h. $f_i(v_j) = \delta_{ij}$, $g_k(w_l) = \delta_{kl}$. Dann hat $g^*$ bez. dieser dualen Basen die Matrix $A^t$.\\
-Proposition:\\
-Sei $g: V \to W$ linear. Dann gilt:\\
-1) ker(g$^*$) = im(g)$^\perp$\\
-2) ker(g) = im(g$^*$)$^\top$\\
-3) g surjektiv $\Leftrightarrow$ g$^*$ injektiv\\
-4) g injektiv $\Leftrightarrow$ g$^*$ surjektiv\\
-5) g Isomorphismus $\Leftrightarrow$ g$^*$ Isomorphismus
+Proposition: Sei $g: V \to W$ linear. Dann gilt:
+\begin{enumerate}
+\item $ker(g^*) = im(g)^\perp$
+\item $ker(g) = im(g^*)^\top$
+\item $g$ surjektiv $\Leftrightarrow$ $g^*$ injektiv
+\item $g$ injektiv $\Leftrightarrow$ $g^*$ surjektiv
+\item $g$ Isomorphismus $\Leftrightarrow$ $g^*$ Isomorphismus
+\end{enumerate}
 
 \section{Bilinearform ausgeartet}
-Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v |in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
+Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
 (ausgeartet im 2.Argument analog)\\
 Bemerkungen:
 \begin{compactitem}
 \item Innere Produkte sind stets nicht-ausgeartet
-\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
+\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
 \end{compactitem}
 
 \section{Strukturmatrix}
@@ -165,13 +210,15 @@ Beispiele:
 \end{compactitem}
 Satz: Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei $\beta: V \times W \to K$ eine Bilinearform und B die Strukturmatrix.\\
 Sei $V \ni v = x_1v_1 + … + x_nv_n$, $x_i \in K$ und\\
-\hspace*{10mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
+\hspace*{4mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
 Dann gilt: $\beta(v, w) = x^tBy$\\
 Folgerung:\\
-Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. FASÄ:\\
-1) $\beta$ ist ausgeartet im 1.Argument\\
-2) $\beta$ ist ausgeartet im 2.Argument\\
-3) det(B) = det(B$^t$) = 0\\
-4) rg(B) = rg(B$^t$) < n\\
-5) ker(B) = \{0\}\\
-6) ker(B$^t$) = \{0\}\\
+Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. FASÄ:
+\begin{enumerate}
+\item $\beta$ ist ausgeartet im 1.Argument
+\item $\beta$ ist ausgeartet im 2.Argument
+\item $det(B) = det(B^t) = 0$
+\item $rg(B) = rg(B^t) < n$
+\item $ker(B) = \{0\}$
+\item $ker(B^t) = \{0\}$
+\end{enumerate}
