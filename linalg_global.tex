@@ -17,6 +17,7 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{newclude}
+\usepackage[autostyle=true,german=quotes]{csquotes}
 \geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
 
 %\hypersetup{
@@ -46,6 +47,8 @@
 \renewcommand{\itemize}{\compactitem}
 \renewcommand{\enumerate}{\compactenum}
 \renewcommand{\labelenumi}{\theenumi)}
+
+\newenvironment{remark}{\begin{samepage}\textbf{Bemerkung}:}{\end{samepage}}
 
 \parindent 0pt
 

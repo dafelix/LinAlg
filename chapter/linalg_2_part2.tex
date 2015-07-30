@@ -8,20 +8,24 @@ $V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \m
 \item Sei $f: V \to V$ linear und $a_1, …, a_n$ eine ON-Basis von $V$. Sei $A = (\alpha_{ij})$ die darstellende Matrix von $f$ bez. $a_1, …, a_n$. Dann gilt: $\alpha_{ij} = (f(a_j), a_i)$
 \item Sei $B = (\beta_{ij})$ die darstellende Matrix von $f^*$. Dann gilt: $B = A^*$
 \end{enumerate}
-\item Bemerkungen:
+\item
+\begin{remark}
 \begin{enumerate}
 \item Falls dim(V) < $\infty$, so gibt es stets $f^*$
 \item $f^*$ ist eindeutig durch $f$ bestimmt
 \end{enumerate}
+\end{remark}
 \item $f \in End(V)$ heißt \textbf{selbstadjungiert}, falls $f = f^*$\\
 $f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
 \item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$\\
 Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt\\
 Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
 \item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
-\item Bemerkung: Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
-Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
 \end{itemize}
+\begin{remark}
+Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
+Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
+\end{remark}
 
 \section{mehr zu positiv und positiv definit}
 \begin{compactitem}
@@ -129,8 +133,11 @@ $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p
 \item $id_V = p_1 + … + p_k$
 \item $p_ip_j = 0$ für $i \neq j$
 \end{enumerate}
-Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.\\
-Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
+Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.
+
+\begin{remark}
+Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
+\end{remark}
 \end{compactitem}
 
 \section{Dualräume}
@@ -191,12 +198,15 @@ Proposition: Sei $g: V \to W$ linear. Dann gilt:
 
 \section{Bilinearform ausgeartet}
 Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
-(ausgeartet im 2.Argument analog)\\
-Bemerkungen:
+(ausgeartet im 2.Argument analog)
+
+
+\begin{remark}
 \begin{compactitem}
 \item Innere Produkte sind stets nicht-ausgeartet
 \item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
 \end{compactitem}
+\end{remark}
 
 \section{Strukturmatrix}
 Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
