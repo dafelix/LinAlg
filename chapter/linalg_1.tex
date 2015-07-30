@@ -6,211 +6,156 @@
 %\setcounter{section}{1}
 
 \section{Gruppen}
-Eine Menge G hat die Struktur einer (abelschen) Gruppe, wenn es eine ‘Addition’ mit den Eigenschaften der Addition in den ganzen Zahlen Z gibt; allgemein ist eine Gruppenstruktur auf einer Menge eine (nicht unbedingt kommutative) ‘Verknüpfung’ von Elementen mit den folgenden Eigenschaften: \\
-\\
-Definition 2.1\\
-Sei G eine nichtleere Menge. Eine Verknüpfung $\cdot$ auf G ist eine Abbildung $\cdot$ : G $\times$ G $\to$ G, d.h. $\cdot$ ordnet jedem geordneten Paar (a,b) $\in$ G$\times$G ein Element c $\in$ G zu; schreibe c = a$\cdot$b. Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine Gruppe, falls gilt: \\
-(1) $\cdot$ ist assoziativ: a$\cdot$(b$\cdot$c)=(a$\cdot$b)$\cdot$c für alle a,b,c $\in$ G\\
-(2) es gibt ein (links)-neutrales Element e $\in$ G mit e $\cdot$ a = a für alle a $\in$ G \\
-(3) zu jedem a $\in$ G gibt es ein (links)-inverses Element, d.h. ein b $\in$ G mit b $\cdot$ a = e \\
-Die Gruppe G ist kommutativ oder abelsch, falls zusätzlich gilt: \\
-(4) a $\cdot$ b = b $\cdot$ a für a, b $\in$ G\\ 
-\\
-NB\\
-Ist (G, $\cdot$) eine abelsche Gruppe, so schreibt man oft a + b anstelle von a $\cdot$ b (analog zu der Addition + in Z).
-\begin{compactitem}
-\item Aufgrund des Assoziativgesetzes lassen sich Produkte von Elementen in einer Gruppe (G, $\cdot$) beliebig klammern. Seien a, b, c $\in$ G mit ba = b $\cdot$ a = e und cb = c $\cdot$ b = e. Dann gilt 
-ab = (ea)b = ((cb)a)b = (c(ba))b = (ce)b = c(eb) = cb = e, d.h. ba = e impliziert ab = e (das links-inverse Element ist auch ein rechts-inverses Element). Weiter folgt damit auch ae = a(ba) = (ab)a = ea = a, also liefert ea = a auch ae = a (das links-neutrale Element e ist auch ein rechts-neutrales Element).
+\begin{itemize}
+\item Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine Gruppe, falls gilt:
+\begin{enumerate}
+\item $\cdot$ ist assoziativ: a$\cdot$(b$\cdot$c)=(a$\cdot$b)$\cdot$c für alle a,b,c $\in$ G
+\item es gibt ein (links)-neutrales Element e $\in$ G mit e $\cdot$ a = a für alle a $\in$ G 
+\item zu jedem a $\in$ G gibt es ein (links)-inverses Element, d.h. ein b $\in$ G mit b $\cdot$ a = e
+\end{enumerate}
+Die Gruppe G ist kommutativ oder abelsch, falls zusätzlich gilt:
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item a $\cdot$ b = b $\cdot$ a für a, b $\in$ G
+\end{enumerate}
+\item NB: 
+\begin{enumerate}
 \item Das neutrale Element ist eindeutig bestimmt. Ebenso ist zu jedem a $\in$ G das zugehörige inverse Element eindeutig bestimmt.
 \item Ist (G, $\cdot$) eine Gruppe, so schreibe e = 1 (Einselement) und b = a$^{-1}$ für das zu a inverse Element. Sind $a_1, a_2, . . . , a_n \in G$, so schreibe $\prod\nolimits_{i=1}^{n} a_i = a_1 \cdots a_n$; nach Definition gilt $\prod\nolimits_{i=1}^{0}a_i = 1$.
-\item Ist (G,+) eine abelsche Gruppe, so setze e = 0 (Nullelement) und bezeichne das zu a inverse Element mit -a. In diesem Fall bezeichnet $\sum\nolimits_{i=1}^{n} a_i$ die Summe der endlich vielen Elemente $a_1, . . . , a_n$; nach Definition $\sum\nolimits_{i=1}^{0} a_i = 0$. \\
-\end{compactitem}
-Definition 2.4\\
-Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine Untergruppe von G, H $\le$ G, falls gilt:\\
-(a) 1 $\in$ H\\ 
-(b) a,b $\in$ H $\Rightarrow$ ab $\in$ H\\ 
-(c) a $\in$ H $\Rightarrow$ a$^{-1}$ $\in$ H\\ 
-\\
-\newpage
-NB\\
-Ist $\emptyset \neq H \subseteq G$ eine nichtleere Teilmenge, so lassen sich die Kriterien (a)-(c) der obigen Definition zu einer Bedingung vereinfachen: 
-$\emptyset \neq H \subseteq G$ ist genau dann eine Untergruppe, falls gilt: a,b $\in$ H $\Rightarrow$ ab$^{-1}$ $\in$ H.\\
-\\
-Definition 2.7\\
-Sei G eine Gruppe, U $\le$ G eine Untergruppe, und $\sim$ die durch U definierte Äquivalenzrelation auf G (a $\sim$ b $\Leftrightarrow$ ab$^{-1}$ $\in$ U). Ist a $\in$ G, so ist die entsprechende Äquivalenzklasse die Menge 
+\item Ist (G,+) eine abelsche Gruppe, so setze e = 0 (Nullelement) und bezeichne das zu a inverse Element mit -a. In diesem Fall bezeichnet $\sum\nolimits_{i=1}^{n} a_i$ die Summe der endlich vielen Elemente $a_1, . . . , a_n$; nach Definition $\sum\nolimits_{i=1}^{0} a_i = 0$.
+\end{enumerate}
+\item Definition: Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine \textbf{Untergruppe} von G, H $\le$ G, falls gilt:
+\begin{enumerate}
+\item 1 $\in$ H
+\item a,b $\in$ H $\Rightarrow$ ab $\in$ H
+\item a $\in$ H $\Rightarrow$ a$^{-1}$ $\in$ H
+\end{enumerate}
+\item NB: Ist $\emptyset \neq H \subseteq G$ eine nichtleere Teilmenge, so lassen sich die Kriterien (a)-(c) der obigen Definition zu einer Bedingung vereinfachen: 
+$\emptyset \neq H \subseteq G$ ist genau dann eine Untergruppe, falls gilt: a,b $\in$ H $\Rightarrow$ ab$^{-1}$ $\in$ H.
+\item Definition: Sei G eine Gruppe, U $\le$ G eine Untergruppe, und $\sim$ die durch U definierte Äquivalenzrelation auf G (a $\sim$ b $\Leftrightarrow$ ab$^{-1}$ $\in$ U). Ist a $\in$ G, so ist die entsprechende Äquivalenzklasse die Menge 
 $[a]=\{ b \in G | a \sim b \} = \{ b \in G | ab^{-1} \in U \} = \{ b \in G | b = Ua \} = Ua$; 
 diese Mengen sind die Rechtsnebenklassen von U. Sind die $Ua_j$ für j $\in$ J, die verschiedenen Rechtsnebenklassen, so bilden diese eine Partition G=$\bigcup\limits_{j \in J} Ua_j$.
 Ist |J| endlich, so nennt man |J| den Index von U in G und schreibt |J| = |G : U|.
-\begin{compactitem}
+\begin{enumerate}
 \item Genauso definiert a $\sim$ b $\Leftrightarrow$ a$^{-1}$b $\in$ eine Äquivalenzrelation auf G. Die Äquivalenzklasse von a $\in$ G ist die Linksnebenklasse $[a] = \{b \in G | a \sim b \} = \{ b \in G | a^{-1}b \in U \} = aU$. 
 Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im allgemeinen nicht.
 \item Der Versuch analog zur Definition der Addition auf $\mathbb{Z}/m\mathbb{Z}$ mittels der Addition auf $\mathbb{Z}$ eine Verknüpfung auf der Menge der Nebenklassen $G/U = \{Ua | a \in G\}$ durch Ua $\cdot$ Ub = Uab zu definieren funktioniert für abelsche Gruppen, aber nicht für allgemeine Gruppen. Dies wird uns (später, im Rahmen der Algebra) zu besonderen Untergruppen führen, den sogenannten Normalteilern.
-\end{compactitem}
-%%%%%
+\end{enumerate}
+\end{itemize}
+
 \section{Körper}
-Ein Körper ist eine additiv geschriebene abelsche Gruppe, auf der zusätzlich eine Multiplikation definiert ist, die die Eigenschaften der Multiplikation von rationalen Zahlen erfüllt. \\
-\\
-Definition 3.1\\
-Ein Körper K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt: \\
-(1) (K, +) ist eine abelsche Gruppe mit Nullelement 0,\\ 
-(2) (K \textbackslash \{0\}, $\cdot$) ist eine abelsche Gruppen mit Einselement 1$\neq$ 0,\\
-(3) a$\cdot$(b+c)=a$\cdot$b + a$\cdot$c und (a+b)$\cdot$c = a$\cdot$c + a$\cdot$b.\\
-In Körpern gelten viele der ‘üblichen’ Rechenregeln. Für a, b $\in$ K ist:
-\begin{compactitem} 
+\begin{itemize}
+\item Ein Körper K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
+\begin{enumerate}
+\item (K, +) ist eine abelsche Gruppe mit Nullelement 0,
+\item (K \textbackslash \{0\}, $\cdot$) ist eine abelsche Gruppen mit Einselement 1$\neq$ 0,
+\item a$\cdot$(b+c)=a$\cdot$b + a$\cdot$c und (a+b)$\cdot$c = a$\cdot$c + a$\cdot$b.
+\end{enumerate}
+\item In Körpern gelten viele der ‘üblichen’ Rechenregeln. Für a, b $\in$ K ist:
+\begin{enumerate} 
 \item 0a = a0 = 0, 
 \item (-1)a = -a, 
 \item (-a)b = a(-b) = -ab, 
-\item ab = 0 $\Rightarrow$ a = 0 oder b = 0. \\
-\end{compactitem}
-Beispiele 3.2
-\begin{compactenum}
-\item[(a)] $\mathbb{Q}$ und $\mathbb{R}$ sind Körper.
-\item[(b)] Sei p eine Primzahl und $\mathbb{Z}/p\mathbb{Z}$ die Menge der Restklassen modulo p. Dann bildet $\mathbb{Z}/p\mathbb{Z}$\textbackslash\{[0]\} bzgl. der evidenten Multiplikation [a]$\cdot$[b] = [ab] eine abelsche Gruppe, d.h. $\mathbb{Z}/p\mathbb{Z}$ ist ein Körper mit p Elementen. In $\mathbb{Z}/p\mathbb{Z}$ gilt pa = 0 für alle a $\in$ $\mathbb{Z}/p\mathbb{Z}$.\\
-\end{compactenum}
-Definition 3.3\\
-Sei K ein Körper. Ein Teilkörper L $\subseteq$ K ist eine Teilmenge, so dass gilt:\\
-(a) a,b $\in$ L $\Rightarrow$ a+b, a$\cdot$b $\in$ L, \\
-(b) 0, 1 $\in$ L,\\
-(c) a $\in$ L $\Rightarrow$ -a $\in$ L,\\ 
-(d) 0 $\neq$ a $\in$ L $\Rightarrow$ a$^{-1}$ $\in$ L.\\
-%%%%%
+\item ab = 0 $\Rightarrow$ a = 0 oder b = 0.
+\end{enumerate}
+\item Beispiele:
+\begin{enumerate}
+\item $\mathbb{Q}$ und $\mathbb{R}$ sind Körper.
+\item Sei p eine Primzahl und $\mathbb{Z}/p\mathbb{Z}$ die Menge der Restklassen modulo p. Dann bildet $\mathbb{Z}/p\mathbb{Z}$\textbackslash\{[0]\} bzgl. der evidenten Multiplikation [a]$\cdot$[b] = [ab] eine abelsche Gruppe, d.h. $\mathbb{Z}/p\mathbb{Z}$ ist ein Körper mit p Elementen. In $\mathbb{Z}/p\mathbb{Z}$ gilt pa = 0 für alle a $\in$ $\mathbb{Z}/p\mathbb{Z}$.\\
+\end{enumerate}
+\item Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
+\begin{enumerate}
+\item a,b $\in$ L $\Rightarrow$ a+b, a$\cdot$b $\in$ L,
+\item 0, 1 $\in$ L,
+\item a $\in$ L $\Rightarrow$ -a $\in$ L,
+\item 0 $\neq$ a $\in$ L $\Rightarrow$ a$^{-1}$ $\in$ L.
+\end{enumerate}
+\end{itemize}
+
 \section{Vektorräume}
-Eine (abelsche) Gruppe ist eine algebraische Struktur, die die Eigenschaften der Addition in den ganzen Zahlen abstrahiert. Ähnlich ist die Definition eines Körpers eine abstrakte Formulierung der Eigenschaften der Addition und Multiplikation von rationalen Zahlen.\\
-Die algebraische Struktur eines Vektorraums ist motiviert durch die reelle Ebene $\mathbb{R}^2$ = \{(a, b) | a, b $\in$ $\mathbb{R}$ \}, zusammen mit der Addition v = (a,b), w = (c,d) $\in$ $\mathbb{R}^2$ $\Rightarrow$ v + w = (a + c, b + d), und der Skalarmultiplikation v = (a,b) $\in$ $\mathbb{R}^2$, $\alpha$ $\in$ $\mathbb{R}$ $\Rightarrow$ $\alpha$ $\cdot$ v = ($\alpha$ $\cdot$ a, $\alpha$ $\cdot$ b).\\ 
-In der abstrakten Formulierung werden die Vektoren Elemente einer abelschen Gruppe (bez. +) und die Skalare Elemente eines Körpers sein; zur Unterscheidung bezeichnen wir Vektoren mit lateinischen Buchstaben a,b,c... und Skalare mit griechischen Buchstaben $\alpha, \beta, \gamma$,....\\
-\\
-Definition 4.1\\
-Sei K ein Körper. Ein K-Vektorraum ist eine Menge V , zusammen mit einer (inneren) Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b (einer ‘Addition’ +) und einer (äußeren) Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’ $\cdot$), so dass gilt: \\
-(1) V ist bzgl. + eine abelsche Gruppe, \\
-(2) ($\alpha$ + $\beta$) $\cdot$ a = $\alpha$ $\cdot$ a + $\beta$ $\cdot$ a und $\alpha$ $\cdot$ (a + b) = $\alpha$ $\cdot$ a + $\alpha$ $\cdot$ b,\\ 
-(3) ($\alpha$ $\cdot$ $\beta$) $\cdot$ a = $\alpha$ $\cdot$ ($\beta$ $\cdot$ a) für $\alpha$, $\beta$ $\in$ K und a $\in$ V ,\\ 
-(4) 1 $\cdot$ a = a für 1 $\in$ K und a $\in$ V.\\
-Für K-Vektorräume gelten die folgenden Rechenregeln (wir schreiben 0$_V$ für das Nullelement in V und 0$_K$ für das Nullelement in K; im Weiteren werden diese Elemente nur mit 0 bezeichnet, da es sich aus dem Kontext ergibt, welche ‘Null’ gemeint ist):
-\begin{compactitem}
+\begin{itemize}
+\item Sei K ein Körper. Ein K-Vektorraum ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’ $\cdot$), so dass gilt:
+\begin{enumerate}
+\item V ist bzgl. + eine abelsche Gruppe,
+\item ($\alpha$ + $\beta$) $\cdot$ a = $\alpha$ $\cdot$ a + $\beta$ $\cdot$ a und $\alpha$ $\cdot$ (a + b) = $\alpha$ $\cdot$ a + $\alpha$ $\cdot$ b,
+\item ($\alpha$ $\cdot$ $\beta$) $\cdot$ a = $\alpha$ $\cdot$ ($\beta$ $\cdot$ a) für $\alpha$, $\beta$ $\in$ K und a $\in$ V,
+\item 1 $\cdot$ a = a für 1 $\in$ K und a $\in$ V.
+\end{enumerate}
+\item Für K-Vektorräume gelten die folgenden Rechenregeln:
+\begin{enumerate}
 \item $\alpha \cdot 0_V = 0_V$ für alle $\alpha$ $\in$ K,
 \item $0_K \cdot a = 0_V$  für alle a $\in$ V,
 \item $(-\alpha) \cdot a = \alpha \cdot (-a) = \alpha(-a)$ für $\alpha$ $\in$ K und a $\in$ V,
 \item $\alpha \cdot a = 0$ für $\alpha$ $\in$ K und a $\in$ V impliziert $\alpha = 0_K$ oder $a = 0_V$,
 \item $\alpha \cdot (\sum\nolimits_{i=1}^{n} a_i) = \sum\nolimits_{i=0}^{n} \alpha a_i$ und $(\sum\nolimits_{i=0}^{n}\alpha_i) \cdot a = \sum\nolimits_{i=0}^{n} \alpha_i a$,
-\item $\sum\nolimits_{i=0}^{n} \alpha_i a_i + \sum\nolimits_{i=0}^{n} \beta_i a_i = \sum\nolimits_{i=0}^{n} (\alpha_i + \beta_i) a_i$\\
-\end{compactitem}
-Beispiel 4.2 c)\\
-Sei K ein Körper und M ein Menge. Dann ist die Menge V = Abb(M,K) der Abbildungen M $\to$ K ein K-Vektorraum bezüglich der ‘punktweise’ definierten Verknüpfungen: f, g $\in$ V , $\alpha$ $\in$ K,
-\begin{center}
-f + g: M $\to$ K, x $\mapsto$ f(x) + g(x),\\
-$\alpha$ $\cdot$ f : M $\to$ K, x $\mapsto$ $\alpha$ $\cdot$ f(x)
-\end{center}
-Diese Beispiele von K-Vektorräumen treten oft in der Analysis auf; zum Beispiel, ist I = [0, 1] $\subset$ $\mathbb{R}$ das Einheitsintervall, und K = $\mathbb{R}$, so ist V = Abb(I,$\mathbb{R}$) der $\mathbb{R}$-Vektorraum der reellwertigen Funktionen auf dem Einheitsintervall. \\
-\\
-Definition 4.3\\
-Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein K-Untervektorraum oder K-linearer Unterraum von V, falls gilt: \\
-(a) $\emptyset$ $\neq$ U, \\
-(b) a, b $\in$ U $\Rightarrow$ a + b $\in$ U,\\ 
-(c) $\alpha$ $\in$ K, a $\in$ U $\Rightarrow$ $\alpha$ $\cdot$ a $\in$ U (insbesondere: a $\in$ U $\Rightarrow$ -a $\in$ U ).\\ 
-Ist V ein K-Vektorraum und U $\subseteq$ V ein K-linearer Unterraum, so bezeichnen wir oft U auch nur als linearen Unterraum, d.h. ein linearer Unterraum eines K-Vektorraums ist stets ein Untervektorraum über demselben Körper. \\
-\\
-Lemma 4.5\\
-Sei V ein K -Vektorraum und sei $(U_i )_{i \in I}$ eine Familie von linearen Unterräumen von V. Dann ist U =$\cap_i U_i \subseteq V$ ebenfalls ein linearer Unterraum. \\
-\\
-Lemma 4.6\\
-Sei V ein K-Vektorraum und A $\subseteq$ V eine Teilmenge. Dann ist die Menge $\langle A \rangle := \big\{ \sum\nolimits_{i=0}^{n} \alpha_i a_i | n \in \mathbb{N}_0, \alpha_i \in K, a_i \in A \big\} \subseteq V$.
-ein linearer Unterraum (der von A erzeugte lineare Unterraum). Weiter ist $\langle A \rangle = \cap U$, wobei der Schnitt über alle linearen Unterräume U von V mit A $\subseteq$ U zu erstrecken ist. Also ist $\langle A \rangle$ der kleinste lineare Unterraum, der die Teilmenge A enthält.\\
-\\
-Definition 4.7\\
-Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein Erzeugendensystem von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
+\item $\sum\nolimits_{i=0}^{n} \alpha_i a_i + \sum\nolimits_{i=0}^{n} \beta_i a_i = \sum\nolimits_{i=0}^{n} (\alpha_i + \beta_i) a_i$
+\end{enumerate}
+\item Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum} oder K-linearer Unterraum von V, falls gilt:
+\begin{enumerate}
+\item $\emptyset$ $\neq$ U,
+\item a, b $\in$ U $\Rightarrow$ a + b $\in$ U,
+\item $\alpha$ $\in$ K, a $\in$ U $\Rightarrow$ $\alpha$ $\cdot$ a $\in$ U (insbesondere: a $\in$ U $\Rightarrow$ -a $\in$ U ).
+\end{enumerate}
+\item Lemma: Sei V ein K -Vektorraum und sei $(U_i )_{i \in I}$ eine Familie von linearen Unterräumen von V. Dann ist U =$\cap_i U_i \subseteq V$ ebenfalls ein linearer Unterraum.
+\item Lemma: Sei V ein K-Vektorraum und A $\subseteq$ V eine Teilmenge. Dann ist die Menge $\langle A \rangle := \big\{ \sum\nolimits_{i=0}^{n} \alpha_i a_i | n \in \mathbb{N}_0, \alpha_i \in K, a_i \in A \big\} \subseteq V$ ein linearer Unterraum (der von A erzeugte lineare Unterraum). Weiter ist $\langle A \rangle = \cap U$, wobei der Schnitt über alle linearen Unterräume U von V mit A $\subseteq$ U zu erstrecken ist. Also ist $\langle A \rangle$ der kleinste lineare Unterraum, der die Teilmenge A enthält.
+\item Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
 \begin{center}
 $a = \sum\nolimits_{i=1}^{n}\alpha_i a_i, \alpha_i \in K, a_i \in A$
 \end{center}
-besitzt. Der Vektorraum K ist endlich erzeugt (über K), falls V eine endliches Erzeugendensystem A = $\{a_1, …, a_n\}$ besitzt.\\
-\\
-NB\\
-Ist $(a_i)_{i \in I}$ eine Familie von Elementen von V , so definiert man analog den von den Elementen $a_i$ erzeugten linearen Unterraum $\langle a_i | i \in I \rangle \subseteq V$ als den von der Menge A = $\{a_i | i \in I\}$ erzeugten Unterraum. Klar ist 
+besitzt. Der Vektorraum K ist endlich erzeugt (über K), falls V eine endliches Erzeugendensystem A = $\{a_1, …, a_n\}$ besitzt.
+\item NB: Ist $(a_i)_{i \in I}$ eine Familie von Elementen von V , so definiert man analog den von den Elementen $a_i$ erzeugten linearen Unterraum $\langle a_i | i \in I \rangle \subseteq V$ als den von der Menge A = $\{a_i | i \in I\}$ erzeugten Unterraum. Klar ist 
 damit:
-\begin{compactitem}
+\begin{enumerate}
 \item $\langle \emptyset \rangle = \{0\}$,
 \item $A \subseteq \langle A \rangle$ für jede Teilmenge A $\subseteq$ V, 
 \item $U = \langle U \rangle$ für jeden linearen Unterraum U $\subseteq$ V, 
 \item Sind A, B $\subseteq$ V Teilmengen, so gilt\\ 
 A $\subseteq$ B $\Rightarrow$ $\langle A \rangle \subset \langle B \rangle$, \hspace*{3mm}
-A $\subseteq$ $\langle B \rangle$ $\Rightarrow$ $\langle A \rangle \subseteq \langle B \rangle$.\\
-\end{compactitem} 
-Definition 4.10\\
-Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist linear unabhängig (die $a_i$ sind linear unabhängig), falls für jede endliche Teilmenge J $\subseteq$ I gilt
+A $\subseteq$ $\langle B \rangle$ $\Rightarrow$ $\langle A \rangle \subseteq \langle B \rangle$.
+\end{enumerate} 
+\item Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}, falls für jede endliche Teilmenge J $\subseteq$ I gilt
 \begin{center}
 $\sum\nolimits_{j \in J} \alpha_j a_j = 0 \Rightarrow \alpha_j = 0$ für alle j $\in$ J.
 \end{center}
-Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.\\ 
-\\
-Theorem 4.13 (”Basisergänzungssatz”)\\
-Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$ . Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.\\
-\\
-Lemma 4.14 (”Austauschlemma”)\\
-Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.\\
-\\
-Theorem 4.15 (”Austauschsatz von Steinitz”)\\
-Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V. \\
-%%%%
+Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
+\item \textbf{”Basisergänzungssatz”}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.
+\item \textbf{”Austauschlemma”}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.
+\item \textbf{”Austauschsatz von Steinitz”}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
+\end{itemize}
+
 \section{Lineare Abbildungen und Faktorräume}
-Wir wollen K-Vektorräume mittels Abbildungen vergleichen. Ein Vektorraum ist eine Menge, zusammen mit einer ‘algebraischen’ Struktur (‘Addition’ und ’Skalarmultiplikation’), und wir verlangen, dass Abbildungen zwischen Vektorräumen diese Strukturen erhalten.\\ 
-Abstrakt sollte eine strukturerhaltende Abbildung die folgende Eigenschaft haben: Ist M eine Menge mit einer Verknüpfung $*_M$ und N eine Menge mit einer Verknüpfung $*_N$, so ist eine Abbildung von Mengen f : M $\to$ N mit diesen Verknüpfungen verträglich, falls gilt
-\begin{center}
-$f (m *_M m') = f (m) *_N f(m'), m,m' \in M,$
-\end{center}
-d.h. es ist egal, ob man in M verknüpft und dann abbildet oder zuerst abbildet und dann in N verknüpft. Die strukturerhaltenden Abbildungen werden Homomorphismen genannt. 
-Zum Beispiel: Sind G, H Gruppen, so ist ein Gruppenhomomorphismus eine Abbildung f : G $\to$ H, so dass für alle $g,g' \in G$ gilt:
-\begin{center}
-$f (g \cdot g') = f(g) \cdot f(g')$.
-\end{center}
-Sind K, L Körper, so ist ein Körperhomomorphismus eine Abbildung $f : K \to L$, so dass für $k, k' \in K$ die folgenden Formeln gelten:
-\begin{center}
-$f(k + k') = f(k) + f(k')$,\\ 
-$f(k \cdot k') = f(k) \cdot f(k')$.
-\end{center}
-Mittels strukturerhaltender Abbildung ergibt sich ein evidenter Begriff von ’gleichwertigen’ oder ‘isomorphen’ algebraischen Strukturen:\\ 
-gibt es eine bijektive Abbildung (die beiden Mengen haben ‘gleich viele’ Elemente) die strukturerhaltend ist (es ist egal, wo man verknüpft), so sind die Strukturen isomorph (aber nicht unbedingt identisch).\\
-Wir betrachten strukturerhaltende Abbildungen von Vektorräume.\\
-\\
-Definition 5.1\\
-Sei K ein Körper und seien V,W K-Vektorräume.
+\begin{itemize}
+\item Sei K ein Körper und seien V,W K-Vektorräume.
 \begin{compactenum}
-\item[(1)] Eine Abbildung f : V $\to$ W heißt linear (oder Homomorphismus), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
-\begin{center}
-$f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.
-\end{center}
+\item Eine Abbildung f : V $\to$ W heißt linear (oder Homomorphismus), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
+$f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.\\
 Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die Endomorphismen von V.
-\item[(2)] Ist f $\in$ Hom$_K$(V,W), so definiere Kern und Bild von f als
+\item Ist f $\in$ Hom$_K$(V,W), so definiere Kern und Bild von f als
 \begin{center}
 Bild(f) = $\{ f (a) | a \in V\}$,\\
 Kern(f) = $\{ a \in V | f(a) = 0\}$.
 \end{center}
 Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
-\item[(3)] Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f Epimorphismus (bzw. Monomorphismus). Ist f bijektiv, so ist f ein Isomorphismus. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W isomorph,V $\cong$ W.
+\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f Epimorphismus (bzw. Monomorphismus). Ist f bijektiv, so ist f ein Isomorphismus. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W isomorph,V $\cong$ W.
 \end{compactenum}
-Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).\\
-\\
-Lemma 5.2\\
-Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).\\
-(a) Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.\\
-(b) f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.\\
-\\
-Lemma 5.4\\
-Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
+Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
+\item Lemma: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
+\begin{enumerate}
+\item Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.
+\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.
+\end{enumerate}
+\item Lemma: Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
 \begin{compactenum}
-\item[(a)] Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
-\item[(b)]Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit:
-\begin{center}
-$f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
-\end{center}
+\item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
+\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
 \end{compactenum}
-Theorem 5.5\\
-Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. Dann sind folgende Aussagen äquivalent:\\
-(a) dim$_K$W = n, \\
-(b) Es gibt einen Isomorphismus f : V $\to$ W, d.h. V $\cong$ W.\\
-\\
-NB\\
-Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.\\
-\\
-Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild Bild(f) sind die in W ‘sichtbaren’ Elemente, der Kern Kern(f) die Elemente in V , die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein.\\
+\item Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. Dann sind folgende Aussagen äquivalent:
+\begin{enumerate}
+\item dim$_K$W = n,
+\item Es gibt einen Isomorphismus f : V $\to$ W, d.h. V $\cong$ W.
+\end{enumerate}
+\item NB:Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
+\item Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild Bild(f) sind die in W ‘sichtbaren’ Elemente, der Kern Kern(f) die Elemente in V, die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein.\\
 Die Idee hier, das Bild(f) mit einem Quotienten- oder Faktorraum V/Kern(f) zu identifizieren. Da jeder lineare Unterraum U $\subseteq$ V insbesondere eine abelsche Untergruppe ist, definiert nach Lemma 2.6
 \begin{center}
 $a_1 \sim a_2 \Leftrightarrow a_1 - a_2 \in U$
@@ -223,26 +168,22 @@ ist eine abelsche Gruppe mittels $(a_1 + U) + (a_2 + U) = (a_1 + a_2) + U$ (wohl
 \begin{center}
 $q(a_1)+q(a_2)=(a_1 +U)+(a_2 +U)=(a_1 +a_2)+U =q(a_1 +a_2)$.
 \end{center}
-Wir zeigen, dass die Skalarmultiplikation auf V eine Skalarmultiplikation auf V/U induziert, so dass V/U ebenfalls ein K-Vektorraum und q : V $\to$ V/U eine lineare Abbildung ist.\\
-\\
-Lemma 5.7\\
-Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
+Wir zeigen, dass die Skalarmultiplikation auf V eine Skalarmultiplikation auf V/U induziert, so dass V/U ebenfalls ein K-Vektorraum und q : V $\to$ V/U eine lineare Abbildung ist.
+\item Lemma: Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
 \begin{center}
 $(a_1 + U)+(a_2 + U)=(a_1 +a_2)+U$ und $\alpha(a+U)=\alpha a+U$.
 \end{center} 
-Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.\\
-\\
-Lemma 5.8\\
-Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
+Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.
+\begin{itemize}
+\item Lemma 5.8: Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
 \begin{compactenum}
-\item[(a)] Ist $\{w_i + U | i \in I\}$ eine Basis von W/U und $\{v_j + W | j \in J\}$ eine Basis von V/W, so ist $\{w_i +U, v_j +U | i \in I, j \in J\}$ eine Basis von V/U.
-\item[(b)] Ist dimV/U = n < $\infty$, so ist dimV/U = dimV/W + dimW/U.
-\item[(c)] Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.\\
+\item Ist $\{w_i + U | i \in I\}$ eine Basis von W/U und $\{v_j + W | j \in J\}$ eine Basis von V/W, so ist $\{w_i +U, v_j +U | i \in I, j \in J\}$ eine Basis von V/U.
+\item Ist dimV/U = n < $\infty$, so ist dimV/U = dimV/W + dimW/U.
+\item Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.
 \end{compactenum}
-Theorem 5.9 (Homomorphiesatz)\\
-Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
+\item Theorem (Homomorphiesatz): Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
-\item[(a)] Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert\\
+\item Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert\\
 \\
 \\
 \\
@@ -250,25 +191,26 @@ Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \\
 \\
 Hierbei ist q: V $\to$ V/Kern(f) die kanonische Projektion definiert durch q(a) := a + Kern(f).
-\item[(b)] Ist dim$_K$ V = n < $\infty$, so gilt die Formel: \\
-dimV = dimKern(f) + dimBild(f).\\
+\item Ist dim$_K$ V = n < $\infty$, so gilt die Formel: \\
+dimV = dimKern(f) + dimBild(f).
 \end{compactenum}
-Lemma 5.10\\
-Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ Hom$_K$(V, W) sind gleichwertig: \\
-(a) f ist ein Isomorphismus, \\
-(b) f ist ein Monomorphismus,\\ 
-(c) f ist ein Epimorphismus. \\
-%%%%
+\item Lemma: Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ Hom$_K$(V, W) sind gleichwertig:
+\begin{enumerate}
+\item f ist ein Isomorphismus,
+\item f ist ein Monomorphismus, 
+\item f ist ein Epimorphismus.
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+
 \section{Lineare Abbildungen und Matrizen}
-Wir studieren lineare Abbildungen und zeigen dazu zunächst, dass die Menge der K-linearen Abbildungen Hom$_K$(V,W) selbst ein K- Vektorraum ist. Damit ist jede solche lineare Abbildung V $\to$ W eine K-Linearkombination von Basiselementen des K-Vektorraums Hom$_K$(V,W).\\
-\\
-Lemma 6.1\\
-Seien V, W K-Vektorräume.
+\begin{itemize}
+\item Lemma: Seien V, W K-Vektorräume.
 \begin{compactenum}
-\item[(a)] Für $f, g \in Hom_K(V, W), \alpha \in K$ und $a \in V$ setze\\
+\item Für $f, g \in Hom_K(V, W), \alpha \in K$ und $a \in V$ setze\\
 (f + g)(a) = f(a) + g(a) und $(\alpha f)(a) = \alpha f(a)$.\\
 Mittels dieser Operationen ist Hom$_K$(V, W) ein K-Vektorraum.
-\item[(b)] Seien $\{a_j | j \in J\} \subseteq V$ und $\{b_i | i \in I\} \subseteq W$ Basen. Für $j \in J$ und $i \in I$ definiere $e_{ij} \in Hom_K(V, W)$ durch
+\item Seien $\{a_j | j \in J\} \subseteq V$ und $\{b_i | i \in I\} \subseteq W$ Basen. Für $j \in J$ und $i \in I$ definiere $e_{ij} \in Hom_K(V, W)$ durch
 \begin{center}
 $e_{ij}(a_k) =
 \begin{cases}
@@ -276,32 +218,29 @@ $e_{ij}(a_k) =
 b_i~~ j = k\\
 \end{cases}$
 \end{center}
-Dann ist $\{e_{ij} | i \in I, j \in J\}$ eine linear unabhängige Teilmenge von Hom$_K$(V, W). Falls V und W endlich erzeugt sind, so ist $\{e_{ij} | i \in I, j \in J\}$ eine Basis von Hom$_K$(V, W). Insbesondere  gilt dann \\dim$_K$Hom(V, W) = dim$_K$V $\cdot$ dim$_K$W.\\
+Dann ist $\{e_{ij} | i \in I, j \in J\}$ eine linear unabhängige Teilmenge von Hom$_K$(V, W). Falls V und W endlich erzeugt sind, so ist $\{e_{ij} | i \in I, j \in J\}$ eine Basis von Hom$_K$(V, W). Insbesondere  gilt dann \\dim$_K$Hom(V, W) = dim$_K$V $\cdot$ dim$_K$W.
 \end{compactenum}
-Lemma 6.2\\
-Seien V$_i$ K-Vektorräume, i = 1, 2, 3, 4.
+\item Lemma: Seien V$_i$ K-Vektorräume, i = 1, 2, 3, 4.
 \begin{compactenum}
-\item [(a)]Sind $f \in Hom_K (V_2, V_3)$ und $g \in Hom_K (V_1, V_2)$ so definiert $(fg)(a_1) = f(g(a_1)), a_1 \in V_1$
+\item Sind $f \in Hom_K (V_2, V_3)$ und $g \in Hom_K (V_1, V_2)$ so definiert $(fg)(a_1) = f(g(a_1)), a_1 \in V_1$
 eine lineare Abbildung $fg \in Hom_K(V_1,V_3)$.
-\item[(b)] Ist $f \in Hom_K (V_2, V_3)$ und sind $g_1, g_2 \in Hom_K (V_1, V_2)$, so gilt\\
+\item Ist $f \in Hom_K (V_2, V_3)$ und sind $g_1, g_2 \in Hom_K (V_1, V_2)$, so gilt\\
 $f(g_1 +g_2)=fg_1 +fg_2$.
-\item[(c)] Sind $f_1, f_2 \in Hom_K (V_2, V_3)$ und $g \in Hom_ (V_1, V_2)$, so gilt\\
+\item Sind $f_1, f_2 \in Hom_K (V_2, V_3)$ und $g \in Hom_ (V_1, V_2)$, so gilt\\
 $(f_1 + f_2)g = f_1g + f_2g$.
-\item[(d)] Für $f \in Hom_K(V_3,V_4)$, $g \in Hom_K(V_2,V_3)$ und $h \in Hom_K(V_1,V_2)$, so gilt\\
-$f(gh) = (fg)h$.\\
+\item Für $f \in Hom_K(V_3,V_4)$, $g \in Hom_K(V_2,V_3)$ und $h \in Hom_K(V_1,V_2)$, so gilt: $f(gh) = (fg)h$.
 \end{compactenum}
-Lemma 6.3\\
-Seien $V_i$ K-Vektorräume, i = 1, 2, 3.
+\item Lemma: Seien $V_i$ K-Vektorräume, i = 1, 2, 3.
 \begin{compactenum}
-\item[(a)] Sei $f \in Hom_K(V_1,V_2)$ ein Isomorphismus. Sei $g = f^{-1}$ die inverse Abbildung. Dann ist g linear, d.h. $g \in Hom_K(V_2,V_1)$.
-\item[(b)] Sind $f \in Hom_K(V_1,V_2)$ und $g \in Hom_K(V_2,V_3)$ Isomorphismen, so ist auch $gf \in Hom_K(V_1,V_3)$ ein Isomorphismus; es gilt: $(gf)^{-1} = f^{-1}g^{-1}$.
+\item Sei $f \in Hom_K(V_1,V_2)$ ein Isomorphismus. Sei $g = f^{-1}$ die inverse Abbildung. Dann ist g linear, d.h. $g \in Hom_K(V_2,V_1)$.
+\item Sind $f \in Hom_K(V_1,V_2)$ und $g \in Hom_K(V_2,V_3)$ Isomorphismen, so ist auch $gf \in Hom_K(V_1,V_3)$ ein Isomorphismus; es gilt: $(gf)^{-1} = f^{-1}g^{-1}$.
 \end{compactenum}
-Eine K- Algebra ist ”fast ein Köper”, aber
+Eine \textbf{K- Algebra} ist ”fast ein Köper”, aber
 \begin{compactitem}
 \item die Multiplikation ist im Allgemeinen nicht kommutativ.
-\item nicht jedes Element ungleich Null ist invertierbar bezüglich der Multiplikation.\\
+\item nicht jedes Element ungleich Null ist invertierbar bezüglich der Multiplikation.
 \end{compactitem}
-Das Kroneckersymbol $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k. Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden nach Lemma 6.1(b) die Endomorphismen $e_{ij} \in End_K (V)$ mit
+\item Das Kroneckersymbol $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k. Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden die Endomorphismen $e_{ij} \in End_K (V)$ mit
 \begin{center}
 $e_{ij}(a_k) = \delta_{jk}a_i$
 \end{center}
@@ -309,328 +248,264 @@ eine Basis $\{e_{11}, ..., e_{nn}\}$ von $End_K (V)$; es ist $dim_K End_K (V) = 
 \begin{center}
 $e_{ij}e_{kl} = \delta_{jk}e_{il}$ und $\sum\nolimits_{i=1}^{n}e_{ii} = id_V$.
 \end{center}
-Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Die obige Formel liefert $e_{12}e_{22} = \delta_{22}e_{12} = e_{12} \neq 0$ und $e_{22}e_{12} = \delta_{21}e_{22} = 0$, d.h. $e_{12}e_{22} \neq e_{22}e_{12}$.\\
-\\
-Definition 6.5\\
-Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f regulär (auch ‘invertierbar’ bzw. ‘Automorphismus’); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$ (vgl. Lemma 6.3); diese Gruppe bezeichnen wir mit GL(V).\\
-\\
-Beispiel 6.6\\
-Sei K ein endlicher Körper mit p Elementen und sei V ein K-Vektorraum der Dimension n. Für zwei (beliebige) endlich-dimensionale K-Vektorräume V,W und $f \in Hom_K(V,W)$ gilt: \\
+Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Die obige Formel liefert $e_{12}e_{22} = \delta_{22}e_{12} = e_{12} \neq 0$ und $e_{22}e_{12} = \delta_{21}e_{22} = 0$, d.h. $e_{12}e_{22} \neq e_{22}e_{12}$.
+\item Definition: Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär} (auch ‘invertierbar’ bzw. ‘Automorphismus’); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$ (vgl. Lemma 6.3); diese Gruppe bezeichnen wir mit GL(V).
+\item Beispiel: Sei K ein endlicher Körper mit p Elementen und sei V ein K-Vektorraum der Dimension n. Für zwei (beliebige) endlich-dimensionale K-Vektorräume V,W und $f \in Hom_K(V,W)$ gilt: \\
 f ist ein Isomorphismus genau dann, wenn f jede Basis von V auf eine Basis von W abbildet. Also ist die Anzahl der Elemente von GL(V) genau die Anzahl der verschiedenen Basen von V , wobei auch die Reihenfolge der Basiselemente berücksichtigt werden muss. Jede Basis $\{a_1, …, a_n\}$ von V entsteht durch Wahl der $a_i$ wie folgt:\\
 $0 \neq a_1 \in V \hspace*{23mm} p^n-1~Möglichkeiten$,\\
 $a_1 \in V \textbackslash \langle a_1 \rangle \hspace*{21mm} p^n - p~Möglichkeiten$,\\
 $\cdots \hspace*{36mm} \cdots$\\
 $a_n \in V \textbackslash \langle a_1, …, a_{n-1} \rangle \hspace*{4mm} p^n - p^{n-1}~Möglichkeiten$.\\
-Damit ist $|GL(V )| = (p^n - 1)(p^n - p) \cdots (p^n - p^{n-1})$.\\
-\\
-Definition 6.7\\
-Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der Rang r(f) von f definiert als $r(f) = dim_K Bild(f)$.
+Damit ist $|GL(V )| = (p^n - 1)(p^n - p) \cdots (p^n - p^{n-1})$.
+\item Definition: Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der \textbf{Rang} r(f) von f definiert als $r(f) = dim_K Bild(f)$.
 \begin{compactitem}
 \item Wegen Bild(f) $\subseteq$ W ist stets r(f) $\le$ $dim_K W$.
 \item Aus dem Homomorphiesatz folgt:\\
 $r(f) = dim_K Bild(f) = dim_K V - dim_K Kern(f)$\\
 \end{compactitem}
-Überblick:\\
+\item Überblick:\\
 Monomorphismus \hspace*{3mm} f: V $\to$ W \hspace*{3mm} linear, injektiv\\
 Epimorphismus \hspace*{6.5mm} f: V $\to$ W \hspace*{3mm} linear, surjektiv\\
 Isomorphismus \hspace*{7.5mm} f: V $\to$ W \hspace*{3mm} linear, bijektiv\\
 Endomorphismus \hspace*{3.5mm} f: V $\to$ V \hspace*{4mm} linear\\
-Automorphismus \hspace*{4mm} f: V $\to$ V \hspace*{4mm} linear, bijektiv\\
-\\
-Proposition 6.11\\
-Seien U,V,W K-Vektorräume mit Basen X = $\{u_1,...,u_k\}$,Y = $\{v_1,...,v_n\}$ und Z = $\{w_1,...,w_m\}$. Dann gilt:
+Automorphismus \hspace*{4mm} f: V $\to$ V \hspace*{4mm} linear, bijektiv
+\item Proposition: Seien U,V,W K-Vektorräume mit Basen X = $\{u_1,...,u_k\}$,Y = $\{v_1,...,v_n\}$ und Z = $\{w_1,...,w_m\}$. Dann gilt:
 \begin{compactenum}
-\item[(a)] Die Abbildung $\kappa: Hom_K(U,V) \to K^{n \times k}, f \mapsto A_{f,X,Y}$ ist ein Isomorphismus.
-\item[(b)] Seien $f \in Hom_K(U,V)$ und $g \in Hom_K(V,W)$. Sind $A_{f,X,Y} = (\alpha_{jl}) \in K^{n \times k}$ und $A_{g,X,Y} = (\beta_{ij}) \in K^{m \times n}$, so ist $A_{gf,X,Z} = (\gamma_{il}) \in K^{m \times k}$ mit
-$\gamma_{il} = \sum\nolimits_{j=1}{n} \beta_{ij} \alpha_{jl}$.\\
+\item Die Abbildung $\kappa: Hom_K(U,V) \to K^{n \times k}, f \mapsto A_{f,X,Y}$ ist ein Isomorphismus.
+\item Seien $f \in Hom_K(U,V)$ und $g \in Hom_K(V,W)$. Sind $A_{f,X,Y} = (\alpha_{jl}) \in K^{n \times k}$ und $A_{g,X,Y} = (\beta_{ij}) \in K^{m \times n}$, so ist $A_{gf,X,Z} = (\gamma_{il}) \in K^{m \times k}$ mit
+$\gamma_{il} = \sum\nolimits_{j=1}^{n} \beta_{ij} \alpha_{jl}$.
 \end{compactenum}
-Lemma 6.16\\
-Sei V ein K-Vektorraum der Dimension n < $\infty$ und sei $f \in End_K (V)$. Dann sind gleichwertig:\\
-(a) f ist Automorphismus,\\
-(b) Für jede Basis X von V ist $A_{f,X}$ invertierbar; weiter gilt $A_{f^{-1},X} = A^{-1}_{f,X}$,\\
-(c) Für wenigstens eine Basis X von V ist $A_{f,X}$ invertierbar.\\
-\\
-Satz 6.17\\
-Sei f: V $\to$ W linear, V, W e-e. Seien X = $\{v_1, …, v_n\}$ und X' = $\{v'_1, …, v'_n\}$ Basen von V und Y = $\{w_1, …, w_m\}$ und Y' = $\{w'_1, …, w'_m\}$ Basen von W. Sei $v'_j = \sum\nolimits_{i=1}^{n} \beta_{ij} v_i$ und $w'_l = \sum\nolimits_{k=1}^{m} \gamma_{kl} w_k$. Sei B = $(\beta_{ij}) \in K^{n \times n}$, C = $(\gamma_{kl}) \in K^{m \times m}$. Dann gilt:
+\item Lemma: Sei V ein K-Vektorraum der Dimension n < $\infty$ und sei $f \in End_K (V)$. Dann sind gleichwertig:
+\begin{enumerate}
+\item f ist Automorphismus,
+\item Für jede Basis X von V ist $A_{f,X}$ invertierbar; weiter gilt $A_{f^{-1},X} = A^{-1}_{f,X}$,
+\item Für wenigstens eine Basis X von V ist $A_{f,X}$ invertierbar.
+\end{enumerate}
+\item Satz: Sei f: V $\to$ W linear, V, W e-e. Seien X = $\{v_1, …, v_n\}$ und X' = $\{v'_1, …, v'_n\}$ Basen von V und Y = $\{w_1, …, w_m\}$ und Y' = $\{w'_1, …, w'_m\}$ Basen von W. Sei $v'_j = \sum\nolimits_{i=1}^{n} \beta_{ij} v_i$ und $w'_l = \sum\nolimits_{k=1}^{m} \gamma_{kl} w_k$. Sei B = $(\beta_{ij}) \in K^{n \times n}$, C = $(\gamma_{kl}) \in K^{m \times m}$. Dann gilt:
 \begin{compactenum}
 \item[(a)] $A_{f, X', Y'} = C^{-1} A_{f, X, Y} B$
 \item[(b)] Sei V = W und f: V $\to$ V, seien X und X' zwei verschiedene Basen von V. Sei $v'_j = \sum\nolimits_{i=1}^{n} \alpha_{ij} v_i$.\\
-Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$\\
+Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
 \end{compactenum}
+\end{itemize}
+
 \section{Elementare Umformungen}
 Sei $A \in K^{m \times n}$ mit r(A) = r. Dann gibt es invertierbare Matrizen $C \in K^{m \times m}$ und $B \in K^{n \times n}$, so dass gilt: CAB = $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix} \in K^{m \times n}$\\
 Es lassen sich Elementarmatrizen dazu verwenden, die obigen Matrizen C und B explizit zu berechnen. Das Rechenverfahren zur Bestimmung von C und B basiert auf der folgenden Beobachtung: Jede Matrix $A \in K^{m \times n}$ lässt sich durch geeignete Zeilenumformungen (d.h. Linksmultiplikation mit Elementarmatrizen) und Spaltenumformungen (d.h. Rechtsmultiplikation mit Elementarmatrizen) in eine Matrix der Form $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$ überführen.\\
 Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, so dass $T_k \cdots T_1AS_1 \cdots S_l = \begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$.\\
 Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.\\ 
-\newpage
-%%%%%
+
 \section{Lineare Gleichungen}
 (L)  Ax = b\\
 Die Matrix A = $(\alpha_{ij})$ definiert eine lineare Abbildung $f = f_A: K^n \to K^m, x \mapsto Ax$. Sei für $b \in K^m$ das Urbild von b unter der Abbildung f mit f$^{-1}$(b) bezeichnet. Damit lässt sich das System (L) wie folgt interpretieren: Ist $b \in K^m$ fest gewählt, so gilt für das Urbild von b
 \begin{center}
 $f^{-1}(b) = \{x \in K^n | Ax = b\}$,
 \end{center}
-d.h. die Elemente von $f^{-1}(b)$ sind genau die Lösung von (L).\\ 
-\\
-Lemma 8.2\\
-Sei $A \in K^{m \times n}$ eine Matrix.
+d.h. die Elemente von $f^{-1}(b)$ sind genau die Lösung von (L).
+\begin{itemize}
+\item Lemma: Sei $A \in K^{m \times n}$ eine Matrix.
 \begin{compactenum}
-\item[(a)] Die Lösungen $L_0$ des homogenen Systems Ax = 0 bilden einen linearen Unterraum des $K^n$ der Dimension n - r(A).
-\item[(b)] Ist $x_0$ eine Lösung des inhomogenen Systems Ax = b, so ist $x_0 + L_0 = \{x_0 +y | y \in L_0\}$ die Menge aller Lösungen von Ax = b.\\
+\item Die Lösungen $L_0$ des homogenen Systems Ax = 0 bilden einen linearen Unterraum des $K^n$ der Dimension n - r(A).
+\item Ist $x_0$ eine Lösung des inhomogenen Systems Ax = b, so ist $x_0 + L_0 = \{x_0 +y | y \in L_0\}$ die Menge aller Lösungen von Ax = b
 \end{compactenum}
-Proposition 8.4 (Existenz)\\
-Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.\\
-\\
-NB\\
-Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.\\
-\\
-Proposition 8.5 (Eindeutigkeit)\\
-Sei $A \in K^{m \times n},b \in K^m$ und das lineare Gleichungssystem (L) Ax = b habe eine Lösung. Dann hat (L) genau dann eine eindeutige Lösung, wenn Ax = 0 nur die triviale Lösung x = 0 hat; dies gilt genau dann, wenn \\r(A) = n ist.\\
-\\
-NB\\
-Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. Nach Proposition 8.4 ist dann r(A) = m. Sind diese Lösungen eindeutig, so folgt mit Proposition 8.5 r(A) = n. Also ist in diesem Fall A vom Typ (n, n) und wegen r(A) = n invertierbar. Ist $A^{-1}$ die inverse Matrix, so sind die eindeutigen Lösungen von Ax = b genau die \\x = A$^{-1}$b.\\
-\\
-Die zulässige Umformungen von (L) sind:\\
-(a) Vertauschen der Zeilen von B (Permutation der Gleichungen), \\
-(b) Zeilenübergänge in B der Form $z_i \to z_i+\alpha z_j, i \neq j,\alpha \in K$.\\
-(c) Vertauschen der Spalten von A (Permutation der $x_1, …, x_n$).\\
-\\
-\newpage
+\item Proposition (\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\item NB: Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.
+\item Proposition (\textbf{Eindeutigkeit}): Sei $A \in K^{m \times n},b \in K^m$ und das lineare Gleichungssystem (L) Ax = b habe eine Lösung. Dann hat (L) genau dann eine eindeutige Lösung, wenn Ax = 0 nur die triviale Lösung x = 0 hat; dies gilt genau dann, wenn r(A) = n ist.
+\item NB: Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. Nach Proposition 8.4 ist dann r(A) = m. Sind diese Lösungen eindeutig, so folgt mit Proposition 8.5 r(A) = n. Also ist in diesem Fall A vom Typ (n, n) und wegen r(A) = n invertierbar. Ist $A^{-1}$ die inverse Matrix, so sind die eindeutigen Lösungen von Ax = b genau die x = A$^{-1}$b.
+\item Die zulässige Umformungen von (L) sind:
+\begin{enumerate}
+\item Vertauschen der Zeilen von B (Permutation der Gleichungen),
+\item Zeilenübergänge in B der Form $z_i \to z_i+\alpha z_j, i \neq j,\alpha \in K$.
+\item Vertauschen der Spalten von A (Permutation der $x_1, …, x_n$).
+\end{enumerate}
+\end{itemize}
+
 \section{Gruppen II}
-Definition 9.1\\
-Seien G und H (multiplikativ geschriebene) Gruppen.
+\begin{itemize}
+\item Definition: Seien G und H (multiplikativ geschriebene) Gruppen.
 \begin{compactenum}
-\item[(1)] Ein Homomorphismus (oder Gruppenhomomorphismus) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
+\item[(1)] Ein \textbf{Homomorphismus} (oder Gruppenhomomorphismus) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
 $f(g_1g_2) = f(g_1) f(g_2)$.
 \item[(2)] Ist f: G $\to$ H ein Homomorphismus, so setze\\
 $Bild(f) = \{f(g) | g \in G\}$,\\
 $ker(f) = \{g \in G | f(g) = 1\}$.
-\item[(3)] Ein Homomorphismus f: G $\to$ H heißt Epimorphismus (bzw. Monomorphismus, Isomorphismus) falls f surjektiv (bzw. injektiv, bijektiv) ist. Gibt es einen Isomorphismus f: G $\to$ H, so sind G und H isomorph, G $\cong$ H. Die Isomorphismen G $\to$ G sind die Automorphismen von G.
 \end{compactenum}
-\begin{compactitem}
-\item Ein Homomorphismus f: G $\to$ H ist genau dann ein Monomorphismus, wenn ker(f) = {1} ist.
-\item Ein Homomorphismus f: G $\to$ H ist genau dann ein Isomorphismus,wenn es einen Homomorphismus \\g: H $\to$ G mit g $\circ$ f = id$_G$ und f $\circ$ g = id$_H$ gibt. In diesem Fall ist $g=f^{-1}$ die Inverse zu f.\\
-\end{compactitem}
-Definition 9.3\\
-Sei G eine Gruppe. Eine Untergruppe U $\le$ G ist ein Normalteiler (oder eine normale Untergruppe), U $\vartriangleleft$ G, falls gilt
+\item Definition: Sei G eine Gruppe. Eine Untergruppe U $\le$ G ist ein \textbf{Normalteiler} (oder eine normale Untergruppe), U $\vartriangleleft$ G, falls gilt
 \begin{center}
 $u \in U, g \in G \Rightarrow g^{-1}ug \in U$.
 \end{center}
 Ist U < G (d.h. U $\neq$ G), so schreibe U $\vartriangleleft$ G.\\
-Ist G abelsch, so folgt aus $g^{-1}ug = g^{-1}gu = 1u = u \in U$, dass jede Untergruppe ein Normalteiler ist.\\
-\\
-Lemma 9.5\\
-Sei f: G $\to$ H ein Homomorphismus. Dann gilt:\\
-(a) Bild(f) $\subseteq$ H ist eine Untergruppe,\\
-(b) ker(f) $\subseteq$ G ist ein Normalteiler.\\
-\\
-Lemma 9.6\\
-Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.\\
+Ist G abelsch, so folgt aus $g^{-1}ug = g^{-1}gu = 1u = u \in U$, dass jede Untergruppe ein Normalteiler ist.
+\item Lemma: Sei f: G $\to$ H ein Homomorphismus. Dann gilt:
+\begin{enumerate}
+\item Bild(f) $\subseteq$ H ist eine Untergruppe,
+\item ker(f) $\subseteq$ G ist ein Normalteiler.
+\end{enumerate}
+\item Lemma: Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.\\•
 (a) Die Menge G/N ist mittels der Verknüpfung $g_1N \cdot g_2N = g_1g_2N, g_1,g_2 \in G$ eine Gruppe mit neutralem \hspace*{5mm} Element N.\\
-(b) Die Abbildung $\pi$: G $\to$ G/N, g $\mapsto$ gN, ist ein Epimorphismus mit ker($\pi$) = N.\\
-\\
-Theorem 9.7 (Homomorphiesatz)\\
-Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und Bild(f) = Bild(h).\\
-\\
-Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für \\n $\ge$ 3 ist S$_n$ nicht abelsch.\\
-\\
-Lemma 9.10
+(b) Die Abbildung $\pi$: G $\to$ G/N, g $\mapsto$ gN, ist ein Epimorphismus mit ker($\pi$) = N.
+\item Theorem (\textbf{Homomorphiesatz}): Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und Bild(f) = Bild(h).
+\item Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.
+\item Lemma:
 \begin{compactenum}
-\item[(a)] Jede Permutation $\tau \in S_n$ hat eine Darstellung als ein Produkt von disjunkten Zyklen (nicht eindeutig).
-\item[(b)] Es gilt $(a_1, a_2, …, a_k) = (a_1, a_k)(a_1, a_{k-1}) \cdots (a_1, a_2)$; insbesondere lässt sich jede Permutation als ein Produkt von Transpositionen schreiben.\\
+\item Jede Permutation $\tau \in S_n$ hat eine Darstellung als ein Produkt von disjunkten Zyklen (nicht eindeutig).
+\item Es gilt $(a_1, a_2, …, a_k) = (a_1, a_k)(a_1, a_{k-1}) \cdots (a_1, a_2)$; insbesondere lässt sich jede Permutation als ein Produkt von Transpositionen schreiben.
 \end{compactenum}
-Theorem 9.11\\
-Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
+\item Theorem: Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
 \begin{compactenum}
-\item[(a)] Es gibt einen Epimorphismus $sgn: S_n \to \{-1,+1\}$ mit $sgn(\tau) = 1$ für alle Transpositonen $\tau \in S_n$.
-\item[(b)] Sei K ein Körper und $f: S_n \to K^\times$ ein Homomorphismus. Dann ist entweder f($\tau$) = 1 für alle $\tau \in S_n$, oder es ist char(k) $\neq$ 2 und f = sgn.
+\item Es gibt einen Epimorphismus $sgn: S_n \to \{-1,+1\}$ mit $sgn(\tau) = 1$ für alle Transpositonen $\tau \in S_n$.
+\item Sei K ein Körper und $f: S_n \to K^\times$ ein Homomorphismus. Dann ist entweder f($\tau$) = 1 für alle $\tau \in S_n$, oder es ist char(k) $\neq$ 2 und f = sgn.
 \end{compactenum}
 \begin{compactitem}
 \item Ist $\pi \in S_n$ und $\pi = \tau_1 \cdots \tau_k$ eine Zerlegung in Transpositionen, so ist nach (a) sgn ein Homomorphismus mit sgn($\pi$) = -1 ist, also ist sgn($\pi$) = (-1)$^k$.\\
 Die Zerlegung von $\pi$ in Transpositionen ist nicht eindeutig, aber für jede solche Zerlegung gilt, dass die Parität (gerade oder ungerade) der Anzahl der Faktoren eindeutig ist.
-\item Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt aus den obigen Überlegungen zusammen mit Lemma 9.10(b) $sgn(\pi) = (-1)^{m-l}$.\\
+\item Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt aus den obigen Überlegungen zusammen mit Lemma 9.10(b) $sgn(\pi) = (-1)^{m-l}$.
 \end{compactitem}
-Definition 9.12\\
-Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Gruppe auf n Ziffern.
+\item Definition: Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Gruppe auf n Ziffern.
 \begin{compactitem}
 \item Es ist $A_n \vartriangleleft S_n$ und $|S_n : A_n| = 2$.
-\item Für jedes $\pi \in S_n$ mit sgn($\pi$)= -1 ist $S_n = A_n \cup \pi A_n = A_n \cup A_n \pi$, wobei die Vereinigung jeweils disjunkt ist.\\
+\item Für jedes $\pi \in S_n$ mit sgn($\pi$)= -1 ist $S_n = A_n \cup \pi A_n = A_n \cup A_n \pi$, wobei die Vereinigung jeweils disjunkt ist.
 \end{compactitem}
-Beispiel 9.13\\
-Sei U < S$_n$ eine Untergruppe mit |S$_n$ : U| = 2. Dann ist U = A$_n$.\\
-\\
-Bemerkung 9.14\\
-Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler von S$_n$, und A$_n$ besitzt nur die trivialen Normalteiler \{1\} und A$_n$ (man sagt A$_n$ ist eine einfache Gruppe). Für n = 4 ist A$_4$ nicht-einfach.\\
-\\
+\item Beispiel: Sei U < S$_n$ eine Untergruppe mit |S$_n$ : U| = 2. Dann ist U = A$_n$.
+\item Bemerkung: Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler von S$_n$, und A$_n$ besitzt nur die trivialen Normalteiler \{1\} und A$_n$ (man sagt A$_n$ ist eine einfache Gruppe). Für n = 4 ist A$_4$ nicht-einfach.
+\end{itemize}
+
 \section{Determinanten}
-Nach Beispiel 6.15 lässt sich für eine Matrix A = ($\alpha_{ij}) \in K^{2 \times 2}$ aus den Koeffzienten $\alpha_{ij}$ bestimmen, ob A invertierbar ist, genauer A$^{-1}$ existiert $\Leftrightarrow$ d = $\alpha_{11}\alpha_{22} - \alpha_{12}\alpha_{21} \neq 0$\\
-Ist A invertierbar, so ist die inverse Matrix A$^{-1}$ durch die Formel $A^{-1} = \frac{1}{d} \begin{pmatrix} \alpha_{22} & -\alpha_{12} \\ -\alpha_{21} & \alpha_{11} \end{pmatrix}$ gegeben.\\
-Wir wollen nun die Determinante einer quadratischen Matrix definieren. Wir betrachten dabei (da wir das später noch benötigen werden) Matrizen A = ($\alpha_{ij}$), deren Einträge $\alpha_{ij}$ nicht nur Elemente eines Körpers, sondern allgemeiner Elemente eines kommutativen Rings sind. Ein kommutativer Ring ist dabei eine Menge mit zwei Verknüpfungen, die alle Bedingungen an einen Körper erfüllt, außer der Existenz eines inversen Elements bez. der Multiplikation. Genauer:\\
-\\
-Definition 10.1\\
-Ein Ring R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
+\begin{itemize}
+\item Definition: Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
 \begin{compactenum}
-\item[(1)] R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
-\item[(2)] Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
-\item[(3)] Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
+\item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
+\item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
+\item Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
 \end{compactenum}
 Ein Ring R ist kommutativ, falls zusätzlich gilt
 \begin{compactenum}
-\item[(4)] $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.\\
+\setcounter{enumi}{3}
+\item $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.
 \end{compactenum}
-Beispiele 10.2
+\item Beispiele:
 \begin{compactenum}
-\item[(a)] Jeder Körper ist insbesondere ein kommutativer Ring.
-\item[(b)] Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
-\item[(c)] Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
-\item[(d)] Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
-\item[(e)] Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.\\
+\item Jeder Körper ist insbesondere ein kommutativer Ring.
+\item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
+\item Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
+\item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
+\item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
 \end{compactenum}
-Definition 10.3\\
-Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die Determinante von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$\\
-\\
-Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.\\
-\\
-Lemma 10.5\\
-Sei $A \in R^{n \times n}$. Dann gilt:
+\item Definition: Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die Determinante von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$
+\item Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.
+\item Lemma: Sei $A \in R^{n \times n}$. Dann gilt:
 \begin{compactenum}
-\item[(a)] det(A) = det(A$^t$).
-\item[(b)] Für $r, r' \in R$ und $z_j,z'_j \in R^n$ gilt die Formel $f_{det}(...,rz_j + r'z'_j,...) = r f_{det}(...,z_j,...) + r' f_{det}(...,z'_j,...)$ (d.h. für R = K ein Körper, und $z_i$ mit i $\neq$ j fest ist die Abbildung $z \mapsto f_{det}(z_1,… , z_{j-1}, z, z_{j+1},… , z_n)$ linear). 
-\item[(c)] Ist $z_i = z_j$ für ein i $\neq$ j, so ist $f_{det}(z_1, ..., z_n) = 0$.
-\item[(d)] Die zu (b) und (c) analogen Aussagen gelten für $g_{det}(s_1, …, s_n)$.\\
+\item det(A) = det(A$^t$).
+\item Für $r, r' \in R$ und $z_j,z'_j \in R^n$ gilt die Formel $f_{det}(...,rz_j + r'z'_j,...) = r f_{det}(...,z_j,...) + r' f_{det}(...,z'_j,...)$ (d.h. für R = K ein Körper, und $z_i$ mit i $\neq$ j fest ist die Abbildung $z \mapsto f_{det}(z_1,… , z_{j-1}, z, z_{j+1},… , z_n)$ linear). 
+\item Ist $z_i = z_j$ für ein i $\neq$ j, so ist $f_{det}(z_1, ..., z_n) = 0$.
+\item Die zu b) und c) analogen Aussagen gelten für $g_{det}(s_1, …, s_n)$.
 \end{compactenum}
-Proposition 10.7\\
-Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
+\item Proposition: Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
 \begin{compactenum}
-\item[(a)] Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
-\item[(b)] Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
-\item[(c)] Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.\\
+\item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
+\item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
+\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.
 \end{compactenum}
-NB\\
-Die letzte der obigen Aussagen besagt, dass jede abstrakte Volumenfunktion auf R$^n$ folgende Form hat:
-$V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1, …, z_n) \cdot c$, wobei c = $V (e_1,…, e_n) \in R$ eine Konstante ist.\\
-\\
-Lemma 10.9 (Kästchensatz)\\
-Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).\\
-\\
-\newpage
-Definition 10.11\\
-Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determinante der Matrix, die aus A durch Ersetzen der i-ten Zeile durch $e_j = (0,...,0,1,0,...,0)$ mit 1 an der Stelle j entsteht. Die Adjunkte \~{A} von A ist die Matrix $(A_{ij})^t$.\\
-Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.\\
-\\
-Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.\\
-\\
-Theorem 10.14 (Cramersche Regel)\\
-Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
+\item NB: Die letzte der obigen Aussagen besagt, dass jede abstrakte Volumenfunktion auf R$^n$ folgende Form hat:
+$V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1, …, z_n) \cdot c$, wobei c = $V (e_1,…, e_n) \in R$ eine Konstante ist.
+\item Lemma (Kästchensatz): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
+\item Definition: Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determinante der Matrix, die aus A durch Ersetzen der i-ten Zeile durch $e_j = (0,...,0,1,0,...,0)$ mit 1 an der Stelle j entsteht. Die Adjunkte \~{A} von A ist die Matrix $(A_{ij})^t$.\\
+Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.
+\item Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
+\item Theorem (Cramersche Regel): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
 \begin{center}
 $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 \end{center}
 Hierbei sind $s_1, …, s_n$ die Spalten von A.\\
+\end{itemize}
+
 \section{Polynome und ihre Nullstellen}
-Definition 11.1\\
-Seien R, S Ringe (vgl. Definition 10.1).\\
-(1) Eine Abbildung f: R $\to$ S ist ein Ringhomomoprhimus, falls\\
+\begin{itemize}
+\item Definition: Seien R, S Ringe (vgl. Definition 10.1).
+\begin{enumerate}
+\item Eine Abbildung f: R $\to$ S ist ein Ringhomomoprhimus, falls\\
 \hspace*{6.5mm}(a) $f(r_1 +r_2) = f(r_1) + f(r_2), r_1,r_2 \in R$,\\
 \hspace*{6.5mm}(b) $f(r_1r_2) = f(r_1)f(r_2), r_1,r_2 \in R$,\\
-\hspace*{6.5mm}(c) $f(1_R) = 1_S$.\\
-(2) Ein Monomorphismus (bzw. Epimorphismus, Isomorphismus) ist ein injektiver (bzw. surjektiver, bijektiver) \hspace*{4.5mm} Ringhomomorphimus.\\
-\\
-Definition 11.2\\
-Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
-mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.\\
-\\
-Lemma 11.3\\
-Sei R ein Ring mit Einselement 1.
+\hspace*{6.5mm}(c) $f(1_R) = 1_S$.
+\item Ein Monomorphismus (bzw. Epimorphismus, Isomorphismus) ist ein injektiver (bzw. surjektiver, bijektiver) \hspace*{4.5mm} Ringhomomorphimus.
+\end{enumerate}
+\item Definition: Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
+mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
+\item Lemma: Sei R ein Ring mit Einselement 1.
 \begin{compactenum}
-\item[(a)] R[x] ist ein Ring mit Einselement 1 = (1,0,0,...); der Ring R[x] ist genau dann kommutativ, wenn R kommutativ ist.
-\item[(b)] Die Abbildung R $\to$ R[x], a $\mapsto$ (a,0,0,...) ist ein Monomorphismus von Ringen.
-\item[(c)] Ist K ein Körper, so ist K[x] eine kommutative K-Algebra. Ist x = (0,1,0,...), so ist \{$x^j | j = 0,1,2,...$\} eine K-Basis von K [x].\\
+\item R[x] ist ein Ring mit Einselement 1 = (1,0,0,...); der Ring R[x] ist genau dann kommutativ, wenn R kommutativ ist.
+\item Die Abbildung R $\to$ R[x], a $\mapsto$ (a,0,0,...) ist ein Monomorphismus von Ringen.
+\item Ist K ein Körper, so ist K[x] eine kommutative K-Algebra. Ist x = (0,1,0,...), so ist \{$x^j | j = 0,1,2,...$\} eine K-Basis von K[x].
 \end{compactenum}
-Proposition 11.5 (Division mit Rest)\\
-Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit \\Grad(r) < Grad(g).\\
-\\
-Definition 11.6\\
-Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\nolimits_{j=0}^{n} a_j x^j \in K[x]$, so setze f(c) = $\sum\nolimits_{j=0}^{n} a_j c^j \in \mathcal{A}$. Die Abbildung
+\item Proposition (\textbf{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit \\Grad(r) < Grad(g).
+\item Definition: Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\nolimits_{j=0}^{n} a_j x^j \in K[x]$, so setze f(c) = $\sum\nolimits_{j=0}^{n} a_j c^j \in \mathcal{A}$. Die Abbildung
 \begin{center}
 $\alpha = \alpha_c: K[x] \to A, f \mapsto f(c)$
 \end{center}
-ist der Einsetzungshomomorphismus (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].\\
-\\
-Beispiele 11.7
+ist der Einsetzungshomomorphismus (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
+\item Beispiele:
 \begin{compactenum}
-\item[(a)] Seien K $\subseteq$ L Körper. Dann ist L eine K-Algebra und für f $\in$ K[x] und c $\in$ L ist f(c) $\in$ L definiert.
-\item[(c)] Ist K endlich mit |K| = q = p$^n$, so gilt c$^q$ = c für alle c $\in$ K. Ist f(x) = x$^q$ - x $\in$ K[x], so ist f $\neq$ 0, aber f(c) = 0 für alle c $\in$ K, d.h. das Polynom f $\in$ K[x] ist von der durch f induzierten Abbildung K $\to$ K, c $\mapsto$ f(c), zu unterscheiden. Ist $\phi: K^2 \to K^2, (x_1,x_2) \mapsto (0,x_1)$ so folgt $f(\phi) = \phi^q - \phi = -\phi \neq 0$, da $\phi^2$ = 0 ist.\\
+\item Seien K $\subseteq$ L Körper. Dann ist L eine K-Algebra und für f $\in$ K[x] und c $\in$ L ist f(c) $\in$ L definiert.
+\item Ist K endlich mit |K| = q = p$^n$, so gilt c$^q$ = c für alle c $\in$ K. Ist f(x) = x$^q$ - x $\in$ K[x], so ist f $\neq$ 0, aber f(c) = 0 für alle c $\in$ K, d.h. das Polynom f $\in$ K[x] ist von der durch f induzierten Abbildung K $\to$ K, c $\mapsto$ f(c), zu unterscheiden. Ist $\phi: K^2 \to K^2, (x_1,x_2) \mapsto (0,x_1)$ so folgt $f(\phi) = \phi^q - \phi = -\phi \neq 0$, da $\phi^2$ = 0 ist.
 \end{compactenum}
-Lemma 11.8\\
-Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
+\item Lemma: Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
 \begin{compactenum}
-\item[(a)] Ist f(c) = 0, so ist f = (x - c)h für ein geeignetes h $\in$ L[x].
-\item[(b)] Ist f $\neq$ 0 und f(c) = 0, so gibt es ein eindeutiges bestimmtes m $\in$ $\mathbb{N}$ und ein eindeutig bestimmtes Polynom h $\in$ L[x] mit f = (x - c)$^m$h und h(c) $\neq$ 0.\\
+\item Ist f(c) = 0, so ist f = (x - c)h für ein geeignetes h $\in$ L[x].
+\item Ist f $\neq$ 0 und f(c) = 0, so gibt es ein eindeutiges bestimmtes m $\in$ $\mathbb{N}$ und ein eindeutig bestimmtes Polynom h $\in$ L[x] mit f = (x - c)$^m$h und h(c) $\neq$ 0.
 \end{compactenum}
-Definition 11.9\\
-Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
+\item Definition: Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
 \begin{compactenum}
-\item[(1)] Ist f $\in$ K[x] und f(c) = 0, so ist c eine Nullstelle von f.
-\item[(2)] Die Zahl m aus Lemma 11.8 (b) nennt man die Vielfachheit der Nullstelle c von f.\\
+\item Ist f $\in$ K[x] und f(c) = 0, so ist c eine Nullstelle von f.
+\item Die Zahl m aus Lemma 11.8 (b) nennt man die Vielfachheit der Nullstelle c von f.
 \end{compactenum}
-Lemma 11.10\\
-Seien K $\subseteq$ L Körper und sei 0 $\neq$ f $\in$ K[x]. Seien $c_1, …, c_r$ die paarweise verschiedenen Nullstellen von f in L mit Vielfachheiten $m_1 , …, m_r$ . Dann gibt es ein g $\in$ L[x], so dass gilt:
+\item Lemma: Seien K $\subseteq$ L Körper und sei 0 $\neq$ f $\in$ K[x]. Seien $c_1, …, c_r$ die paarweise verschiedenen Nullstellen von f in L mit Vielfachheiten $m_1 , …, m_r$ . Dann gibt es ein g $\in$ L[x], so dass gilt:
 \begin{center}
 $f = \prod\limits_{j=1}^{r} (x - c_j)^{mj} g$ und $g(c_j) \neq 0$ für $j = 1, …, r$.
 \end{center}
 Weiter ist $r \le \sum\nolimits_{j=1}^{r}m_j \le Grad(f)$.\\
-Insbesondere hat f höchstens Grad(f) viele verschiedene Nullstellen.\\
-\\
-Zur Ableitung\\
-Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.\\
-\\
-Lemma 11.12\\
-Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder char(K) > m, so ist c eine m-fache Nullstelle von f genau dann, wenn $f(c) = f'(c) = \cdots = f^{(m-1)}(c) = 0 \neq f^{(m)}(c)$ ist.\\
-\\
-Definition 11.14\\
-Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, falls es $a, c_1, …, c_n \in L$ gibt, so dass in L[x] gilt
+Insbesondere hat f höchstens Grad(f) viele verschiedene Nullstellen.
+\item Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.
+\item Lemma: Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder char(K) > m, so ist c eine m-fache Nullstelle von f genau dann, wenn $f(c) = f'(c) = \cdots = f^{(m-1)}(c) = 0 \neq f^{(m)}(c)$ ist.
+\item Definition: Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, falls es $a, c_1, …, c_n \in L$ gibt, so dass in L[x] gilt
 \begin{center}
 $f = a \prod\limits_{j=1}^{n}(x - c_j)$.
 \end{center}
-Ein Körper K ist algebraisch abgeschlossen, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).\\
-\\
-Bemerkungen 11.15
+Ein Körper K ist algebraisch abgeschlossen, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
+\item Bemerkungen:
 \begin{compactenum}
-\item[(a)] Der Fundamentalsatz der Algebra besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
-\item[(b)] Da $x^2 + 1 \in \mathbb{R}[x]$ keine reelle Nullstelle hat, ist $\mathbb{R}$ nicht algebraisch abgeschlossen.
-\item[(c)] Sei K ein endlicher Körper mit |K| = q = p$^n$. Dann gilt c$^q$ = c für alle c $\in$ K. Also hat $f = x^q - x+1 \in K[x]$ keine Nullstelle in K und K ist nicht algebraisch abgeschlossen. Endliche Körper sind also nie algebraisch abgeschlossen.
-\item[(d)] Ein Satz der Algebra besagt, dass es zu jedem Körper K einen algebraisch abgeschlossenen Körper L mit K $\subseteq$ L gibt.\\
+\item Der Fundamentalsatz der Algebra besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
+\item Da $x^2 + 1 \in \mathbb{R}[x]$ keine reelle Nullstelle hat, ist $\mathbb{R}$ nicht algebraisch abgeschlossen.
+\item Sei K ein endlicher Körper mit |K| = q = p$^n$. Dann gilt c$^q$ = c für alle c $\in$ K. Also hat $f = x^q - x+1 \in K[x]$ keine Nullstelle in K und K ist nicht algebraisch abgeschlossen. Endliche Körper sind also nie algebraisch abgeschlossen.
+\item Ein Satz der Algebra besagt, dass es zu jedem Körper K einen algebraisch abgeschlossenen Körper L mit K $\subseteq$ L gibt.\\
 \end{compactenum}
+\end{itemize}
+
 \section{Charakteristisches Polynom und Eigenwerte}
-Lemma 12.2\\
-Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenvektoren von f zu paarweise verschiedenen Eigenwerten $\alpha_1, ..., \alpha_r$, so sind die $v_1, ..., v_r$ linear unabhängig.
+\begin{itemize}
+\item Lemma: Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenvektoren von f zu paarweise verschiedenen Eigenwerten $\alpha_1, ..., \alpha_r$, so sind die $v_1, ..., v_r$ linear unabhängig.
 \begin{compactitem}
 \item Ist dim$_K$ V = n, so hat f höchstens n verschiedene Eigenwerte.
 \item Sei dim$_K$ V = n. Hat f $\in$ End$_K$ (V ) genau n verschiedene Eigenwerte $\alpha_1, …, \alpha_n$, so bilden die entsprechenden Eigenvektoren $v_1, ..., v_n$ eine Basis von V . Die Matrix von f bzgl. dieser Basis ist eine Diagonalmatrix mit Diagonaleinträgen $\alpha_1, …, \alpha_n$.\\
 \end{compactitem}
-Definition12.3\\
-Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
+\item Definition: Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
 \begin{compactenum}
-\item[(1)] Sei $\alpha \in \sigma(f)$. Dann ist der Eigenraum von f zu $\alpha$ der lineare Unterraum
+\item Sei $\alpha \in \sigma(f)$. Dann ist der Eigenraum von f zu $\alpha$ der lineare Unterraum
 \begin{center}
 $V_f(\alpha) = V(\alpha) = Kern(\alpha id_V - f) = \{v \in V | f(v) = \alpha v\} \subseteq V$.
 \end{center}
-\item[(2)] Ist dimK V = n < $\infty$, so ist f diagonalisierbar (über K), falls es Eigenwerte $\alpha_1, …, \alpha_r \in \sigma(f)$ gibt, so dass gilt $V = \oplus_{i=1}^{r} V_f (\alpha_i)$.\\
-In diesem Fall hat also V eine Basis $\{v_1, …, v_n\}$ bestehend aus Eigenvektoren. Insbesondere ist die Matrix von f bzgl. der Basis $\{v_1, …, v_n\}$ eine Diagonalmatrix; die Diagonaleinträgen sind genau die zugehörigen Eigenwerte.\\
+\item Ist dimK V = n < $\infty$, so ist f diagonalisierbar (über K), falls es Eigenwerte $\alpha_1, …, \alpha_r \in \sigma(f)$ gibt, so dass gilt $V = \oplus_{i=1}^{r} V_f (\alpha_i)$.\\
+In diesem Fall hat also V eine Basis $\{v_1, …, v_n\}$ bestehend aus Eigenvektoren. Insbesondere ist die Matrix von f bzgl. der Basis $\{v_1, …, v_n\}$ eine Diagonalmatrix; die Diagonaleinträgen sind genau die zugehörigen Eigenwerte.
 \end{compactenum}
-Ist f diagonalisierbar, so sind in der Zerlegung $V = \oplus_{i=1}^{r} V_f (\alpha_i)$ die Komponenten $V_f (\alpha_i)$ genau die Eigenräume zu den paarweise verschiedenen Eigenwerten von f.\\
-\\
-Definition 12.5\\
-Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
+Ist f diagonalisierbar, so sind in der Zerlegung $V = \oplus_{i=1}^{r} V_f (\alpha_i)$ die Komponenten $V_f (\alpha_i)$ genau die Eigenräume zu den paarweise verschiedenen Eigenwerten von f.
+\item Definition: Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
 \begin{center}
 $\chi_f (x) = det(xE - A) \in K[x]$
 \end{center}
-das charakteristische Polynom von f.\\
-\\
-Lemma12.6\\
-Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
+das charakteristische Polynom von f.
+\item Lemma: Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
 \begin{center}
 $\alpha$ ist Eigenwert von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
 \end{center}
+\end{itemize}
 
 
