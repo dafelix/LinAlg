@@ -1,0 +1,123 @@
+\section{Diagonalisierbarkeit}
+\begin{enumerate}
+	\item f heißt diagonalisierbar, falls eine der Eigenschaften gilt:
+	\begin{enumerate}
+		\item $\exists$ Basis von V aus Eigenvektoren (auf der Diagonalen stehen Eigenwerte)
+		\item $\exists$ Matrix $S \in Gl_n(K)$, sodass $S^{-1}AS$ Diagnoalgestalt hat
+	\end{enumerate}
+	\item f ist diagonalisierbar $\Leftrightarrow$ $\chi_f(x) = \prod \limits_{i=1}^{r} (x- \alpha_i)^{mi}$. Es gilt dann: $V=\bigoplus \limits_{i=1}^r V_f(\alpha_i)$
+	\item f ist diagonalisierbar $\Leftrightarrow \mu_f(x) = \prod \limits_{i=1}^{r}(x-\alpha_i)$ (mit paarweise verschiedenen $\alpha_i$) 
+\end{enumerate}
+
+\section{Ideal}
+Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, falls
+\begin{enumerate}
+	\item $a_1,a_2 \in I \Rightarrow a_1+a_2 \in I$
+	\item $a \in I \Rightarrow r_1 a r_2 \in I, \forall r_1,r_2 \in R$
+\end{enumerate}
+Bemerkungen:
+\begin{compactitem}
+	\item ker(f) ist stets Ideal
+	\item falls $1 \in I \Rightarrow I = R$
+	\item seien $I_1,I_2 \subseteq R$ Ideale, dann sind auch $I_1 \cap I_2, I_1+I_2, I_1 \cdot I_2$ wieder Ideale
+	\item In $\mathbb{Z}$ sind alle Ideale von der Form $I=a\mathbb{Z}, a \in \mathbb{Z}$
+	\item falls $I_1+I_2 = R$, so nennt man $I_1$ und $I_2$ teilerfremd.
+	\item $I_1+I_2 = R \Rightarrow I_1 \cap I_2 = I_1 \cdot I_2$
+	\item R HIR: $(p)$ ist maximal $ \Leftrightarrow $ $p$ ist irreduzibel $\Leftrightarrow$ $p$ ist Primideal
+	\item Sei R komm. Ring. Dann gilt:
+	\begin{enumerate}
+		\item P Primideal $\Leftrightarrow$ $\QR{R}{P}$ Integritätsbereich
+		\item M max. Ideal $\Leftrightarrow$ $\QR{R}{M}$ ist Körper
+	\end{enumerate}
+	\item Sei R Ring mit 1. Sei $I \subsetneq R $ Ideal. Dann gibt es ein maximales Ideal M mit $ I \subseteq M$. Insbesondere existiern max. Ideale.
+\end{compactitem}
+
+\section{Ringe}
+\begin{enumerate}
+	\item R ist ein euklidischer Ring, falls es eine funktion $\phi : R\\ \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
+	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
+	\item Integritätsbereich: R ist kommutativ und Nullteilerfrei
+	\item R heißt faktoriell, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
+	\item Euklidisch $\Rightarrow$ HIR $\Rightarrow$ faktoriell
+\end{enumerate}
+Bemerkungen:
+\begin{compactitem}
+	\item $\mathbb{Z}$ mit $\phi(a) = |a|$ ist euklidisch
+	\item R euklidisch $\Rightarrow$ R ist Hauptidealring
+	\item Sei R kommutativ. Dann gilt $R^n \simeq R^m \Leftrightarrow n=m$
+\end{compactitem}
+%Todo: Hauptidealring$
+
+\section{Moduln}
+Eine Menge $M \neq \emptyset$ ist ein R-(Links-) Modul, falls es eine Verknüpfung $+:M \times M \rightarrow M, (m_1,m_2) \mapsto m_1+m_2$ und eine weitere Verknüpfung $\cdot R \times M \rightarrow M, (r,m) \mapsto rm$ gibt, sodass:
+\begin{itemize}
+	\item $(M,+)$ ist abelsche Gruppe
+	\item $(r_1,r_2)m = r_1 m + r_2 m$\\$r(m_1+_m2) = rm_1+rm_2$
+	\item $1_R m = m$
+\end{itemize}
+Bemerkungen: Sei R HIR
+\begin{itemize}
+	\item Sei $ M \subseteq F = R^n$ ein R-Untermodul. Dann ist $M \simeq R^k$ mit $k \leq n$
+	\item Sei $M=<m_1,...,m_n>$ e-e. Modul. Dann gilt: M frei $\Leftrightarrow$ M torsionsfrei
+	\item Ist M e-e. R-Modul, so ist $M \simeq T(M) \oplus F, F \simeq R^k$
+\end{itemize}
+
+\subsection{freier Modul}
+\begin{enumerate}
+	\item Sei $F = \bigoplus \limits_{i \in I} R e_i $ (F ist freier Modul und die $e_i$ sind eine "Basis" von F, d.h. $r e_i = 0 \Leftrightarrow r=0$)
+	Für $i\in I$ sei ein Element $m_i \in M$ gegeben, wobei M ein R-Modul ist.
+	Dann gibt es genau einen Modulhom. $f:F \rightarrow M $ mit $f(e_i) = m_i$
+	\item Sei $f:M \twoheadrightarrow F$ ein surjektiver Modulhom., wobei $F = \bigoplus \limits_{i \in I}R e_i$ frei ist. Dann gibt es einen Teilmodul $N \subseteq M$ mit
+	\begin{itemize}
+		\item $M = N \oplus \ker(f)$
+		\item $N \simeq F$
+	\end{itemize}
+\end{enumerate}
+\subsection{Torsionselement}
+Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R\\\{0\}$ gibt mit $rm=0$.
+
+Sei $T(M) := \{m \in M | m \text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei, falls $T(M) = 0$. Es gilt:
+\begin{itemize}
+	\item $T(M) \subseteq M$ ist Teilmodul
+	\item $\QR{M}{T(M)}$ ist torsionsfrei
+\end{itemize}
+
+\subsection{$\pi$-Torsionselement}
+Sei $\pi \in R$ irreduzibel und M ein R-Modul. Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
+%TODO: inhaltlich prüfen$
+
+\subsection{R-Modulhomomorphismus}
+Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
+\begin{itemize}
+	\item $f$ ist ein Gruppenhom., d.h. $f(m_1+m_2) = f(m_1)+f(m_2)$
+	\item $f(rm) = rf(m), \forall r \in R, n\in \mathbb{N}$
+\end{itemize}
+
+\subsection{Untermoduln}
+Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
+\begin{enumerate}
+	\item $(N,+)$ ist Untergruppe
+	\item $rn \in N, \forall r \in R, n\in N$
+\end{enumerate}
+Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
+Bemerkung: $\ker(f),\im(f)$ sind Untermoduln
+
+\section{Elementarteiler}
+Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^x$ (Elementarteiler) mit
+\begin{enumerate}
+	\item $M \simeq R^k \oplus \bigoplus \limits_{i=1}^m \QR{R}{\epsilon_i R}$
+	\item $\epsilon_1 | \epsilon_2 | ... | \epsilon_m$
+\end{enumerate}
+\textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt\\
+\textbf{Anwendung}: Seien $M_1,M_2$ zwei e-e. Moduln, $\epsilon_1,...,\epsilon_m$ die Elementarteiler von $M_1$, $\mu_1,...,\mu_n$, die Elementarteiler von $M_2$. Dann gilt:
+\begin{itemize}
+	\item $M_1 \simeq M_2 \Leftrightarrow rg(M_1) = rg(M_2)$
+	\item $\epsilon_1 = \mu_1,...,\epsilon_m = \mu_m$ (insbes. $l=m$) %TODO: inhaltlich prüfen$
+\end{itemize}
+Bemerkung: Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^x$ gibt mit $a=ub$.
+
+\section{Invariantenteiler}
+%TODO
+
+\section{Äquivalent und Ähnlich}
+%TODO
