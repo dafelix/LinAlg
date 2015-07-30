@@ -44,6 +44,8 @@
 }
 
 \renewcommand{\itemize}{\compactitem}
+\renewcommand{\enumerate}{\compactenum}
+\renewcommand{\labelenumi}{\theenumi)}
 
 \parindent 0pt
 
@@ -53,6 +55,7 @@
 \author{Felix Mößbauer \and Melanie Michels}
 \date{2015}
 \begin{document}
+\pagenumbering{arabic}
 \maketitle
 \include*{chapter/linalg_2_part1}
 \include*{chapter/linalg_2_part2}
