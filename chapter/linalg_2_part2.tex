@@ -18,8 +18,8 @@ $f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R
 \item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$\\
 Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt\\
 Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
-\item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\Phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\Phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
-\item Bemerkung: Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\Phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\Phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
+\item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
+\item Bemerkung: Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
 Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
 \end{itemize}
 
@@ -39,7 +39,7 @@ $B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le 
 \item Eine lineare Abbildung $f: V \to W$ erhält innere Produkte, falls gilt: $(f(v_1), f(v_2))_W = (v_1, v_2)_V$
 \item f erhält innere Produkte $\Rightarrow$ $||f(v)||_W = \sqrt{(f(v), f(v))_W} = \sqrt{(v,v)_V} = ||v||_V$
 \item $f$ erhält innere Produkte und ist bijektiv $\Rightarrow$ $f^{-1}$ erhält ebenfalls innere Produkte, denn: $(f^{-1}(w_1), f^{-1}(w_2))_V = (w_1, w_2)_W$
-\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. FASÄ:
+\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. TFE:
 \begin{enumerate}
 \item f erhält das innere Produkt
 \item f ist ein Isom. zwischen VR mit innerem Produkt
@@ -105,13 +105,13 @@ Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestal
 \section{Projektionen}
 $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
 \begin{compactitem}
-\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und $p: V \to V$ Projektion. FASÄ:
+\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und $p: V \to V$ Projektion. TFE:
 \begin{enumerate}
 \item $p$ ist normal, d.h. $p^*p = pp^*$
 \item $p$ ist selbstadjungiert, d.h. $p = p^*$
 \item $p$ ist eine \textbf{Orthogonalprojektion}, d.h. $im(p)^\perp = ker(p)$
 \end{enumerate}
-\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. FASÄ:
+\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. TFE:
 \begin{enumerate}
 \item $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe
 \item $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$
@@ -213,7 +213,7 @@ Sei $V \ni v = x_1v_1 + … + x_nv_n$, $x_i \in K$ und\\
 \hspace*{4mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
 Dann gilt: $\beta(v, w) = x^tBy$\\
 Folgerung:\\
-Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. FASÄ:
+Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. TFE:
 \begin{enumerate}
 \item $\beta$ ist ausgeartet im 1.Argument
 \item $\beta$ ist ausgeartet im 2.Argument
