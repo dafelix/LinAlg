@@ -92,7 +92,7 @@ Lemma:\\
 Sei $f = f^*$. Dann ist jeder Eigenwert von f reell. Die Eigenvektoren zu verschiedenen Eigenwerten sind zueinander orthogonal.
 
 \section{Invariante Unterräume}
-Sei f $\in$ End(V) beliebig. Sei W $\subseteq$ V ein f invarianter Unterraum, d.h. f(W) $\subseteq$ W. Dann ist W$^{\perp}$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^{\perp}$ $\forall w' \in W^{\perp}$.
+Sei f $\in$ End(V) beliebig. Sei W $\subseteq$ V ein f invarianter Unterraum, d.h. f(W) $\subseteq$ W. Dann ist W$^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
 
 \section{zu selbstadjungiert}
 Sei dim(V) = n < $\infty$ und $f = f^*$ ($\Rightarrow$ f normal).\\
@@ -121,7 +121,7 @@ $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p
 \item Sei V K-VR mit ( , ), dim(V) < $\infty$ und p: V $\to$ V Projektion. FASÄ:\\
 1) p ist normal, d.h. p$^*$p = pp$^*$\\
 2) p ist selbstadjungiert, d.h. p = p$^*$\\
-3) p ist eine Orthogonalprojektion, d.h. $im(p)^{\perp} = ker(p)$
+3) p ist eine Orthogonalprojektion, d.h. $im(p)^\perp = ker(p)$
 \item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. FASÄ:\\
 1) $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe\\
 2) $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$\\
@@ -135,9 +135,88 @@ $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p
 2) $id_V = p_1 + … + p_k$\\
 3) $p_ip_j = 0$ für $i \neq j$\\
 Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.\\
-Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist f normal.\\
-
+Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist f normal.
 \end{compactitem}
+
+\section{Dualräume}
+$V^* = Hom(V, K)$ heißt Dualraum.
+\begin{compactitem}
+\item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_k(V,W)$.
+\item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
+Falls $0 = \alpha_1 f_1 + … + \alpha_n f_n$ so fogt $0 = \alpha_i$.\\
+Insbesondere: Falls dim(V) < $\infty$, so gilt: dim(V$^*$) = dim(V).\\
+\item Lemma: Sei $U \subseteq V$ ein linearer Unterraum und %$v \in \QR{V}{U}$. 
+Dann gibt es $f \in V^*$ mit $f(u) = 0$ $\forall u \in u$ und $f(v) \neq 0$
+\item Proposition: Sei ${V^*}^* = Hom(Hom(V,K), K)$. Setzte $T: V \to V^*, v \mapsto T(v)$ mit $T(v)(f) := f(v)$ $\forall f \in V^*$. Dann gilt:\\
+1) T ist linear und injektiv\\
+2) Falls dim(V) < $\infty$, so ist T ein Isomorphismus
+\end{compactitem}
+
+\section{Restriktion und Inflation}
+Sei $W \subseteq V$ ein lin. UR.\\
+1) $R: V^* \to W^*, f \mapsto f|_W$ heißt Restriktion\\
+2) %$I: (\QR{V}{W})^* \to V^*, f \mapsto If$
+mit $If(v) := f(v + W)$ heißt Inflation von f\\
+3) Sei $M \subseteq V$ eine Teilmenge. $M^\perp := \{ f \in V^* | f(m) = 0$ $\forall m \in M \}$. Also: $M^\perp \subseteq V^*$ (lin. UR)\\
+4) Sei $S \subseteq V^*$ eine Teilmenge. $S^\top := \{ v \in V | s(v) = 0$ $\forall s \in S \}$. $S^\top$ ist lin. UR von V.\\
+Lemma: Sei $W \subseteq V$ ein lin. UR.\\
+1) $R: V^* \to W^*$ ist linear und es gilt ker(R) = W$^\perp$\\
+2) Falls dim(V) = n < $\infty$, so gilt: dim(W$^\perp$) = dim(V) - dim(W)\\
+3) %$I: (\QR{V}{W})^* \to W^\perp$ ist ein Isom.
+
+\section{Dualitätssatz}
+1) Ist $W \subseteq V$ ein lin. UR, so ist $W^{\perp \top} = W$\\
+2) Sei dim(V) < $\infty$ und $S \subseteq V^*$ ein lin. UR, so gilt  $S^{\top \perp} = S$\\
+3) Seien $W_1, W_2 \subseteq V$ lin. UR (V beliebig). Dann gilt:\\
+\hspace*{3mm} $(W_1 + W_2)^\perp = W_1^\perp \cap W_2^\perp$\\
+\hspace*{3mm} Falls dim(V) < $\infty$, so gilt auch: $(W_1 \cap W_2)^\perp ) W_1^\perp + W_2^\perp$
+
+\section{Affine Hyperebene}
+Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.\\
+Erinnerung affiner Unterraum: Ein m-dim. affiner Unterraum von V ist eine Menge M = v + W mit  v $\in$ V und W $\subseteq$ V ein m-dim. linearer Unterraum.\\
+Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt von n-m affinen Hyperebenen.
+
+\section{zu Linearformen}
+Sei $g: V \to W$ linear und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei A = ($\alpha_{ij}$) die Matrix von g bez. dieser Basen, d.h. $g(v_j) ) \sum\limits_{i=1}^m \alpha_{ij} w_i$, j = 1, …, n. Seien $f_1, …, f_n$ bzw. $g_1, …, g_m$ die dualen Basen, d.h. $f_i(v_j) = \delta_{ij}$, $g_k(w_l) = \delta_{kl}$. Dann hat $g^*$ bez. dieser dualen Basen die Matrix $A^t$.\\
+Proposition:\\
+Sei $g: V \to W$ linear. Dann gilt:\\
+1) ker(g$^*$) = im(g)$^\perp$\\
+2) ker(g) = im(g$^*$)$^\top$\\
+3) g surjektiv $\Leftrightarrow$ g$^*$ injektiv\\
+4) g injektiv $\Leftrightarrow$ g$^*$ surjektiv\\
+5) g Isomorphismus $\Leftrightarrow$ g$^*$ Isomorphismus
+
+\section{Bilinearform ausgeartet}
+Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v |in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
+(ausgeartet im 2.Argument analog)\\
+Bemerkungen:
+\begin{compactitem}
+\item Innere Produkte sind stets nicht-ausgeartet
+\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
+\end{compactitem}
+
+\section{Strukturmatrix}
+Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
+Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.\\
+Beispiele:
+\begin{compactitem}
+\item Sei $v_1, …, v_n$ Basis von V und $f_1, …, f_n$ die duale Basis. Dann: B = ($f_i(v_j)$) = E
+\item Sei $v_1, …, v_n$ ON-Basis von V. Dann: B = (($v_i, v_j))_{ij}$ = E
+\item Bez. der Standardbasis ist B = E
+\item Bez. der Standardbasen hat $\beta(x,y) := x^tBy$ die Strukturmatrix B
+\end{compactitem}
+Satz: Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei $\beta: V \times W \to K$ eine Bilinearform und B die Strukturmatrix.\\
+Sei $V \ni v = x_1v_1 + … + x_nv_n$, $x_i \in K$ und\\
+\hspace*{10mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
+Dann gilt: $\beta(v, w) = x^tBy$\\
+Folgerung:\\
+Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. FASÄ:\\
+1) $\beta$ ist ausgeartet im 1.Argument\\
+2) $\beta$ ist ausgeartet im 2.Argument\\
+3) det(B) = det(B$^t$) = 0\\
+4) rg(B) = rg(B$^t$) < n\\
+5) ker(B) = \{0\}\\
+6) ker(B$^t$) = \{0\}\\
 
 \end{document}
 
