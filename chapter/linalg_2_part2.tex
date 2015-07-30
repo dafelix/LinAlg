@@ -1,5 +1,5 @@
 \section{Lineare Funktionale und adjungierte Abbildungen}
-$V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
+$V^* = text{Hom}_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
 \begin{itemize}
 \item Sei dim(V) = n < $\infty$ und $f \in V^*$ $\Rightarrow$ $\exists ! w \in V$ mit $f(v) = (v,w)$ $\forall v \in V$
 \item Sei dim(V) = n < $\infty$ mit innerem Produkt und $ f \in End_K(V)$ $\Rightarrow$ $\exists ! f^* \in End_K(V)$ mit $(f(v_1), v_2) = (v_1, f^*(v_2))$
@@ -121,13 +121,13 @@ $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p
 \item $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$
 \item Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
 \end{enumerate}
-\item Lemma: Sei $f: V \to V$ normal. Dann gilt:
+\item \textbf{Lemma}: Sei $f: V \to V$ normal. Dann gilt:
 \begin{enumerate}
 \item $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$
 \item $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal
 \item Das Minimalpolynom hat keine mehrfachen Nullstellen
 \end{enumerate}
-\item Theorem: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
+\item \textbf{Theorem}: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
 \begin{enumerate}
 \item $f = \alpha_1p_1 + … + \alpha_kp_k$
 \item $id_V = p_1 + … + p_k$
@@ -141,7 +141,7 @@ Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und
 \end{compactitem}
 
 \section{Dualräume}
-$V^* = Hom(V, K)$ heißt Dualraum.
+$V^* = \text{Hom}(V, K)$ heißt Dualraum.
 \begin{compactitem}
 \item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_K(V,W)$.
 \item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta_{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\

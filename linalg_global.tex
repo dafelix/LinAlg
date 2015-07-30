@@ -8,7 +8,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsfonts}
-\usepackage[onehalfspacing]{setspace}
+\usepackage{setspace}
 \usepackage{stmaryrd}
 \usepackage{romannum}
 %\usepackage{esvect}%
@@ -18,6 +18,10 @@
 \usepackage{geometry}
 \usepackage{newclude}
 \usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage{color}
+\usepackage{mdframed}
+
 \geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
 
 %\hypersetup{
@@ -48,7 +52,16 @@
 \renewcommand{\enumerate}{\compactenum}
 \renewcommand{\labelenumi}{\theenumi)}
 
-\newenvironment{remark}{\begin{samepage}\textbf{Bemerkung}:}{\end{samepage}}
+\definecolor{remarkbg}{gray}{0.90}
+\newenvironment{remark}{
+	\begin{samepage}
+	\begin{mdframed}[linewidth=0, backgroundcolor=remarkbg]
+	\textbf{Bemerkung}:
+	}
+	{
+	\end{mdframed}
+	\end{samepage}
+	}
 
 \parindent 0pt
 
@@ -60,6 +73,13 @@
 \begin{document}
 \pagenumbering{arabic}
 \maketitle
+
+\singlespacing
+\tableofcontents
+\onehalfspacing
+
+\newpage
+
 \include*{chapter/linalg_1}
 \include*{chapter/linalg_2_part1}
 \include*{chapter/linalg_2_part2}
