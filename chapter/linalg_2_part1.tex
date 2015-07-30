@@ -16,7 +16,7 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 	\item $a \in I \Rightarrow r_1 a r_2 \in I, \forall r_1,r_2 \in R$
 \end{enumerate}
 Bemerkungen:
-\begin{compactitem}
+\begin{itemize}
 	\item ker(f) ist stets Ideal
 	\item falls $1 \in I \Rightarrow I = R$
 	\item seien $I_1,I_2 \subseteq R$ Ideale, dann sind auch $I_1 \cap I_2, I_1+I_2, I_1 \cdot I_2$ wieder Ideale
@@ -30,22 +30,22 @@ Bemerkungen:
 		\item M max. Ideal $\Leftrightarrow$ $\QR{R}{M}$ ist Körper
 	\end{enumerate}
 	\item Sei R Ring mit 1. Sei $I \subsetneq R $ Ideal. Dann gibt es ein maximales Ideal M mit $ I \subseteq M$. Insbesondere existiern max. Ideale.
-\end{compactitem}
+\end{itemize}
 
 \section{Ringe}
 \begin{enumerate}
-	\item R ist ein euklidischer Ring, falls es eine funktion $\phi : R\\ \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
+	\item R ist ein euklidischer Ring, falls es eine funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
 	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
 	\item Integritätsbereich: R ist kommutativ und Nullteilerfrei
 	\item R heißt faktoriell, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
 	\item Euklidisch $\Rightarrow$ HIR $\Rightarrow$ faktoriell
 \end{enumerate}
 Bemerkungen:
-\begin{compactitem}
+\begin{itemize}
 	\item $\mathbb{Z}$ mit $\phi(a) = |a|$ ist euklidisch
 	\item R euklidisch $\Rightarrow$ R ist Hauptidealring
 	\item Sei R kommutativ. Dann gilt $R^n \simeq R^m \Leftrightarrow n=m$
-\end{compactitem}
+\end{itemize}
 %Todo: Hauptidealring$
 
 \section{Moduln}
@@ -74,7 +74,7 @@ Bemerkungen: Sei R HIR
 	\end{itemize}
 \end{enumerate}
 \subsection{Torsionselement}
-Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R\\\{0\}$ gibt mit $rm=0$.
+Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R \backslash \{0\}$ gibt mit $rm=0$.
 
 Sei $T(M) := \{m \in M | m \text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei, falls $T(M) = 0$. Es gilt:
 \begin{itemize}
@@ -102,6 +102,18 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
 Bemerkung: $\ker(f),\im(f)$ sind Untermoduln
 
+\subsection{K[x]-Modul}
+Sei $A \in End_k(V)$. Dann wird V zu einem K[x]-Modul vermöge\footnote{vermöge = "kann das"} $f(x)v := f(A)v, f\in K[x], v \in V.~(V_a=V)$\\
+Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
+\begin{enumerate}
+	\item $A \approx B$
+	\item $V_a \simeq V_b$ als K[x]-Modul
+	\item $\QR{K[x]^n}{<M_A(x)>} \simeq \QR{K[x]^n}{<M_B(x)>}$ als K[x]-Moduln
+	\item $M_A(x) \sim M_B(x)$
+	\item $M_A(x)$ und $M_B(x)$ haben die gleichen Elementarteiler
+	\item $M_A(x)$ und $M_B(x)$ haben die gleichen Invariantenteiler
+\end{enumerate}
+
 \section{Elementarteiler}
 Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^x$ (Elementarteiler) mit
 \begin{enumerate}
@@ -117,7 +129,134 @@ Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_
 Bemerkung: Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^x$ gibt mit $a=ub$.
 
 \section{Invariantenteiler}
-%TODO
-
+Die Elemente $\pi_1^{e_1,1},...,\pi_1^{e_s,1},\pi_2^{e_1,2},...,\pi_2^{e_s,2},...,\pi_t^{e_1,t},...,\pi_t^{e_s,t}$ mit 
+\begin{align*}
+\begin{array}{ll}
+e_{1,1} \geq e_{2,1} \geq ... \geq e_{s,1} \geq & 0 \\ 
+~~\vdots & \\ 
+e_{1,t} \geq e_{2,t} \geq ... \geq e_{s,t} \geq & 0
+\end{array} 
+\end{align*}
+heißen die Invariantenteiler von M.
 \section{Äquivalent und Ähnlich}
-%TODO
+Sei R ein komm. Ring.
+\begin{enumerate}
+	\item Seien $A,B \in K^{n \times m}$. Dann heißen $A$ und $B$ äquivalent, falls es $P \in Gl_n(R), Q \in Gl_m(R)$ gibt mit $B=P^{-1}AQ$. In Zeichen $A \sim B$.
+	\item Seien $A,B \in M_n(R) = K^{n \times n}$. Dann heißen $A$ und $B$ ähnlich oder konjugiert, falls es $S \in Gl_n(R)$ gibt mit $B=S^{-1}AS$. In Zeichen $A \approx B$.
+\end{enumerate}
+
+\section{Begleitmatrix}
+Sei $g(x) = x^n + a_{n-1}x^{n-1}+\ldots+a_1x + a_0 \in K[x]$ mit $n \geq 1$. Dann heißt die folgende Matrix Begleitmatrix zu g:
+\begin{align*}
+B_j =
+\begin{pmatrix}
+0 &        &		&  & -a_0 \\
+1 & \ddots &		&  & -a_1 \\
+  & \ddots & \ddots	&  & \vdots \\
+  &        & \ddots	& 0 & \vdots \\
+  &        &		& 1 & -a_{n-1}
+\end{pmatrix}
+\in M_n(K)
+\end{align*} 
+Bemerkung:
+\begin{enumerate}
+	\item $\chi_{B_g}(x) = g(x)$
+	\item $\mu_{B_g}(x) \sim 
+	\begin{pmatrix}
+		1 &        & & \\
+		  & \ddots & & \\
+		  &        &1& \\
+		  &        & & g
+	\end{pmatrix}$
+\end{enumerate}
+
+\section{Jordanmatrix}
+Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
+\begin{align*}
+B_n \approx J(\alpha,e) :=
+\begin{pmatrix}
+\alpha &        &   &\\
+1      & \ddots &   &\\
+       & \ddots & \ddots &\\
+       &        & 1 & \alpha
+\end{pmatrix}
+\end{align*}
+\section{Normalformen}
+\subsection{Frobeniussche Normalform}
+Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
+
+\subsection{Weierstraß'sche Normalform}
+Sei $A \in M_n(K)$. Dann gibt es ein bis auf Reihenfolge eindeutig bestimmtes System von Potenzen $h_1,...,h_m$ von normierten, irreduziblen Polynomen, sodass $A$ zur folgenden Matrix ähnlich ist.
+\begin{align*}
+\begin{pmatrix}
+B_{n_1} &        & \\
+        & \ddots & \\
+        &		  & B_{n_m}
+\end{pmatrix}
+\end{align*}
+Die Polynome $h_1,...,h_m$ sind genau die Invariantenteiler von $M_A(x)$
+
+\subsection{Jordan Normalform}
+Sei $A \in M_n(K)$ und $\chi_A$ zerfalle vollständig in Linearfaktoren. Dann gibt es bis auf Reihenfolge ein eindeutig bestimmtes System von Jordanmatrizen $J_1,...,J_m$:
+\begin{align*}
+A \simeq 
+\begin{pmatrix}
+J_1 & & 0\\
+    & \ddots & \\
+0   &        & J_m
+\end{pmatrix}
+\end{align*}
+Bemerkung: Aus der JNF lässt sich das Minimalpolynom $\mu_A$ direkt ablesen. Sortiere Jordankästchen nach EW und nach Größe der Jordankästchen.
+\begin{align*}
+\begin{pmatrix}
+J(\alpha_1,e_{1,1}) & & & & & & 0\\
+& \ddots & & & & & \\
+ & & J(\alpha_1,e_{1,n_1}) & & & & \\
+ & & & \ddots & & & \\
+ & & & & J(\alpha_s,e_{s,1}) & &\\
+ & & & & & \ddots & \\
+0 & & & & & & J(\alpha_s,e_{s,n_s}) \\
+\end{pmatrix}
+\end{align*}
+mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s (x-\alpha_i)^{e_{i,n_i}}$. TFE:
+\begin{enumerate}
+	\item A diagonalisierbar
+	\item Die JNF ist eine Diagonalmatrix
+	\item Jedes Jordankästchen hat die Größe 1
+\end{enumerate}
+
+\section{Inneres Produkt (Skalarprodukt)}
+Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\phi$ von $V \times V$ nach $K, \phi (v_1,v_2) = (v_1,v_2) \in K,~v_1,v_2 \in V$ mit folgenden Eigenschaften:
+\begin{enumerate}
+	\item $(v_1+v_2,v_3) = (v_1,v_3)+(v_2,v_3)$
+	\item $(\alpha v_1,v_2) = \alpha (v_1,v_2)$
+	\item $(v_1,v_2) = \overline{(v_2,v_1)}$ (hermitesch)
+	\item $(v,v) \geq 0$, $(v,v) = 0 \Leftrightarrow v=0$ (positiv definit)
+\end{enumerate}
+Bemerkung: V zusammen mit einem inneren Produkt nennt man einen \textbf{euklidischen Raum} (falls $K=\mathbb{R}$) bzw. \textbf{unitären Raum} (falls $K=\mathbb{C}$).
+
+\textbf{Lemma}:
+Sei $A:V \rightarrow W$ linear und injektiv. Sei $(~,~):W \times W \rightarrow K$ ein inneres Produkt auf $W$. Dann wird durch $p_A(v_1,v_2):=(Av_1,Av_2),~v_1,v_2 \in V$ ein inneres Produkt definiert.
+
+\section{Cauchy-Schwarz-Ungleichung}
+\begin{align*}
+|(v_1,v_2)| \leq \norm{v_1} \norm{v_2}
+\end{align*}
+
+\section{Gram-Schmidt-Verfahren}
+Seien $w_1,...,w_n$ linear unabhängige Vektoren. Die Vektoren $v_1,...,v_n$ des Orthogonalsystems werden rekursiv berechnet:
+\begin{align*}
+v_1 &= w_1\\
+v_2 &= w_2 - \frac{(v_1,w_2)}{(v_1,v_1)}v_1\\
+v_3 &= w_3 - \frac{(v_1,w_3)}{(v_1,v_1)}v_1 - \frac{(v_2,w_3)}{(v_2,v_2)}v_2\\
+v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
+\end{align*}
+
+\section{Lotraum}
+Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$. $M^\perp \subseteq V$ ist ein Unterrraum.
+
+Sei $U \subseteq V$ ein Unterraum mit $\dim(U) = n < \infty$. Dann gilt:
+\begin{enumerate}
+	\item $U \oplus U^\perp = V$
+	\item $(U^\perp)^\perp = U$
+\end{enumerate}
