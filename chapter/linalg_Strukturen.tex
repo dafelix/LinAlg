@@ -1,6 +1,6 @@
 \section{Strukturen}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Gruppe}
+\subsection{Gruppe\index{Gruppe}}
 \begin{definition}
 Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}\index{Gruppe}, falls gilt:
 \begin{enumerate}
@@ -136,7 +136,8 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Ring}
+\subsection{Ring\index{Ring}}
+%Definition fehlt!
 \begin{definition}
 \leavevmode
 \begin{enumerate}
@@ -156,10 +157,11 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 	\item Sei R kommutativ. Dann gilt $R^n \simeq R^m \Leftrightarrow n=m$
 \end{itemize}
 \end{remark}
-%Todo: Hauptidealring$
-%Todo: Integritätsbereich
 
-\subsubsection{Ideal}
+\subsubsection{Hauptidealring\index{Hauptidealring}}
+%Todo: Hauptidealring$
+
+\subsubsection{Ideal\index{Ideal}}
 \begin{definition}
 Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{Ideal}\index{Ideal}, falls
 \begin{enumerate}
@@ -167,6 +169,9 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 	\item $a \in I \Rightarrow r_1 a r_2 \in I, \forall r_1,r_2 \in R$
 \end{enumerate}
 \end{definition}
+
+\subsubsection{Integritätsbereich\index{Integritätsbereich}}
+%Todo
 
 \begin{remark}
 \leavevmode
@@ -187,7 +192,13 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 \end{itemize}
 \end{remark}
 
-\subsubsection{Ringhomomorphismus}
+\subsubsection{Polynomring\index{Polynomring}}
+\begin{definition}
+Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
+mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
+\end{definition}
+
+\subsubsection{Ringhomomorphismus\index{Ringhomomorphismus}}
 \begin{definition}
 Seien R, S Ringe.
 \begin{enumerate}
@@ -201,14 +212,8 @@ Seien R, S Ringe.
 \end{enumerate}
 \end{definition}
 
-\subsubsection{Polynomring}
-\begin{definition}
-Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
-mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
-\end{definition}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Moduln}
+\subsection{Moduln\index{Modul}}
 \begin{definition}
 Eine Menge $M \neq \emptyset$ ist ein R-(Links-) \textbf{Modul}\index{Modul}, falls es eine Verknüpfung $+:M \times M \rightarrow M, (m_1,m_2) \mapsto m_1+m_2$ und eine weitere Verknüpfung $\cdot:R \times M \rightarrow M, (r,m) \mapsto rm$ gibt, sodass:
 \begin{itemize}
@@ -226,7 +231,7 @@ Sei R HIR
 \end{itemize}
 \end{remark}
 
-\subsection{Untermoduln}
+\subsubsection{Untermoduln\index{Untermodul}}
 \begin{definition}
 Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 \begin{enumerate}
@@ -243,7 +248,7 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 \end{itemize}
 \end{remark}
 
-\subsection{freier Modul}
+\subsubsection{Freier Modul\index{freier Modul}}
 \begin{theorem}
 \leavevmode
 \begin{enumerate}
@@ -257,7 +262,8 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 	\end{itemize}
 \end{enumerate}
 \end{theorem}
-\subsection{Torsionselement}
+
+\subsubsection{Torsionselement\index{Torsionselement}}
 \begin{definition}
 Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R \backslash \{0\}$ gibt mit $rm=0$.
 
@@ -272,14 +278,14 @@ Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei
 \end{itemize}
 \end{remark}
 
-\subsection{$\pi$-Torsionselement}
+\subsubsection{$\pi$-Torsionselement\index{$\pi$-Torsionselement}}
 \begin{definition}
 Sei $\pi \in R$ irreduzibel und M ein R-Modul.\\
 Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
 %TODO: inhaltlich prüfen$
 \end{definition}
 
-\subsection{R-Modulhomomorphismus}
+\subsubsection{R-Modulhomomorphismus\index{R-Modulhomomorphismus}}
 \begin{definition}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
 \begin{itemize}
@@ -288,7 +294,7 @@ Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., fall
 \end{itemize}
 \end{definition}
 
-\subsection{K[x]-Modul}
+\subsubsection{K[x]-Modul\index{K[x]-Modul}}
 \begin{theorem}
 Sei $A \in End_K(V)$. Dann wird V zu einem K[x]-Modul vermöge\footnote{vermöge = "kann das"} $f(x)v := f(A)v, f\in K[x], v \in V.~(V_A=V)$\\
 Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
@@ -303,7 +309,7 @@ Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 \end{theorem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Körper}
+\subsection{Körper\index{Körper}}
 \begin{definition}
 Ein \textbf{Körper}\index{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
 \begin{enumerate}
@@ -340,7 +346,7 @@ Sei K ein Körper. Ein \textbf{Teilkörper}\index{Teilkörper}  L $\subseteq$ K 
 \end{definition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Vektorraum}
+\subsection{Vektorraum\index{Vektorraum}}
 \begin{definition}
 Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
 \begin{enumerate}
