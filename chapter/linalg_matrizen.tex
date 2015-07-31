@@ -1,0 +1,271 @@
+\section{Matrizen}
+
+\subsection{Umformungen}
+Sei $A \in K^{m \times n}$ mit r(A) = r. Dann gibt es invertierbare Matrizen $C \in K^{m \times m}$ und $B \in K^{n \times n}$, so dass gilt: CAB = $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix} \in K^{m \times n}$\\
+Es lassen sich Elementarmatrizen dazu verwenden, die obigen Matrizen C und B explizit zu berechnen. Das Rechenverfahren zur Bestimmung von C und B basiert auf der folgenden Beobachtung: Jede Matrix $A \in K^{m \times n}$ lässt sich durch geeignete Zeilenumformungen (d.h. Linksmultiplikation mit Elementarmatrizen) und Spaltenumformungen (d.h. Rechtsmultiplikation mit Elementarmatrizen) in eine Matrix der Form $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$ überführen.\\
+Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, so dass $T_k \cdots T_1AS_1 \cdots S_l = \begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$.\\
+Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
+
+
+\subsection{Determinante}
+\begin{definition}
+Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
+\end{definition}
+
+Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.
+
+\begin{lemma}
+Sei $A \in R^{n \times n}$. Dann gilt:
+\begin{compactenum}
+\item det(A) = det(A$^t$).
+\item Für $r, r' \in R$ und $z_j,z'_j \in R^n$ gilt die Formel $f_{det}(...,rz_j + r'z'_j,...) = r f_{det}(...,z_j,...) + r' f_{det}(...,z'_j,...)$ (d.h. für R = K ein Körper, und $z_i$ mit i $\neq$ j fest ist die Abbildung $z \mapsto f_{det}(z_1,… , z_{j-1}, z, z_{j+1},… , z_n)$ linear). 
+\item Ist $z_i = z_j$ für ein i $\neq$ j, so ist $f_{det}(z_1, ..., z_n) = 0$.
+\item Die zu b) und c) analogen Aussagen gelten für $g_{det}(s_1, …, s_n)$.
+\end{compactenum}
+\end{lemma}
+
+\begin{proposition}
+Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
+\begin{compactenum}
+\item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
+\item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
+\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.
+\end{compactenum}
+\end{proposition}
+
+\begin{remark}
+Die letzte der obigen Aussagen besagt, dass jede abstrakte Volumenfunktion auf R$^n$ folgende Form hat:
+$V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1, …, z_n) \cdot c$, wobei c = $V (e_1,…, e_n) \in R$ eine Konstante ist.
+\end{remark}
+
+\begin{lemma}
+(\textbf{Kästchensatz}\index{Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
+\end{lemma}
+
+\begin{definition}
+Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determinante der Matrix, die aus A durch Ersetzen der i-ten Zeile durch $e_j = (0,...,0,1,0,...,0)$ mit 1 an der Stelle j entsteht. Die Adjunkte \~{A} von A ist die Matrix $(A_{ij})^t$.\\
+Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.
+\end{definition}
+
+Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
+
+\begin{theorem}
+(\textbf{Cramersche Regel}\index{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
+\begin{center}
+$y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
+\end{center}
+Hierbei sind $s_1, …, s_n$ die Spalten von A.
+\end{theorem}
+
+\subsection{Charakteristisches Polynom und Eigenwerte}
+\begin{definition}
+Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
+\begin{center}
+$\chi_f (x) = det(xE - A) \in K[x]$
+\end{center}
+das \textbf{charakteristische Polynom}\index{Charakteristisches Polynom} von f.
+\end{definition}
+
+\begin{lemma}
+Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
+\begin{center}
+$\alpha$ ist \textbf{Eigenwert}\index{Eigenwert} von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
+\end{center}
+\end{lemma}
+
+\begin{definition}
+Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
+Sei $\alpha \in \sigma(f)$\footnote{Das Spektrum $\sigma(f)$ von f ist die Menge aller Eigenwerte}. Dann ist der \textbf{Eigenraum}\index{Eigenraum} von f zu $\alpha$ der lineare Unterraum
+\begin{center}
+$V_f(\alpha) = V(\alpha) = Kern(\alpha id_V - f) = \{v \in V | f(v) = \alpha v\} \subseteq V$.
+\end{center}
+\end{definition}
+
+\begin{lemma}
+Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenvektoren von f zu paarweise verschiedenen Eigenwerten $\alpha_1, ..., \alpha_r$, so sind die $v_1, ..., v_r$ linear unabhängig.
+\begin{enumerate}
+\item Ist dim$_K$ V = n, so hat f höchstens n verschiedene Eigenwerte.
+\item Sei dim$_K$ V = n. Hat f $\in$ End$_K$ (V ) genau n verschiedene Eigenwerte $\alpha_1, …, \alpha_n$, so bilden die entsprechenden Eigenvektoren $v_1, ..., v_n$ eine Basis von V . Die Matrix von f ist bzgl. dieser Basis eine Diagonalmatrix mit Diagonaleinträgen $\alpha_1, …, \alpha_n$.
+\end{enumerate}
+\end{lemma}
+
+
+\subsection{Begleitmatrix}
+\begin{definition}
+Sei $g(x) = x^n + a_{n-1}x^{n-1}+\ldots+a_1x + a_0 \in K[x]$ mit $n \geq 1$. Dann heißt die folgende Matrix Begleitmatrix zu g:
+\begin{align*}
+B_j =
+\begin{pmatrix}
+0 &        &		&  & -a_0 \\
+1 & \ddots &		&  & -a_1 \\
+  & \ddots & \ddots	&  & \vdots \\
+  &        & \ddots	& 0 & \vdots \\
+  &        &		& 1 & -a_{n-1}
+\end{pmatrix}
+\in M_n(K)
+\end{align*} 
+\end{definition}
+
+\begin{remark}
+\leavevmode
+\begin{enumerate}
+	\item $\chi_{B_g}(x) = g(x)$
+	\item $\mu_{B_g}(x) \sim 
+	\begin{pmatrix}
+		1 &        & & \\
+		  & \ddots & & \\
+		  &        &1& \\
+		  &        & & g
+	\end{pmatrix}$
+\end{enumerate}
+\end{remark}
+
+
+\subsection{Jordanmatrix}
+\begin{definition}
+Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
+\begin{align*}
+B_n \approx J(\alpha,e) :=
+\begin{pmatrix}
+\alpha &        &   &\\
+1      & \ddots &   &\\
+       & \ddots & \ddots &\\
+       &        & 1 & \alpha
+\end{pmatrix}
+\end{align*}
+\end{definition}
+
+\subsection{Normalformen}
+\subsubsection{Frobeniussche Normalform}
+\begin{theorem}
+Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
+\end{theorem}
+\subsubsection{Weierstraß'sche Normalform}
+\begin{theorem}
+Sei $A \in M_n(K)$. Dann gibt es ein bis auf Reihenfolge eindeutig bestimmtes System von Potenzen $h_1,...,h_m$ von normierten, irreduziblen Polynomen, sodass $A$ zur folgenden Matrix ähnlich ist.
+\begin{align*}
+\begin{pmatrix}
+B_{n_1} &        & \\
+        & \ddots & \\
+        &		  & B_{n_m}
+\end{pmatrix}
+\end{align*}
+Die Polynome $h_1,...,h_m$ sind genau die Invariantenteiler von $M_A(x)$
+\end{theorem}
+
+\subsubsection{Jordan Normalform}
+\begin{theorem}
+Sei $A \in M_n(K)$ und $\chi_A$ zerfalle vollständig in Linearfaktoren. Dann gibt es bis auf Reihenfolge ein eindeutig bestimmtes System von Jordanmatrizen $J_1,...,J_m$:
+\begin{align*}
+A \simeq 
+\begin{pmatrix}
+J_1 & & 0\\
+    & \ddots & \\
+0   &        & J_m
+\end{pmatrix}
+\end{align*}
+\end{theorem}
+\begin{remark}
+Aus der JNF lässt sich das Minimalpolynom $\mu_A$ direkt ablesen. Sortiere Jordankästchen nach EW und nach Größe der Jordankästchen.
+\begin{align*}
+\begin{pmatrix}
+J(\alpha_1,e_{1,1}) & & & & & & 0\\
+& \ddots & & & & & \\
+ & & J(\alpha_1,e_{1,n_1}) & & & & \\
+ & & & \ddots & & & \\
+ & & & & J(\alpha_s,e_{s,1}) & &\\
+ & & & & & \ddots & \\
+0 & & & & & & J(\alpha_s,e_{s,n_s}) \\
+\end{pmatrix}
+\end{align*}
+mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s (x-\alpha_i)^{e_{i,n_i}}$. TFE:
+\begin{enumerate}
+	\item A diagonalisierbar
+	\item Die JNF ist eine Diagonalmatrix
+	\item Jedes Jordankästchen hat die Größe 1
+\end{enumerate}
+\end{remark}
+
+\subsection{äquivalent und ähnlich}
+\begin{definition}
+Sei R ein komm. Ring.
+\begin{enumerate}
+	\item Seien $A,B \in K^{n \times m}$. Dann heißen $A$ und $B$ äquivalent, falls es $P \in Gl_n(R), Q \in Gl_m(R)$ gibt mit $B=P^{-1}AQ$. In Zeichen $A \sim B$.
+	\item Seien $A,B \in M_n(R) = K^{n \times n}$. Dann heißen $A$ und $B$ ähnlich oder konjugiert, falls es $S \in Gl_n(R)$ gibt mit $B=S^{-1}AS$. In Zeichen $A \approx B$.
+\end{enumerate}
+\end{definition}
+
+\subsection{positiv Definit}
+\begin{definition}
+Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
+\end{definition}
+\begin{theorem}
+\leavevmode
+\begin{compactitem}
+\item Sei V K-VR mit ( , ) und dim(V) = n < $\infty$. Dann gilt für $f \in End(V)$:\\
+f ist positiv $\Leftrightarrow$ $\exists u \in Gl(V)$ mit $f = u^*u$
+\item A positiv $\Leftrightarrow$ \={A} positiv\\
+f positiv $\Leftrightarrow$ A positiv
+\item Sei $B \in M_n(\mathbb{C})$.\\
+$B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le k \le n$
+\end{compactitem}
+\end{theorem}
+
+
+\subsection{unitär und orthogonal}
+\begin{definition}
+Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
+Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$
+\end{definition}
+\begin{theorem}
+Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$. TFE:
+\begin{itemize}
+	\item A ist unitär
+	\item die Spalten von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts
+	\item die Zeilen von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts
+\end{itemize}
+\end{theorem}
+
+\begin{definition}
+$A \in M_n(K)$ heißt orthogonal, falls $A^tA = E$
+\end{definition}
+
+\begin{definition}
+Seien $A, B \in M_n(K)$.\\
+$A$ ist \textbf{unitär ähnlich} zu $B$, falls es eine unitäre Matrix $U$ gibt mit $B = U^*AU$\\
+$A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O$ gibt mit $B = O^tAO$
+\end{definition}
+
+\subsection{Strukturmatrix}
+\begin{definition}
+Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
+Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.
+\end{definition}
+
+\begin{example}
+\leavevmode
+\begin{compactitem}
+\item Sei $v_1, …, v_n$ Basis von V und $f_1, …, f_n$ die duale Basis. Dann: B = ($f_i(v_j)$) = E
+\item Sei $v_1, …, v_n$ ON-Basis von V. Dann: B = (($v_i, v_j))_{ij}$ = E
+\item Bez. der Standardbasis ist B = E
+\item Bez. der Standardbasen hat $\beta(x,y) := x^tBy$ die Strukturmatrix B
+\end{compactitem}
+\end{example}
+
+\begin{theorem}
+Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei $\beta: V \times W \to K$ eine Bilinearform und B die Strukturmatrix.\\
+Sei $V \ni v = x_1v_1 + … + x_nv_n$, $x_i \in K$ und\\
+\hspace*{4mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
+Dann gilt: $\beta(v, w) = x^tBy$
+
+\textbf{Folgerung}:
+Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. TFE:
+\begin{enumerate}
+\item $\beta$ ist ausgeartet im 1.Argument
+\item $\beta$ ist ausgeartet im 2.Argument
+\item $\det(B) = \det(B^t) = 0$
+\item $\rg(B) = \rg(B^t) < n$
+\item $\ker(B) = \{0\}$
+\item $\ker(B^t) = \{0\}$
+\end{enumerate}
+\end{theorem}
