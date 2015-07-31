@@ -1,5 +1,5 @@
 \section{Lineare Funktionale und adjungierte Abbildungen}
-$V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
+$V^* = text{Hom}_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
 \begin{itemize}
 \item Sei dim(V) = n < $\infty$ und $f \in V^*$ $\Rightarrow$ $\exists ! w \in V$ mit $f(v) = (v,w)$ $\forall v \in V$
 \item Sei dim(V) = n < $\infty$ mit innerem Produkt und $ f \in End_K(V)$ $\Rightarrow$ $\exists ! f^* \in End_K(V)$ mit $(f(v_1), v_2) = (v_1, f^*(v_2))$
@@ -8,20 +8,24 @@ $V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \m
 \item Sei $f: V \to V$ linear und $a_1, …, a_n$ eine ON-Basis von $V$. Sei $A = (\alpha_{ij})$ die darstellende Matrix von $f$ bez. $a_1, …, a_n$. Dann gilt: $\alpha_{ij} = (f(a_j), a_i)$
 \item Sei $B = (\beta_{ij})$ die darstellende Matrix von $f^*$. Dann gilt: $B = A^*$
 \end{enumerate}
-\item Bemerkungen:
+\item
+\begin{remark}
 \begin{enumerate}
 \item Falls dim(V) < $\infty$, so gibt es stets $f^*$
 \item $f^*$ ist eindeutig durch $f$ bestimmt
 \end{enumerate}
+\end{remark}
 \item $f \in End(V)$ heißt \textbf{selbstadjungiert}, falls $f = f^*$\\
 $f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
 \item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$\\
 Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt\\
 Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
 \item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
-\item Bemerkung: Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
-Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
 \end{itemize}
+\begin{remark}
+Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
+Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
+\end{remark}
 
 \section{mehr zu positiv und positiv definit}
 \begin{compactitem}
@@ -117,24 +121,27 @@ $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p
 \item $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$
 \item Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
 \end{enumerate}
-\item Lemma: Sei $f: V \to V$ normal. Dann gilt:
+\item \textbf{Lemma}: Sei $f: V \to V$ normal. Dann gilt:
 \begin{enumerate}
 \item $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$
 \item $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal
 \item Das Minimalpolynom hat keine mehrfachen Nullstellen
 \end{enumerate}
-\item Theorem: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
+\item \textbf{Theorem}: V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
 \begin{enumerate}
 \item $f = \alpha_1p_1 + … + \alpha_kp_k$
 \item $id_V = p_1 + … + p_k$
 \item $p_ip_j = 0$ für $i \neq j$
 \end{enumerate}
-Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.\\
-Bemerkung: Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
+Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.
+
+\begin{remark}
+Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
+\end{remark}
 \end{compactitem}
 
 \section{Dualräume}
-$V^* = Hom(V, K)$ heißt Dualraum.
+$V^* = \text{Hom}(V, K)$ heißt Dualraum.
 \begin{compactitem}
 \item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_K(V,W)$.
 \item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta_{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
@@ -191,12 +198,15 @@ Proposition: Sei $g: V \to W$ linear. Dann gilt:
 
 \section{Bilinearform ausgeartet}
 Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
-(ausgeartet im 2.Argument analog)\\
-Bemerkungen:
+(ausgeartet im 2.Argument analog)
+
+
+\begin{remark}
 \begin{compactitem}
 \item Innere Produkte sind stets nicht-ausgeartet
 \item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
 \end{compactitem}
+\end{remark}
 
 \section{Strukturmatrix}
 Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
@@ -217,8 +227,8 @@ Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearf
 \begin{enumerate}
 \item $\beta$ ist ausgeartet im 1.Argument
 \item $\beta$ ist ausgeartet im 2.Argument
-\item $det(B) = det(B^t) = 0$
-\item $rg(B) = rg(B^t) < n$
-\item $ker(B) = \{0\}$
-\item $ker(B^t) = \{0\}$
+\item $\det(B) = \det(B^t) = 0$
+\item $\rg(B) = \rg(B^t) < n$
+\item $\ker(B) = \{0\}$
+\item $\ker(B^t) = \{0\}$
 \end{enumerate}

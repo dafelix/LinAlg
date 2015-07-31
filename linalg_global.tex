@@ -8,7 +8,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsfonts}
-\usepackage[onehalfspacing]{setspace}
+\usepackage{setspace}
 \usepackage{stmaryrd}
 \usepackage{romannum}
 %\usepackage{esvect}%
@@ -17,6 +17,13 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{newclude}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage[arrow, matrix, curve]{xy}
+
+\usepackage{color}
+\usepackage{mdframed}
+
 \geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
 
 %\hypersetup{
@@ -26,7 +33,7 @@
 %  pdfkeywords = {Stichwort1, Stichwort2 ...} ,
 %  pdfcreator  = {Mit welcher Anwendung i.d.R. pdflatex},
 %  pdfproducer = {LaTeX with hyperref}
-%}
+%}xt
 
 % für Faktorraum. Beispiel: Z/3Z <=> \QR{Z}{3Z}
 \newcommand{\QR}[2]{
@@ -38,6 +45,11 @@
 \newcommand{\im}[0]{
 \text{im}
 }
+
+% Befehl für rg
+\newcommand{\rg}[0]{
+\text{rg}
+}
 % Befehl für Norm
 \newcommand{\norm}[1]{
 \parallel #1 \parallel
@@ -46,6 +58,17 @@
 \renewcommand{\itemize}{\compactitem}
 \renewcommand{\enumerate}{\compactenum}
 \renewcommand{\labelenumi}{\theenumi)}
+
+\definecolor{remarkbg}{gray}{0.90}
+\newenvironment{remark}{
+	\begin{samepage}
+	\begin{mdframed}[linewidth=0, backgroundcolor=remarkbg]
+	\textbf{Bemerkung}:
+	}
+	{
+	\end{mdframed}
+	\end{samepage}
+	}
 
 \parindent 0pt
 
@@ -57,6 +80,13 @@
 \begin{document}
 \pagenumbering{arabic}
 \maketitle
+
+\singlespacing
+\tableofcontents
+\onehalfspacing
+
+\newpage
+
 \include*{chapter/linalg_1}
 \include*{chapter/linalg_2_part1}
 \include*{chapter/linalg_2_part2}
