@@ -38,32 +38,10 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 	\item Sei R Ring mit 1. Sei $I \subsetneq R $ Ideal. Dann gibt es ein maximales Ideal M mit $ I \subseteq M$. Insbesondere existieren max. Ideale.
 \end{itemize}
 \end{remark}
+
 \section{Ringe}
 \begin{definition}
-Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
-\begin{compactenum}
-\item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
-\item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
-\item Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
-\end{compactenum}
-Ein Ring R ist kommutativ, falls zusätzlich gilt
-\begin{compactenum}
-\setcounter{enumi}{3}
-\item $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.
-\end{compactenum}
-\end{definition}
-\begin{example}
-\begin{compactenum}
-\item Jeder Körper ist insbesondere ein kommutativer Ring.
-\item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
-\item Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
-\item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
-\item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
-\end{compactenum}
-\end{example}
-
-
-\begin{definition}
+\leavevmode
 \begin{enumerate}
 	\item R ist ein \textbf{euklidischer} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
 	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
@@ -71,6 +49,7 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 	\item R heißt \textbf{faktoriell}, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
 \end{enumerate}
 \end{definition}
+
 \begin{remark}
 \begin{itemize}
 	\item Euklidisch $\Rightarrow$ HIR $\Rightarrow$ faktoriell
@@ -121,7 +100,7 @@ Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei
 \end{definition}
 
 \begin{remark}
-$~~$
+\leavevmode
 \begin{itemize}
 	\item $T(M) \subseteq M$ ist Teilmodul
 	\item $\QR{M}{T(M)}$ ist torsionsfrei
@@ -151,8 +130,9 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 	\item $rn \in N, \forall r \in R, n\in N$
 \end{enumerate}
 \end{definition}
+
 \begin{remark}
-$~~$
+\leavevmode
 \begin{itemize}
 	\item Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
 	\item $\ker(f),\im(f)$ sind Untermoduln.
@@ -182,6 +162,7 @@ Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_
 \end{enumerate}
 \textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt
 \end{theorem}
+
 \begin{remark}
 Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
 
@@ -190,8 +171,6 @@ Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \s
 	\item $M_1 \simeq M_2 \Leftrightarrow rg(M_1) = rg(M_2)$
 	\item $\epsilon_1 = \mu_1,...,\epsilon_m = \mu_m$ (insbes. $l=m$) %TODO: inhaltlich prüfen$
 \end{itemize}
-\begin{remark}
-Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
 \end{remark}
 
 \section{Invariantenteiler}
@@ -230,6 +209,7 @@ B_j =
 \in M_n(K)
 \end{align*} 
 \end{definition}
+
 \begin{remark}
 \leavevmode
 \begin{enumerate}
@@ -243,6 +223,7 @@ B_j =
 	\end{pmatrix}$
 \end{enumerate}
 \end{remark}
+
 \section{Jordanmatrix}
 \begin{definition}
 Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
@@ -306,6 +287,7 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 	\item Jedes Jordankästchen hat die Größe 1
 \end{enumerate}
 \end{remark}
+
 \section{Inneres Produkt (Skalarprodukt)}
 \begin{definition}
 Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\phi$ von $V \times V$ nach $K, \phi (v_1,v_2) = (v_1,v_2) \in K,~v_1,v_2 \in V$ mit folgenden Eigenschaften:
@@ -319,8 +301,10 @@ Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\ph
 \begin{remark}
 V zusammen mit einem inneren Produkt nennt man einen \textbf{euklidischen Raum} (falls $K=\mathbb{R}$) bzw. \textbf{unitären Raum} (falls $K=\mathbb{C}$).
 \end{remark}
-\textbf{Lemma}:
+
+\begin{lemma}
 Sei $A:V \rightarrow W$ linear und injektiv. Sei $(~,~):W \times W \rightarrow K$ ein inneres Produkt auf $W$. Dann wird durch $p_A(v_1,v_2):=(Av_1,Av_2),~v_1,v_2 \in V$ ein inneres Produkt definiert.
+\end{lemma}
 
 \section{Cauchy-Schwarz-Ungleichung}
 \begin{theorem}
