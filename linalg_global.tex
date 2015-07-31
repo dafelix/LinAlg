@@ -67,11 +67,14 @@
 \newtheorem{theorem}{Satz}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{example}{Beispiel}[section]
+\newtheorem{proposition}{Proposition}[section]
 
 \newtheorem{mddefinition}{Definition}[section]
 \newenvironment{definition}%
   {\begin{mdframed}[linewidth=0,backgroundcolor=remarkbg]\begin{mddefinition}}%
   {\end{mddefinition}\end{mdframed}}
+
+%Use \leavevmode if theorem,... is followed by enumerate / itemize /...
 
 %\newenvironment{remark}{
 %	\begin{samepage}
