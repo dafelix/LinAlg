@@ -93,7 +93,7 @@ Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.
 
 \textbf{Homomorphiesatz} für Gruppen: Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und im(f) = im(h).\\
 
-Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.\\
+Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.
 
 \begin{lemma}
 \begin{compactenum}
@@ -392,7 +392,11 @@ Eine \textbf{K- Algebra} ist ”fast ein Köper”, aber
 \item nicht jedes Element ungleich Null ist invertierbar bezüglich der Multiplikation\\
 \end{enumerate}
 
-Das \textbf{Kroneckersymbol} $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k. Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden die Endomorphismen $e_{ij} \in End_K (V)$ mit $e_{ij}(a_k) = \delta_{jk}a_i$ eine Basis $\{e_{11}, ..., e_{nn}\}$ von $End_K (V)$; es ist $dim_K End_K (V) = n^2$. Für die Basiselemente $\{e_{ij}\}$ von $End_K(V)$ gelten die Formeln
+\begin{definition}
+Das \textbf{Kroneckersymbol} $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k.
+\end{definition}
+
+Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden die Endomorphismen $e_{ij} \in End_K (V)$ mit $e_{ij}(a_k) = \delta_{jk}a_i$ eine Basis $\{e_{11}, ..., e_{nn}\}$ von $End_K (V)$; es ist $dim_K End_K (V) = n^2$. Für die Basiselemente $\{e_{ij}\}$ von $End_K(V)$ gelten die Formeln
 \begin{center}
 $e_{ij}e_{kl} = \delta_{jk}e_{il}$ und $\sum\nolimits_{i=1}^{n}e_{ii} = id_V$.
 \end{center}
@@ -430,12 +434,14 @@ Endomorphismus & f: V $\to$ V & linear\\
 Automorphismus & f: V $\to$ V & linear, bijektiv\\
 \end{tabular}\\
 
-Proposition: Seien U,V,W K-Vektorräume mit Basen X = $\{u_1,...,u_k\}$,Y = $\{v_1,...,v_n\}$ und Z = $\{w_1,...,w_m\}$. Dann gilt:
+\begin{proposition}
+Seien U,V,W K-Vektorräume mit Basen X = $\{u_1,...,u_k\}$,Y = $\{v_1,...,v_n\}$ und Z = $\{w_1,...,w_m\}$. Dann gilt:
 \begin{compactenum}
 \item Die Abbildung $\kappa: Hom_K(U,V) \to K^{n \times k}, f \mapsto A_{f,X,Y}$ ist ein Isomorphismus.
 \item Seien $f \in Hom_K(U,V)$ und $g \in Hom_K(V,W)$. Sind $A_{f,X,Y} = (\alpha_{jl}) \in K^{n \times k}$ und $A_{g,X,Y} = (\beta_{ij}) \in K^{m \times n}$, so ist $A_{gf,X,Z} = (\gamma_{il}) \in K^{m \times k}$ mit
-$\gamma_{il} = \sum\nolimits_{j=1}^{n} \beta_{ij} \alpha_{jl}$.\\
+$\gamma_{il} = \sum\nolimits_{j=1}^{n} \beta_{ij} \alpha_{jl}$.
 \end{compactenum}
+\end{proposition}
 
 \begin{lemma}
 Sei V ein K-Vektorraum der Dimension n < $\infty$ und sei $f \in End_K (V)$. Dann sind gleichwertig:
@@ -446,12 +452,14 @@ Sei V ein K-Vektorraum der Dimension n < $\infty$ und sei $f \in End_K (V)$. Dan
 \end{enumerate}
 \end{lemma}
 
-Satz: Sei f: V $\to$ W linear, V, W endlich erzeugt. Seien X = $\{v_1, …, v_n\}$ und X' = $\{v'_1, …, v'_n\}$ Basen von V und Y = $\{w_1, …, w_m\}$ und Y' = $\{w'_1, …, w'_m\}$ Basen von W. Sei $v'_j = \sum\nolimits_{i=1}^{n} \beta_{ij} v_i$ und $w'_l = \sum\nolimits_{k=1}^{m} \gamma_{kl} w_k$. Sei B = $(\beta_{ij}) \in K^{n \times n}$, C = $(\gamma_{kl}) \in K^{m \times m}$. Dann gilt:
+\begin{theorem}
+Sei f: V $\to$ W linear, V, W endlich erzeugt. Seien X = $\{v_1, …, v_n\}$ und X' = $\{v'_1, …, v'_n\}$ Basen von V und Y = $\{w_1, …, w_m\}$ und Y' = $\{w'_1, …, w'_m\}$ Basen von W. Sei $v'_j = \sum\nolimits_{i=1}^{n} \beta_{ij} v_i$ und $w'_l = \sum\nolimits_{k=1}^{m} \gamma_{kl} w_k$. Sei B = $(\beta_{ij}) \in K^{n \times n}$, C = $(\gamma_{kl}) \in K^{m \times m}$. Dann gilt:
 \begin{compactenum}
 \item $A_{f, X', Y'} = C^{-1} A_{f, X, Y} B$
 \item Sei V = W und f: V $\to$ V, seien X und X' zwei verschiedene Basen von V. Sei $v'_j = \sum\nolimits_{i=1}^{n} \alpha_{ij} v_i$.\\
 Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
 \end{compactenum}
+\end{theorem}
 
 
 \section{Elementare Umformungen}
@@ -466,7 +474,7 @@ Die Matrix A = $(\alpha_{ij})$ definiert eine lineare Abbildung $f = f_A: K^n \t
 \begin{center}
 $f^{-1}(b) = \{x \in K^n | Ax = b\}$,
 \end{center}
-d.h. die Elemente von $f^{-1}(b)$ sind genau die Lösung von (L).\\
+d.h. die Elemente von $f^{-1}(b)$ sind genau die Lösung von (L).
 
 \begin{lemma}
 Sei $A \in K^{m \times n}$ eine Matrix.
@@ -476,13 +484,15 @@ Sei $A \in K^{m \times n}$ eine Matrix.
 \end{compactenum}
 \end{lemma}
 
-Proposition (\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.\\
+Proposition (\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
 
 \begin{remark}
 Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.
 \end{remark}
 
-Proposition (\textbf{Eindeutigkeit}): Sei $A \in K^{m \times n},b \in K^m$ und das lineare Gleichungssystem (L) Ax = b habe eine Lösung. Dann hat (L) genau dann eine eindeutige Lösung, wenn Ax = 0 nur die triviale Lösung x = 0 hat; dies gilt genau dann, wenn r(A) = n ist.\\
+\begin{proposition}
+(\textbf{Eindeutigkeit}): Sei $A \in K^{m \times n},b \in K^m$ und das lineare Gleichungssystem (L) Ax = b habe eine Lösung. Dann hat (L) genau dann eine eindeutige Lösung, wenn Ax = 0 nur die triviale Lösung x = 0 hat; dies gilt genau dann, wenn r(A) = n ist.
+\end{proposition}
 
 \begin{remark}
 Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. Demnach ist dann r(A) = m. Sind diese Lösungen eindeutig, so folgt r(A) = n. Also ist in diesem Fall A vom Typ (n, n) und wegen r(A) = n invertierbar. Ist $A^{-1}$ die inverse Matrix, so sind die eindeutigen Lösungen von Ax = b genau die x = A$^{-1}$b.
@@ -525,7 +535,7 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
 
-Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.\\
+Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.
 
 \begin{lemma}
 Sei $A \in R^{n \times n}$. Dann gilt:
@@ -537,12 +547,14 @@ Sei $A \in R^{n \times n}$. Dann gilt:
 \end{compactenum}
 \end{lemma}
 
-Proposition: Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
+\begin{propoaition}
+Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
 \begin{compactenum}
 \item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
 \item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
 \item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.\\
 \end{compactenum}
+\end{proposition}
 
 \begin{remark}
 Die letzte der obigen Aussagen besagt, dass jede abstrakte Volumenfunktion auf R$^n$ folgende Form hat:
@@ -597,7 +609,9 @@ Sei R ein Ring mit Einselement 1.
 \end{compactenum}
 \end{lemma}
 
-Proposition (\textbf{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).\\
+\begin{proposition}
+(\textbf{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).
+\end{proposition}
 
 \begin{definition}
 Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\nolimits_{j=0}^{n} a_j x^j \in K[x]$, so setze f(c) = $\sum\nolimits_{j=0}^{n} a_j c^j \in \mathcal{A}$. Die Abbildung
