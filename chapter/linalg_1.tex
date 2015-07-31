@@ -6,19 +6,20 @@
 %\setcounter{section}{1}
 
 \section{Gruppen}
-\begin{itemize}
-\item Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}, falls gilt:
+\begin{definition}
+Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}, falls gilt:
 \begin{enumerate}
 \item $\cdot$ ist assoziativ: a$\cdot$(b$\cdot$c)=(a$\cdot$b)$\cdot$c für alle a,b,c $\in$ G
 \item es gibt ein (links)-neutrales Element e $\in$ G mit e $\cdot$ a = a für alle a $\in$ G 
 \item zu jedem a $\in$ G gibt es ein (links)-inverses Element, d.h. ein b $\in$ G mit b $\cdot$ a = e
 \end{enumerate}
-Die Gruppe G ist kommutativ oder \textbf{abelsch}, falls zusätzlich gilt:
+\hspace*{3mm} Die Gruppe G ist kommutativ oder \textbf{abelsch}, falls zusätzlich gilt:
 \begin{enumerate}
 \setcounter{enumi}{3}
 \item a $\cdot$ b = b $\cdot$ a für a, b $\in$ G
 \end{enumerate}
-\item 
+\end{definition}
+
 \begin{remark}
 \begin{enumerate}
 \item Das neutrale Element ist eindeutig bestimmt. Ebenso ist zu jedem a $\in$ G das zugehörige inverse Element eindeutig bestimmt.
@@ -26,66 +27,82 @@ Die Gruppe G ist kommutativ oder \textbf{abelsch}, falls zusätzlich gilt:
 \item Ist (G,+) eine abelsche Gruppe, so setze e = 0 (Nullelement) und bezeichne das zu a inverse Element mit -a. In diesem Fall bezeichnet $\sum\nolimits_{i=1}^{n} a_i$ die Summe der endlich vielen Elemente $a_1, . . . , a_n$; nach Definition $\sum\nolimits_{i=1}^{0} a_i = 0$.
 \end{enumerate}
 \end{remark}
-\item Definition: Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine \textbf{Untergruppe} von G, H $\le$ G, falls gilt:
+
+\begin{definition}
+Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine \textbf{Untergruppe} von G, H $\le$ G, falls gilt:
 \begin{enumerate}
 \item 1 $\in$ H
 \item a,b $\in$ H $\Rightarrow$ ab $\in$ H
 \item a $\in$ H $\Rightarrow$ a$^{-1}$ $\in$ H
 \end{enumerate}
-\item
-\begin{remark} Ist $\emptyset \neq H \subseteq G$ eine nichtleere Teilmenge, so lassen sich die Kriterien (a)-(c) der obigen Definition zu einer Bedingung vereinfachen: 
+\end{definition}
+
+\begin{remark} 
+Ist $\emptyset \neq H \subseteq G$ eine nichtleere Teilmenge, so lassen sich die Kriterien (a)-(c) der obigen Definition zu einer Bedingung vereinfachen: 
 $\emptyset \neq H \subseteq G$ ist genau dann eine Untergruppe, falls gilt: a,b $\in$ H $\Rightarrow$ ab$^{-1}$ $\in$ H.
 \end{remark}
-\item Definition: Sei G eine Gruppe, U $\le$ G eine Untergruppe, und $\sim$ die durch U definierte Äquivalenzrelation auf G (a $\sim$ b $\Leftrightarrow$ ab$^{-1}$ $\in$ U). Ist a $\in$ G, so ist die entsprechende Äquivalenzklasse die Menge 
+
+\begin{definition}
+Sei G eine Gruppe, U $\le$ G eine Untergruppe, und $\sim$ die durch U definierte Äquivalenzrelation auf G (a $\sim$ b $\Leftrightarrow$ ab$^{-1}$ $\in$ U). Ist a $\in$ G, so ist die entsprechende Äquivalenzklasse die Menge 
 $[a]=\{ b \in G | a \sim b \} = \{ b \in G | ab^{-1} \in U \} = \{ b \in G | b = Ua \} = Ua$; 
 diese Mengen sind die \textbf{Rechtsnebenklassen} von U. Sind die $Ua_j$ für j $\in$ J, die verschiedenen Rechtsnebenklassen, so bilden diese eine Partition G=$\bigcup\limits_{j \in J} Ua_j$.
-\item Ist |J| endlich, so nennt man |J| den Index von U in G und schreibt |J| = |G : U|.
+\end{definition}
+
+Ist |J| endlich, so nennt man |J| den Index von U in G und schreibt |J| = |G : U|.
 \begin{enumerate}
 \item Genauso definiert a $\sim$ b $\Leftrightarrow$ a$^{-1}$b $\in$ eine Äquivalenzrelation auf G. Die Äquivalenzklasse von a $\in$ G ist die Linksnebenklasse $[a] = \{b \in G | a \sim b \} = \{ b \in G | a^{-1}b \in U \} = aU$. 
 Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im allgemeinen nicht.
 \item Der Versuch analog zur Definition der Addition auf $\mathbb{Z}/m\mathbb{Z}$ mittels der Addition auf $\mathbb{Z}$ eine Verknüpfung auf der Menge der Nebenklassen $G/U = \{Ua | a \in G\}$ durch Ua $\cdot$ Ub = Uab zu definieren funktioniert für abelsche Gruppen, aber nicht für allgemeine Gruppen.
 \end{enumerate}
-\end{itemize}
+
 
 \section{Körper}
-\begin{itemize}
-\item Ein \textbf{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
+\begin{definition}
+Ein \textbf{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
 \begin{enumerate}
 \item (K, +) ist eine abelsche Gruppe mit Nullelement 0,
 \item (K \textbackslash \{0\}, $\cdot$) ist eine abelsche Gruppen mit Einselement 1$\neq$ 0,
 \item a$\cdot$(b+c)=a$\cdot$b + a$\cdot$c und (a+b)$\cdot$c = a$\cdot$c + a$\cdot$b.
 \end{enumerate}
-\item In Körpern gelten viele der ‘üblichen’ Rechenregeln. Für a, b $\in$ K ist:
+\end{definition}
+
+In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\in$ K ist:
 \begin{enumerate} 
 \item 0a = a0 = 0 
 \item (-1)a = -a
 \item (-a)b = a(-b) = -ab
 \item ab = 0 $\Rightarrow$ a = 0 oder b = 0
 \end{enumerate}
-\item Beispiele:
+
+Beispiele:
 \begin{enumerate}
 \item $\mathbb{Q}$ und $\mathbb{R}$ sind Körper.
 \item Sei p eine Primzahl und $\mathbb{Z}/p\mathbb{Z}$ die Menge der Restklassen modulo p. Dann bildet $\mathbb{Z}/p\mathbb{Z}$ \textbackslash\{[0]\} bzgl. der evidenten Multiplikation [a]$\cdot$[b] = [ab] eine abelsche Gruppe, d.h. $\mathbb{Z}/p\mathbb{Z}$ ist ein Körper mit p Elementen. In $\mathbb{Z}/p\mathbb{Z}$ gilt pa = 0 für alle a $\in$ $\mathbb{Z}/p\mathbb{Z}$.
 \end{enumerate}
-\item Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
+
+\begin{definition}
+Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
 \begin{enumerate}
 \item a,b $\in$ L $\Rightarrow$ a+b, a$\cdot$b $\in$ L
 \item 0, 1 $\in$ L
 \item a $\in$ L $\Rightarrow$ -a $\in$ L
 \item 0 $\neq$ a $\in$ L $\Rightarrow$ a$^{-1}$ $\in$ L
 \end{enumerate}
-\end{itemize}
+\end{definition}
+
 
 \section{Vektorräume}
-\begin{itemize}
-\item Sei K ein Körper. Ein \textbf{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
+\begin{definition}
+Sei K ein Körper. Ein \textbf{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
 \begin{enumerate}
 \item V ist bzgl. + eine abelsche Gruppe,
 \item ($\alpha$ + $\beta$) $\cdot$ a = $\alpha$ $\cdot$ a + $\beta$ $\cdot$ a und $\alpha$ $\cdot$ (a + b) = $\alpha$ $\cdot$ a + $\alpha$ $\cdot$ b,
 \item ($\alpha$ $\cdot$ $\beta$) $\cdot$ a = $\alpha$ $\cdot$ ($\beta$ $\cdot$ a) für $\alpha$, $\beta$ $\in$ K und a $\in$ V,
 \item 1 $\cdot$ a = a für 1 $\in$ K und a $\in$ V.
 \end{enumerate}
-\item Für K-Vektorräume gelten die folgenden Rechenregeln:
+\end{definition}
+
+Für K-Vektorräume gelten die folgenden \textbf{Rechenregeln}:
 \begin{enumerate}
 \item $\alpha \cdot 0_V = 0_V$ für alle $\alpha$ $\in$ K,
 \item $0_K \cdot a = 0_V$  für alle a $\in$ V,
@@ -94,20 +111,31 @@ Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im all
 \item $\alpha \cdot (\sum\nolimits_{i=1}^{n} a_i) = \sum\nolimits_{i=0}^{n} \alpha a_i$ und $(\sum\nolimits_{i=0}^{n}\alpha_i) \cdot a = \sum\nolimits_{i=0}^{n} \alpha_i a$,
 \item $\sum\nolimits_{i=0}^{n} \alpha_i a_i + \sum\nolimits_{i=0}^{n} \beta_i a_i = \sum\nolimits_{i=0}^{n} (\alpha_i + \beta_i) a_i$
 \end{enumerate}
-\item Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum} oder K-linearer Unterraum von V, falls gilt:
+
+\begin{definition}
+Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum} oder K-linearer Unterraum von V, falls gilt:
 \begin{enumerate}
 \item $\emptyset$ $\neq$ U,
 \item a, b $\in$ U $\Rightarrow$ a + b $\in$ U,
 \item $\alpha$ $\in$ K, a $\in$ U $\Rightarrow$ $\alpha$ $\cdot$ a $\in$ U (insbesondere: a $\in$ U $\Rightarrow$ -a $\in$ U ).
 \end{enumerate}
-\item Lemma: Sei V ein K -Vektorraum und sei $(U_i )_{i \in I}$ eine Familie von linearen Unterräumen von V. Dann ist U =$\cap_i U_i \subseteq V$ ebenfalls ein linearer Unterraum.
-\item Lemma: Sei V ein K-Vektorraum und A $\subseteq$ V eine Teilmenge. Dann ist die Menge $\langle A \rangle := \big\{ \sum\nolimits_{i=0}^{n} \alpha_i a_i | n \in \mathbb{N}_0, \alpha_i \in K, a_i \in A \big\} \subseteq V$ ein linearer Unterraum (der von A erzeugte lineare Unterraum). Weiter ist $\langle A \rangle = \cap U$, wobei der Schnitt über alle linearen Unterräume U von V mit A $\subseteq$ U zu erstrecken ist. Also ist $\langle A \rangle$ der kleinste lineare Unterraum, der die Teilmenge A enthält.
-\item Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
+\end{definition}
+
+\begin{remark}
+\begin{itemize}
+\item Sei V ein K -Vektorraum und sei $(U_i )_{i \in I}$ eine Familie von linearen Unterräumen von V. Dann ist U =$\cap_i U_i \subseteq V$ ebenfalls ein linearer Unterraum.
+\item Sei V ein K-Vektorraum und A $\subseteq$ V eine Teilmenge. Dann ist die Menge $\langle A \rangle := \big\{ \sum\nolimits_{i=0}^{n} \alpha_i a_i | n \in \mathbb{N}_0, \alpha_i \in K, a_i \in A \big\} \subseteq V$ ein linearer Unterraum (der von A erzeugte lineare Unterraum). Weiter ist $\langle A \rangle = \cap U$, wobei der Schnitt über alle linearen Unterräume U von V mit A $\subseteq$ U zu erstrecken ist. Also ist $\langle A \rangle$ der kleinste lineare Unterraum, der die Teilmenge A enthält.
+\end{itemize}
+\end{remark}
+
+\begin{definition}
+Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
 \begin{center}
 $a = \sum\nolimits_{i=1}^{n}\alpha_i a_i, \alpha_i \in K, a_i \in A$
 \end{center}
 besitzt. Der Vektorraum K ist endlich erzeugt (über K), falls V eine endliches Erzeugendensystem A = $\{a_1, …, a_n\}$ besitzt.
-\item
+\end{definition}
+
 \begin{remark} 
 Ist $(a_i)_{i \in I}$ eine Familie von Elementen von V , so definiert man analog den von den Elementen $a_i$ erzeugten linearen Unterraum $\langle a_i | i \in I \rangle \subseteq V$ als den von der Menge A = $\{a_i | i \in I\}$ erzeugten Unterraum. Klar ist 
 damit:
@@ -120,52 +148,63 @@ A $\subseteq$ B $\Rightarrow$ $\langle A \rangle \subset \langle B \rangle$, \hs
 A $\subseteq$ $\langle B \rangle$ $\Rightarrow$ $\langle A \rangle \subseteq \langle B \rangle$.
 \end{enumerate} 
 \end{remark}
-\item Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}, falls für jede endliche Teilmenge J $\subseteq$ I gilt:
+
+\begin{definition}
+Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}, falls für jede endliche Teilmenge J $\subseteq$ I gilt:
 \begin{center}
 $\sum\nolimits_{j \in J} \alpha_j a_j = 0 \Rightarrow \alpha_j = 0$ für alle j $\in$ J.
 \end{center}
 Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
-\item \textbf{”Basisergänzungssatz”}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.
-\item \textbf{”Austauschlemma”}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.
-\item \textbf{”Austauschsatz von Steinitz”}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
-\end{itemize}
+\end{definition}
+
+\textbf{”Basisergänzungssatz”}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.\\
+
+\textbf{”Austauschlemma”}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.\\
+
+\textbf{”Austauschsatz von Steinitz”}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
+
 
 \section{Lineare Abbildungen und Faktorräume}
-\begin{itemize}
-\item Sei K ein Körper und seien V,W K-Vektorräume.
+\begin{definition}
+Sei K ein Körper und seien V,W K-Vektorräume.
 \begin{compactenum}
-\item Eine Abbildung f : V $\to$ W heißt linear (oder \textbf{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
+\item Eine Abbildung f : V $\to$ W heißt \textbf{linear} (oder \textbf{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
 $f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.\\
-Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die Endomorphismen von V.
-\item Ist f $\in$ Hom$_K$(V,W), so definiere Kern und Bild von f als
+Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die \textbf{Endomorphismen} von V.
+\item Ist f $\in$ Hom$_K$(V,W), so definiere \textbf{Kern} und \textbf{Bild} von f als
 \begin{center}
 Bild(f) = $\{ f (a) | a \in V\}$,\\
 Kern(f) = $\{ a \in V | f(a) = 0\}$.
 \end{center}
 Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
-\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f Epimorphismus (bzw. Monomorphismus). Ist f bijektiv, so ist f ein Isomorphismus. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W isomorph,V $\cong$ W.
+\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph},V $\cong$ W.
 \end{compactenum}
 Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
-\item Lemma: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
+\end{definition}
+
+Lemma: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
 \begin{enumerate}
 \item Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.
 \item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.
 \end{enumerate}
-\item Lemma: Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
+
+Lemma: Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
 \begin{compactenum}
 \item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
 \item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
 \end{compactenum}
-\item Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
+
+Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
 \begin{enumerate}
 \item dim$_K$W = n,
 \item Es gibt einen Isomorphismus f : V $\to$ W, d.h. V $\cong$ W.
 \end{enumerate}
-\item 
+
 \begin{remark}
 Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
 \end{remark}
-\item Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild im(f) sind die in W ‘sichtbaren’ Elemente, der Kern ker(f) die Elemente in V, die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein.\\
+
+Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild im(f) sind die in W ‘sichtbaren’ Elemente, der Kern ker(f) die Elemente in V, die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein.\\
 Die Idee hier, das Bild(f) mit einem Quotienten- oder Faktorraum V/Kern(f) zu identifizieren. Da jeder lineare Unterraum U $\subseteq$ V insbesondere eine abelsche Untergruppe ist, definiert nach Lemma 2.6
 \begin{center}
 $a_1 \sim a_2 \Leftrightarrow a_1 - a_2 \in U$
@@ -179,19 +218,21 @@ ist eine abelsche Gruppe mittels $(a_1 + U) + (a_2 + U) = (a_1 + a_2) + U$ (wohl
 $q(a_1)+q(a_2)=(a_1 +U)+(a_2 +U)=(a_1 +a_2)+U =q(a_1 +a_2)$.
 \end{center}
 Wir zeigen, dass die Skalarmultiplikation auf V eine Skalarmultiplikation auf V/U induziert, so dass V/U ebenfalls ein K-Vektorraum und q : V $\to$ V/U eine lineare Abbildung ist.
-\item Lemma: Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
+
+Lemma: Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
 \begin{center}
 $(a_1 + U)+(a_2 + U)=(a_1 +a_2)+U$ und $\alpha(a+U)=\alpha a+U$.
 \end{center} 
 Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.
 
-\item Lemma: Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
+Lemma: Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
 \begin{enumerate}
 \item Ist $\{w_i + U | i \in I\}$ eine Basis von W/U und $\{v_j + W | j \in J\}$ eine Basis von V/W, so ist $\{w_i +U, v_j +U | i \in I, j \in J\}$ eine Basis von V/U.
 \item Ist dimV/U = n < $\infty$, so ist dimV/U = dimV/W + dimW/U.
 \item Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.
 \end{enumerate}
-\item Theorem (Homomorphiesatz): Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
+
+Theorem (Homomorphiesatz): Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
 \item Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert:
 \begin{align*}
@@ -206,13 +247,14 @@ Hierbei ist q: V $\to$ V/Kern(f) die kanonische Projektion definiert durch q(a) 
 \item Ist dim$_K$ V = n < $\infty$, so gilt die Formel: \\
 dimV = dimKern(f) + dimBild(f).
 \end{compactenum}
-\item Lemma: Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ Hom$_K$(V,W) sind gleichwertig:
+
+Lemma: Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ Hom$_K$(V,W) sind gleichwertig:
 \begin{enumerate}
 \item f ist ein Isomorphismus,
 \item f ist ein Monomorphismus, 
 \item f ist ein Epimorphismus.
 \end{enumerate}
-\end{itemize}
+
 
 \section{Lineare Abbildungen und Matrizen}
 \begin{itemize}
