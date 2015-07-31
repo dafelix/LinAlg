@@ -87,7 +87,7 @@ Sei f: G $\to$ H ein Homomorphismus. Dann gilt:
 Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.
 \begin{enumerate}
 \item Die Menge G/N ist mittels der Verknüpfung $g_1N \cdot g_2N = g_1g_2N, g_1,g_2 \in G$ eine Gruppe mit neutralem Element N
-\item Die Abbildung $\pi$: G $\to$ G/N, g $\mapsto$ gN, ist ein Epimorphismus mit ker($\pi$) = N\\
+\item Die Abbildung $\pi$: G $\to$ G/N, g $\mapsto$ gN, ist ein Epimorphismus mit ker($\pi$) = N
 \end{enumerate}
 \end{lemma}
 
@@ -277,7 +277,7 @@ Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
 Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
 \begin{compactenum}
 \item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
-\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.\\
+\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
 \end{compactenum}
 \end{lemma}
 
@@ -466,7 +466,8 @@ Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
 Sei $A \in K^{m \times n}$ mit r(A) = r. Dann gibt es invertierbare Matrizen $C \in K^{m \times m}$ und $B \in K^{n \times n}$, so dass gilt: CAB = $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix} \in K^{m \times n}$\\
 Es lassen sich Elementarmatrizen dazu verwenden, die obigen Matrizen C und B explizit zu berechnen. Das Rechenverfahren zur Bestimmung von C und B basiert auf der folgenden Beobachtung: Jede Matrix $A \in K^{m \times n}$ lässt sich durch geeignete Zeilenumformungen (d.h. Linksmultiplikation mit Elementarmatrizen) und Spaltenumformungen (d.h. Rechtsmultiplikation mit Elementarmatrizen) in eine Matrix der Form $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$ überführen.\\
 Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, so dass $T_k \cdots T_1AS_1 \cdots S_l = \begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$.\\
-Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.\\ 
+Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
+
 
 \section{Lineare Gleichungen}
 (L)  Ax = b\\
@@ -484,7 +485,9 @@ Sei $A \in K^{m \times n}$ eine Matrix.
 \end{compactenum}
 \end{lemma}
 
-Proposition (\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\begin{proposition}
+(\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\end{proposition}
 
 \begin{remark}
 Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.
@@ -547,12 +550,12 @@ Sei $A \in R^{n \times n}$. Dann gilt:
 \end{compactenum}
 \end{lemma}
 
-\begin{propoaition}
+\begin{proposition}
 Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
 \begin{compactenum}
 \item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
 \item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
-\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.\\
+\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.
 \end{compactenum}
 \end{proposition}
 
@@ -570,7 +573,7 @@ Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determina
 Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.
 \end{definition}
 
-Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.\\
+Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
 \begin{theorem}
 (\textbf{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
@@ -653,7 +656,7 @@ Weiter ist $r \le \sum\nolimits_{j=1}^{r}m_j \le Grad(f)$.\\
 Insbesondere hat f höchstens Grad(f) viele verschiedene Nullstellen.
 \end{lemma}
 
-Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.\\
+Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.
 
 \begin{lemma}
 Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder char(K) > m, so ist c eine m-fache Nullstelle von f genau dann, wenn $f(c) = f'(c) = \cdots = f^{(m-1)}(c) = 0 \neq f^{(m)}(c)$ ist.
@@ -698,7 +701,7 @@ In diesem Fall hat also V eine Basis $\{v_1, …, v_n\}$ bestehend aus Eigenvekt
 \end{compactenum}
 \end{definition}
 
-Ist f diagonalisierbar, so sind in der Zerlegung $V = \oplus_{i=1}^{r} V_f (\alpha_i)$ die Komponenten $V_f (\alpha_i)$ genau die Eigenräume zu den paarweise verschiedenen Eigenwerten von f.\\
+Ist f diagonalisierbar, so sind in der Zerlegung $V = \oplus_{i=1}^{r} V_f (\alpha_i)$ die Komponenten $V_f (\alpha_i)$ genau die Eigenräume zu den paarweise verschiedenen Eigenwerten von f.
 
 \begin{definition}
 Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
