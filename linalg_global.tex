@@ -25,6 +25,12 @@
 \usepackage{color}
 \usepackage{mdframed}
 
+% fuer Stichwortverzeichnis
+\usepackage{makeidx}
+
+% Stichwortverzeichnis erstellen
+\makeindex
+
 \geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
 
 %\hypersetup{
@@ -97,6 +103,7 @@
 \parindent 0pt
 
 \title{Zusammenfassung Lineare Algebra I und II}
+\subtitle{basierend auf den Vorlesungen von Prof. Bley an der\\Ludwig-Maximilians-Universität München}
 \author{Felix Mößbauer \and Melanie Michels}
 \date{2015}
 \begin{document}
@@ -111,13 +118,21 @@
 
 \include*{chapter/tests}
 
-\include*{chapter/linalg_1}
+%\include*{chapter/linalg_struktur}
 
-\vspace{15pt}
-\framebox[\textwidth]{Lineare Algebra II}
+%\vspace{15pt}
+%\framebox[\textwidth]{Lineare Algebra II}
 
-\include*{chapter/linalg_2_part1}
-\include*{chapter/linalg_2_part2}
+\include*{chapter/linalg_matrizen}
+%\include*{chapter/linalg_dualraum}
+
+\newpage
+\renewcommand{\indexname}{Stichwortverzeichnis}
+% Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Stichwortverzeichnis}
+
+% Stichwortverzeichnis endgueltig anzeigen
+\printindex
 \end{document}
 
 

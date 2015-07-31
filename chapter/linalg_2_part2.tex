@@ -83,30 +83,6 @@ Die unitären Abbildungen bilden eine Gruppe U(V). Für $u \in U(V)$ gilt:
 \end{compactitem}
 \end{theorem}
 
-\section{unitäre Matrizen}
-\begin{definition}
-Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
-Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$
-\end{definition}
-\begin{theorem}
-Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$. TFE:
-\begin{itemize}
-	\item A ist unitär
-	\item die Spalten von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts
-	\item die Zeilen von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts
-\end{itemize}
-\end{theorem}
-\section{Orthogonale Matrizen}
-\begin{definition}
-$A \in M_n(K)$ heißt orthogonal, falls $A^tA = E$
-\end{definition}
-\section{zu orthogonal und unitär}
-\begin{definition}
-Seien $A, B \in M_n(K)$.\\
-$A$ ist \textbf{unitär ähnlich} zu $B$, falls es eine unitäre Matrix $U$ gibt mit $B = U^*AU$\\
-$A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O$ gibt mit $B = O^tAO$
-\end{definition}
-
 \section{Normale Endomorphismen}
 \begin{definition}
 $f: V \to V$ heißt normal, falls $ff^*=f^*f$.
@@ -301,37 +277,3 @@ Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet 
 \item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
 \end{compactitem}
 \end{remark}
-
-\section{Strukturmatrix}
-\begin{definition}
-Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
-Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.
-\end{definition}
-
-\begin{example}
-\leavevmode
-\begin{compactitem}
-\item Sei $v_1, …, v_n$ Basis von V und $f_1, …, f_n$ die duale Basis. Dann: B = ($f_i(v_j)$) = E
-\item Sei $v_1, …, v_n$ ON-Basis von V. Dann: B = (($v_i, v_j))_{ij}$ = E
-\item Bez. der Standardbasis ist B = E
-\item Bez. der Standardbasen hat $\beta(x,y) := x^tBy$ die Strukturmatrix B
-\end{compactitem}
-\end{example}
-
-\begin{theorem}
-Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei $\beta: V \times W \to K$ eine Bilinearform und B die Strukturmatrix.\\
-Sei $V \ni v = x_1v_1 + … + x_nv_n$, $x_i \in K$ und\\
-\hspace*{4mm} $W \ni w = y_1w_1 + … + y_mw_m$, $y_j \in K$.\\
-Dann gilt: $\beta(v, w) = x^tBy$
-
-\textbf{Folgerung}:
-Sei dim(V) = dim(W) = n < $\infty$. Sei $\beta: V \times W \to K$ eine Bilinearform mit Strukturmatrix B. TFE:
-\begin{enumerate}
-\item $\beta$ ist ausgeartet im 1.Argument
-\item $\beta$ ist ausgeartet im 2.Argument
-\item $\det(B) = \det(B^t) = 0$
-\item $\rg(B) = \rg(B^t) < n$
-\item $\ker(B) = \{0\}$
-\item $\ker(B^t) = \{0\}$
-\end{enumerate}
-\end{theorem}
