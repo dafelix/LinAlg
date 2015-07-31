@@ -8,6 +8,54 @@ Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
 
 
 \subsection{Determinante}
+\begin{definition}
+Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
+\end{definition}
+
+Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.
+
+\begin{lemma}
+Sei $A \in R^{n \times n}$. Dann gilt:
+\begin{compactenum}
+\item det(A) = det(A$^t$).
+\item Für $r, r' \in R$ und $z_j,z'_j \in R^n$ gilt die Formel $f_{det}(...,rz_j + r'z'_j,...) = r f_{det}(...,z_j,...) + r' f_{det}(...,z'_j,...)$ (d.h. für R = K ein Körper, und $z_i$ mit i $\neq$ j fest ist die Abbildung $z \mapsto f_{det}(z_1,… , z_{j-1}, z, z_{j+1},… , z_n)$ linear). 
+\item Ist $z_i = z_j$ für ein i $\neq$ j, so ist $f_{det}(z_1, ..., z_n) = 0$.
+\item Die zu b) und c) analogen Aussagen gelten für $g_{det}(s_1, …, s_n)$.
+\end{compactenum}
+\end{lemma}
+
+\begin{proposition}
+Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
+\begin{compactenum}
+\item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
+\item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
+\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.
+\end{compactenum}
+\end{proposition}
+
+\begin{remark}
+Die letzte der obigen Aussagen besagt, dass jede abstrakte Volumenfunktion auf R$^n$ folgende Form hat:
+$V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1, …, z_n) \cdot c$, wobei c = $V (e_1,…, e_n) \in R$ eine Konstante ist.
+\end{remark}
+
+\begin{lemma}
+(\textbf{Kästchensatz}\index{Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
+\end{lemma}
+
+\begin{definition}
+Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determinante der Matrix, die aus A durch Ersetzen der i-ten Zeile durch $e_j = (0,...,0,1,0,...,0)$ mit 1 an der Stelle j entsteht. Die Adjunkte \~{A} von A ist die Matrix $(A_{ij})^t$.\\
+Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.
+\end{definition}
+
+Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
+
+\begin{theorem}
+(\textbf{Cramersche Regel}\index{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
+\begin{center}
+$y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
+\end{center}
+Hierbei sind $s_1, …, s_n$ die Spalten von A.
+\end{theorem}
 
 \subsection{Diagonalisierbarkeit\index{Diagonalisierbarkeit}}
 
