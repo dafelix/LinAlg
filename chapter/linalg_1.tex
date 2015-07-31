@@ -121,12 +121,11 @@ Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Unterve
 \end{enumerate}
 \end{definition}
 
-\begin{remark}
+Lemma:
 \begin{itemize}
 \item Sei V ein K -Vektorraum und sei $(U_i )_{i \in I}$ eine Familie von linearen Unterräumen von V. Dann ist U =$\cap_i U_i \subseteq V$ ebenfalls ein linearer Unterraum.
 \item Sei V ein K-Vektorraum und A $\subseteq$ V eine Teilmenge. Dann ist die Menge $\langle A \rangle := \big\{ \sum\nolimits_{i=0}^{n} \alpha_i a_i | n \in \mathbb{N}_0, \alpha_i \in K, a_i \in A \big\} \subseteq V$ ein linearer Unterraum (der von A erzeugte lineare Unterraum). Weiter ist $\langle A \rangle = \cap U$, wobei der Schnitt über alle linearen Unterräume U von V mit A $\subseteq$ U zu erstrecken ist. Also ist $\langle A \rangle$ der kleinste lineare Unterraum, der die Teilmenge A enthält.
 \end{itemize}
-\end{remark}
 
 \begin{definition}
 Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
@@ -163,8 +162,7 @@ Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 
 \textbf{”Austauschsatz von Steinitz”}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
 
-
-\section{Lineare Abbildungen und Faktorräume}
+\section{Lineare Abbildungen}
 \begin{definition}
 Sei K ein Körper und seien V,W K-Vektorräume.
 \begin{compactenum}
@@ -182,16 +180,23 @@ Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
 Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
 \end{definition}
 
+\begin{remark}
+Seien $\{a_1, …, a_n\}$ und $\{b_1, …, b_m\}$ Basen von V und W. Eine lineare Abbildung $f: V \to W$ ist durch die Bilder der Basisvektoren eindeutig bestimmt. Jedes der Bilder $f(a_j)$ besitzt eine eindeutige Darstellung als Linearkombination der $b_i$, d.h. für j = 1, …, n gibt es eindeutig bestimmte Skalare $\alpha_{ij} \in K$, so dass $f(a_j) = \sum\limits_{i=1}^m \alpha_{ij}b_i$.\\
+Wir ordnen diese Vektoren $(\alpha_{1j}, …, \alpha_{mj})$, j= 1, …, n als Spalten einer Matrix an:\\
+$\begin{pmatrix} \alpha_{11} & \cdots & \alpha_{1n} \\ \vdots & & \vdots \\ \alpha_{m1} & \cdots & \alpha_{mn} \end{pmatrix}$\\
+Damit lässt sich die lineare Abbildung f bez. dieser Basen durch eine solche Abbildungsmatrix darstellen.
+\end{remark}
+
 Lemma: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
 \begin{enumerate}
 \item Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.
-\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.
+\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.\\
 \end{enumerate}
 
 Lemma: Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
 \begin{compactenum}
 \item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
-\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
+\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.\\
 \end{compactenum}
 
 Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
@@ -204,35 +209,30 @@ Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
 Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
 \end{remark}
 
-Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild im(f) sind die in W ‘sichtbaren’ Elemente, der Kern ker(f) die Elemente in V, die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein.\\
-Die Idee hier, das Bild(f) mit einem Quotienten- oder Faktorraum V/Kern(f) zu identifizieren. Da jeder lineare Unterraum U $\subseteq$ V insbesondere eine abelsche Untergruppe ist, definiert nach Lemma 2.6
+Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V charakterisiert; das Bild im(f) sind die in W ‘sichtbaren’ Elemente, der Kern ker(f) die Elemente in V, die in W ‘verlorengehen’ (d.h. kein nicht-triviales Bild haben). Um diese linearen Räume studieren zu können führen wir Faktorräume ein:
+
+\subsection{Faktorräume}
+\begin{definition}
+Sei $V$ ein K-Vektorraum und $U \subseteq V$ ein linearer Unterraum. Für $a \in V$ sei $a + U = \{a + u | u \in U\} \subseteq V$. Der \textbf{Quotienten-} oder \textbf{Faktorraum} von V nach U ist die Menge 
 \begin{center}
-$a_1 \sim a_2 \Leftrightarrow a_1 - a_2 \in U$
+$\QR{V}{U} = \{a + U | a \in V\}$
 \end{center}
-eine Äquivalenzrelation auf V, und die Menge der Äquivalenzklassen
-\begin{center}
-$V /U = \{a + U | a \in V \}$
-\end{center}
-ist eine abelsche Gruppe mittels $(a_1 + U) + (a_2 + U) = (a_1 + a_2) + U$ (wohldefiniert, da V additiv eine abelsche Gruppe bildet; siehe auch unten im Beweis zu Lemma 5.7). Weiter gibt es eine evidente surjektive Abbildung q: V $\to$ V/U, a $\mapsto$ a + U, die nach Konstruktion ein Gruppenhomomorphismus ist: Für $a_1, a_2 \in V$ ist
-\begin{center}
-$q(a_1)+q(a_2)=(a_1 +U)+(a_2 +U)=(a_1 +a_2)+U =q(a_1 +a_2)$.
-\end{center}
-Wir zeigen, dass die Skalarmultiplikation auf V eine Skalarmultiplikation auf V/U induziert, so dass V/U ebenfalls ein K-Vektorraum und q : V $\to$ V/U eine lineare Abbildung ist.
+\end{definition}
 
 Lemma: Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
 \begin{center}
 $(a_1 + U)+(a_2 + U)=(a_1 +a_2)+U$ und $\alpha(a+U)=\alpha a+U$.
 \end{center} 
-Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.
+Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.\\
 
 Lemma: Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
 \begin{enumerate}
 \item Ist $\{w_i + U | i \in I\}$ eine Basis von W/U und $\{v_j + W | j \in J\}$ eine Basis von V/W, so ist $\{w_i +U, v_j +U | i \in I, j \in J\}$ eine Basis von V/U.
 \item Ist dimV/U = n < $\infty$, so ist dimV/U = dimV/W + dimW/U.
-\item Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.
+\item Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.\\
 \end{enumerate}
 
-Theorem (Homomorphiesatz): Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
+\textbf{Homomorphiesatz}: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
 \item Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert:
 \begin{align*}
@@ -252,11 +252,11 @@ Lemma: Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f 
 \begin{enumerate}
 \item f ist ein Isomorphismus,
 \item f ist ein Monomorphismus, 
-\item f ist ein Epimorphismus.
+\item f ist ein Epimorphismus.\\
 \end{enumerate}
 
 
-\section{Lineare Abbildungen und Matrizen}
+\subsection{Matrizen}
 \begin{itemize}
 \item Lemma: Seien V, W K-Vektorräume.
 \begin{compactenum}
