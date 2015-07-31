@@ -58,7 +58,7 @@ Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im all
 \begin{definition}
 Seien G und H (multiplikativ geschriebene) Gruppen.
 \begin{compactenum}
-\item Ein \textbf{Homomorphismus} (oder \textbf|Gruppenhomomorphismus}) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
+\item Ein \textbf{Homomorphismus} (oder \textbf{Gruppenhomomorphismus}) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
 $f(g_1g_2) = f(g_1) f(g_2)$.
 \item Ist f: G $\to$ H ein Homomorphismus, so setze\\
 $im(f) = \{f(g) | g \in G\}$,\\
@@ -79,7 +79,7 @@ Ist G abelsch, so folgt aus $g^{-1}ug = g^{-1}gu = 1u = u \in U$, dass jede Unte
 Sei f: G $\to$ H ein Homomorphismus. Dann gilt:
 \begin{enumerate}
 \item im(f) $\subseteq$ H ist eine Untergruppe
-\item ker(f) $\subseteq$ G ist ein Normalteiler\\
+\item ker(f) $\subseteq$ G ist ein Normalteiler
 \end{enumerate}
 \end{lemma}
 
@@ -98,11 +98,12 @@ Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Meng
 \begin{lemma}
 \begin{compactenum}
 \item Jede Permutation $\tau \in S_n$ hat eine Darstellung als ein Produkt von disjunkten Zyklen (nicht eindeutig).
-\item Es gilt $(a_1, a_2, …, a_k) = (a_1, a_k)(a_1, a_{k-1}) \cdots (a_1, a_2)$; insbesondere lässt sich jede Permutation als ein Produkt von Transpositionen schreiben.\\
+\item Es gilt $(a_1, a_2, …, a_k) = (a_1, a_k)(a_1, a_{k-1}) \cdots (a_1, a_2)$; insbesondere lässt sich jede Permutation als ein Produkt von Transpositionen schreiben.
 \end{compactenum}
 \end{lemma}
 
-Theorem: Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
+\begin{theorem}
+Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
 \begin{compactenum}
 \item Es gibt einen Epimorphismus $sgn: S_n \to \{-1,+1\}$ mit $sgn(\tau) = 1$ für alle Transpositonen $\tau \in S_n$.
 \item Sei K ein Körper und $f: S_n \to K^\times$ ein Homomorphismus. Dann ist entweder f($\tau$) = 1 für alle $\tau \in S_n$, oder es ist char(k) $\neq$ 2 und f = sgn.
@@ -110,8 +111,9 @@ Theorem: Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
 \begin{compactitem}
 \item Ist $\pi \in S_n$ und $\pi = \tau_1 \cdots \tau_k$ eine Zerlegung in Transpositionen, so ist nach 1) sgn ein Homomorphismus mit sgn($\pi$) = -1, also ist sgn($\pi$) = (-1)$^k$.\\
 Die Zerlegung von $\pi$ in Transpositionen ist nicht eindeutig, aber für jede solche Zerlegung gilt, dass die Parität (gerade oder ungerade) der Anzahl der Faktoren eindeutig ist.
-\item Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt aus den obigen Überlegungen zusammen mit Lemma 9.10(b) $sgn(\pi) = (-1)^{m-l}$.\\
+\item Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt aus den obigen Überlegungen zusammen mit Lemma 9.10(b) $sgn(\pi) = (-1)^{m-l}$.
 \end{compactitem}
+\end{theorem}
 
 \begin{definition}
 Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Gruppe auf n Ziffern.
@@ -121,7 +123,9 @@ Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Grup
 \end{enumerate}
 \end{definition}
 
-Beispiel: Sei U < S$_n$ eine Untergruppe mit |S$_n$ : U| = 2. Dann ist U = A$_n$.
+\begin{example}
+Sei U < S$_n$ eine Untergruppe mit |S$_n$ : U| = 2. Dann ist U = A$_n$.
+\end{example}
 
 \begin{remark}
 Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler von S$_n$, und A$_n$ besitzt nur die trivialen Normalteiler \{1\} und A$_n$ (man sagt A$_n$ ist eine einfache Gruppe). Für n = 4 ist A$_4$ nicht-einfach.
@@ -146,11 +150,12 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \item ab = 0 $\Rightarrow$ a = 0 oder b = 0
 \end{enumerate}
 
-Beispiele:
+\begin{example}
 \begin{enumerate}
 \item $\mathbb{Q}$ und $\mathbb{R}$ sind Körper.
 \item Sei p eine Primzahl und $\mathbb{Z}/p\mathbb{Z}$ die Menge der Restklassen modulo p. Dann bildet $\mathbb{Z}/p\mathbb{Z}$ \textbackslash\{[0]\} bzgl. der evidenten Multiplikation [a]$\cdot$[b] = [ab] eine abelsche Gruppe, d.h. $\mathbb{Z}/p\mathbb{Z}$ ist ein Körper mit p Elementen. In $\mathbb{Z}/p\mathbb{Z}$ gilt pa = 0 für alle a $\in$ $\mathbb{Z}/p\mathbb{Z}$.
 \end{enumerate}
+\end{example}
 
 \begin{definition}
 Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
@@ -264,7 +269,7 @@ Damit lässt sich die lineare Abbildung f bez. dieser Basen durch eine solche Ab
 Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
 \begin{enumerate}
 \item Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.
-\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.\\
+\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.
 \end{enumerate}
 \end{lemma}
 
@@ -276,11 +281,13 @@ Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i |
 \end{compactenum}
 \end{lemma}
 
-Theorem: Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
+\begin{theorem}
+Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
 \begin{enumerate}
 \item dim$_K$W = n,
 \item Es gibt einen Isomorphismus f : V $\to$ W, d.h. V $\cong$ W.
 \end{enumerate}
+\end{theorem}
 
 \begin{remark}
 Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
@@ -395,7 +402,7 @@ Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Di
 Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär} (auch ‘invertierbar’ bzw. ‘Automorphismus’); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V).
 \end{definition}
 
-Beispiel:\\
+\begin{example}
 Sei K ein endlicher Körper mit p Elementen und sei V ein K-Vektorraum der Dimension n. Für zwei (beliebige) endlich-dimensionale K-Vektorräume V,W und $f \in Hom_K(V,W)$ gilt: \\
 f ist ein Isomorphismus genau dann, wenn f jede Basis von V auf eine Basis von W abbildet. Also ist die Anzahl der Elemente von GL(V) genau die Anzahl der verschiedenen Basen von V , wobei auch die Reihenfolge der Basiselemente berücksichtigt werden muss. Jede Basis $\{a_1, …, a_n\}$ von V entsteht durch Wahl der $a_i$ wie folgt:\\
 $0 \neq a_1 \in V \hspace*{23mm} p^n-1~Möglichkeiten$,\\
@@ -403,6 +410,7 @@ $a_1 \in V \textbackslash \langle a_1 \rangle \hspace*{21mm} p^n - p~Möglichkei
 $\cdots \hspace*{36mm} \cdots$\\
 $a_n \in V \textbackslash \langle a_1, …, a_{n-1} \rangle \hspace*{4mm} p^n - p^{n-1}~Möglichkeiten$.\\
 Damit ist $|GL(V )| = (p^n - 1)(p^n - p) \cdots (p^n - p^{n-1})$.
+\end{example}
 
 \begin{definition}
 Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der \textbf{Rang} r(f) von f definiert als $r(f) = dim_K Bild(f)$.
@@ -503,7 +511,7 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 \end{compactenum}
 \end{definition}
 
-Beispiele:
+\begin{example}
 \begin{compactenum}
 \item Jeder Körper ist insbesondere ein kommutativer Ring.
 \item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
@@ -511,6 +519,7 @@ Beispiele:
 \item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
 \item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
 \end{compactenum}
+\end{example}
 
 \begin{definition}
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
@@ -541,7 +550,7 @@ $V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1
 \end{remark}
 
 \begin{lemma}
-(\textbf|Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
+(\textbf{Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
 \end{lemma}
 
 \begin{definition}
@@ -551,11 +560,13 @@ Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile 
 
 Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.\\
 
-Theorem (\textbf{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
+\begin{theorem}
+(\textbf{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
 \begin{center}
 $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 \end{center}
-Hierbei sind $s_1, …, s_n$ die Spalten von A.\\
+Hierbei sind $s_1, …, s_n$ die Spalten von A.
+\end{theorem}
 
 
 \section{Polynome und ihre Nullstellen}
@@ -596,11 +607,12 @@ $\alpha = \alpha_c: K[x] \to A, f \mapsto f(c)$
 ist der \textbf{Einsetzungshomomorphismus} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
 \end{definition}
 
-Beispiele:
+\begin{example}
 \begin{compactenum}
 \item Seien K $\subseteq$ L Körper. Dann ist L eine K-Algebra und für f $\in$ K[x] und c $\in$ L ist f(c) $\in$ L definiert.
-\item Ist K endlich mit |K| = q = p$^n$, so gilt c$^q$ = c für alle c $\in$ K. Ist f(x) = x$^q$ - x $\in$ K[x], so ist f $\neq$ 0, aber f(c) = 0 für alle c $\in$ K, d.h. das Polynom f $\in$ K[x] ist von der durch f induzierten Abbildung K $\to$ K, c $\mapsto$ f(c), zu unterscheiden. Ist $\phi: K^2 \to K^2, (x_1,x_2) \mapsto (0,x_1)$ so folgt $f(\phi) = \phi^q - \phi = -\phi \neq 0$, da $\phi^2$ = 0 ist.\\
+\item Ist K endlich mit |K| = q = p$^n$, so gilt c$^q$ = c für alle c $\in$ K. Ist f(x) = x$^q$ - x $\in$ K[x], so ist f $\neq$ 0, aber f(c) = 0 für alle c $\in$ K, d.h. das Polynom f $\in$ K[x] ist von der durch f induzierten Abbildung K $\to$ K, c $\mapsto$ f(c), zu unterscheiden. Ist $\phi: K^2 \to K^2, (x_1,x_2) \mapsto (0,x_1)$ so folgt $f(\phi) = \phi^q - \phi = -\phi \neq 0$, da $\phi^2$ = 0 ist.
 \end{compactenum}
+\end{example}
 
 \begin{lemma}
 Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
