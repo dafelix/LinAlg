@@ -42,6 +42,29 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 
 \section{Ringe}
 \begin{definition}
+Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
+\begin{compactenum}
+\item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
+\item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
+\item Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
+\end{compactenum}
+Ein Ring R ist kommutativ, falls zusätzlich gilt
+\begin{compactenum}
+\setcounter{enumi}{3}
+\item $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.
+\end{compactenum}
+\end{definition}
+\begin{example}
+\begin{compactenum}
+\item Jeder Körper ist insbesondere ein kommutativer Ring.
+\item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
+\item Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
+\item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
+\item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
+\end{compactenum}
+\end{example}
+
+\begin{definition}
 \leavevmode
 \begin{enumerate}
 	\item R ist ein \textbf{euklidischer}\index{euklidischer Ring} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
