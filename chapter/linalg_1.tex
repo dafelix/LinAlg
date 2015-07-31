@@ -7,13 +7,13 @@
 
 \section{Gruppen}
 \begin{definition}
-Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}, falls gilt:
+Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}\index{Gruppe}, falls gilt:
 \begin{enumerate}
 \item $\cdot$ ist assoziativ: a$\cdot$(b$\cdot$c)=(a$\cdot$b)$\cdot$c für alle a,b,c $\in$ G
 \item es gibt ein (links)-neutrales Element e $\in$ G mit e $\cdot$ a = a für alle a $\in$ G 
 \item zu jedem a $\in$ G gibt es ein (links)-inverses Element, d.h. ein b $\in$ G mit b $\cdot$ a = e
 \end{enumerate}
-\hspace*{3mm} Die Gruppe G ist kommutativ oder \textbf{abelsch}, falls zusätzlich gilt:
+\hspace*{3mm} Die Gruppe G ist kommutativ oder \textbf{abelsch}\index{abelsch}, falls zusätzlich gilt:
 \begin{enumerate}
 \setcounter{enumi}{3}
 \item a $\cdot$ b = b $\cdot$ a für a, b $\in$ G
@@ -30,7 +30,7 @@ Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}, 
 \end{remark}
 
 \begin{definition}
-Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine \textbf{Untergruppe} von G, H $\le$ G, falls gilt:
+Sei G eine Gruppe. Eine Teilmenge H $\subseteq$ G ist eine \textbf{Untergruppe}\index{Untergruppe} von G, H $\le$ G, falls gilt:
 \begin{enumerate}
 \item 1 $\in$ H
 \item a,b $\in$ H $\Rightarrow$ ab $\in$ H
@@ -46,7 +46,7 @@ $\emptyset \neq H \subseteq G$ ist genau dann eine Untergruppe, falls gilt: a,b 
 \begin{definition}
 Sei G eine Gruppe, U $\le$ G eine Untergruppe, und $\sim$ die durch U definierte Äquivalenzrelation auf G (a $\sim$ b $\Leftrightarrow$ ab$^{-1}$ $\in$ U). Ist a $\in$ G, so ist die entsprechende Äquivalenzklasse die Menge 
 $[a]=\{ b \in G | a \sim b \} = \{ b \in G | ab^{-1} \in U \} = \{ b \in G | b = Ua \} = Ua$; 
-diese Mengen sind die \textbf{Rechtsnebenklassen} von U. Sind die $Ua_j$ für j $\in$ J, die verschiedenen Rechtsnebenklassen, so bilden diese eine Partition G=$\bigcup\limits_{j \in J} Ua_j$.
+diese Mengen sind die \textbf{Rechtsnebenklassen}\index{Rechtsnebenklasse} von U. Sind die $Ua_j$ für j $\in$ J, die verschiedenen Rechtsnebenklassen, so bilden diese eine Partition G=$\bigcup\limits_{j \in J} Ua_j$.
 \end{definition}
 
 Ist |J| endlich, so nennt man |J| den Index von U in G und schreibt |J| = |G : U|.
@@ -59,7 +59,7 @@ Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im all
 \begin{definition}
 Seien G und H (multiplikativ geschriebene) Gruppen.
 \begin{compactenum}
-\item Ein \textbf{Homomorphismus} (oder \textbf{Gruppenhomomorphismus}) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
+\item Ein \textbf{Homomorphismus}\index{Homomorphismus} (oder \textbf{Gruppenhomomorphismus}\index{Gruppenhomomorphismus}) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
 $f(g_1g_2) = f(g_1) f(g_2)$.
 \item Ist f: G $\to$ H ein Homomorphismus, so setze\\
 $im(f) = \{f(g) | g \in G\}$,\\
@@ -68,7 +68,7 @@ $ker(f) = \{g \in G | f(g) = 1\}$.
 \end{definition}
 
 \begin{definition}
-Sei G eine Gruppe. Eine Untergruppe U $\le$ G ist ein \textbf{Normalteiler} (oder eine normale Untergruppe), U $\vartriangleleft$ G, falls gilt
+Sei G eine Gruppe. Eine Untergruppe U $\le$ G ist ein \textbf{Normalteiler}\index{Normalteiler} (oder eine normale Untergruppe), U $\vartriangleleft$ G, falls gilt
 \begin{center}
 $u \in U, g \in G \Rightarrow g^{-1}ug \in U$.
 \end{center}
@@ -93,7 +93,7 @@ Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.
 \end{lemma}
 
 \begin{theorem}
-(\textbf{Homomorphiesatz} für Gruppen)
+(\textbf{Homomorphiesatz} für Gruppen\index{Homomorphiesatz für Gruppen})
 Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und im(f) = im(h).
 \end{theorem}
 
@@ -143,7 +143,7 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 
 \section{Körper}
 \begin{definition}
-Ein \textbf{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
+Ein \textbf{Körper}\index{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
 \begin{enumerate}
 \item (K, +) ist eine abelsche Gruppe mit Nullelement 0,
 \item (K \textbackslash \{0\}, $\cdot$) ist eine abelsche Gruppen mit Einselement 1$\neq$ 0,
@@ -168,7 +168,7 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \end{example}
 
 \begin{definition}
-Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
+Sei K ein Körper. Ein \textbf{Teilkörper}\index{Teilkörper}  L $\subseteq$ K ist eine Teilmenge, so dass gilt:
 \begin{enumerate}
 \item a,b $\in$ L $\Rightarrow$ a+b, a$\cdot$b $\in$ L
 \item 0, 1 $\in$ L
@@ -180,7 +180,7 @@ Sei K ein Körper. Ein \textbf{Teilkörper} L $\subseteq$ K ist eine Teilmenge, 
 
 \section{Vektorräume}
 \begin{definition}
-Sei K ein Körper. Ein \textbf{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
+Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
 \begin{enumerate}
 \item V ist bzgl. + eine abelsche Gruppe,
 \item ($\alpha$ + $\beta$) $\cdot$ a = $\alpha$ $\cdot$ a + $\beta$ $\cdot$ a und $\alpha$ $\cdot$ (a + b) = $\alpha$ $\cdot$ a + $\alpha$ $\cdot$ b,
@@ -200,7 +200,7 @@ Für K-Vektorräume gelten die folgenden \textbf{Rechenregeln}:
 \end{enumerate}
 
 \begin{definition}
-Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum} oder K-linearer Unterraum von V, falls gilt:
+Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum}\index{K-Untervektorraum} oder \textbf{K-linearer Unterraum} von V, falls gilt:
 \begin{enumerate}
 \item $\emptyset$ $\neq$ U,
 \item a, b $\in$ U $\Rightarrow$ a + b $\in$ U,
@@ -217,7 +217,7 @@ Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Unterve
 \end{lemma}
 
 \begin{definition}
-Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
+Eine Menge $A = \{a_i\}_{i \in I} \subseteq V$ von Elementen eines K-Vektorraums V ist ein \textbf{Erzeugendensystem}\index{Erzeugendensystem} von V, falls $\langle A \rangle$ = V gilt, d.h. falls jeder Vektor a $\in$ V eine Darstellung als endliche Summe
 \begin{center}
 $a = \sum\nolimits_{i=1}^{n}\alpha_i a_i, \alpha_i \in K, a_i \in A$
 \end{center}
@@ -238,7 +238,7 @@ A $\subseteq$ $\langle B \rangle$ $\Rightarrow$ $\langle A \rangle \subseteq \la
 \end{remark}
 
 \begin{definition}
-Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}, falls für jede endliche Teilmenge J $\subseteq$ I gilt:
+Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}\index{linear unabhängig} , falls für jede endliche Teilmenge J $\subseteq$ I gilt:
 \begin{center}
 $\sum\nolimits_{j \in J} \alpha_j a_j = 0 \Rightarrow \alpha_j = 0$ für alle j $\in$ J.
 \end{center}
@@ -246,15 +246,15 @@ Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 \end{definition}
 
 \begin{theorem}
-\textbf{Basisergänzungssatz}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.
+\textbf{Basisergänzungssatz}\index{Basisergänzungssatz} : Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.
 \end{theorem}
 
 \begin{lemma}
-\textbf{Austauschlemma}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.
+\textbf{Austauschlemma}\index{Austauschlemma}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.
 \end{lemma}
 
 \begin{theorem}
-\textbf{Austauschsatz von Steinitz}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
+\textbf{Austauschsatz von Steinitz}\index{Austauschsatz von Steinitz}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
 \end{theorem}
 
 
@@ -262,16 +262,16 @@ Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 \begin{definition}
 Sei K ein Körper und seien V,W K-Vektorräume.
 \begin{compactenum}
-\item Eine Abbildung f : V $\to$ W heißt \textbf{linear} (oder \textbf{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
+\item Eine Abbildung f : V $\to$ W heißt \textbf{linear}\index{linear} (oder \textbf{Homomorphismus}\index{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
 $f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.\\
-Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die \textbf{Endomorphismen} von V.
-\item Ist f $\in$ Hom$_K$(V,W), so definiere \textbf{Kern} und \textbf{Bild} von f als
+Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die \textbf{Endomorphismen}\index{Endomorphismen} von V.
+\item Ist f $\in$ Hom$_K$(V,W), so definiere \textbf{Kern}\index{Kern} und \textbf{Bild}\index{Bild} von f als
 \begin{center}
 Bild(f) = $\{ f (a) | a \in V\}$,\\
 Kern(f) = $\{ a \in V | f(a) = 0\}$.
 \end{center}
 Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
-\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph},V $\cong$ W.
+\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}\index{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}\index{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph}\index{isomorph},V $\cong$ W.
 \end{compactenum}
 Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
 \end{definition}
@@ -315,7 +315,7 @@ Eine lineare Abbildung f: V $\to$ W ist durch die linearen Unterräume Bild(f) $
 
 \subsection{Faktorräume}
 \begin{definition}
-Sei $V$ ein K-Vektorraum und $U \subseteq V$ ein linearer Unterraum. Für $a \in V$ sei $a + U = \{a + u | u \in U\} \subseteq V$. Der \textbf{Quotienten-} oder \textbf{Faktorraum} von V nach U ist die Menge 
+Sei $V$ ein K-Vektorraum und $U \subseteq V$ ein linearer Unterraum. Für $a \in V$ sei $a + U = \{a + u | u \in U\} \subseteq V$. Der \textbf{Quotienten-}\index{Quotientenraum} oder \textbf{Faktorraum}\index{Faktorraum} von V nach U ist die Menge 
 \begin{center}
 $\QR{V}{U} = \{a + U | a \in V\}$
 \end{center}
@@ -338,7 +338,7 @@ Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterr�
 \end{enumerate}
 \end{lemma}
 
-\textbf{Homomorphiesatz}: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
+\textbf{Homomorphiesatz}\index{Homomorphiesatz}: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
 \item Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert:
 \begin{align*}
@@ -404,14 +404,14 @@ Seien $V_i$ K-Vektorräume, i = 1, 2, 3.
 \end{compactenum}
 \end{lemma}
 
-Eine \textbf{K- Algebra} ist ”fast ein Köper”, aber
+Eine \textbf{K-Algebra}\index{K-Algebra} ist ”fast ein Köper”, aber
 \begin{enumerate}
 \item die Multiplikation ist im Allgemeinen nicht kommutativ
 \item nicht jedes Element ungleich Null ist invertierbar bezüglich der Multiplikation\\
 \end{enumerate}
 
 \begin{definition}
-Das \textbf{Kroneckersymbol} $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k.
+Das \textbf{Kroneckersymbol}\index{Kroneckersymbol} $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k.
 \end{definition}
 
 Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden die Endomorphismen $e_{ij} \in End_K (V)$ mit $e_{ij}(a_k) = \delta_{jk}a_i$ eine Basis $\{e_{11}, ..., e_{nn}\}$ von $End_K (V)$; es ist $dim_K End_K (V) = n^2$. Für die Basiselemente $\{e_{ij}\}$ von $End_K(V)$ gelten die Formeln
@@ -421,7 +421,7 @@ $e_{ij}e_{kl} = \delta_{jk}e_{il}$ und $\sum\nolimits_{i=1}^{n}e_{ii} = id_V$.
 Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Die obige Formel liefert $e_{12}e_{22} = \delta_{22}e_{12} = e_{12} \neq 0$ und $e_{22}e_{12} = \delta_{21}e_{22} = 0$, d.h. $e_{12}e_{22} \neq e_{22}e_{12}$.
 
 \begin{definition}
-Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär} (auch ‘invertierbar’ bzw. ‘Automorphismus’); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V).
+Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär}\index{regulär} (auch ‘invertierbar’\index{invertierbar} bzw. ‘Automorphismus’\index{Automorphismus}); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V)\index{General Linear Group}.
 \end{definition}
 
 \begin{example}
@@ -445,11 +445,11 @@ $r(f) = dim_K Bild(f) = dim_K V - dim_K Kern(f)$
 
 Überblick der linearen Abbildungen:\\
 \begin{tabular}{lll}
-Monomorphismus & f: V $\to$ W& linear, injektiv\\
-Epimorphismus & f: V $\to$ W & linear, surjektiv\\
-Isomorphismus & f: V $\to$ W & linear, bijektiv\\
-Endomorphismus & f: V $\to$ V & linear\\
-Automorphismus & f: V $\to$ V & linear, bijektiv\\
+Monomorphismus\index{Monomorphismus} & f: V $\to$ W& linear, injektiv\\
+Epimorphismus\index{Epimorphismus} & f: V $\to$ W & linear, surjektiv\\
+Isomorphismus\index{Isomorphismus} & f: V $\to$ W & linear, bijektiv\\
+Endomorphismus\index{Endomorphismus} & f: V $\to$ V & linear\\
+Automorphismus\index{Automorphismus} & f: V $\to$ V & linear, bijektiv\\
 \end{tabular}\\
 
 \begin{proposition}
@@ -529,7 +529,7 @@ Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. De
 
 \section{Determinanten}
 \begin{definition}
-Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
+Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
 
 Für $A \in R^{n \times n}$ mit Zeilen $z_1, ..., z_n$ und Spalten $s_1, ..., s_n$ betrachten wir im folgenden det(A) als eine Funktion der Zeilen bzw. Spalten $det(A) = f_{det}(z_1,..., z_n) = g_{det}(s_1, ..., s_n)$.
@@ -559,7 +559,7 @@ $V (z_1, …, z_n) = f_{det}(z_1, … z_n) \cdot V (e_1, …, e_n) = f_{det}(z_1
 \end{remark}
 
 \begin{lemma}
-(\textbf{Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
+(\textbf{Kästchensatz}\index{Kästchensatz}): Seien $B \in R^{m \times m},C \in R^{n \times n}$ und sei $D \in R^{n \times m}$. Setze k = m + n und betrachte die k $\times$ k-Matrix $A = \begin{pmatrix} B & 0 \\ D & C \end{pmatrix}$. Dann gilt: det(A) = det(B) det(C).
 \end{lemma}
 
 \begin{definition}
@@ -570,7 +570,7 @@ Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile 
 Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
 \begin{theorem}
-(\textbf{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
+(\textbf{Cramersche Regel}\index{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
 \begin{center}
 $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 \end{center}
@@ -582,7 +582,7 @@ Hierbei sind $s_1, …, s_n$ die Spalten von A.
 \begin{definition}
 Seien R, S Ringe.
 \begin{enumerate}
-\item Eine Abbildung f: R $\to$ S ist ein \textbf{Ringhomomoprhimus}, falls
+\item Eine Abbildung f: R $\to$ S ist ein \textbf{Ringhomomorphimus}\index{Ringhomomorphimus}, falls
 \begin{enumerate}
 \item $f(r_1 +r_2) = f(r_1) + f(r_2), r_1,r_2 \in R$
 \item $f(r_1r_2) = f(r_1)f(r_2), r_1,r_2 \in R$
@@ -607,7 +607,7 @@ Sei R ein Ring mit Einselement 1.
 \end{lemma}
 
 \begin{proposition}
-(\textbf{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).
+(\textbf{Division mit Rest}\index{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).
 \end{proposition}
 
 \begin{definition}
@@ -615,7 +615,7 @@ Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\
 \begin{center}
 $\alpha = \alpha_c: K[x] \to A, f \mapsto f(c)$
 \end{center}
-ist der \textbf{Einsetzungshomomorphismus} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
+ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshomomorphismus} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
 \end{definition}
 
 \begin{example}
@@ -662,13 +662,13 @@ Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, fa
 \begin{center}
 $f = a \prod\limits_{j=1}^{n}(x - c_j)$.
 \end{center}
-Ein Körper K ist \textbf{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
+Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
 \end{definition}
 
 \begin{remark}
 \leavevmode
 \begin{compactenum}
-\item Der \textbf{Fundamentalsatz der Algebra} besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
+\item Der \textbf{Fundamentalsatz der Algebra}\index{Fundamentalsatz der Algebra} besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
 \item Da $x^2 + 1 \in \mathbb{R}[x]$ keine reelle Nullstelle hat, ist $\mathbb{R}$ nicht algebraisch abgeschlossen.
 \item Sei K ein endlicher Körper mit |K| = q = p$^n$. Dann gilt c$^q$ = c für alle c $\in$ K. Also hat $f = x^q - x+1 \in K[x]$ keine Nullstelle in K und K ist nicht algebraisch abgeschlossen. Endliche Körper sind also nie algebraisch abgeschlossen.
 \item Ein Satz der Algebra besagt, dass es zu jedem Körper K einen algebraisch abgeschlossenen Körper L mit K $\subseteq$ L gibt.
@@ -678,8 +678,23 @@ Ein Körper K ist \textbf{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] m
 
 \section{Charakteristisches Polynom und Eigenwerte}
 \begin{definition}
+Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
+\begin{center}
+$\chi_f (x) = det(xE - A) \in K[x]$
+\end{center}
+das \textbf{charakteristische Polynom}\index{Charakteristisches Polynom} von f.
+\end{definition}
+
+\begin{lemma}
+Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
+\begin{center}
+$\alpha$ ist \textbf{Eigenwert}\index{Eigenwert} von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
+\end{center}
+\end{lemma}
+
+\begin{definition}
 Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
-Sei $\alpha \in \sigma(f)$\footnote{Das Spektrum $\sigma(f)$ von f ist die Menge aller Eigenwerte}. Dann ist der \textbf{Eigenraum} von f zu $\alpha$ der lineare Unterraum
+Sei $\alpha \in \sigma(f)$\footnote{Das Spektrum $\sigma(f)$ von f ist die Menge aller Eigenwerte}. Dann ist der \textbf{Eigenraum}\index{Eigenraum} von f zu $\alpha$ der lineare Unterraum
 \begin{center}
 $V_f(\alpha) = V(\alpha) = Kern(\alpha id_V - f) = \{v \in V | f(v) = \alpha v\} \subseteq V$.
 \end{center}
@@ -692,20 +707,4 @@ Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenv
 \item Sei dim$_K$ V = n. Hat f $\in$ End$_K$ (V ) genau n verschiedene Eigenwerte $\alpha_1, …, \alpha_n$, so bilden die entsprechenden Eigenvektoren $v_1, ..., v_n$ eine Basis von V . Die Matrix von f ist bzgl. dieser Basis eine Diagonalmatrix mit Diagonaleinträgen $\alpha_1, …, \alpha_n$.
 \end{enumerate}
 \end{lemma}
-
-\begin{definition}
-Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
-\begin{center}
-$\chi_f (x) = det(xE - A) \in K[x]$
-\end{center}
-das \textbf{charakteristische Polynom} von f.
-\end{definition}
-
-\begin{lemma}
-Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
-\begin{center}
-$\alpha$ ist \textbf{Eigenwert} von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
-\end{center}
-\end{lemma}
-
 
