@@ -10,11 +10,13 @@
 \end{enumerate}
 
 \section{Ideal}
+\begin{definition}
 Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, falls
 \begin{enumerate}
 	\item $a_1,a_2 \in I \Rightarrow a_1+a_2 \in I$
 	\item $a \in I \Rightarrow r_1 a r_2 \in I, \forall r_1,r_2 \in R$
 \end{enumerate}
+\end{definition}
 \begin{remark}
 \begin{itemize}
 	\item ker(f) ist stets Ideal
@@ -33,15 +35,17 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 \end{itemize}
 \end{remark}
 \section{Ringe}
+\begin{definition}
 \begin{enumerate}
 	\item R ist ein \textbf{euklidischer} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
 	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
 	\item \textbf{Integritätsbereich}: R ist kommutativ und Nullteilerfrei
 	\item R heißt \textbf{faktoriell}, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
-	\item Euklidisch $\Rightarrow$ HIR $\Rightarrow$ faktoriell
 \end{enumerate}
+\end{definition}
 \begin{remark}
 \begin{itemize}
+	\item Euklidisch $\Rightarrow$ HIR $\Rightarrow$ faktoriell
 	\item $\mathbb{Z}$ mit $\phi(a) = |a|$ ist euklidisch
 	\item R euklidisch $\Rightarrow$ R ist Hauptidealring
 	\item Sei R kommutativ. Dann gilt $R^n \simeq R^m \Leftrightarrow n=m$
@@ -50,12 +54,14 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 %Todo: Hauptidealring$
 
 \section{Moduln}
+\begin{definition}
 Eine Menge $M \neq \emptyset$ ist ein R-(Links-) Modul, falls es eine Verknüpfung $+:M \times M \rightarrow M, (m_1,m_2) \mapsto m_1+m_2$ und eine weitere Verknüpfung $\cdot:R \times M \rightarrow M, (r,m) \mapsto rm$ gibt, sodass:
 \begin{itemize}
 	\item $(M,+)$ ist abelsche Gruppe
 	\item $(r_1,r_2)m = r_1 m + r_2 m$\\$r(m_1+m_2) = rm_1+rm_2$
 	\item $1_R m = m$
 \end{itemize}
+\end{definition}
 \begin{remark}
 Sei R HIR
 \begin{itemize}
@@ -77,17 +83,24 @@ Sei R HIR
 	\end{itemize}
 \end{enumerate}
 \subsection{Torsionselement}
+\begin{definition}
 Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt Torsionselement, falls es ein $r\in R \backslash \{0\}$ gibt mit $rm=0$.
 
-Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei, falls $T(M) = 0$. Es gilt:
+Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei, falls $T(M) = 0$.
+\end{definition}
+
+\begin{remark}
 \begin{itemize}
 	\item $T(M) \subseteq M$ ist Teilmodul
 	\item $\QR{M}{T(M)}$ ist torsionsfrei
 \end{itemize}
+\end{remark}
 
 \subsection{$\pi$-Torsionselement}
+\begin{definition}
 Sei $\pi \in R$ irreduzibel und M ein R-Modul. Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
 %TODO: inhaltlich prüfen$
+\end{definition}
 
 \subsection{R-Modulhomomorphismus}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
@@ -137,6 +150,7 @@ Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \s
 \end{remark}
 
 \section{Invariantenteiler}
+\begin{definition}
 Die Elemente $\pi_1^{e_{1,1}},...,\pi_1^{e_{s,1}},\pi_2^{e_{1,2}},...,\pi_2^{e_{s,2}},...,\pi_t^{e_{1,t}},...,\pi_t^{e_{s,t}}$ mit 
 \begin{align*}
 \begin{array}{ll}
@@ -146,14 +160,18 @@ e_{1,t} \geq e_{2,t} \geq ... \geq e_{s,t} \geq & 0
 \end{array} 
 \end{align*}
 heißen die Invariantenteiler von M.
+\end{definition}
 \section{Äquivalent und Ähnlich}
+\begin{definition}
 Sei R ein komm. Ring.
 \begin{enumerate}
 	\item Seien $A,B \in K^{n \times m}$. Dann heißen $A$ und $B$ äquivalent, falls es $P \in Gl_n(R), Q \in Gl_m(R)$ gibt mit $B=P^{-1}AQ$. In Zeichen $A \sim B$.
 	\item Seien $A,B \in M_n(R) = K^{n \times n}$. Dann heißen $A$ und $B$ ähnlich oder konjugiert, falls es $S \in Gl_n(R)$ gibt mit $B=S^{-1}AS$. In Zeichen $A \approx B$.
 \end{enumerate}
+\end{definition}
 
 \section{Begleitmatrix}
+\begin{definition}
 Sei $g(x) = x^n + a_{n-1}x^{n-1}+\ldots+a_1x + a_0 \in K[x]$ mit $n \geq 1$. Dann heißt die folgende Matrix Begleitmatrix zu g:
 \begin{align*}
 B_j =
@@ -166,6 +184,7 @@ B_j =
 \end{pmatrix}
 \in M_n(K)
 \end{align*} 
+\end{definition}
 \begin{remark}
 \begin{enumerate}
 	\item $\chi_{B_g}(x) = g(x)$
@@ -179,6 +198,7 @@ B_j =
 \end{enumerate}
 \end{remark}
 \section{Jordanmatrix}
+\begin{definition}
 Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
 \begin{align*}
 B_n \approx J(\alpha,e) :=
@@ -189,6 +209,7 @@ B_n \approx J(\alpha,e) :=
        &        & 1 & \alpha
 \end{pmatrix}
 \end{align*}
+\end{definition}
 \section{Normalformen}
 \subsection{Frobeniussche Normalform}
 Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
@@ -235,6 +256,7 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 \end{enumerate}
 \end{remark}
 \section{Inneres Produkt (Skalarprodukt)}
+\begin{definition}
 Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\phi$ von $V \times V$ nach $K, \phi (v_1,v_2) = (v_1,v_2) \in K,~v_1,v_2 \in V$ mit folgenden Eigenschaften:
 \begin{enumerate}
 	\item $(v_1+v_2,v_3) = (v_1,v_3)+(v_2,v_3)$
@@ -242,6 +264,7 @@ Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\ph
 	\item $(v_1,v_2) = \overline{(v_2,v_1)}$ (hermitesch)
 	\item $(v,v) \geq 0$, $(v,v) = 0 \Leftrightarrow v=0$ (positiv definit)
 \end{enumerate}
+\end{definition}
 \begin{remark}
 V zusammen mit einem inneren Produkt nennt man einen \textbf{euklidischen Raum} (falls $K=\mathbb{R}$) bzw. \textbf{unitären Raum} (falls $K=\mathbb{C}$).
 \end{remark}

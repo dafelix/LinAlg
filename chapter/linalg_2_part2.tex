@@ -15,9 +15,13 @@ $V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \m
 \item $f^*$ ist eindeutig durch $f$ bestimmt
 \end{enumerate}
 \end{remark}
+\begin{definition}
+\begin{itemize}
 \item $f \in End(V)$ heißt \textbf{selbstadjungiert}, falls $f = f^*$\\
 $f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
-\item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$\\
+\item $f \in End(V)$ heißt \textbf{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$
+\end{itemize}
+\end{definition}
 Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt\\
 Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
 \item Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
@@ -28,8 +32,10 @@ Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
 \end{remark}
 
 \section{mehr zu positiv und positiv definit}
+\begin{definition}
+Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
+\end{definition}
 \begin{compactitem}
-\item Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
 \item Sei V K-VR mit ( , ) und dim(V) = n < $\infty$. Dann gilt für $f \in End(V)$:\\
 f ist positiv $\Leftrightarrow$ $\exists u \in Gl(V)$ mit $f = u^*u$
 \item A positiv $\Leftrightarrow$ \={A} positiv\\
@@ -59,22 +65,30 @@ Die unitären Abbildungen bilden eine Gruppe U(V). Für $u \in U(V)$ gilt:
 \end{compactitem}
 
 \section{unitäre Matrizen}
+\begin{definition}
 Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
-Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$\\
-$\Rightarrow$ Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$\\
+Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$
+\end{definition}
+
+Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$\\
 A ist unitär $\Leftrightarrow$ die Spalten von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts\\
 \hspace*{18mm} $\Leftrightarrow$ die Zeilen von A bilden eine ON-Basis des $K^n$ bez. des Standardskalarprodukts\\
 
 \section{Orthogonale Matrizen}
+\begin{definition}
 $A \in M_n(K)$ heißt orthogonal, falls $A^tA = E$
-
+\end{definition}
 \section{zu orthogonal und unitär}
+\begin{definition}
 Seien $A, B \in M_n(K)$.\\
 $A$ ist \textbf{unitär ähnlich} zu $B$, falls es eine unitäre Matrix $U$ gibt mit $B = U^*AU$\\
 $A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O$ gibt mit $B = O^tAO$
+\end{definition}
 
 \section{Normale Endomorphismen}
-$f: V \to V$ heißt normal, falls $ff^*=f^*f$.\\
+\begin{definition}
+$f: V \to V$ heißt normal, falls $ff^*=f^*f$.
+\end{definition}
 Beispiele:
 \begin{enumerate}
 \item Selbstadjungierte, also $f = f^*$
@@ -103,11 +117,15 @@ $A \in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ $A = A
 Sei f normal, dann gilt: v ist EV von $f$  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von $f^*$ zum EW $\overline{\alpha}$
 
 \section{Matrix normal}
-Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal, falls $AA^* = A^*A$.\\
+\begin{definition}
+Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal, falls $AA^* = A^*A$.
+\end{definition}
 Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
 
 \section{Projektionen}
+\begin{definition}
 $p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
+\end{definition}
 \begin{compactitem}
 \item Sei V K-VR mit ( , ), dim(V) < $\infty$ und $p: V \to V$ Projektion. TFE:
 \begin{enumerate}
@@ -141,7 +159,9 @@ Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und
 \end{compactitem}
 
 \section{Dualräume}
+\begin{definition}
 $V^* = Hom(V, K)$ heißt Dualraum.
+\end{definition}
 \begin{compactitem}
 \item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_K(V,W)$.
 \item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta_{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
@@ -157,10 +177,14 @@ Dann gibt es $f \in V^*$ mit $f(u) = 0$ $\forall u \in u$ und $f(v) \neq 0$
 \end{compactitem}
 
 \section{Restriktion und Inflation}
+\begin{definition}
 Sei $W \subseteq V$ ein lin. UR.
 \begin{enumerate}
 \item $R: V^* \to W^*, f \mapsto f|_W$ heißt Restriktion
 \item $I: \big(\QR{V}{W}\big)^* \to V^*, f \mapsto If$ mit $If(v) := f(v + W)$ heißt Inflation von f
+\end{enumerate}
+\end{definition}
+\begin{enumerate}
 \item Sei $M \subseteq V$ eine Teilmenge. $M^\perp := \{ f \in V^* | f(m) = 0$ $\forall m \in M \}$. Also: $M^\perp \subseteq V^*$ (lin. UR)
 \item Sei $S \subseteq V^*$ eine Teilmenge. $S^\top := \{ v \in V | s(v) = 0$ $\forall s \in S \}$. $S^\top$ ist lin. UR von V.
 \end{enumerate}
@@ -181,7 +205,9 @@ Falls dim(V) < $\infty$, so gilt auch: $(W_1 \cap W_2)^\perp = W_1^\perp + W_2^\
 \end{enumerate}
 
 \section{Affine Hyperebene}
-Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.\\
+\begin{definition}
+Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.
+\end{definition}
 Erinnerung affiner Unterraum: Ein m-dim. affiner Unterraum von V ist eine Menge M = v + W mit  $v \in V$ und $W \subseteq V$ ein m-dim. linearer Unterraum.\\
 Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt von n-m affinen Hyperebenen.
 
@@ -197,10 +223,10 @@ Proposition: Sei $g: V \to W$ linear. Dann gilt:
 \end{enumerate}
 
 \section{Bilinearform ausgeartet}
+\begin{definition}
 Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
 (ausgeartet im 2.Argument analog)
-
-
+\end{definition}
 \begin{remark}
 \begin{compactitem}
 \item Innere Produkte sind stets nicht-ausgeartet
@@ -209,8 +235,10 @@ Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet 
 \end{remark}
 
 \section{Strukturmatrix}
+\begin{definition}
 Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
-Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.\\
+Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.
+\end{definition}
 Beispiele:
 \begin{compactitem}
 \item Sei $v_1, …, v_n$ Basis von V und $f_1, …, f_n$ die duale Basis. Dann: B = ($f_i(v_j)$) = E
