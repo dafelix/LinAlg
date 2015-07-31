@@ -1,0 +1,303 @@
+\section{Lineare Abbildungen}
+
+\begin{definition}
+Sei K ein Körper und seien V,W K-Vektorräume.
+\begin{compactenum}
+\item Eine Abbildung f : V $\to$ W heißt \textbf{linear}\index{linear} (oder \textbf{Homomorphismus}\index{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
+$f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.\\
+Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die \textbf{Endomorphismen}\index{Endomorphismen} von V.
+\item Ist f $\in$ Hom$_K$(V,W), so definiere \textbf{Kern}\index{Kern} und \textbf{Bild}\index{Bild} von f als
+\begin{center}
+Bild(f) = $\{ f (a) | a \in V\}$,\\
+Kern(f) = $\{ a \in V | f(a) = 0\}$.
+\end{center}
+Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
+\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}\index{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}\index{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph}\index{isomorph},V $\cong$ W.
+\end{compactenum}
+Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
+\end{definition}
+
+\begin{remark}
+Seien $\{a_1, …, a_n\}$ und $\{b_1, …, b_m\}$ Basen von V und W. Eine lineare Abbildung $f: V \to W$ ist durch die Bilder der Basisvektoren eindeutig bestimmt. Jedes der Bilder $f(a_j)$ besitzt eine eindeutige Darstellung als Linearkombination der $b_i$, d.h. für j = 1, …, n gibt es eindeutig bestimmte Skalare $\alpha_{ij} \in K$, so dass $f(a_j) = \sum\limits_{i=1}^m \alpha_{ij}b_i$.\\
+Wir ordnen diese Vektoren $(\alpha_{1j}, …, \alpha_{mj})$, j= 1, …, n als Spalten einer Matrix an:\\
+$\begin{pmatrix} \alpha_{11} & \cdots & \alpha_{1n} \\ \vdots & & \vdots \\ \alpha_{m1} & \cdots & \alpha_{mn} \end{pmatrix}$\\
+Damit lässt sich die lineare Abbildung f bez. dieser Basen durch eine solche Abbildungsmatrix darstellen.
+\end{remark}
+
+\begin{lemma}
+Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
+\begin{enumerate}
+\item Bild(f) $\subseteq$ W und Kern(f) $\subseteq$ V sind lineare Unterräume.
+\item f ist ein Monomorphismus $\Leftrightarrow$ Kern(f) = \{0\}.
+\end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
+\begin{compactenum}
+\item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
+\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
+\end{compactenum}
+\end{lemma}
+
+\begin{theorem}
+Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
+\begin{enumerate}
+\item dim$_K$W = n,
+\item Es gibt einen Isomorphismus f : V $\to$ W, d.h. V $\cong$ W.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
+\end{remark}
+
+\subsection{Homomorphiesatz}
+\begin{theorem}
+\textbf{Homomorphiesatz}\index{Homomorphiesatz}: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
+\begin{compactenum}
+\item Es gibt einen Monomorphismus \={f}: V/Kern(f) $\to$ W, so dass f = \={f} $\circ$ q und Bild(f) = Bild(\={f}) ist, d.h. das folgende Diagramm kommutiert:
+\begin{align*}
+\begin{xy}
+  \xymatrix{
+      V \ar[r]^f \ar[d]_q &  W \\
+      V / \ker(f) \ar[ru]_{\overline{f}}& &
+  }
+\end{xy}
+\end{align*}
+Hierbei ist q: V $\to$ V/Kern(f) die kanonische Projektion definiert durch q(a) := a + Kern(f).
+\item Ist dim$_K$ V = n < $\infty$, so gilt die Formel: \\
+dimV = dimKern(f) + dimBild(f).
+\end{compactenum}
+\end{theorem}
+\begin{lemma}
+Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ Hom$_K$(V,W) sind gleichwertig:
+\begin{enumerate}
+\item f ist ein Isomorphismus,
+\item f ist ein Monomorphismus, 
+\item f ist ein Epimorphismus.
+\end{enumerate}
+\end{lemma}
+
+\subsection{Überblick der linearen Abbildungen}
+\begin{tabular}{lll}
+Monomorphismus\index{Monomorphismus} & f: V $\to$ W& linear, injektiv\\
+Epimorphismus\index{Epimorphismus} & f: V $\to$ W & linear, surjektiv\\
+Isomorphismus\index{Isomorphismus} & f: V $\to$ W & linear, bijektiv\\
+Endomorphismus\index{Endomorphismus} & f: V $\to$ V & linear\\
+Automorphismus\index{Automorphismus} & f: V $\to$ V & linear, bijektiv\\
+\end{tabular}
+
+\subsection{Raum der Homomorphismen}
+\begin{lemma}
+Seien V, W K-Vektorräume.
+\begin{compactenum}
+\item Für $f, g \in Hom_K(V, W), \alpha \in K$ und $a \in V$ setze (f + g)(a) = f(a) + g(a) und $(\alpha f)(a) = \alpha f(a)$.\\
+Mittels dieser Operationen ist Hom$_K$(V, W) ein K-Vektorraum.
+\item Seien $\{a_j | j \in J\} \subseteq V$ und $\{b_i | i \in I\} \subseteq W$ Basen. Für $j \in J$ und $i \in I$ definiere $e_{ij} \in Hom_K(V, W)$ durch
+\begin{center}
+$e_{ij}(a_k) =
+\begin{cases}
+0 ~~j \neq k\\
+b_i~~ j = k\\
+\end{cases}$
+\end{center}
+Dann ist $\{e_{ij} | i \in I, j \in J\}$ eine linear unabhängige Teilmenge von Hom$_K$(V,W). Falls V und W endlich erzeugt sind, so ist $\{e_{ij} | i \in I, j \in J\}$ eine Basis von Hom$_K$(V,W). Insbesondere  gilt dann:\\
+dim$_K$Hom(V,W) = dim$_K$V $\cdot$ dim$_K$W.
+\end{compactenum}
+\end{lemma}
+
+\begin{lemma}
+Seien V$_i$ K-Vektorräume, i = 1, 2, 3, 4.
+\begin{compactenum}
+\item Sind $f \in Hom_K (V_2, V_3)$ und $g \in Hom_K (V_1, V_2)$ so definiert $(fg)(a_1) = f(g(a_1)), a_1 \in V_1$
+eine lineare Abbildung $fg \in Hom_K(V_1,V_3)$.
+\item Ist $f \in Hom_K (V_2, V_3)$ und sind $g_1, g_2 \in Hom_K (V_1, V_2)$, so gilt\\
+$f(g_1 +g_2)=fg_1 +fg_2$.
+\item Sind $f_1, f_2 \in Hom_K (V_2, V_3)$ und $g \in Hom_ (V_1, V_2)$, so gilt\\
+$(f_1 + f_2)g = f_1g + f_2g$.
+\item Für $f \in Hom_K(V_3,V_4)$, $g \in Hom_K(V_2,V_3)$ und $h \in Hom_K(V_1,V_2)$, so gilt: $f(gh) = (fg)h$.
+\end{compactenum}
+\end{lemma}
+
+\begin{lemma}
+Seien $V_i$ K-Vektorräume, i = 1, 2, 3.
+\begin{compactenum}
+\item Sei $f \in Hom_K(V_1,V_2)$ ein Isomorphismus. Sei $g = f^{-1}$ die inverse Abbildung. Dann ist g linear, d.h. $g \in Hom_K(V_2,V_1)$.
+\item Sind $f \in Hom_K(V_1,V_2)$ und $g \in Hom_K(V_2,V_3)$ Isomorphismen, so ist auch $gf \in Hom_K(V_1,V_3)$ ein Isomorphismus; es gilt: $(gf)^{-1} = f^{-1}g^{-1}$.
+\end{compactenum}
+\end{lemma}
+
+\begin{definition}
+Das \textbf{Kroneckersymbol}\index{Kroneckersymbol} $\delta_{jk}$ ist definiert als $\delta_{jk} = 1$ falls j = k und $\delta_{jk} = 0$ falls j $\neq$ k.
+\end{definition}
+
+Ist $\{a_1,... ,a_n\}$ eine Basis von V, so sind bilden die Endomorphismen $e_{ij} \in End_K (V)$ mit $e_{ij}(a_k) = \delta_{jk}a_i$ eine Basis $\{e_{11}, ..., e_{nn}\}$ von $End_K (V)$; es ist $dim_K End_K (V) = n^2$. Für die Basiselemente $\{e_{ij}\}$ von $End_K(V)$ gelten die Formeln
+\begin{center}
+$e_{ij}e_{kl} = \delta_{jk}e_{il}$ und $\sum\nolimits_{i=1}^{n}e_{ii} = id_V$.
+\end{center}
+Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Die obige Formel liefert $e_{12}e_{22} = \delta_{22}e_{12} = e_{12} \neq 0$ und $e_{22}e_{12} = \delta_{21}e_{22} = 0$, d.h. $e_{12}e_{22} \neq e_{22}e_{12}$.
+
+\begin{definition}
+Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär}\index{regulär} (auch ‘invertierbar’\index{invertierbar} bzw. ‘Automorphismus’\index{Automorphismus}); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V)\index{General Linear Group}.
+\end{definition}
+
+\begin{example}
+Sei K ein endlicher Körper mit p Elementen und sei V ein K-Vektorraum der Dimension n. Für zwei (beliebige) endlich-dimensionale K-Vektorräume V,W und $f \in Hom_K(V,W)$ gilt: \\
+f ist ein Isomorphismus genau dann, wenn f jede Basis von V auf eine Basis von W abbildet. Also ist die Anzahl der Elemente von GL(V) genau die Anzahl der verschiedenen Basen von V , wobei auch die Reihenfolge der Basiselemente berücksichtigt werden muss. Jede Basis $\{a_1, …, a_n\}$ von V entsteht durch Wahl der $a_i$ wie folgt:\\
+$0 \neq a_1 \in V \hspace*{23mm} p^n-1~Möglichkeiten$,\\
+$a_1 \in V \textbackslash \langle a_1 \rangle \hspace*{21mm} p^n - p~Möglichkeiten$,\\
+$\cdots \hspace*{36mm} \cdots$\\
+$a_n \in V \textbackslash \langle a_1, …, a_{n-1} \rangle \hspace*{4mm} p^n - p^{n-1}~Möglichkeiten$.\\
+Damit ist $|GL(V )| = (p^n - 1)(p^n - p) \cdots (p^n - p^{n-1})$.
+\end{example}
+
+\begin{definition}
+Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der \textbf{Rang} r(f) von f definiert als $r(f) = dim_K Bild(f)$.
+\begin{enumerate}
+\item Wegen Bild(f) $\subseteq$ W ist stets r(f) $\le$ $dim_K W$.
+\item Aus dem Homomorphiesatz folgt:\\
+$r(f) = dim_K Bild(f) = dim_K V - dim_K Kern(f)$
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}
+Seien U,V,W K-Vektorräume mit Basen X = $\{u_1,...,u_k\}$,Y = $\{v_1,...,v_n\}$ und Z = $\{w_1,...,w_m\}$. Dann gilt:
+\begin{compactenum}
+\item Die Abbildung $\kappa: Hom_K(U,V) \to K^{n \times k}, f \mapsto A_{f,X,Y}$ ist ein Isomorphismus.
+\item Seien $f \in Hom_K(U,V)$ und $g \in Hom_K(V,W)$. Sind $A_{f,X,Y} = (\alpha_{jl}) \in K^{n \times k}$ und $A_{g,X,Y} = (\beta_{ij}) \in K^{m \times n}$, so ist $A_{gf,X,Z} = (\gamma_{il}) \in K^{m \times k}$ mit
+$\gamma_{il} = \sum\nolimits_{j=1}^{n} \beta_{ij} \alpha_{jl}$.
+\end{compactenum}
+\end{proposition}
+
+\begin{lemma}
+Sei V ein K-Vektorraum der Dimension n < $\infty$ und sei $f \in End_K (V)$. Dann sind gleichwertig:
+\begin{enumerate}
+\item f ist Automorphismus,
+\item Für jede Basis X von V ist $A_{f,X}$ invertierbar; weiter gilt $A_{f^{-1},X} = A^{-1}_{f,X}$,
+\item Für wenigstens eine Basis X von V ist $A_{f,X}$ invertierbar.
+\end{enumerate}
+\end{lemma}
+
+\begin{theorem}
+Sei f: V $\to$ W linear, V, W endlich erzeugt. Seien X = $\{v_1, …, v_n\}$ und X' = $\{v'_1, …, v'_n\}$ Basen von V und Y = $\{w_1, …, w_m\}$ und Y' = $\{w'_1, …, w'_m\}$ Basen von W. Sei $v'_j = \sum\nolimits_{i=1}^{n} \beta_{ij} v_i$ und $w'_l = \sum\nolimits_{k=1}^{m} \gamma_{kl} w_k$. Sei B = $(\beta_{ij}) \in K^{n \times n}$, C = $(\gamma_{kl}) \in K^{m \times m}$. Dann gilt:
+\begin{compactenum}
+\item $A_{f, X', Y'} = C^{-1} A_{f, X, Y} B$
+\item Sei V = W und f: V $\to$ V, seien X und X' zwei verschiedene Basen von V. Sei $v'_j = \sum\nolimits_{i=1}^{n} \alpha_{ij} v_i$.\\
+Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
+\end{compactenum}
+\end{theorem}
+
+
+\subsection{Lineare Funktionale und adjungierte Abbildungen}
+\begin{definition}
+$V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
+\end{definition}
+
+\begin{lemma}
+Sei dim(V) = n < $\infty$ und $f \in V^*$ $\Rightarrow$ $\exists ! w \in V$ mit $f(v) = (v,w)$ $\forall v \in V$
+\end{lemma}
+
+\begin{theorem}
+Sei dim(V) = n < $\infty$ mit innerem Produkt und $ f \in End_K(V)$ $\Rightarrow$ $\exists ! f^* \in End_K(V)$ mit $(f(v_1), v_2) = (v_1, f^*(v_2))$
+\end{theorem}
+
+\begin{lemma}
+Sei dim(V) = n < $\infty$ mit innerem Produkt ( , ).
+\begin{enumerate}
+\item Sei $f: V \to V$ linear und $a_1, …, a_n$ eine ON-Basis von $V$. Sei $A = (\alpha_{ij})$ die darstellende Matrix von $f$ bez. $a_1, …, a_n$. Dann gilt: $\alpha_{ij} = (f(a_j), a_i)$
+\item Sei $B = (\beta_{ij})$ die darstellende Matrix von $f^*$. Dann gilt: $B = A^*$
+\end{enumerate}
+\end{lemma}
+
+\begin{theorem}
+Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein weiteres inneres Produkt. Dann $\exists !$ positiver Endomorphismus $f: V \to V$ mit $\phi(v_1, v_2) = (f(v_1), v_2)$, $\forall v_1, v_2 \in V$
+\end{theorem}
+\begin{definition}
+\leavevmode
+\begin{itemize}
+\item $f \in End(V)$ heißt \textbf{selbstadjungiert}\index{selbstadjungiert}, falls $f = f^*$\\
+$f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
+\item $f \in End(V)$ heißt \textbf{positiv}\index{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$
+\end{itemize}
+\end{definition}
+\begin{remark}
+\leavevmode
+\begin{enumerate}
+\item Falls dim(V) < $\infty$, so gibt es stets $f^*$
+\item $f^*$ ist eindeutig durch $f$ bestimmt
+\item Es gilt also: $f$ ist positiv $\Leftrightarrow$ $p(v_1, v_2) = (f(v_1), v_2)$ ist inners Produkt
+\item Falls $K = \mathbb{C}$: $f$ ist positiv $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$, $\forall v \in V$, und $(f(v), v) > 0$, $\forall v \neq 0$
+\end{enumerate}
+\end{remark}
+\begin{remark}
+Sei $V = \mathbb{R}^n$ mit $(x, y) = x^ty$. Zu jedem inneren Produkt $\phi$ gibt es $A \in M_n(\mathbb{R})$ mit $A = A^t$ und $x^tAx > 0$ $\forall x \neq 0$, sodass $\phi (x, y) = (Ax, y) = x^tAy = x^tAy$.\\
+Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
+\end{remark}
+
+\begin{theorem} \textbf{(Eigenwerte von f)}
+Sei f normal, dann gilt: v ist EV von $f$  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von $f^*$ zum EW $\overline{\alpha}$
+\end{theorem}
+
+\subsubsection{selbstadjungiert}
+\begin{lemma}
+Sei dim(V) = n < $\infty$ und $f = f^*$ ($\Rightarrow$ f normal).\\
+Dann gibt es eine ON-Basis von V, die aus Eigenvektoren zu $f$ besteht (d.h. $f$ ist unitär diagonalisierbar).\\
+Anders ausgedrückt: Es gibt eine ON-Basis, sodass die darstellende Matrix Diagonalgestalt hat.
+
+\textbf{Zusammenfassung im Fall $K=\mathbb{R}$}
+\begin{lemma}
+Zu $f$ $\exists$ ON-Basis aus Eigenvektoren $\Leftrightarrow$ $f = f^*$\\
+$A \in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ $A = A^t$
+\end{lemma}
+
+\textbf{Folgerung}: Sei $A \in M_n(\mathbb{C})$ \textbf{hermitesch}, d.h. $A^*=A$. Dann gibt es eine unitäre Matrix $U$, sodass $U^*AU$ Diagonalgestalt hat.\\
+Sei $A \in M_n(\mathbb{R})$ symm., d.h. $A^t=A$, dann gibt es eine orthogonale Matrix $O$, sodass $O^tAO$ Diagonalgestalt hat.
+\end{lemma}
+
+\subsection{Projektionen}
+\begin{definition}
+$p: V \to V$ heißt Projektion auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
+\end{definition}
+
+\begin{theorem}
+\leavevmode
+\begin{itemize}
+\item Sei V K-VR mit ( , ), dim(V) < $\infty$ und $p: V \to V$ Projektion. TFE:
+\begin{enumerate}
+\item $p$ ist normal, d.h. $p^*p = pp^*$
+\item $p$ ist selbstadjungiert, d.h. $p = p^*$
+\item $p$ ist eine \textbf{Orthogonalprojektion}, d.h. $im(p)^\perp = ker(p)$
+\end{enumerate}
+\item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. TFE:
+\begin{enumerate}
+\item $V = W_1 \oplus … \oplus W_k$ ist eine orthogonale Summe
+\item $id_V = \sum\limits_{j=1}^k p_j$ und $p_ip_j = 0$ $\forall i \neq j$
+\item Ist $B_j$ eine ON-Basis von $W_j$, j = 1, …, k, so ist $B := \bigcup\limits_{j=1}^k B_j$ eine ON-Basis von V 
+\end{enumerate}
+\end{itemize}
+\end{theorem}
+
+\begin{lemma}
+Sei $f: V \to V$ normal. Dann gilt:
+\begin{enumerate}
+	\item $f^2(v) = 0$ $\Rightarrow$ $f(v) = 0$ $\forall v \in V$
+	\item $q \in K[x]$ $\Rightarrow$ $q(f)$ ist normal
+	\item Das Minimalpolynom hat keine mehrfachen Nullstellen
+\end{enumerate}
+\end{lemma}
+
+\begin{theorem}
+V sei endl.dim. $\mathbb{C}$-VR mit ( , ). Sei $f: V \to V$ normal. Seien $\alpha_1, …, \alpha_k$ die paarweise verschiedenen Eigenwerte. Seien $p_j: V \to V$ die Orthogonalprojektionen auf die $V(\alpha_j)$. Dann git:
+\begin{enumerate}
+\item $f = \alpha_1p_1 + … + \alpha_kp_k$
+\item $id_V = p_1 + … + p_k$
+\item $p_ip_j = 0$ für $i \neq j$
+\end{enumerate}
+Insbesondere ist $V = V(\alpha_1) \oplus … \oplus V(\alpha_k)$ eine direkte orth. Summe.
+\end{theorem}
+
+\begin{remark}
+Falls es für $f: V \to V$ Orthogonalprojektionen $p_1, …, p_k$ mit 1), 2) und 3) gibt, so ist $f$ normal.
+\end{remark}
+

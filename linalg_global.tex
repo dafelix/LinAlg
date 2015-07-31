@@ -110,6 +110,8 @@
 \pagenumbering{arabic}
 \maketitle
 
+\newpage
+
 \singlespacing
 \tableofcontents
 \onehalfspacing
@@ -123,8 +125,12 @@
 %\vspace{15pt}
 %\framebox[\textwidth]{Lineare Algebra II}
 
+\include*{chapter/linalg_abbildungen}
+
 \include*{chapter/linalg_matrizen}
-%\include*{chapter/linalg_dualraum}
+
+\include*{chapter/linalg_inneresProdukt}
+\include*{chapter/linalg_dualraum}
 
 \newpage
 \renewcommand{\indexname}{Stichwortverzeichnis}

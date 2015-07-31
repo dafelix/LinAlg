@@ -8,6 +8,24 @@ Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
 
 
 \subsection{Determinante}
+
+\subsection{Diagonalisierbarkeit\index{Diagonalisierbarkeit}}
+
+\begin{theorem}
+\leavevmode
+\begin{enumerate}
+	\item f heißt diagonalisierbar, falls eine der Eigenschaften gilt:
+	\begin{enumerate}
+		\item $\exists$ Basis von V aus Eigenvektoren (auf der Diagonalen stehen Eigenwerte)
+		\item $\exists$ Matrix $S \in Gl_n(K)$, sodass $S^{-1}AS$ Diagnoalgestalt hat
+	\end{enumerate}
+	\item f ist diagonalisierbar $\Leftrightarrow$ $\chi_f(x) = \prod \limits_{i=1}^{r} (x- \alpha_i)^{m_i}$. Es gilt dann: $V=\bigoplus \limits_{i=1}^r V_f(\alpha_i)$
+	\item f ist diagonalisierbar $\Leftrightarrow \mu_f(x) = \prod \limits_{i=1}^{r}(x-\alpha_i)$ (mit paarweise verschiedenen $\alpha_i$) 
+\end{enumerate}
+\end{theorem}
+
+
+
 \begin{definition}
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
@@ -56,6 +74,46 @@ $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 \end{center}
 Hierbei sind $s_1, …, s_n$ die Spalten von A.
 \end{theorem}
+
+\subsection{Lineare Gleichungen}
+(L)  Ax = b\\
+Die Matrix A = $(\alpha_{ij})$ definiert eine lineare Abbildung $f = f_A: K^n \to K^m, x \mapsto Ax$. Sei für $b \in K^m$ das Urbild von b unter der Abbildung f mit f$^{-1}$(b) bezeichnet. Damit lässt sich das System (L) wie folgt interpretieren: Ist $b \in K^m$ fest gewählt, so gilt für das Urbild von b
+\begin{center}
+$f^{-1}(b) = \{x \in K^n | Ax = b\}$,
+\end{center}
+d.h. die Elemente von $f^{-1}(b)$ sind genau die Lösung von (L).
+
+\begin{lemma}
+Sei $A \in K^{m \times n}$ eine Matrix.
+\begin{compactenum}
+\item Die Lösungen $L_0$ des homogenen Systems Ax = 0 bilden einen linearen Unterraum des $K^n$ der Dimension n - r(A).
+\item Ist $x_0$ eine Lösung des inhomogenen Systems Ax = b, so ist $x_0 + L_0 = \{x_0 +y | y \in L_0\}$ die Menge aller Lösungen von Ax = b
+\end{compactenum}
+\end{lemma}
+
+\begin{proposition}
+(\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\end{proposition}
+
+\begin{remark}
+Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.
+\end{remark}
+
+\begin{proposition}
+(\textbf{Eindeutigkeit}): Sei $A \in K^{m \times n},b \in K^m$ und das lineare Gleichungssystem (L) Ax = b habe eine Lösung. Dann hat (L) genau dann eine eindeutige Lösung, wenn Ax = 0 nur die triviale Lösung x = 0 hat; dies gilt genau dann, wenn r(A) = n ist.
+\end{proposition}
+
+\begin{remark}
+Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. Demnach ist dann r(A) = m. Sind diese Lösungen eindeutig, so folgt r(A) = n. Also ist in diesem Fall A vom Typ (n, n) und wegen r(A) = n invertierbar. Ist $A^{-1}$ die inverse Matrix, so sind die eindeutigen Lösungen von Ax = b genau die x = A$^{-1}$b.
+\end{remark}
+
+\textbf{Zulässige Umformungen} von (L) sind:
+\begin{enumerate}
+\item Vertauschen der Zeilen von B (Permutation der Gleichungen),
+\item Zeilenübergänge in B der Form $z_i \to z_i+\alpha z_j, i \neq j,\alpha \in K$.
+\item Vertauschen der Spalten von A (Permutation der $x_1, …, x_n$).
+\end{enumerate}
+
 
 \subsection{Charakteristisches Polynom und Eigenwerte}
 \begin{definition}
@@ -187,6 +245,14 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 \end{remark}
 
 \subsection{äquivalent und ähnlich}
+
+\subsection{normal}
+\begin{definition}
+Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal, falls $AA^* = A^*A$.
+\end{definition}
+\begin{lemma}
+Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
+\end{lemma}
 \begin{definition}
 Sei R ein komm. Ring.
 \begin{enumerate}
@@ -195,10 +261,18 @@ Sei R ein komm. Ring.
 \end{enumerate}
 \end{definition}
 
-\subsection{positiv Definit}
+\subsection{positiv definit\index{positiv definit}}
 \begin{definition}
 Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
 \end{definition}
+\begin{theorem}
+\leavevmode
+\begin{compactitem}
+\item Sei V K-VR mit ( , ) und dim(V) = n < $\infty$. Dann gilt für $f \in End(V)$:\\
+f ist positiv $\Leftrightarrow$ $\exists u \in Gl(V)$ mit $f = u^*u$
+\item A positiv $\Leftrightarrow$ \={A} positiv\\
+f positiv $\Leftrightarrow$ A positiv
+
 \begin{theorem}
 \leavevmode
 \begin{compactitem}
@@ -211,8 +285,24 @@ $B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le 
 \end{compactitem}
 \end{theorem}
 
+\end{compactitem}
+\end{theorem}
+
 
 \subsection{unitär und orthogonal}
+
+\subsection{Gram-Schmidt-Verfahren}
+
+\begin{theorem}
+Seien $w_1,...,w_n$ linear unabhängige Vektoren. Die Vektoren $v_1,...,v_n$ des Orthogonalsystems werden rekursiv berechnet:
+\begin{align*}
+v_1 &= w_1\\
+v_2 &= w_2 - \frac{(v_1,w_2)}{(v_1,v_1)}v_1\\
+v_3 &= w_3 - \frac{(v_1,w_3)}{(v_1,v_1)}v_1 - \frac{(v_2,w_3)}{(v_2,v_2)}v_2\\
+v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
+\end{align*}
+\end{theorem}
+
 \begin{definition}
 Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
 Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$

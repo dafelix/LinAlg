@@ -59,8 +59,8 @@ Seien G und H (multiplikativ geschriebene) Gruppen.
 \item Ein \textbf{Homomorphismus}\index{Homomorphismus} (oder \textbf{Gruppenhomomorphismus}\index{Gruppenhomomorphismus}) ist eine Abbildung f: G $\to$ H, die mit den Gruppenstrukturen verträglich ist, d.h. für $g_1, g_2 \in G$ gilt:\\
 $f(g_1g_2) = f(g_1) f(g_2)$.
 \item Ist f: G $\to$ H ein Homomorphismus, so setze\\
-$im(f) = \{f(g) | g \in G\}$,\\
-$ker(f) = \{g \in G | f(g) = 1\}$.
+$\im(f) = \{f(g) | g \in G\}$,\\
+$\ker(f) = \{g \in G | f(g) = 1\}$.
 \end{compactenum}
 \end{definition}
 
@@ -227,11 +227,21 @@ Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \
 mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
 \end{definition}
 
+\begin{lemma}
+Sei R ein Ring mit Einselement 1.
+\begin{compactenum}
+\item R[x] ist ein Ring mit Einselement 1 = (1,0,0,...); der Ring R[x] ist genau dann kommutativ, wenn R kommutativ ist.
+\item Die Abbildung R $\to$ R[x], a $\mapsto$ (a,0,0,...) ist ein Monomorphismus von Ringen.
+\item Ist K ein Körper, so ist K[x] eine kommutative K-Algebra. Ist x = (0,1,0,...), so ist \{$x^j | j = 0,1,2,...$\} eine K-Basis von K[x].
+\end{compactenum}
+\end{lemma}
+
+
 \subsubsection{Ringhomomorphismus\index{Ringhomomorphismus}}
 \begin{definition}
 Seien R, S Ringe.
 \begin{enumerate}
-\item Eine Abbildung f: R $\to$ S ist ein \textbf{Ringhomomorphimus}\index{Ringhomomorphimus}, falls
+\item Eine Abbildung f: R $\to$ S ist ein \textbf{Ringhomomorphismus}\index{Ringhomomorphismus}, falls
 \begin{enumerate}
 \item $f(r_1 +r_2) = f(r_1) + f(r_2), r_1,r_2 \in R$
 \item $f(r_1r_2) = f(r_1)f(r_2), r_1,r_2 \in R$
@@ -337,7 +347,88 @@ Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 \end{enumerate}
 \end{theorem}
 
+\subsubsection{Elementarteiler}
+\begin{theorem}
+Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^\times$ (Elementarteiler) mit
+\begin{enumerate}
+	\item $M \simeq R^k \oplus \bigoplus \limits_{i=1}^m \QR{R}{\epsilon_i R}$
+	\item $\epsilon_1 | \epsilon_2 | ... | \epsilon_m$
+\end{enumerate}
+\textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt
+\end{theorem}
+
+\begin{remark}
+Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}\index{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
+
+\textbf{Anwendung}: Seien $M_1,M_2$ zwei e-e. Moduln, $\epsilon_1,...,\epsilon_m$ die Elementarteiler von $M_1$, $\mu_1,...,\mu_n$, die Elementarteiler von $M_2$. Dann gilt:
+\begin{itemize}
+	\item $M_1 \simeq M_2 \Leftrightarrow rg(M_1) = rg(M_2)$
+	\item $\epsilon_1 = \mu_1,...,\epsilon_m = \mu_m$ (insbes. $l=m$) %TODO: inhaltlich prüfen$
+\end{itemize}
+\end{remark}
+
+\subsubsection{Invariantenteiler}
+\begin{definition}
+Die Elemente $\pi_1^{e_{1,1}},...,\pi_1^{e_{s,1}},\pi_2^{e_{1,2}},...,\pi_2^{e_{s,2}},...,\pi_t^{e_{1,t}},...,\pi_t^{e_{s,t}}$ mit 
+\begin{align*}
+\begin{array}{ll}
+e_{1,1} \geq e_{2,1} \geq ... \geq e_{s,1} \geq & 0 \\ 
+~~\vdots & \\ 
+e_{1,t} \geq e_{2,t} \geq ... \geq e_{s,t} \geq & 0
+\end{array} 
+\end{align*}
+heißen die Invariantenteiler von M.
+\end{definition}
+
+\subsection{Faktorräume}
+\begin{definition}
+Sei $V$ ein K-Vektorraum und $U \subseteq V$ ein linearer Unterraum. Für $a \in V$ sei $a + U = \{a + u | u \in U\} \subseteq V$. Der \textbf{Quotienten-}\index{Quotientenraum} oder \textbf{Faktorraum}\index{Faktorraum} von V nach U ist die Menge 
+\begin{center}
+$\QR{V}{U} = \{a + U | a \in V\}$
+\end{center}
+\end{definition}
+
+\begin{lemma}
+Sei V ein K-Vektorraum und U $\subseteq$ V ein linearer Unterraum. Dann ist der Faktorraum V/U ein K-Vektorraum mittels
+\begin{center}
+$(a_1 + U)+(a_2 + U)=(a_1 +a_2)+U$ und $\alpha(a+U)=\alpha a+U$.
+\end{center} 
+Die Abbildung q : V $\to$ V /U, a $\mapsto$ a + U ist ein Epimorphismus.
+\end{lemma}
+
+\begin{lemma}
+Sei V ein K-Vektorraum und seien U $\subseteq$ W $\subseteq$ V linearere Unterräume. Dann gilt:
+\begin{enumerate}
+\item Ist $\{w_i + U | i \in I\}$ eine Basis von W/U und $\{v_j + W | j \in J\}$ eine Basis von V/W, so ist $\{w_i +U, v_j +U | i \in I, j \in J\}$ eine Basis von V/U.
+\item Ist dimV/U = n < $\infty$, so ist dimV/U = dimV/W + dimW/U.
+\item Ist dim V = n < $\infty$, so ist dim V/W = dim V - dim W.
+\end{enumerate}
+\end{lemma}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{K-Algebra}
+Eine \textbf{K-Algebra}\index{K-Algebra} ist ”fast ein Köper”, aber
+\begin{enumerate}
+\item die Multiplikation ist im Allgemeinen nicht kommutativ
+\item nicht jedes Element ungleich Null ist invertierbar bezüglich der Multiplikation\\
+\end{enumerate}
+
+\begin{definition}
+Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\nolimits_{j=0}^{n} a_j x^j \in K[x]$, so setze f(c) = $\sum\nolimits_{j=0}^{n} a_j c^j \in \mathcal{A}$. Die Abbildung
+\begin{center}
+$\alpha = \alpha_c: K[x] \to A, f \mapsto f(c)$
+\end{center}
+ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshomomorphismus} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
+\end{definition}
+
+\begin{example}
+\leavevmode
+\begin{compactenum}
+\item Seien K $\subseteq$ L Körper. Dann ist L eine K-Algebra und für f $\in$ K[x] und c $\in$ L ist f(c) $\in$ L definiert.
+\item Ist K endlich mit |K| = q = p$^n$, so gilt c$^q$ = c für alle c $\in$ K. Ist f(x) = x$^q$ - x $\in$ K[x], so ist f $\neq$ 0, aber f(c) = 0 für alle c $\in$ K, d.h. das Polynom f $\in$ K[x] ist von der durch f induzierten Abbildung K $\to$ K, c $\mapsto$ f(c), zu unterscheiden. Ist $\phi: K^2 \to K^2, (x_1,x_2) \mapsto (0,x_1)$ so folgt $f(\phi) = \phi^q - \phi = -\phi \neq 0$, da $\phi^2$ = 0 ist.
+\end{compactenum}
+\end{example}
+
 \subsection{Körper\index{Körper}}
 \begin{definition}
 Ein \textbf{Körper}\index{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
@@ -366,6 +457,26 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \end{enumerate}
 \end{example}
 
+\subsubsection{Algebraische Abgeschlossenheit}
+\begin{definition}
+Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, falls es $a, c_1, …, c_n \in L$ gibt, so dass in L[x] gilt
+\begin{center}
+$f = a \prod\limits_{j=1}^{n}(x - c_j)$.
+\end{center}
+Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
+\end{definition}
+
+\begin{remark}
+\leavevmode
+\begin{compactenum}
+\item Der \textbf{Fundamentalsatz der Algebra}\index{Fundamentalsatz der Algebra} besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
+\item Da $x^2 + 1 \in \mathbb{R}[x]$ keine reelle Nullstelle hat, ist $\mathbb{R}$ nicht algebraisch abgeschlossen.
+\item Sei K ein endlicher Körper mit |K| = q = p$^n$. Dann gilt c$^q$ = c für alle c $\in$ K. Also hat $f = x^q - x+1 \in K[x]$ keine Nullstelle in K und K ist nicht algebraisch abgeschlossen. Endliche Körper sind also nie algebraisch abgeschlossen.
+\item Ein Satz der Algebra besagt, dass es zu jedem Körper K einen algebraisch abgeschlossenen Körper L mit K $\subseteq$ L gibt.
+\end{compactenum}
+\end{remark}
+
+\subsubsection{Unterkörper}
 \begin{definition}
 Sei K ein Körper. Ein \textbf{Teilkörper}\index{Teilkörper}  L $\subseteq$ K ist eine Teilmenge, so dass gilt:
 \begin{enumerate}
@@ -375,6 +486,42 @@ Sei K ein Körper. Ein \textbf{Teilkörper}\index{Teilkörper}  L $\subseteq$ K 
 \item 0 $\neq$ a $\in$ L $\Rightarrow$ a$^{-1}$ $\in$ L
 \end{enumerate}
 \end{definition}
+
+\subsubsection{Polynome über Körpern}
+\begin{proposition}
+(\textbf{Division mit Rest}\index{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).
+\end{proposition}
+
+\begin{lemma}
+Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
+\begin{compactenum}
+\item Ist f(c) = 0, so ist f = (x - c)h für ein geeignetes h $\in$ L[x].
+\item Ist f $\neq$ 0 und f(c) = 0, so gibt es ein eindeutiges bestimmtes m $\in$ $\mathbb{N}$ und ein eindeutig bestimmtes Polynom h $\in$ L[x] mit f = (x - c)$^m$h und h(c) $\neq$ 0.
+\end{compactenum}
+\end{lemma}
+
+\begin{definition}
+Seien K $\subseteq$ L Körper, f $\in$ K[x] und c $\in$ L.
+\begin{compactenum}
+\item Ist f $\in$ K[x] und f(c) = 0, so ist c eine Nullstelle von f.
+\item Die Zahl m aus Lemma 11.8 (b) nennt man die Vielfachheit der Nullstelle c von f.
+\end{compactenum}
+\end{definition}
+
+\begin{lemma}
+Seien K $\subseteq$ L Körper und sei 0 $\neq$ f $\in$ K[x]. Seien $c_1, …, c_r$ die paarweise verschiedenen Nullstellen von f in L mit Vielfachheiten $m_1 , …, m_r$ . Dann gibt es ein g $\in$ L[x], so dass gilt:
+\begin{center}
+$f = \prod\limits_{j=1}^{r} (x - c_j)^{mj} g$ und $g(c_j) \neq 0$ für $j = 1, …, r$.
+\end{center}
+Weiter ist $r \le \sum\nolimits_{j=1}^{r}m_j \le Grad(f)$.\\
+Insbesondere hat f höchstens Grad(f) viele verschiedene Nullstellen.
+\end{lemma}
+
+Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.
+
+\begin{lemma}
+Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder char(K) > m, so ist c eine m-fache Nullstelle von f genau dann, wenn $f(c) = f'(c) = \cdots = f^{(m-1)}(c) = 0 \neq f^{(m)}(c)$ ist.
+\end{lemma}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Vektorraum\index{Vektorraum}}
@@ -458,3 +605,28 @@ Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 \textbf{Austauschsatz von Steinitz}\index{Austauschsatz von Steinitz}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
 \end{theorem}
 
+\subsection{Affine Hyperebene}
+\begin{definition}
+Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.
+\end{definition}
+
+\begin{remark}
+Erinnerung affiner Unterraum: Ein m-dim. affiner Unterraum von V ist eine Menge M = v + W mit  $v \in V$ und $W \subseteq V$ ein m-dim. linearer Unterraum.\\
+Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt von n-m affinen Hyperebenen.
+\end{remark}
+
+\subsection{Invariante Unterräume}
+\begin{theorem}
+Sei $f \in End(V)$ beliebig. Sei $W \subseteq V$ ein $f$ invarianter Unterraum, d.h. $f(W) \subseteq W$. Dann ist $W^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
+\end{theorem}
+
+\subsection{Lotraum}
+\begin{theorem}
+Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$. $M^\perp \subseteq V$ ist ein Unterrraum.
+
+Sei $U \subseteq V$ ein Unterraum mit $\dim(U) = n < \infty$. Dann gilt:
+\begin{enumerate}
+	\item $U \oplus U^\perp = V$
+	\item $(U^\perp)^\perp = U$
+\end{enumerate}
+\end{theorem}

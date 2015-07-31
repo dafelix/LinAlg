@@ -1,0 +1,60 @@
+\section{Inneres Produkt (Skalarprodukt)}
+\begin{definition}
+Sei V ein K-VR. Ein inneres Produkt (oder Skalarprodukt) ist eine Abbildung $\phi$ von $V \times V$ nach $K, \phi (v_1,v_2) = (v_1,v_2) \in K,~v_1,v_2 \in V$ mit folgenden Eigenschaften:
+\begin{enumerate}
+	\item $(v_1+v_2,v_3) = (v_1,v_3)+(v_2,v_3)$
+	\item $(\alpha v_1,v_2) = \alpha (v_1,v_2)$
+	\item $(v_1,v_2) = \overline{(v_2,v_1)}$ (hermitesch)
+	\item $(v,v) \geq 0$, $(v,v) = 0 \Leftrightarrow v=0$ (positiv definit)
+\end{enumerate}
+\end{definition}
+\begin{remark}
+V zusammen mit einem inneren Produkt nennt man einen \textbf{euklidischen Raum} (falls $K=\mathbb{R}$) bzw. \textbf{unitären Raum}\index{unitärer Raum} (falls $K=\mathbb{C}$).
+\end{remark}
+
+\begin{lemma}
+Sei $A:V \rightarrow W$ linear und injektiv. Sei $(~,~):W \times W \rightarrow K$ ein inneres Produkt auf $W$. Dann wird durch $p_A(v_1,v_2):=(Av_1,Av_2),~v_1,v_2 \in V$ ein inneres Produkt definiert.
+\end{lemma}
+
+\subsection{Cauchy-Schwarz-Ungleichung}
+\begin{theorem}
+\begin{align*}
+|(v_1,v_2)| \leq \norm{v_1} \norm{v_2}
+\end{align*}
+\end{theorem}
+
+\subsection{Erhaltung innerer Produkte}
+\begin{theorem}
+\leavevmode
+\begin{compactitem}
+\item Eine lineare Abbildung $f: V \to W$ erhält innere Produkte, falls gilt: $(f(v_1), f(v_2))_W = (v_1, v_2)_V$
+\item f erhält innere Produkte $\Rightarrow$ $||f(v)||_W = \sqrt{(f(v), f(v))_W} = \sqrt{(v,v)_V} = ||v||_V$
+\item $f$ erhält innere Produkte und ist bijektiv $\Rightarrow$ $f^{-1}$ erhält ebenfalls innere Produkte, denn: $(f^{-1}(w_1), f^{-1}(w_2))_V = (w_1, w_2)_W$
+\item Sei dim(V) = n < $\infty$, sei $f: V \to W$ linear. TFE:
+\begin{enumerate}
+\item f erhält das innere Produkt
+\item f ist ein Isom. zwischen VR mit innerem Produkt
+\item f bildet jede ON-Basis von V auf eine ON-Basis von W ab
+\item f bildet eine ON-Basis von V auf eine ON-Basis von W ab
+\end{enumerate}
+Eine unitäre Abbildung ist ein Isom. $u: V \to V$, der innere Produkte erhält.
+Die unitären Abbildungen bilden eine Gruppe U(V). Für $u \in U(V)$ gilt:
+\begin{enumerate}
+\item Sei dim(V) = n < $\infty$. Dann gilt: $u \in U(V)$ $\Leftrightarrow$ $u$(ON-Basis) = ON-Basis
+\item $u \in U(V)$ $\Leftrightarrow$ $\exists u^*$ mit $u^*u=uu^*=id$
+\end{enumerate}
+\end{compactitem}
+\end{theorem}
+
+\subsection{Bilinearform ausgeartet}
+\begin{definition}
+Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ ausgeartet im 1.Argument, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
+(ausgeartet im 2.Argument analog)
+\end{definition}
+\begin{remark}
+\leavevmode
+\begin{compactitem}
+\item Innere Produkte sind stets nicht-ausgeartet
+\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
+\end{compactitem}
+\end{remark}

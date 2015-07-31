@@ -1,0 +1,92 @@
+\section{Dualräume}
+\begin{definition}
+$V^* = Hom(V, K)$ heißt Dualraum.
+\end{definition}
+\begin{theorem}
+\leavevmode
+\begin{itemize}
+\item Ist $\{ v_i : i \in I \}$ eine Basis von V und sind $\{ c_i | i \in I \}$ beliebige Element von W, so bestimmt die Zuordnung $c_i = f(v_i)$ ein Element $f \in Hom_K(V,W)$.
+\item Sei dim(V) = n < $\infty$ und $v_1, …, v_n$ eine Basis. Sei $f_j: V \to K$ definiert durch $f_j(v_i) = \delta_{ij}$. Dann ist $f_1, …, f_n \in V^*$ eine Basis von $V^*$, denn $V^* \ni f = f(v_1)f_1 + … + f(v_n)f_n$.\\
+Falls $0 = \alpha_1 f_1 + … + \alpha_n f_n$, so folgt $0 = \alpha_i$.\\
+Insbesondere: Falls dim(V) < $\infty$, so gilt: dim(V$^*$) = dim(V).
+\end{itemize}
+\end{theorem}
+
+\begin{lemma}
+Sei $U \subseteq V$ ein linearer Unterraum und $v \in \QR{V}{U}$. 
+Dann gibt es $f \in V^*$ mit $f(u) = 0$ $\forall u \in u$ und $f(v) \neq 0$
+\end{lemma}
+
+\begin{proposition}
+Sei ${V^*}^* = Hom(Hom(V,K), K)$. Setzte $T: V \to V^*, v \mapsto T(v)$ mit $T(v)(f) := f(v)$ $\forall f \in V^*$. Dann gilt:
+\begin{enumerate}
+\item T ist linear und injektiv
+\item Falls dim(V) < $\infty$, so ist T ein Isomorphismus
+\end{enumerate}
+\end{proposition}
+
+\subsection{Dualitätssatz}
+\begin{theorem}
+\leavevmode
+\begin{enumerate}
+\item Ist $W \subseteq V$ ein lin. UR, so ist $W^{\perp \top} = W$
+\item Sei dim(V) < $\infty$ und $S \subseteq V^*$ ein lin. UR, so gilt  $S^{\top \perp} = S$
+\item Seien $W_1, W_2 \subseteq V$ lin. UR (V beliebig). Dann gilt:\\
+$(W_1 + W_2)^\perp = W_1^\perp \cap W_2^\perp$\\
+Falls dim(V) < $\infty$, so gilt auch: $(W_1 \cap W_2)^\perp = W_1^\perp + W_2^\perp$
+\end{enumerate}
+\end{theorem}
+
+\subsection{Restriktion und Inflation}
+\begin{definition}
+Sei $W \subseteq V$ ein lin. UR.
+\begin{enumerate}
+\item $R: V^* \to W^*, f \mapsto f|_W$ heißt \textbf{Restriktion}
+\item $I: \big(\QR{V}{W}\big)^* \to V^*, f \mapsto If$ mit $If(v) := f(v + W)$ heißt \textbf{Inflation} von f
+\item Sei $M \subseteq V$ eine Teilmenge. $M^\perp := \{ f \in V^* | f(m) = 0$ $\forall m \in M \}$. Also: $M^\perp \subseteq V^*$ (lin. UR)
+\item Sei $S \subseteq V^*$ eine Teilmenge. $S^\top := \{ v \in V | s(v) = 0$ $\forall s \in S \}$. $S^\top$ ist lin. UR von V.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+Sei $W \subseteq V$ ein lin. UR.
+\begin{enumerate}
+\item $R: V^* \to W^*$ ist linear und es gilt ker(R) = W$^\perp$
+\item Falls dim(V) = n < $\infty$, so gilt: dim(W$^\perp$) = dim(V) - dim(W)
+\item $I: \big(\QR{V}{W}\big)^* \to W^\perp$ ist ein Isomorphismus
+\end{enumerate}
+\end{lemma}
+
+\subsection{Normale Endomorphismen}
+\begin{definition}
+$f: V \to V$ heißt normal, falls $ff^*=f^*f$.
+\end{definition}
+
+\begin{example}
+\leavevmode
+\begin{enumerate}
+\item Selbstadjungierte, also $f = f^*$
+\item Unitäre, also $f^{-1} = f^*$
+\item f normal, $\alpha \in K$ $\Rightarrow$ $\alpha f$ normal
+\end{enumerate}
+\end{example}
+\begin{lemma}
+Sei $f = f^*$. Dann ist jeder Eigenwert von f reell. Die Eigenvektoren zu verschiedenen Eigenwerten sind zueinander orthogonal.
+\end{lemma}
+
+\subsection{zu Linearformen}
+\begin{lemma}
+Sei $g: V \to W$ linear und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W. Sei A = ($\alpha_{ij}$) die Matrix von g bez. dieser Basen, d.h. $g(v_j) ) \sum\limits_{i=1}^m \alpha_{ij} w_i$, j = 1, …, n. Seien $f_1, …, f_n$ bzw. $g_1, …, g_m$ die dualen Basen, d.h. $f_i(v_j) = \delta_{ij}$, $g_k(w_l) = \delta_{kl}$. Dann hat $g^*$ bez. dieser dualen Basen die Matrix $A^t$.
+\end{lemma}
+
+\begin{proposition}
+Sei $g: V \to W$ linear. Dann gilt:
+\begin{enumerate}
+\item $ker(g^*) = im(g)^\perp$
+\item $ker(g) = im(g^*)^\top$
+\item $g$ surjektiv $\Leftrightarrow$ $g^*$ injektiv
+\item $g$ injektiv $\Leftrightarrow$ $g^*$ surjektiv
+\item $g$ Isomorphismus $\Leftrightarrow$ $g^*$ Isomorphismus
+\end{enumerate}
+\end{proposition}
+
