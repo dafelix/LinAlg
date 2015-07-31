@@ -61,23 +61,35 @@
 \renewcommand{\labelenumi}{\theenumi)}
 
 \definecolor{remarkbg}{gray}{0.90}
-\newenvironment{remark}{
-	\begin{samepage}
-	\begin{mdframed}[linewidth=0, backgroundcolor=remarkbg]
-	\textbf{Bemerkung}:
-	}
-	{
-	\end{mdframed}
-	\end{samepage}
-	}
 
-\newenvironment{definition}{
-	\begin{mdframed}[linewidth=1pt]
-	\textbf{Definition}:\\
-	}
-	{
-	\end{mdframed}
-	}
+\theoremstyle{definition}
+\newtheorem{remark}{Bemerkung}[section]
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Beispiel}[section]
+
+\newtheorem{mddefinition}{Definition}[section]
+\newenvironment{definition}%
+  {\begin{mdframed}[linewidth=0,backgroundcolor=remarkbg]\begin{mddefinition}}%
+  {\end{mddefinition}\end{mdframed}}
+
+%\newenvironment{remark}{
+%	\begin{samepage}
+%	\begin{mdframed}[linewidth=0, backgroundcolor=remarkbg]
+%	\textbf{Bemerkung}:
+%	}
+%	{
+%	\end{mdframed}
+%	\end{samepage}
+%	}
+
+%\newenvironment{definition}{
+%	\begin{mdframed}[linewidth=1pt]
+%	\textbf{Definition}:\\
+%	}
+%	{
+%	\end{mdframed}
+%	}
 
 \parindent 0pt
 

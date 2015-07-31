@@ -90,6 +90,7 @@ Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei
 \end{definition}
 
 \begin{remark}
+$~~$
 \begin{itemize}
 	\item $T(M) \subseteq M$ ist Teilmodul
 	\item $\QR{M}{T(M)}$ ist torsionsfrei
@@ -103,25 +104,32 @@ Sei $\pi \in R$ irreduzibel und M ein R-Modul. Dann heißt $T_\pi (M):= \{m \in 
 \end{definition}
 
 \subsection{R-Modulhomomorphismus}
+\begin{definition}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
 \begin{itemize}
 	\item $f$ ist ein Gruppenhom., d.h. $f(m_1+m_2) = f(m_1)+f(m_2)$
 	\item $f(rm) = rf(m), \forall r \in R, n\in \mathbb{N}$
 \end{itemize}
+\end{definition}
 
 \subsection{Untermoduln}
+\begin{definition}
 Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt Untermodul, falls:
 \begin{enumerate}
 	\item $(N,+)$ ist Untergruppe
 	\item $rn \in N, \forall r \in R, n\in N$
 \end{enumerate}
-Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
-
+\end{definition}
 \begin{remark}
-$\ker(f),\im(f)$ sind Untermoduln.
+$~~$
+\begin{itemize}
+	\item Es gilt der Hom. Satz, insbesondere $\QR{M}{\ker(f)} \simeq \im(f)$
+	\item $\ker(f),\im(f)$ sind Untermoduln.
+\end{itemize}
 \end{remark}
 
 \subsection{K[x]-Modul}
+\begin{theorem}
 Sei $A \in End_K(V)$. Dann wird V zu einem K[x]-Modul vermöge\footnote{vermöge = "kann das"} $f(x)v := f(A)v, f\in K[x], v \in V.~(V_A=V)$\\
 Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 \begin{enumerate}
@@ -132,6 +140,7 @@ Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 	\item $M_A(x)$ und $M_B(x)$ haben die gleichen Elementarteiler
 	\item $M_A(x)$ und $M_B(x)$ haben die gleichen Invariantenteiler
 \end{enumerate}
+\end{theorem}
 
 \section{Elementarteiler}
 Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^\times$ (Elementarteiler) mit
