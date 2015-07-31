@@ -72,13 +72,11 @@
 	}
 
 \newenvironment{definition}{
-	%\begin{samepage}
-	%\begin{mdframed}[linewidth=0, backgroundcolor=remarkbg]
-	\textbf{Definition}:
+	\begin{mdframed}[linewidth=0.5pt]
+	\textbf{Definition}:\\
 	}
 	{
-	%\end{mdframed}
-	%\end{samepage}
+	\end{mdframed}
 	}
 
 \parindent 0pt
@@ -95,7 +93,14 @@
 \onehalfspacing
 
 \newpage
+
+%\include*{chapter/tests}
+
 \include*{chapter/linalg_1}
+
+\vspace{15pt}
+\framebox[\textwidth]{Lineare Algebra II}
+
 \include*{chapter/linalg_2_part1}
 \include*{chapter/linalg_2_part2}
 \end{document}
