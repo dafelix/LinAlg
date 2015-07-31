@@ -113,12 +113,16 @@ Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
 \item Es gibt einen Epimorphismus $sgn: S_n \to \{-1,+1\}$ mit $sgn(\tau) = 1$ für alle Transpositonen $\tau \in S_n$.
 \item Sei K ein Körper und $f: S_n \to K^\times$ ein Homomorphismus. Dann ist entweder f($\tau$) = 1 für alle $\tau \in S_n$, oder es ist char(k) $\neq$ 2 und f = sgn.
 \end{compactenum}
-\begin{compactitem}
-\item Ist $\pi \in S_n$ und $\pi = \tau_1 \cdots \tau_k$ eine Zerlegung in Transpositionen, so ist nach 1) sgn ein Homomorphismus mit sgn($\pi$) = -1, also ist sgn($\pi$) = (-1)$^k$.\\
-Die Zerlegung von $\pi$ in Transpositionen ist nicht eindeutig, aber für jede solche Zerlegung gilt, dass die Parität (gerade oder ungerade) der Anzahl der Faktoren eindeutig ist.
-\item Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt aus den obigen Überlegungen zusammen mit Lemma 9.10(b) $sgn(\pi) = (-1)^{m-l}$.
-\end{compactitem}
 \end{theorem}
+
+\begin{remark}
+\begin{itemize}
+\item Ist $\pi \in S_n$ und $\pi = \tau_1 \cdots \tau_k$ eine Zerlegung in Transpositionen, so ist nach 1) sgn ein Homomorphismus mit sgn($\pi$) = -1, also ist sgn($\pi$) = (-1)$^k$.
+
+\item Die Zerlegung von $\pi$ in Transpositionen ist nicht eindeutig, aber für jede solche Zerlegung gilt, dass die Parität (gerade oder ungerade) der Anzahl der Faktoren eindeutig ist.\\
+Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte Zyklen der Länge $k_i, i = 1, …, l$. Es sei m die Anzahl der bewegten Ziffern, also $m = \sum\nolimits_{i=1}^{l} k_i$. Dann folgt $sgn(\pi) = (-1)^{m-l}$.
+\end{itemize}
+\end{remark}
 
 \begin{definition}
 Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Gruppe auf n Ziffern.
@@ -241,11 +245,18 @@ $\sum\nolimits_{j \in J} \alpha_j a_j = 0 \Rightarrow \alpha_j = 0$ für alle j 
 Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 \end{definition}
 
-\textbf{Basisergänzungssatz}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.\\
+\begin{theorem}
+\textbf{Basisergänzungssatz}: Sei V ein endlich erzeugter K-Vektorraum, V = $\langle A \rangle$ mit A = $\{a_1,... ,a_n\}$. Sei C $\subseteq$ A eine linear unabhängige Menge von Vektoren. Dann gibt es eine Basis B von V mit C $\subseteq$ B $\subseteq$ A. Insbesondere besitzt jeder endlich erzeugte Vektorraum V eine Basis.
+\end{theorem}
 
-\textbf{”Austauschlemma”}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.\\
+\begin{lemma}
+\textbf{Austauschlemma}: Sei V ein K-Vektorraum und sei B = $\{b_1,... ,b_n\} \subseteq V$ eine Basis von V. Ist $b= \sum\nolimits_{i=1}^{n} \alpha_i b_i$ mit $\alpha_i \in K$ und $\alpha_1 \neq 0$, so ist auch B' = $\{ b, b_1, …, b_n \} \subseteq V$ eine Basis.
+\end{lemma}
 
-\textbf{”Austauschsatz von Steinitz”}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
+\begin{theorem}
+\textbf{Austauschsatz von Steinitz}: Sei V ein K-Vektorraum und $\{b_1,... ,b_n\} \subseteq$ V eine Basis von V. Ist $\{a_1,... ,a_m\} \subseteq$ V eine linear unabhängige Teilmenge, so ist m $\le$ n und bei geeigneter Nummerierung der $b_i$ ist $\{a_1,... ,a_m, b_{m+1},... ,b_n\}$ ebenfalls eine Basis von V.
+\end{theorem}
+
 
 \section{Lineare Abbildungen}
 \begin{definition}
@@ -284,7 +295,7 @@ Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V,W).
 Seien V und W K-Vektorräume, $\{a_j | j \in J\}$ eine Basis von V, und $\{b_i | i \in I\}$ eine Basis von W.
 \begin{compactenum}
 \item Seien $c_j \in W$, $j \in J$ beliebig vorgegeben. Dann gibt es genau eine lineare Abbildung f :V $\to$ W mit $f(a_j)=c_j$ für $j \in J$.
-\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.\\
+\item Seien $\alpha_{ij} \in$ K, i $\in$ I, j $\in$ J, so dass für j $\in$ J nur endlich viele $\alpha_{ij} \neq 0$ sind. Dann gibt es genau ein f $\in$ Hom$_K$(V, W) mit: $f(a_j) = \sum\nolimits_{i \in I} \alpha_{ij} b_i, j \in J$.
 \end{compactenum}
 \end{lemma}
 
@@ -473,7 +484,8 @@ Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
 Sei $A \in K^{m \times n}$ mit r(A) = r. Dann gibt es invertierbare Matrizen $C \in K^{m \times m}$ und $B \in K^{n \times n}$, so dass gilt: CAB = $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix} \in K^{m \times n}$\\
 Es lassen sich Elementarmatrizen dazu verwenden, die obigen Matrizen C und B explizit zu berechnen. Das Rechenverfahren zur Bestimmung von C und B basiert auf der folgenden Beobachtung: Jede Matrix $A \in K^{m \times n}$ lässt sich durch geeignete Zeilenumformungen (d.h. Linksmultiplikation mit Elementarmatrizen) und Spaltenumformungen (d.h. Rechtsmultiplikation mit Elementarmatrizen) in eine Matrix der Form $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$ überführen.\\
 Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, so dass $T_k \cdots T_1AS_1 \cdots S_l = \begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$.\\
-Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.\\ 
+Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
+
 
 \section{Lineare Gleichungen}
 (L)  Ax = b\\
@@ -491,7 +503,9 @@ Sei $A \in K^{m \times n}$ eine Matrix.
 \end{compactenum}
 \end{lemma}
 
-Proposition (\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\begin{proposition}
+(\textbf{Existenz}): Sei $A \in K^{m \times n}$ und sei $b \in K^m$. Sei (L) das System Ax = b und sei B = [A, b] die erweiterte Koeffizientenmatrix. Dann ist (L) genau dann lösbar, wenn r(A) = r(B) ist. Insbesondere: Ist b = 0 und n > m, so hat das homogene System Ax = 0 stets eine nicht-triviale Lösung x $\neq$ 0.
+\end{proposition}
 
 \begin{remark}
 Das System Ax = b ist genau dann für jedes $b \in K^m$ lösbar, wenn r(A) = m ist.
@@ -515,31 +529,6 @@ Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. De
 
 \section{Determinanten}
 \begin{definition}
-Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
-\begin{compactenum}
-\item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
-\item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
-\item Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
-\end{compactenum}
-Ein Ring R ist kommutativ, falls zusätzlich gilt
-\begin{compactenum}
-\setcounter{enumi}{3}
-\item $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.
-\end{compactenum}
-\end{definition}
-
-\begin{example}
-\leavevmode
-\begin{compactenum}
-\item Jeder Körper ist insbesondere ein kommutativer Ring.
-\item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
-\item Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
-\item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
-\item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
-\end{compactenum}
-\end{example}
-
-\begin{definition}
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
 
@@ -560,7 +549,7 @@ Für eine abstrakte Volumenfunktion V auf R$^n$ gilt:
 \begin{compactenum}
 \item Für i $\neq$ j und $r \in R$ ist $V(…, z_i + rz_j, …, z_j, …) = V(z_1, …, z_i, …, z_j, …, z_n)$
 \item Für $\tau \in S_n$ ist $V(z_{\tau(1)}, …, z_{\tau(n)}) = sgn(\tau)V(z_1, …, z_n)$
-\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.\\
+\item Ist $z_i = (\alpha_{i1}, …, \alpha_{in})$ und $e_i = (0, …, 0, 1, 0, …, 0)$ das Element von $R^n$ mit 1 an der Stelle i und Nullen sonst, so ist $V(z_1, …, z_n) = det(\alpha_{ij}) V(e_1, …, e_n)$.
 \end{compactenum}
 \end{proposition}
 
@@ -578,7 +567,7 @@ Sei $A = (\alpha_{ij}) \in R^{n \times n}$, und sei $A_{ij} \in R$ die Determina
 Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile und der j-ten Spalte entsteht. Aus Lemma 10.7(b) und Lemma 10.9 folgt $A_{ij} =(-1)^{i+j} det(A\textbackslash\{ij\})$.
 \end{definition}
 
-Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.\\
+Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
 \begin{theorem}
 (\textbf{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
@@ -662,7 +651,7 @@ Weiter ist $r \le \sum\nolimits_{j=1}^{r}m_j \le Grad(f)$.\\
 Insbesondere hat f höchstens Grad(f) viele verschiedene Nullstellen.
 \end{lemma}
 
-Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.\\
+Zur Ableitung: Ist Grad(f) = n, so ist Grad(f') = n - 1, falls char(K) $\nmid$ n, und Grad(f') $\le$ n - 1, falls char(K) $\mid$ n.
 
 \begin{lemma}
 Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder char(K) > m, so ist c eine m-fache Nullstelle von f genau dann, wenn $f(c) = f'(c) = \cdots = f^{(m-1)}(c) = 0 \neq f^{(m)}(c)$ ist.
@@ -688,27 +677,21 @@ Ein Körper K ist \textbf{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] m
 
 
 \section{Charakteristisches Polynom und Eigenwerte}
+\begin{definition}
+Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
+Sei $\alpha \in \sigma(f)$\footnote{Das Spektrum $\sigma(f)$ von f ist die Menge aller Eigenwerte}. Dann ist der \textbf{Eigenraum} von f zu $\alpha$ der lineare Unterraum
+\begin{center}
+$V_f(\alpha) = V(\alpha) = Kern(\alpha id_V - f) = \{v \in V | f(v) = \alpha v\} \subseteq V$.
+\end{center}
+\end{definition}
+
 \begin{lemma}
 Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenvektoren von f zu paarweise verschiedenen Eigenwerten $\alpha_1, ..., \alpha_r$, so sind die $v_1, ..., v_r$ linear unabhängig.
 \begin{enumerate}
 \item Ist dim$_K$ V = n, so hat f höchstens n verschiedene Eigenwerte.
-\item Sei dim$_K$ V = n. Hat f $\in$ End$_K$ (V ) genau n verschiedene Eigenwerte $\alpha_1, …, \alpha_n$, so bilden die entsprechenden Eigenvektoren $v_1, ..., v_n$ eine Basis von V . Die Matrix von f bzgl. dieser Basis ist eine Diagonalmatrix mit Diagonaleinträgen $\alpha_1, …, \alpha_n$.
+\item Sei dim$_K$ V = n. Hat f $\in$ End$_K$ (V ) genau n verschiedene Eigenwerte $\alpha_1, …, \alpha_n$, so bilden die entsprechenden Eigenvektoren $v_1, ..., v_n$ eine Basis von V . Die Matrix von f ist bzgl. dieser Basis eine Diagonalmatrix mit Diagonaleinträgen $\alpha_1, …, \alpha_n$.
 \end{enumerate}
 \end{lemma}
-
-\begin{definition}
-Sei V ein K-Vektorraum und f $\in$ End$_K$(V).
-\begin{compactenum}
-\item Sei $\alpha \in \sigma(f)$. Dann ist der Eigenraum von f zu $\alpha$ der lineare Unterraum
-\begin{center}
-$V_f(\alpha) = V(\alpha) = Kern(\alpha id_V - f) = \{v \in V | f(v) = \alpha v\} \subseteq V$.
-\end{center}
-\item Ist dim$_K$(V) = n < $\infty$, so ist f diagonalisierbar (über K), falls es Eigenwerte $\alpha_1, …, \alpha_r \in \sigma(f)$ gibt, so dass gilt $V = \oplus_{i=1}^{r} V_f (\alpha_i)$.\\
-In diesem Fall hat also V eine Basis $\{v_1, …, v_n\}$ bestehend aus Eigenvektoren. Insbesondere ist die Matrix von f bzgl. der Basis $\{v_1, …, v_n\}$ eine Diagonalmatrix; die Diagonaleinträgen sind genau die zugehörigen Eigenwerte.
-\end{compactenum}
-\end{definition}
-
-Ist f diagonalisierbar, so sind in der Zerlegung $V = \oplus_{i=1}^{r} V_f (\alpha_i)$ die Komponenten $V_f (\alpha_i)$ genau die Eigenräume zu den paarweise verschiedenen Eigenwerten von f.\\
 
 \begin{definition}
 Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
@@ -721,7 +704,7 @@ das \textbf{charakteristische Polynom} von f.
 \begin{lemma}
 Sei dim$_K$V < $\infty$ und f $\in$ End$_K$(V). Für $\alpha \in K$ gilt dann:
 \begin{center}
-$\alpha$ ist Eigenwert von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
+$\alpha$ ist \textbf{Eigenwert} von f $\Leftrightarrow$ $\chi_f(\alpha) = 0$.
 \end{center}
 \end{lemma}
 
