@@ -44,12 +44,14 @@ $[a]=\{ b \in G | a \sim b \} = \{ b \in G | ab^{-1} \in U \} = \{ b \in G | b =
 diese Mengen sind die \textbf{Rechtsnebenklassen}\index{Rechtsnebenklasse} von U. Sind die $Ua_j$ für j $\in$ J, die verschiedenen Rechtsnebenklassen, so bilden diese eine Partition G=$\bigcup\limits_{j \in J} Ua_j$.
 \end{definition}
 
+\begin{remark}
 Ist |J| endlich, so nennt man |J| den Index von U in G und schreibt |J| = |G : U|.
 \begin{enumerate}
 \item Genauso definiert a $\sim$ b $\Leftrightarrow$ a$^{-1}$b $\in$ eine Äquivalenzrelation auf G. Die Äquivalenzklasse von a $\in$ G ist die Linksnebenklasse $[a] = \{b \in G | a \sim b \} = \{ b \in G | a^{-1}b \in U \} = aU$. 
 Ist G abelsch, so gilt aU = Ua; für eine nicht-abelsche Gruppe gilt dies im allgemeinen nicht.
 \item Der Versuch analog zur Definition der Addition auf $\mathbb{Z}/m\mathbb{Z}$ mittels der Addition auf $\mathbb{Z}$ eine Verknüpfung auf der Menge der Nebenklassen $G/U = \{Ua | a \in G\}$ durch Ua $\cdot$ Ub = Uab zu definieren funktioniert für abelsche Gruppen, aber nicht für allgemeine Gruppen.
 \end{enumerate}
+\end{remark}
 
 \begin{definition}
 Seien G und H (multiplikativ geschriebene) Gruppen.
@@ -92,7 +94,9 @@ Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.
 Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und im(f) = im(h).
 \end{theorem}
 
+\begin{remark}
 Die symmetrische Gruppe S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.
+\end{remark}
 
 \begin{lemma}
 \leavevmode
@@ -111,6 +115,7 @@ Sei n > 1 und sei \{-1, 1\} die multiplikative Gruppe.
 \end{theorem}
 
 \begin{remark}
+\leavevmode
 \begin{itemize}
 \item Ist $\pi \in S_n$ und $\pi = \tau_1 \cdots \tau_k$ eine Zerlegung in Transpositionen, so ist nach 1) sgn ein Homomorphismus mit sgn($\pi$) = -1, also ist sgn($\pi$) = (-1)$^k$.
 
@@ -137,7 +142,31 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ring\index{Ring}}
-%Definition fehlt!
+\begin{definition}
+Ein \textbf{Ring}\index{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
+\begin{compactenum}
+\item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
+\item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
+\item Es gelten die Distributivgesetze, d.h. für $r_1, r_2, r_3 \in R$ ist $r_1(r_2 + r_3) = r_1r_2 + r_1r_3$ und $(r_1 + r_2)r_3 = r_1r_3 + r_2r_3$.
+\end{compactenum}
+Ein Ring R ist kommutativ, falls zusätzlich gilt
+\begin{compactenum}
+\setcounter{enumi}{3}
+\item $r_1r_2 = r_2r_1$ für $r_1,r_2 \in R$.
+\end{compactenum}
+\end{definition}
+
+\begin{example}
+\leavevmode
+\begin{compactenum}
+\item Jeder Körper ist insbesondere ein kommutativer Ring.
+\item Die ganzen Zahlen $\mathbb{Z}$ formen bzgl. der üblichen Addition und Multiplikation einen kommutativen Ring.
+\item Ist R ein (kommutativer) Ring, so bildet die Menge der n-Tupel $R^n = \{(r_1,..., r_n) | r_i \in R\}$ bzgl. der komponentenweisen Addition und Multiplikation wieder einen (kommutativen) Ring. Achtung: Selbst wenn R = K ein Körper ist, so ist $R^n$ für n > 1 kein Körper.
+\item Die Menge der Polynome K[x] (bzw. R[x]) über einem Körper (bzw. einem kommutativen Ring R) bilden bzgl. der Addition und Mutiplikation von Polynomen einen kommutativen Ring.
+\item Sei $R^{n \times n}$ die Menge der quadratischen Matrizen A = ($\alpha_{ij}$) vom Typ (n,n) mit Einträgen $\alpha_{ij}$ aus einem kommutativen Ring R. Dann ist $R^{n \times n}$ bzgl. der Addition und Multiplikation von Matrizen ein Ring. Der Ring $R^{n \times n}$ ist für n $\ge$ 2 in der Regel (z.B.falls 0 $\neq$1 in R) nicht kommutativ.
+\end{compactenum}
+\end{example}
+
 \begin{definition}
 \leavevmode
 \begin{enumerate}
@@ -170,9 +199,6 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 \end{enumerate}
 \end{definition}
 
-\subsubsection{Integritätsbereich\index{Integritätsbereich}}
-%Todo
-
 \begin{remark}
 \leavevmode
 \begin{itemize}
@@ -191,6 +217,9 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 	\item Sei R Ring mit 1. Sei $I \subsetneq R $ Ideal. Dann gibt es ein maximales Ideal M mit $ I \subseteq M$. Insbesondere existieren max. Ideale.
 \end{itemize}
 \end{remark}
+
+\subsubsection{Integritätsbereich\index{Integritätsbereich}}
+%Todo
 
 \subsubsection{Polynomring\index{Polynomring}}
 \begin{definition}
@@ -319,6 +348,7 @@ Ein \textbf{Körper}\index{Körper} K ist eine Menge mit zwei Verknüpfungen + u
 \end{enumerate}
 \end{definition}
 
+\begin{remark}
 In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\in$ K ist:
 \begin{enumerate} 
 \item 0a = a0 = 0 
@@ -326,6 +356,7 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \item (-a)b = a(-b) = -ab
 \item ab = 0 $\Rightarrow$ a = 0 oder b = 0
 \end{enumerate}
+\end{remark}
 
 \begin{example}
 \leavevmode
@@ -357,6 +388,7 @@ Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{K-Vektorraum} ist eine Menge 
 \end{enumerate}
 \end{definition}
 
+\begin{remark}
 Für K-Vektorräume gelten die folgenden \textbf{Rechenregeln}:
 \begin{enumerate}
 \item $\alpha \cdot 0_V = 0_V$ für alle $\alpha$ $\in$ K,
@@ -366,6 +398,7 @@ Für K-Vektorräume gelten die folgenden \textbf{Rechenregeln}:
 \item $\alpha \cdot (\sum\nolimits_{i=1}^{n} a_i) = \sum\nolimits_{i=0}^{n} \alpha a_i$ und $(\sum\nolimits_{i=0}^{n}\alpha_i) \cdot a = \sum\nolimits_{i=0}^{n} \alpha_i a$,
 \item $\sum\nolimits_{i=0}^{n} \alpha_i a_i + \sum\nolimits_{i=0}^{n} \beta_i a_i = \sum\nolimits_{i=0}^{n} (\alpha_i + \beta_i) a_i$
 \end{enumerate}
+\end{remark}
 
 \begin{definition}
 Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum}\index{K-Untervektorraum} oder \textbf{K-linearer Unterraum} von V, falls gilt:
