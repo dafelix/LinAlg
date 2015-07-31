@@ -22,6 +22,7 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 \end{definition}
 \begin{remark}
 \begin{itemize}
+\leavevmode
 	\item ker(f) ist stets Ideal
 	\item falls $1 \in I \Rightarrow I = R$
 	\item seien $I_1,I_2 \subseteq R$ Ideale, dann sind auch $I_1 \cap I_2, I_1+I_2, I_1 \cdot I_2$ wieder Ideale
@@ -39,6 +40,7 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt Ideal, f
 \end{remark}
 \section{Ringe}
 \begin{definition}
+\leavevmode
 \begin{enumerate}
 	\item R ist ein \textbf{euklidischer} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
 	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
@@ -149,19 +151,22 @@ Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 \end{theorem}
 
 \section{Elementarteiler}
+\begin{theorem}
 Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^\times$ (Elementarteiler) mit
 \begin{enumerate}
 	\item $M \simeq R^k \oplus \bigoplus \limits_{i=1}^m \QR{R}{\epsilon_i R}$
 	\item $\epsilon_1 | \epsilon_2 | ... | \epsilon_m$
 \end{enumerate}
-\textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt\\
+\textbf{Zusatz}: $k,\epsilon_i$ sind eindeutig durch den Isomorphietyp von M bestimmt
+\end{theorem}
+\begin{remark}
+Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
+
 \textbf{Anwendung}: Seien $M_1,M_2$ zwei e-e. Moduln, $\epsilon_1,...,\epsilon_m$ die Elementarteiler von $M_1$, $\mu_1,...,\mu_n$, die Elementarteiler von $M_2$. Dann gilt:
 \begin{itemize}
 	\item $M_1 \simeq M_2 \Leftrightarrow rg(M_1) = rg(M_2)$
 	\item $\epsilon_1 = \mu_1,...,\epsilon_m = \mu_m$ (insbes. $l=m$) %TODO: inhaltlich prüfen$
 \end{itemize}
-\begin{remark}
-Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
 \end{remark}
 
 \section{Invariantenteiler}
@@ -201,6 +206,7 @@ B_j =
 \end{align*} 
 \end{definition}
 \begin{remark}
+\leavevmode
 \begin{enumerate}
 	\item $\chi_{B_g}(x) = g(x)$
 	\item $\mu_{B_g}(x) \sim 
@@ -227,9 +233,11 @@ B_n \approx J(\alpha,e) :=
 \end{definition}
 \section{Normalformen}
 \subsection{Frobeniussche Normalform}
+\begin{theorem}
 Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
-
+\end{theorem}
 \subsection{Weierstraß'sche Normalform}
+\begin{theorem}
 Sei $A \in M_n(K)$. Dann gibt es ein bis auf Reihenfolge eindeutig bestimmtes System von Potenzen $h_1,...,h_m$ von normierten, irreduziblen Polynomen, sodass $A$ zur folgenden Matrix ähnlich ist.
 \begin{align*}
 \begin{pmatrix}
@@ -239,8 +247,10 @@ B_{n_1} &        & \\
 \end{pmatrix}
 \end{align*}
 Die Polynome $h_1,...,h_m$ sind genau die Invariantenteiler von $M_A(x)$
+\end{theorem}
 
 \subsection{Jordan Normalform}
+\begin{theorem}
 Sei $A \in M_n(K)$ und $\chi_A$ zerfalle vollständig in Linearfaktoren. Dann gibt es bis auf Reihenfolge ein eindeutig bestimmtes System von Jordanmatrizen $J_1,...,J_m$:
 \begin{align*}
 A \simeq 
@@ -250,6 +260,7 @@ J_1 & & 0\\
 0   &        & J_m
 \end{pmatrix}
 \end{align*}
+\end{theorem}
 \begin{remark}
 Aus der JNF lässt sich das Minimalpolynom $\mu_A$ direkt ablesen. Sortiere Jordankästchen nach EW und nach Größe der Jordankästchen.
 \begin{align*}
@@ -287,11 +298,14 @@ V zusammen mit einem inneren Produkt nennt man einen \textbf{euklidischen Raum} 
 Sei $A:V \rightarrow W$ linear und injektiv. Sei $(~,~):W \times W \rightarrow K$ ein inneres Produkt auf $W$. Dann wird durch $p_A(v_1,v_2):=(Av_1,Av_2),~v_1,v_2 \in V$ ein inneres Produkt definiert.
 
 \section{Cauchy-Schwarz-Ungleichung}
+\begin{theorem}
 \begin{align*}
 |(v_1,v_2)| \leq \norm{v_1} \norm{v_2}
 \end{align*}
+\end{theorem}
 
 \section{Gram-Schmidt-Verfahren}
+\begin{theorem}
 Seien $w_1,...,w_n$ linear unabhängige Vektoren. Die Vektoren $v_1,...,v_n$ des Orthogonalsystems werden rekursiv berechnet:
 \begin{align*}
 v_1 &= w_1\\
@@ -299,8 +313,10 @@ v_2 &= w_2 - \frac{(v_1,w_2)}{(v_1,v_1)}v_1\\
 v_3 &= w_3 - \frac{(v_1,w_3)}{(v_1,v_1)}v_1 - \frac{(v_2,w_3)}{(v_2,v_2)}v_2\\
 v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
 \end{align*}
+\end{theorem}
 
 \section{Lotraum}
+\begin{theorem}
 Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$. $M^\perp \subseteq V$ ist ein Unterrraum.
 
 Sei $U \subseteq V$ ein Unterraum mit $\dim(U) = n < \infty$. Dann gilt:
@@ -308,3 +324,4 @@ Sei $U \subseteq V$ ein Unterraum mit $\dim(U) = n < \infty$. Dann gilt:
 	\item $U \oplus U^\perp = V$
 	\item $(U^\perp)^\perp = U$
 \end{enumerate}
+\end{theorem}
