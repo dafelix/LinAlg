@@ -49,14 +49,6 @@ Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile 
 
 Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
-\begin{theorem}
-(\textbf{Cramersche Regel}\index{Cramersche Regel}): Es sei wie eben $y = (y_1, …, y_n)^t = A^{-1}b$ die eindeutige Lösung von Ax = b. Dann gilt
-\begin{center}
-$y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
-\end{center}
-Hierbei sind $s_1, …, s_n$ die Spalten von A.
-\end{theorem}
-
 \subsection{Diagonalisierbarkeit\index{Diagonalisierbarkeit}}
 
 \begin{theorem}
@@ -67,7 +59,7 @@ Hierbei sind $s_1, …, s_n$ die Spalten von A.
 		\item $\exists$ Basis von V aus Eigenvektoren (auf der Diagonalen stehen Eigenwerte)
 		\item $\exists$ Matrix $S \in Gl_n(K)$, sodass $S^{-1}AS$ Diagnoalgestalt hat
 	\end{enumerate}
-	\item f ist diagonalisierbar $\Leftrightarrow$ $\chi_f(x) = \prod \limits_{i=1}^{r} (x- \alpha_i)^{m_i}$. Es gilt dann: $V=\bigoplus \limits_{i=1}^r V_f(\alpha_i)$
+	\item f ist diagonalisierbar $\Leftrightarrow$ $\chi_f(x) = \prod \limits_{i=1}^{r} (x- \alpha_i)^{m_i}$ und algebraischen = geometrischer Vielfachheit.\\Es gilt dann: $V=\bigoplus \limits_{i=1}^r V_f(\alpha_i)$
 	\item f ist diagonalisierbar $\Leftrightarrow \mu_f(x) = \prod \limits_{i=1}^{r}(x-\alpha_i)$ (mit paarweise verschiedenen $\alpha_i$) 
 \end{enumerate}
 \end{theorem}
