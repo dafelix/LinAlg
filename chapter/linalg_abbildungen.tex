@@ -3,7 +3,7 @@
 \begin{definition}
 Sei K ein Körper und seien V,W K-Vektorräume.
 \begin{compactenum}
-\item Eine Abbildung f : V $\to$ W heißt \textbf{linear}\index{linear} (oder \textbf{Homomorphismus}\index{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
+\item Eine Abbildung f : V $\to$ W heißt \textbf{linear}\index{Lineare Abbildung} (oder \textbf{Homomorphismus}\index{Homomorphismus}), falls für alle $a_1, a_2, a \in V$ und $\alpha \in K$ gilt:
 $f (a_1 + a_2) = f (a_1) + f (a_2)$ und $f (\alpha \cdot a) = \alpha \cdot f (a)$.\\
 Sei Hom(V,W) = Hom$_K$(V,W) die Menge aller linearen Abbildungen von V nach W; ist V = W, so schreibe $End_K(V )$ = $Hom_K(V,V)$, die Elemente von $End_K(V)$ sind die \textbf{Endomorphismen}\index{Endomorphismen} von V.
 \item Ist f $\in$ Hom$_K$(V,W), so definiere \textbf{Kern}\index{Kern} und \textbf{Bild}\index{Bild} von f als
@@ -12,7 +12,7 @@ Bild(f) = $\{ f (a) | a \in V\}$,\\
 Kern(f) = $\{ a \in V | f(a) = 0\}$.
 \end{center}
 Oft schreiben wir auch ker(f) und im(f) anstelle von Kern(f) und Bild(f).
-\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}\index{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}\index{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph}\index{isomorph},V $\cong$ W.
+\item Sei f $\in$ HomK(V,W). Ist f mengentheoretisch surjektiv (bzw. injektiv), so heißt f \textbf{Epimorphismus} (bzw. \textbf{Monomorphismus}\index{Monomorphismus}). Ist f bijektiv, so ist f ein \textbf{Isomorphismus}\index{Isomorphismus}. Gibt es einen Isomorphismus f: V $\to$ W, so sind V und W \textbf{isomorph}\index{Isomorphe Räume},V $\cong$ W.
 \end{compactenum}
 Ist f $\in$ Hom$_K$(V,W), so ist f(0) = 0 und f(a) = f(a).
 \end{definition}
@@ -139,7 +139,7 @@ $e_{ij}e_{kl} = \delta_{jk}e_{il}$ und $\sum\nolimits_{i=1}^{n}e_{ii} = id_V$.
 Ist $dim_K V > 1$, so ist die Multiplikation in $End_K (V)$ nicht kommutativ: Die obige Formel liefert $e_{12}e_{22} = \delta_{22}e_{12} = e_{12} \neq 0$ und $e_{22}e_{12} = \delta_{21}e_{22} = 0$, d.h. $e_{12}e_{22} \neq e_{22}e_{12}$.
 
 \begin{definition}
-Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär}\index{regulär} (auch ‘invertierbar’\index{invertierbar} bzw. ‘Automorphismus’\index{Automorphismus}); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V)\index{General Linear Group}.
+Sei V ein K-Vektorraum. Ist $f \in End_K(V)$ ein Isomorphismus, so nennt man f \textbf{regulär}\index{Regulärer Endomorphismus} (auch ‘invertierbar’\index{Invertierbarer Endomorphismus} bzw. ‘Automorphismus’\index{Automorphismus}); ist f nicht regulär, so heißt f singulär. Die regulären Abbildungen aus $End_K (V)$ bilden bzgl. der Multiplikation von Endomorphismen eine Gruppe mit neutralem Element $id_V$; diese Gruppe bezeichnen wir mit GL(V)\index{General Linear Group}.
 \end{definition}
 
 \begin{example}
@@ -153,7 +153,7 @@ Damit ist $|GL(V )| = (p^n - 1)(p^n - p) \cdots (p^n - p^{n-1})$.
 \end{example}
 
 \begin{definition}
-Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der \textbf{Rang} r(f) \index{Rang} von f definiert als $r(f) = dim_K Bild(f)$.
+Seien V, W K-Vektorräume und sei $f \in Hom_K (V, W)$. Ist $dim_K Bild(f) < \infty$, so ist der \textbf{Rang}\index{Rang} r(f) von f definiert als $r(f) = dim_K Bild(f)$.
 \begin{enumerate}
 \item Wegen Bild(f) $\subseteq$ W ist stets r(f) $\le$ $dim_K W$.
 \item Aus dem Homomorphiesatz folgt:\\
@@ -216,9 +216,9 @@ Sei V K-VR mit ( , ), dim(V) = n < $\infty$. Sei $\phi: V \times V \to K$ ein we
 \begin{definition}
 \leavevmode
 \begin{itemize}
-\item $f \in End(V)$ heißt \textbf{selbstadjungiert}\index{selbstadjungiert}, falls $f = f^*$\\
+\item $f \in End(V)$ heißt \textbf{selbstadjungiert}\index{Selbstadjungierter Endomorphismus}, falls $f = f^*$\\
 $f = f^*$ $\Leftrightarrow$ $A = A^*$ $\Leftrightarrow$ $(f(v), v) \in \mathbb{R}$ $\forall v \in V$
-\item $f \in End(V)$ heißt \textbf{positiv}\index{positiv}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$
+\item $f \in End(V)$ heißt \textbf{positiv}\index{Positiver Endomorphismus}, falls $f= f^*$ und $(f(v), v) > 0$ $\forall v \in V \backslash \{0\}$
 \end{itemize}
 \end{definition}
 \begin{remark}
@@ -251,13 +251,13 @@ Zu $f$ $\exists$ ON-Basis aus Eigenvektoren $\Leftrightarrow$ $f = f^*$\\
 $A \in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ $A = A^t$
 \end{lemma}
 
-\textbf{Folgerung}: Sei $A \in M_n(\mathbb{C})$ \textbf{hermitesch}, d.h. $A^*=A$. Dann gibt es eine unitäre Matrix $U$, sodass $U^*AU$ Diagonalgestalt hat.\\
-Sei $A \in M_n(\mathbb{R})$ symm., d.h. $A^t=A$, dann gibt es eine orthogonale Matrix $O$, sodass $O^tAO$ Diagonalgestalt hat.
+\textbf{Folgerung}: Sei $A \in M_n(\mathbb{C})$ \textbf{hermitesch}\index{Hermitsche Matrix}, d.h. $A^*=A$. Dann gibt es eine unitäre Matrix $U$, sodass $U^*AU$ Diagonalgestalt hat.\\
+Sei $A \in M_n(\mathbb{R})$ symm.\index{Symmetrische Matrix}, d.h. $A^t=A$, dann gibt es eine orthogonale Matrix $O$, sodass $O^tAO$ Diagonalgestalt hat.
 \end{lemma}
 
 \section{Projektionen}
 \begin{definition}
-$p: V \to V$ heißt Projektion\index{Projektion} auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
+$p: V \to V$ heißt \textbf{Projektion}\index{Projektion} auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
 \end{definition}
 
 \begin{theorem}
@@ -267,7 +267,7 @@ $p: V \to V$ heißt Projektion\index{Projektion} auf U falls $p(V) = U$ und $p|_
 \begin{enumerate}
 \item $p$ ist normal, d.h. $p^*p = pp^*$
 \item $p$ ist selbstadjungiert, d.h. $p = p^*$
-\item $p$ ist eine \textbf{Orthogonalprojektion}, d.h. $im(p)^\perp = ker(p)$
+\item $p$ ist eine \textbf{Orthogonalprojektion}\index{Orthogonalprojektion}, d.h. $im(p)^\perp = ker(p)$
 \end{enumerate}
 \item Sei dim(V) = n < $\infty$ mit ( , ). Seien $W_1, …, W_k \subseteq V$ Unterräume und seien $p_i: V \to V$ Orthogonalprojektionen auf die $W_i$. TFE:
 \begin{enumerate}
