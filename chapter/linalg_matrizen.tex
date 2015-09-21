@@ -1,13 +1,13 @@
-\section{Matrizen}
+\chapter{Matrizen}
 
-\subsection{Umformungen}
+\section{Umformungen}
 Sei $A \in K^{m \times n}$ mit r(A) = r. Dann gibt es invertierbare Matrizen $C \in K^{m \times m}$ und $B \in K^{n \times n}$, so dass gilt: CAB = $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix} \in K^{m \times n}$\\
 Es lassen sich Elementarmatrizen dazu verwenden, die obigen Matrizen C und B explizit zu berechnen. Das Rechenverfahren zur Bestimmung von C und B basiert auf der folgenden Beobachtung: Jede Matrix $A \in K^{m \times n}$ lässt sich durch geeignete Zeilenumformungen (d.h. Linksmultiplikation mit Elementarmatrizen) und Spaltenumformungen (d.h. Rechtsmultiplikation mit Elementarmatrizen) in eine Matrix der Form $\begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$ überführen.\\
 Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, so dass $T_k \cdots T_1AS_1 \cdots S_l = \begin{pmatrix} E_r & 0 \\ 0 & 0 \end{pmatrix}$.\\
 Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
 
 
-\subsection{Determinante}
+\section{Determinante}
 \begin{definition}
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
@@ -49,7 +49,7 @@ Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile 
 
 Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
-\subsection{Diagonalisierbarkeit\index{Diagonalisierbarkeit}}
+\section{Diagonalisierbarkeit\index{Diagonalisierbarkeit}}
 
 \begin{theorem}
 \leavevmode
@@ -115,7 +115,7 @@ $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 Hierbei sind $s_1, …, s_n$ die Spalten von A.
 \end{theorem}
 
-\subsection{Lineare Gleichungen}
+\section{Lineare Gleichungen}
 (L)  Ax = b\\
 Die Matrix A = $(\alpha_{ij})$ definiert eine lineare Abbildung $f = f_A: K^n \to K^m, x \mapsto Ax$. Sei für $b \in K^m$ das Urbild von b unter der Abbildung f mit f$^{-1}$(b) bezeichnet. Damit lässt sich das System (L) wie folgt interpretieren: Ist $b \in K^m$ fest gewählt, so gilt für das Urbild von b
 \begin{center}
@@ -155,7 +155,7 @@ Sei $A \in K^{m \times n}$, so dass Ax = b für alle $b \in K^m$ lösbar ist. De
 \end{enumerate}
 
 
-\subsection{Charakteristisches Polynom und Eigenwerte}
+\section{Charakteristisches Polynom und Eigenwerte}
 \begin{definition}
 Sei V ein n-dimensionaler K-Vektorraum, und f $\in$ End$_K$ (V ) ein Endomorphismus. Sei A = A$_{f,B}$ $\in$ K$^{n \times n}$ die Matrix von f bzgl. einer gewählten Basis B von V . Sei E = E$_n$ $\in$ K$^{n \times n}$ die Einheitsmatrix. Dann ist
 \begin{center}
@@ -188,7 +188,7 @@ Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenv
 \end{lemma}
 
 
-\subsection{Begleitmatrix}
+\section{Begleitmatrix}
 \begin{definition}
 Sei $g(x) = x^n + a_{n-1}x^{n-1}+\ldots+a_1x + a_0 \in K[x]$ mit $n \geq 1$. Dann heißt die folgende Matrix Begleitmatrix zu g:
 \begin{align*}
@@ -219,7 +219,7 @@ B_j =
 \end{remark}
 
 
-\subsection{Jordanmatrix}
+\section{Jordanmatrix}
 \begin{definition}
 Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
 \begin{align*}
@@ -233,12 +233,12 @@ B_n \approx J(\alpha,e) :=
 \end{align*}
 \end{definition}
 
-\subsection{Normalformen}
-\subsubsection{Frobeniussche Normalform}
+\section{Normalformen}
+\subsection{Frobeniussche Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
 \end{theorem}
-\subsubsection{Weierstraß'sche Normalform}
+\subsection{Weierstraß'sche Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$. Dann gibt es ein bis auf Reihenfolge eindeutig bestimmtes System von Potenzen $h_1,...,h_m$ von normierten, irreduziblen Polynomen, sodass $A$ zur folgenden Matrix ähnlich ist.
 \begin{align*}
@@ -251,7 +251,7 @@ B_{n_1} &        & \\
 Die Polynome $h_1,...,h_m$ sind genau die Invariantenteiler von $M_A(x)$
 \end{theorem}
 
-\subsubsection{Jordan Normalform}
+\subsection{Jordan Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$ und $\chi_A$ zerfalle vollständig in Linearfaktoren. Dann gibt es bis auf Reihenfolge ein eindeutig bestimmtes System von Jordanmatrizen $J_1,...,J_m$:
 \begin{align*}
@@ -284,7 +284,7 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 \end{enumerate}
 \end{remark}
 
-\subsection{normal}
+\section{normal}
 \begin{definition}
 Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal\index{normale Matrix}, falls $AA^* = A^*A$.
 \end{definition}
@@ -292,7 +292,7 @@ Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal\index{normale Matrix}, falls $
 Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
 \end{lemma}
 
-\subsection{äquivalent und ähnlich}
+\section{äquivalent und ähnlich}
 \begin{definition}
 Sei R ein komm. Ring.
 \begin{enumerate}
@@ -301,7 +301,7 @@ Sei R ein komm. Ring.
 \end{enumerate}
 \end{definition}
 
-\subsection{positiv definit\index{positiv definit}}
+\section{positiv definit\index{positiv definit}}
 \begin{definition}
 Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
 \end{definition}
@@ -328,7 +328,7 @@ $B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le 
 \end{compactitem}
 \end{theorem}
 
-\subsection{Gram-Schmidt-Verfahren\index{Gram-Schmidt-Verfahren}}
+\section{Gram-Schmidt-Verfahren\index{Gram-Schmidt-Verfahren}}
 
 \begin{theorem}
 Seien $w_1,...,w_n$ linear unabhängige Vektoren. Die Vektoren $v_1,...,v_n$ des Orthogonalsystems werden rekursiv berechnet:
@@ -340,7 +340,7 @@ v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
 \end{align*}
 \end{theorem}
 
-\subsection{unitär und orthogonal}
+\section{unitär und orthogonal}
 \begin{definition}
 Eine Matrix $A \in M_n(K)$ heißt unitär\index{unitär}, falls $AA^* = E$\\
 Falls $K = \mathbb{R}$ heißt $A$ orthogonal\index{orthogonal} und $A^{-1} = A^t$
@@ -364,7 +364,7 @@ $A$ ist \textbf{unitär ähnlich} zu $B$, falls es eine unitäre Matrix $U$ gibt
 $A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O$ gibt mit $B = O^tAO$
 \end{definition}
 
-\subsection{Strukturmatrix}
+\section{Strukturmatrix}
 \begin{definition}
 Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
 Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix\index{Strukturmatrix} von $\beta$ bez. der gewählten Basen.

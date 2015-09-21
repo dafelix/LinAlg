@@ -1,4 +1,4 @@
-\section{Lineare Abbildungen}
+\chapter{Lineare Abbildungen}
 
 \begin{definition}
 Sei K ein Körper und seien V,W K-Vektorräume.
@@ -52,7 +52,7 @@ Seien V und W K-Vektorräume, und sei dim$_K$V = n < $\infty$. TFE:
 Das Theorem besagt, dass jeder n-dimensionale K-Vektorraum isomorph zu K$^n$ ist. Der Beweis zeigt: jeder Isomorphismus bildet eine Basis wieder auf eine Basis ab; damit gilt für isomorphe K-Vektorräume V $\cong$ W (beliebiger Dimension) stets dim$_K$V = dim$_K$W.
 \end{remark}
 
-\subsection{Homomorphiesatz}
+\section{Homomorphiesatz}
 \begin{theorem}
 \textbf{Homomorphiesatz}\index{Homomorphiesatz}: Seien V,W K-Vektorräume und sei f $\in$ Hom$_K$(V, W).
 \begin{compactenum}
@@ -79,7 +79,7 @@ Seien V, W K-Vektorräume mit dim$_K$V = dim$_K$W = n < $\infty$. Für f $\in$ H
 \end{enumerate}
 \end{lemma}
 
-\subsection{Überblick der linearen Abbildungen}
+\section{Überblick der linearen Abbildungen}
 \begin{tabular}{lll}
 Monomorphismus\index{Monomorphismus} & f: V $\to$ W& linear, injektiv\\
 Epimorphismus\index{Epimorphismus} & f: V $\to$ W & linear, surjektiv\\
@@ -88,7 +88,7 @@ Endomorphismus\index{Endomorphismus} & f: V $\to$ V & linear\\
 Automorphismus\index{Automorphismus} & f: V $\to$ V & linear, bijektiv\\
 \end{tabular}
 
-\subsection{Raum der Homomorphismen}
+\section{Raum der Homomorphismen}
 \begin{lemma}
 Seien V, W K-Vektorräume.
 \begin{compactenum}
@@ -189,7 +189,7 @@ Dann gilt: $A_{f, X'} = (\alpha_{ij})^{-1} A_{f, X} (\alpha_{ij})$
 \end{theorem}
 
 
-\subsection{Lineare Funktionale und adjungierte Abbildungen}
+\section{Lineare Funktionale und adjungierte Abbildungen}
 \begin{definition}
 $V^* = Hom_K(V,K)$ ist der K-VR der linearen Funktionale. ($K = \{\mathbb{R}, \mathbb{C}\}$).
 \end{definition}
@@ -239,7 +239,7 @@ Umgekehrt definiert jede solche Matrix ein Skalarprodukt auf $\mathbb{R}^n$.
 Sei f normal, dann gilt: v ist EV von $f$  zum EW $\alpha$ $\Leftrightarrow$ v ist EV von $f^*$ zum EW $\overline{\alpha}$
 \end{theorem}
 
-\subsubsection{selbstadjungiert}
+\section{selbstadjungiert}
 \begin{lemma}
 Sei dim(V) = n < $\infty$ und $f = f^*$ ($\Rightarrow$ f normal).\\
 Dann gibt es eine ON-Basis von V, die aus Eigenvektoren zu $f$ besteht (d.h. $f$ ist unitär diagonalisierbar).\\
@@ -255,7 +255,7 @@ $A \in M_n(\mathbb{R})$ ist orthogonal diagonalisierbar $\Leftrightarrow$ $A = A
 Sei $A \in M_n(\mathbb{R})$ symm., d.h. $A^t=A$, dann gibt es eine orthogonale Matrix $O$, sodass $O^tAO$ Diagonalgestalt hat.
 \end{lemma}
 
-\subsection{Projektionen}
+\section{Projektionen}
 \begin{definition}
 $p: V \to V$ heißt Projektion\index{Projektion} auf U falls $p(V) = U$ und $p|_U = id_U$, bzw. $p^2 = p$
 \end{definition}

@@ -1,4 +1,4 @@
-\documentclass[fontsize=10pt,twoside]{scrartcl}
+\documentclass[fontsize=10pt,openany]{scrbook}
  
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -123,6 +123,7 @@
 
 \singlespacing
 \tableofcontents
+\thispagestyle{plain}
 \onehalfspacing
 
 \vfill
@@ -138,16 +139,14 @@
 %\framebox[\textwidth]{Lineare Algebra II}
 
 \include*{chapter/linalg_abbildungen}
-
 \include*{chapter/linalg_matrizen}
-
 \include*{chapter/linalg_inneresProdukt}
 \include*{chapter/linalg_dualraum}
 
-\newpage
+\cleardoublepage
 \renewcommand{\indexname}{Stichwortverzeichnis}
 % Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
-\addcontentsline{toc}{section}{Stichwortverzeichnis}
+\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
 
 % Stichwortverzeichnis endgueltig anzeigen
 \printindex
