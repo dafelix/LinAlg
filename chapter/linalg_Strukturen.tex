@@ -1,6 +1,6 @@
 \chapter{Strukturen}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Gruppe\index{Gruppe}}
+\section{Gruppe}
 \begin{definition}
 Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}\index{Gruppe}, falls gilt:
 \begin{enumerate}
@@ -8,7 +8,7 @@ Eine Menge G, zusammen mit einer Verknüpfung $\cdot$ ist eine \textbf{Gruppe}\i
 \item es gibt ein (links)-neutrales Element e $\in$ G mit e $\cdot$ a = a für alle a $\in$ G 
 \item zu jedem a $\in$ G gibt es ein (links)-inverses Element, d.h. ein b $\in$ G mit b $\cdot$ a = e
 \end{enumerate}
-\hspace*{3mm} Die Gruppe G ist kommutativ oder \textbf{abelsch}\index{abelsch}, falls zusätzlich gilt:
+\hspace*{3mm} Die Gruppe G ist kommutativ oder \textbf{abelsch}\index{Abelsche Gruppe}, falls zusätzlich gilt:
 \begin{enumerate}
 \setcounter{enumi}{3}
 \item a $\cdot$ b = b $\cdot$ a für a, b $\in$ G
@@ -95,7 +95,7 @@ Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimo
 \end{theorem}
 
 \begin{remark}
-Die symmetrische Gruppe S$_n$\index{symmetrische Gruppe} ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.
+Die \textbf{symmetrische Gruppe}\index{Symmetrische Gruppe} S$_n$ ist die Gruppe der bijektiven Abbildungen der Menge \{1, …, n\}. Die Gruppenoperation auf S$_n$ ist die Verknüpfung von Abbildungen, S$_n$ ist eine endliche Gruppe mit |S$_n$| = n!. Für n $\ge$ 3 ist S$_n$ nicht abelsch.
 \end{remark}
 
 \begin{lemma}
@@ -125,7 +125,7 @@ Ist $\pi \in S_n$ und $\pi = \zeta_1 \cdots \zeta_l$ eine Zerlegung in disjunkte
 \end{remark}
 
 \begin{definition}
-Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die alternierende Gruppe\index{alternierende Gruppe} auf n Ziffern.
+Für n $\ge$ 2 ist $A_n := ker\{sgn : S_n \to \{-1,1\}\}$ die \textbf{alternierende Gruppe}\index{Alternierende Gruppe}\index{Alternierende Gruppe} auf n Ziffern.
 \begin{enumerate}
 \item Es ist $A_n \vartriangleleft S_n$ und $|S_n : A_n| = 2$.
 \item Für jedes $\pi \in S_n$ mit sgn($\pi$)= -1 ist $S_n = A_n \cup \pi A_n = A_n \cup A_n \pi$, wobei die Vereinigung jeweils disjunkt ist.
@@ -141,9 +141,9 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Ring\index{Ring}}
+\section{Ring}
 \begin{definition}
-Ein \textbf{Ring}\index{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
+Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
 \begin{compactenum}
 \item R ist bzgl. + eine abelsche Gruppe (mit neutralem Element 0).
 \item Es gibt ein 1 $\in$ R mit 1r = r = r1 für r $\in$ R, und es gilt das Assoziativgesetz $r_1(r_2r_3) = (r_1r_2)r_3$ für $r_1, r_2, r_3 \in R$.
@@ -170,10 +170,10 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 \begin{definition}
 \leavevmode
 \begin{enumerate}
-	\item R ist ein \textbf{euklidischer}\index{euklidischer Ring} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
+	\item R ist ein \textbf{euklidischer}\index{Euklidischer Ring} Ring, falls es eine Funktion $\phi : R\backslash \{0\} \rightarrow \mathbb{N}_0$ gibt, sodass gilt:
 	$\forall a,b \in R, b \neq 0$, gibt es $q,r \in R$ mit $a=qb+r$, $r=0$ oder $\phi(r) < \phi (b)$
 	\item \textbf{Integritätsbereich}\index{Integritätsbereich}: R ist kommutativ und Nullteilerfrei
-	\item R heißt \textbf{faktoriell}\index{faktorieller Ring}, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
+	\item R heißt \textbf{faktoriell}\index{Faktorieller Ring}, falls jedes $0 \neq x \in R$ eine eindeutige Primzerlegung hat
 \end{enumerate}
 \end{definition}
 
@@ -187,13 +187,13 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 \end{itemize}
 \end{remark}
 
-\subsection{Hauptidealring\index{Hauptidealring}}
+\subsection{Hauptidealring}
 Ein \textbf{Integritätsbereich} $R$ (nullteilerfreier kommutativer Ring mit $1 \neq 0$) heißt HIR, wenn jedes Ideal $I \subseteq R$ ein \textbf{Hauptideal} ist. Es muss folglich gelten:
 $I = R \cdot x = \{ r \cdot x | r \in R\}$
 
-\subsection{Ideal\index{Ideal}}
+\subsection{Ideal}
 \begin{definition}
-Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{Ideal}\index{Ideal}, falls
+Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{Ideal}, falls
 \begin{enumerate}
 	\item $a_1,a_2 \in I \Rightarrow a_1+a_2 \in I$
 	\item $a \in I \Rightarrow r_1 a r_2 \in I, \forall r_1,r_2 \in R$
@@ -219,10 +219,10 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 \end{itemize}
 \end{remark}
 
-\subsection{Integritätsbereich / Integritätsring\index{Integritätsbereich}\index{Integritätsring}}
+\subsection{Integritätsbereich / Integritätsring}
 Ein vom Nullring verschiedener nullteilerfreier kommutativer Ring mit dem neutralen Element.
 
-\subsection{Polynomring\index{Polynomring}}
+\subsection{Polynomring}
 \begin{definition}
 Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
 mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
@@ -238,7 +238,7 @@ Sei R ein Ring mit Einselement 1.
 \end{lemma}
 
 
-\subsection{Ringhomomorphismus\index{Ringhomomorphismus}}
+\subsection{Ringhomomorphismus}
 \begin{definition}
 Seien R, S Ringe.
 \begin{enumerate}
@@ -253,7 +253,7 @@ Seien R, S Ringe.
 \end{definition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Moduln\index{Modul}}
+\section{Moduln}
 \begin{definition}
 Eine Menge $M \neq \emptyset$ ist ein R-(Links-) \textbf{Modul}\index{Modul}, falls es eine Verknüpfung $+:M \times M \rightarrow M, (m_1,m_2) \mapsto m_1+m_2$ und eine weitere Verknüpfung $\cdot:R \times M \rightarrow M, (r,m) \mapsto rm$ gibt, sodass:
 \begin{itemize}
@@ -271,7 +271,7 @@ Sei R HIR
 \end{itemize}
 \end{remark}
 
-\subsection{Untermoduln\index{Untermodul}}
+\subsection{Untermoduln}
 \begin{definition}
 Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, falls:
 \begin{enumerate}
@@ -288,7 +288,7 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, fa
 \end{itemize}
 \end{remark}
 
-\subsection{Freier Modul\index{freier Modul}}
+\subsection{Freier Modul}
 \begin{theorem}
 \leavevmode
 \begin{enumerate}
@@ -303,7 +303,7 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, fa
 \end{enumerate}
 \end{theorem}
 
-\subsection{Torsionselement\index{Torsionselement}}
+\subsection{Torsionselement}
 \begin{definition}
 Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt \textbf{Torsionselement}, falls es ein $r\in R \backslash \{0\}$ gibt mit $rm=0$.
 
@@ -318,14 +318,14 @@ Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei
 \end{itemize}
 \end{remark}
 
-\subsection{$\pi$-Torsionselement\index{$\pi$-Torsionselement}}
+\subsection{$\pi$-Torsionselement}
 \begin{definition}
 Sei $\pi \in R$ irreduzibel und M ein R-Modul.\\
 Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
 %TODO: inhaltlich prüfen$
 \end{definition}
 
-\subsection{R-Modulhomomorphismus\index{R-Modulhomomorphismus}}
+\subsection{R-Modulhomomorphismus}
 \begin{definition}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
 \begin{itemize}
@@ -334,7 +334,7 @@ Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., fall
 \end{itemize}
 \end{definition}
 
-\subsection{K[x]-Modul\index{K[x]-Modul}}
+\subsection{K[x]-Modul}
 \begin{theorem}
 Sei $A \in End_K(V)$. Dann wird V zu einem K[x]-Modul vermöge\footnote{vermöge = "kann das"} $f(x)v := f(A)v, f\in K[x], v \in V.~(V_A=V)$\\
 Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
@@ -359,7 +359,7 @@ Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_
 \end{theorem}
 
 \begin{remark}
-Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}\index{assoziiert}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
+Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}\index{Assoziierte Ringelemente}, in Zeichen $a \sim b$, falls es $u \in R^\times$ gibt mit $a=ub$.
 
 \textbf{Anwendung}: Seien $M_1,M_2$ zwei e-e. Moduln, $\epsilon_1,...,\epsilon_m$ die Elementarteiler von $M_1$, $\mu_1,...,\mu_n$, die Elementarteiler von $M_2$. Dann gilt:
 \begin{itemize}
@@ -430,9 +430,9 @@ ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshomomorphismus} (bzg
 \end{compactenum}
 \end{example}
 
-\section{Körper\index{Körper}}
+\section{Körper}
 \begin{definition}
-Ein \textbf{Körper}\index{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
+Ein \textbf{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
 \begin{enumerate}
 \item (K, +) ist eine abelsche Gruppe mit Nullelement 0,
 \item (K \textbackslash \{0\}, $\cdot$) ist eine abelsche Gruppen mit Einselement 1$\neq$ 0,
@@ -464,7 +464,7 @@ Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, fa
 \begin{center}
 $f = a \prod\limits_{j=1}^{n}(x - c_j)$.
 \end{center}
-Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
+Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{Algebraische Abgeschlossenheit}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
 \end{definition}
 
 \begin{remark}
@@ -479,7 +479,7 @@ Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{algebraisch abgeschlo
 
 \subsection{Unterkörper}
 \begin{definition}
-Sei K ein Körper. Ein \textbf{Teilkörper}\index{Teilkörper}  L $\subseteq$ K ist eine Teilmenge, so dass gilt:
+Sei K ein Körper. Ein \textbf{Unterkörper}\index{Unterkörper} oder \textbf{Teilkörper}\index{Teilkörper} L $\subseteq$ K ist eine Teilmenge, so dass gilt:
 \begin{enumerate}
 \item a,b $\in$ L $\Rightarrow$ a+b, a$\cdot$b $\in$ L
 \item 0, 1 $\in$ L
@@ -525,7 +525,7 @@ Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder ch
 \end{lemma}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Vektorraum\index{Vektorraum}}
+\section{Vektorraum}
 \begin{definition}
 Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
 \begin{enumerate}
@@ -549,7 +549,7 @@ Für K-Vektorräume gelten die folgenden \textbf{Rechenregeln}:
 \end{remark}
 
 \begin{definition}
-Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum}\index{K-Untervektorraum} oder \textbf{K-linearer Unterraum} von V, falls gilt:
+Sei V ein K-Vektorraum. Eine Teilmenge U $\subseteq$ V ist ein \textbf{K-Untervektorraum}\index{Untervektorraum} oder \textbf{K-linearer Unterraum} von V, falls gilt:
 \begin{enumerate}
 \item $\emptyset$ $\neq$ U,
 \item a, b $\in$ U $\Rightarrow$ a + b $\in$ U,
@@ -587,7 +587,7 @@ A $\subseteq$ $\langle B \rangle$ $\Rightarrow$ $\langle A \rangle \subseteq \la
 \end{remark}
 
 \begin{definition}
-Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}\index{linear unabhängig} , falls für jede endliche Teilmenge J $\subseteq$ I gilt:
+Sei V ein K -Vektorraum und seien $\{a_i \}_{i \in I}$ Vektoren in V . Die Menge $\{a_i\}_{i \in I}$ ist \textbf{linear unabhängig}\index{Lineare Unabhängigkeit} , falls für jede endliche Teilmenge J $\subseteq$ I gilt:
 \begin{center}
 $\sum\nolimits_{j \in J} \alpha_j a_j = 0 \Rightarrow \alpha_j = 0$ für alle j $\in$ J.
 \end{center}
@@ -608,7 +608,7 @@ Sind die $a_i$ nicht linear unabhängig, so sind sie linear abhängig.
 
 \section{Affine Hyperebene}
 \begin{definition}
-Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W affine Hyperebene.
+Falls dim(V) = n < $\infty$ und dim(W) = n-1, so heißt H = a + W \textbf{affine Hyperebene}\index{Affine Hyperebene}.
 \end{definition}
 
 \begin{remark}
@@ -618,12 +618,12 @@ Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt
 
 \section{Invariante Unterräume}
 \begin{theorem}
-Sei $f \in End(V)$ beliebig. Sei $W \subseteq V$ ein $f$ invarianter Unterraum, d.h. $f(W) \subseteq W$. Dann ist $W^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
+Sei $f \in End(V)$ beliebig. Sei $W \subseteq V$ ein $f$ \textbf{invarianter Unterraum}\index{Invarianter Unterraum}, d.h. $f(W) \subseteq W$. Dann ist $W^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
 \end{theorem}
 
 \section{Lotraum}
 \begin{theorem}
-Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$. $M^\perp \subseteq V$ ist ein Unterrraum.
+Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$ definiert den \textbf{Lotraum} von M. $M^\perp \subseteq V$ ist ein Unterraum.
 
 Sei $U \subseteq V$ ein Unterraum mit $\dim(U) = n < \infty$. Dann gilt:
 \begin{enumerate}
