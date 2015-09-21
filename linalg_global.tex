@@ -1,4 +1,4 @@
-\documentclass[fontsize=10pt]{scrartcl}
+\documentclass[fontsize=10pt,twoside]{scrartcl}
  
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -28,10 +28,13 @@
 % fuer Stichwortverzeichnis
 \usepackage{makeidx}
 
+% für header
+\usepackage{fancyhdr}
+
 % Stichwortverzeichnis erstellen
 \makeindex
 
-\geometry{a4paper,left=20mm,right=20mm, top=1.5cm, bottom=3cm} 
+\geometry{a4paper,left=20mm,right=20mm, top=2cm, bottom=3cm} 
 
 %\hypersetup{
 %  pdftitle    = {Titel},
@@ -100,6 +103,9 @@
 %	\end{mdframed}
 %	}
 
+\pagestyle{fancy}
+\cfoot{\thepage}
+
 \parindent 0pt
 
 \title{Zusammenfassung Lineare Algebra I und II}
@@ -107,10 +113,13 @@
 \author{Felix Mößbauer \and Melanie Michels}
 \date{2015}
 \begin{document}
-\pagenumbering{arabic}
+
+\pagenumbering{gobble}
+\thispagestyle{plain}
 \maketitle
 
 \newpage
+\pagenumbering{arabic}
 
 \singlespacing
 \tableofcontents

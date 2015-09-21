@@ -284,20 +284,20 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 \end{enumerate}
 \end{remark}
 
-\subsection{äquivalent und ähnlich}
-
 \subsection{normal}
 \begin{definition}
-Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal, falls $AA^* = A^*A$.
+Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal\index{normale Matrix}, falls $AA^* = A^*A$.
 \end{definition}
 \begin{lemma}
 Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
 \end{lemma}
+
+\subsection{äquivalent und ähnlich}
 \begin{definition}
 Sei R ein komm. Ring.
 \begin{enumerate}
-	\item Seien $A,B \in K^{n \times m}$. Dann heißen $A$ und $B$ äquivalent, falls es $P \in Gl_n(R), Q \in Gl_m(R)$ gibt mit $B=P^{-1}AQ$. In Zeichen $A \sim B$.
-	\item Seien $A,B \in M_n(R) = K^{n \times n}$. Dann heißen $A$ und $B$ ähnlich oder konjugiert, falls es $S \in Gl_n(R)$ gibt mit $B=S^{-1}AS$. In Zeichen $A \approx B$.
+	\item Seien $A,B \in K^{n \times m}$. Dann heißen $A$ und $B$ äquivalent\index{äquivalente Matrizen}, falls es $P \in Gl_n(R), Q \in Gl_m(R)$ gibt mit $B=P^{-1}AQ$. In Zeichen $A \sim B$.
+	\item Seien $A,B \in M_n(R) = K^{n \times n}$. Dann heißen $A$ und $B$ ähnlich\index{ähnliche Matrizen} oder konjugiert, falls es $S \in Gl_n(R)$ gibt mit $B=S^{-1}AS$. In Zeichen $A \approx B$.
 \end{enumerate}
 \end{definition}
 
@@ -340,9 +340,10 @@ v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
 \end{align*}
 \end{theorem}
 
+\subsection{unitär und orthogonal}
 \begin{definition}
-Eine Matrix $A \in M_n(K)$ heißt unitär, falls $AA^* = E$\\
-Falls $K = \mathbb{R}$ heißt $A$ orthogonal und $A^{-1} = A^t$
+Eine Matrix $A \in M_n(K)$ heißt unitär\index{unitär}, falls $AA^* = E$\\
+Falls $K = \mathbb{R}$ heißt $A$ orthogonal\index{orthogonal} und $A^{-1} = A^t$
 \end{definition}
 \begin{theorem}
 Jede unitäre Matrix ist invertierbar und $A^* = A^{-1}$. TFE:
@@ -366,7 +367,7 @@ $A$ ist \textbf{orthogonal ähnlich} zu $B$, falls es eine orthogonale Matrix $O
 \subsection{Strukturmatrix}
 \begin{definition}
 Sei $\beta: V \times W \to K$ eine Bilinearform und dim(V) = n < $\infty$, dim(W) = m < $\infty$. Seien $v_1, …, v_n$ bzw. $w_1, …, w_m$ Basen von V bzw. W.\\
-Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix von $\beta$ bez. der gewählten Basen.
+Dann heißt B = ($\beta(v_i, w_j))_{ij}$ $\in K^{n \times m}$ die Strukturmatrix\index{Strukturmatrix} von $\beta$ bez. der gewählten Basen.
 \end{definition}
 
 \begin{example}
