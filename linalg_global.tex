@@ -32,8 +32,10 @@
 % fuer Stichwortverzeichnis
 \usepackage{makeidx}
 
+\usepackage[headsepline]{scrpage2}
 % für header
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
+
 
 % Stichwortverzeichnis erstellen
 \makeindex[columns=3]
@@ -107,19 +109,23 @@
 %	\end{mdframed}
 %	}
 
-\pagestyle{fancy}
-\cfoot{\thepage}
+\pagestyle{scrheadings}
+\renewcommand*\chapterpagestyle{scrheadings}
+\clearscrheadfoot
+\addtokomafont{pageheadfoot}{\slshape}
+\ihead{\headmark}
+\automark[chapter]{section}
+\cfoot{\pagemark}
 
 \parindent 0pt
 
 \title{Zusammenfassung Lineare Algebra I und II}
-\subtitle{basierend auf den Vorlesungen von Prof. Bley an der\\Ludwig-Maximilians-Universität München}
+%\subtitle{basierend auf den Vorlesungen von Prof. Bley an der\\Ludwig-Maximilians-Universität München}
 \author{Felix Mößbauer \and Melanie Michels}
 \date{2015}
 \begin{document}
 
 \pagenumbering{gobble}
-\thispagestyle{plain}
 \maketitle
 
 \newpage
@@ -127,7 +133,6 @@
 
 \singlespacing
 \tableofcontents
-\thispagestyle{plain}
 \onehalfspacing
 
 \vfill
