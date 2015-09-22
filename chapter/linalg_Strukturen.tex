@@ -141,7 +141,7 @@ Für n = 3 und n $\ge$ 5 sind \{1\}, A$_n$ und S$_n$ die einzigen Normalteiler v
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Ring}
+\isection{Ring}
 \begin{definition}
 Ein \textbf{Ring} R ist eine Menge, zusammen mit zwei Verknüpfungen + und $\cdot$, so dass gilt:
 \begin{compactenum}
@@ -187,11 +187,11 @@ Ein Ring R ist kommutativ, falls zusätzlich gilt
 \end{itemize}
 \end{remark}
 
-\subsection{Hauptidealring}
+\isubsection{Hauptidealring}
 Ein \textbf{Integritätsbereich} $R$ (nullteilerfreier kommutativer Ring mit $1 \neq 0$) heißt HIR, wenn jedes Ideal $I \subseteq R$ ein \textbf{Hauptideal} ist. Es muss folglich gelten:
 $I = R \cdot x = \{ r \cdot x | r \in R\}$
 
-\subsection{Ideal}
+\isubsection{Ideal}
 \begin{definition}
 Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{Ideal}, falls
 \begin{enumerate}
@@ -219,10 +219,10 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 \end{itemize}
 \end{remark}
 
-\subsection{Integritätsbereich / Integritätsring}
+\isubsection{Integritätsbereich / Integritätsring}
 Ein vom Nullring verschiedener nullteilerfreier kommutativer Ring mit dem neutralen Element.
 
-\subsection{Polynomring}
+\isubsection{Polynomring}
 \begin{definition}
 Sei R ein Ring. Der Polynomring R[x] über R ist R[x] = \{($a_0,a_1,...) | a_j \in R$, nur endlich viele $a_j \neq 0$\},
 mit Addition und Multiplikation definiert durch $(a_j) + (b_j) = (a_j + b_j)$ und $(a_j)(b_j) = (c_j)$ mit $c_k = \sum\nolimits_{j=0}^{k} a_j b_{k-j}$.
@@ -253,7 +253,7 @@ Seien R, S Ringe.
 \end{definition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Moduln}
+\isection{Moduln}
 \begin{definition}
 Eine Menge $M \neq \emptyset$ ist ein R-(Links-) \textbf{Modul}\index{Modul}, falls es eine Verknüpfung $+:M \times M \rightarrow M, (m_1,m_2) \mapsto m_1+m_2$ und eine weitere Verknüpfung $\cdot:R \times M \rightarrow M, (r,m) \mapsto rm$ gibt, sodass:
 \begin{itemize}
@@ -271,7 +271,7 @@ Sei R HIR
 \end{itemize}
 \end{remark}
 
-\subsection{Untermoduln}
+\isubsection{Untermoduln}
 \begin{definition}
 Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, falls:
 \begin{enumerate}
@@ -288,7 +288,7 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, fa
 \end{itemize}
 \end{remark}
 
-\subsection{Freier Modul}
+\isubsection{Freier Modul}
 \begin{theorem}
 \leavevmode
 \begin{enumerate}
@@ -303,7 +303,7 @@ Sei M ein R-Modul. Eine Teilmenge $N \subseteq M$ heißt \textbf{Untermodul}, fa
 \end{enumerate}
 \end{theorem}
 
-\subsection{Torsionselement}
+\isubsection{Torsionselement}
 \begin{definition}
 Sei R komm. Integritätsbereich. Sei M ein R-Modul. Ein Element $m\in M$ heißt \textbf{Torsionselement}, falls es ein $r\in R \backslash \{0\}$ gibt mit $rm=0$.
 
@@ -318,14 +318,14 @@ Sei $T(M) := \{m \in M | m~\text{ist torsion} \} \ni 0$. $M$ heißt Torsionsfrei
 \end{itemize}
 \end{remark}
 
-\subsection{$\pi$-Torsionselement}
+\isubsection{$\pi$-Torsionselement}
 \begin{definition}
 Sei $\pi \in R$ irreduzibel und M ein R-Modul.\\
 Dann heißt $T_\pi (M):= \{m \in M | \exists e \in \mathbb{N}: \pi^em = 0 \} \subseteq T(M)$ $\pi$-Torsionsteilmodul von M.
 %TODO: inhaltlich prüfen$
 \end{definition}
 
-\subsection{R-Modulhomomorphismus}
+\isubsection{R-Modulhomomorphismus}
 \begin{definition}
 Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., falls:
 \begin{itemize}
@@ -334,7 +334,7 @@ Sei R ein Ring, M,N zwei R-Moduln. Dann ist $f:M\mapsto N$ ein R-Modulhom., fall
 \end{itemize}
 \end{definition}
 
-\subsection{K[x]-Modul}
+\isubsection{K[x]-Modul}
 \begin{theorem}
 Sei $A \in End_K(V)$. Dann wird V zu einem K[x]-Modul vermöge\footnote{vermöge = "kann das"} $f(x)v := f(A)v, f\in K[x], v \in V.~(V_A=V)$\\
 Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
@@ -348,7 +348,7 @@ Seien $A,B \in M_n(K), V=K^n$. TFE\footnote{TFE = The following are equivalent}:
 \end{enumerate}
 \end{theorem}
 
-\subsection{Elementarteiler}
+\isubsection{Elementarteiler}
 \begin{theorem}
 Sei R euklidischer Ring. Sei M ein e-e. R-Modul. Dann gibt es $k \in \mathbb{N}_0$ (Rang von M) und $\epsilon_1,...,\epsilon_m \in R, \epsilon_i \notin R^\times$ (Elementarteiler) mit
 \begin{enumerate}
@@ -368,7 +368,7 @@ Sei R komm. Ring. Dann heißen $a,b \in R$ \textbf{assoziiert}\index{Assoziierte
 \end{itemize}
 \end{remark}
 
-\subsection{Invariantenteiler}
+\isubsection{Invariantenteiler}
 \begin{definition}
 Die Elemente $\pi_1^{e_{1,1}},...,\pi_1^{e_{s,1}},\pi_2^{e_{1,2}},...,\pi_2^{e_{s,2}},...,\pi_t^{e_{1,t}},...,\pi_t^{e_{s,t}}$ mit 
 \begin{align*}
@@ -430,7 +430,7 @@ ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshomomorphismus} (bzg
 \end{compactenum}
 \end{example}
 
-\section{Körper}
+\isection{Körper}
 \begin{definition}
 Ein \textbf{Körper} K ist eine Menge mit zwei Verknüpfungen + und $\cdot$, für die gilt:
 \begin{enumerate}
@@ -458,7 +458,7 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \end{enumerate}
 \end{example}
 
-\subsection{Algebraische Abgeschlossenheit}
+\isubsection{Algebraische Abgeschlossenheit}
 \begin{definition}
 Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, falls es $a, c_1, …, c_n \in L$ gibt, so dass in L[x] gilt
 \begin{center}
@@ -488,7 +488,7 @@ Sei K ein Körper. Ein \textbf{Unterkörper}\index{Unterkörper} oder \textbf{Te
 \end{enumerate}
 \end{definition}
 
-\subsection{Polynome über Körpern}
+\isubsection{Polynome über Körpern}
 \begin{proposition}
 (\textbf{Division mit Rest}\index{Division mit Rest}): Seien f,g $\in$ K[x] mit g $\neq$ 0. Dann gibt es eindeutig bestimmte h, r $\in$ K[x], so dass gilt f = gh + r mit Grad(r) < Grad(g).
 \end{proposition}
@@ -527,7 +527,7 @@ Sei f $\in$ K[x] mit Grad(f) $\ge$ 1, und sei c $\in$ K. Ist char(K) = 0 oder ch
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vektorraum}
 \begin{definition}
-Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{K-Vektorraum} ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
+Sei K ein Körper. Ein \textbf{K-Vektorraum}\index{Vektorraum} (oder Vektorraum) ist eine Menge V , zusammen mit einer Verknüpfung V $\times$ V $\to$ V, (a, b) $\mapsto$ a + b und einer Verknüpfung K $\times$ V $\to$ V, ($\alpha$, a) $\mapsto$ $\alpha$ $\cdot$ a (einer ‘Skalarmultiplikation’), so dass gilt:
 \begin{enumerate}
 \item V ist bzgl. + eine abelsche Gruppe,
 \item ($\alpha$ + $\beta$) $\cdot$ a = $\alpha$ $\cdot$ a + $\beta$ $\cdot$ a und $\alpha$ $\cdot$ (a + b) = $\alpha$ $\cdot$ a + $\alpha$ $\cdot$ b,
@@ -621,7 +621,7 @@ Dazu: Sei dim(V) = n < $\infty$. Dann ist jeder m-dim. affiner Unterraum Schnitt
 Sei $f \in End(V)$ beliebig. Sei $W \subseteq V$ ein $f$ \textbf{invarianter Unterraum}\index{Invarianter Unterraum}, d.h. $f(W) \subseteq W$. Dann ist $W^\perp$ $f^*$ invariant, d.h. $f^*(w') \subseteq W^\perp$ $\forall w' \in W^\perp$.
 \end{theorem}
 
-\section{Lotraum}
+\isection{Lotraum}
 \begin{theorem}
 Sei $M \subseteq V$ eine Menge. $M^\perp = \{v\in V | (v,m)=0~\forall m \in M\}$ definiert den \textbf{Lotraum} von M. $M^\perp \subseteq V$ ist ein Unterraum.
 
