@@ -22,6 +22,9 @@
 \usepackage{idxlayout}
 \usepackage{imakeidx}
 
+% für URL in Präambel
+\usepackage{url}
+
 
 % http://www.guntherkrauss.de/computer/tex/diagramme.html
 \usepackage[arrow, matrix]{xy}
@@ -141,7 +144,9 @@
 \onehalfspacing
 
 \vfill
-\small {Ausgabe vom \today.}
+\small
+\include*{chapter/praeambel}
+\normalsize
 
 \newpage
 
