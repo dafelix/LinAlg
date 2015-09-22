@@ -7,7 +7,7 @@ Also gibt es $T_1, :, T_k \in \mathbb{E}_m$ und $S_1, :, S_l \in \mathbb{E}_n$, 
 Also ist $C = T_k \cdots T_1$ und $B = S_1 \cdots S_l$.
 
 
-\section{Determinante}
+\isection{Determinante}
 \begin{definition}
 Sei R ein kommutativer Ring und $A = (\alpha_{ij}) \in R^{n \times n}$ eine quadratische Matrix vom Typ (n,n). Die \textbf{Determinante}\index{Determinante} von A ist $det(A) = \sum\nolimits_{\tau \in S_n} sgn(\tau) \alpha_{1\tau(1)} \alpha_{1 \tau(2)} \cdots \alpha_{n \tau(n)} \in R$.
 \end{definition}
@@ -49,7 +49,7 @@ Sei A\textbackslash\{ij\} die Matrix, die aus A durch Streichen der i-ten Zeile 
 
 Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b mit einer invertierbaren Matrix $A \in K^{n \times n}$ und $b \in K^n$. Das Gleichungssystem hat die eindeutige Lösung y = A$^{-1}$b.
 
-\section{Diagonalisierbarkeit}
+\isection{Diagonalisierbarkeit}
 
 \begin{theorem}
 \leavevmode
@@ -63,7 +63,6 @@ Zum Schluss dieses Kapitels betrachten wir ein lineares Gleichungssystem Ax = b 
 	\item f ist diagonalisierbar $\Leftrightarrow \mu_f(x) = \prod \limits_{i=1}^{r}(x-\alpha_i)$ (mit paarweise verschiedenen $\alpha_i$) 
 \end{enumerate}
 \end{theorem}
-
 
 
 \begin{definition}
@@ -115,7 +114,7 @@ $y_i = \frac{1}{det(A)} det(s_1, …, s_{i-1}, b, s_{i+1}, …, s_n)$.
 Hierbei sind $s_1, …, s_n$ die Spalten von A.
 \end{theorem}
 
-\section{Lineare Gleichungen}
+\isection{Lineare Gleichungen}
 (L)  Ax = b\\
 Die Matrix A = $(\alpha_{ij})$ definiert eine lineare Abbildung $f = f_A: K^n \to K^m, x \mapsto Ax$. Sei für $b \in K^m$ das Urbild von b unter der Abbildung f mit f$^{-1}$(b) bezeichnet. Damit lässt sich das System (L) wie folgt interpretieren: Ist $b \in K^m$ fest gewählt, so gilt für das Urbild von b
 \begin{center}
@@ -188,7 +187,7 @@ Sei V ein K-Vektorraum und f $\in$ End$_K$(V). Sind $v_1, …, v_r \in V$ Eigenv
 \end{lemma}
 
 
-\section{Begleitmatrix}
+\isection{Begleitmatrix}
 \begin{definition}
 Sei $g(x) = x^n + a_{n-1}x^{n-1}+\ldots+a_1x + a_0 \in K[x]$ mit $n \geq 1$. Dann heißt die folgende Matrix \textbf{Begleitmatrix} zu g:
 \begin{align*}
@@ -219,7 +218,7 @@ B_j =
 \end{remark}
 
 
-\section{Jordanmatrix}
+\isection{Jordanmatrix}
 \begin{definition}
 Sei $K$ bel. und $h(x)=(x-\alpha)^e, e \geq 1$. Dann heißt $J(\alpha,e)$ Jordanmatrix:
 \begin{align*}
@@ -233,12 +232,12 @@ B_n \approx J(\alpha,e) :=
 \end{align*}
 \end{definition}
 
-\section{Normalformen}
-\subsection{Frobeniussche Normalform}
+\isection{Normalformen}
+\isubsection{Frobeniussche Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$. Dann ist $A$ zu genau einer Matrix $B_{g_1,...,g_r}$ ähnlich ($\approx$) mit Polynomen $g_1(x) | g_2(x)| ... | g_r(x)$. Die $g_i$ sind dabei die Elementarteiler von $M_A(x)$.
 \end{theorem}
-\subsection{Weierstraß'sche Normalform}
+\isubsection{Weierstraß'sche Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$. Dann gibt es ein bis auf Reihenfolge eindeutig bestimmtes System von Potenzen $h_1,...,h_m$ von normierten, irreduziblen Polynomen, sodass $A$ zur folgenden Matrix ähnlich ist.
 \begin{align*}
@@ -251,7 +250,7 @@ B_{n_1} &        & \\
 Die Polynome $h_1,...,h_m$ sind genau die \textbf{Invariantenteiler}\index{Invariantenteiler} von $M_A(x)$
 \end{theorem}
 
-\subsection{Jordan Normalform}
+\isubsection{Jordan Normalform}
 \begin{theorem}
 Sei $A \in M_n(K)$ und $\chi_A$ zerfalle vollständig in Linearfaktoren. Dann gibt es bis auf Reihenfolge ein eindeutig bestimmtes System von \textbf{Jordanmatrizen}\index{Jordanmatrix} $J_1,...,J_m$:
 \begin{align*}
@@ -284,7 +283,7 @@ mit $e_{i,1} \leq ... \leq e_{i,n_i}$. Dann gilt $\mu_A(x)=\prod \limits_{i=1}^s
 \end{enumerate}
 \end{remark}
 
-\section{normal}
+\section{Normale Matrizen}
 \begin{definition}
 Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal\index{Normale Matrix}, falls $AA^* = A^*A$.
 \end{definition}
@@ -292,7 +291,7 @@ Eine Matrix $A \in M_n(\mathbb{C})$ heißt normal\index{Normale Matrix}, falls $
 Dann gilt für $A$: $\exists$ unitäre Matrix $U$ mit $U^*AU$ hat Diagonalgestalt $\Leftrightarrow$ $A$ ist normal
 \end{lemma}
 
-\section{äquivalent und ähnlich}
+\section{Äquivalente und ähnliche Matrizen}
 \begin{definition}
 Sei R ein komm. Ring.
 \begin{enumerate}
@@ -301,7 +300,7 @@ Sei R ein komm. Ring.
 \end{enumerate}
 \end{definition}
 
-\section{positiv definit}
+\isection{Positiv definite Matrizen}
 \begin{definition}
 Sei $A \in M_n(\mathbb{R})$ symmetrisch. Dann heißt $A$ \textbf{positiv definit}, falls $x^tAx > 0$ $\forall x \neq 0$
 \end{definition}
@@ -328,7 +327,7 @@ $B$ positiv $\Leftrightarrow$ $B = B^*$ und $det(B^{(k)}) > 0$ für alle $1 \le 
 \end{compactitem}
 \end{theorem}
 
-\section{Gram-Schmidt-Verfahren}
+\isection{Gram-Schmidt-Verfahren}
 
 \begin{theorem}
 Seien $w_1,...,w_n$ linear unabhängige Vektoren. Die Vektoren $v_1,...,v_n$ des Orthogonalsystems werden rekursiv berechnet:
@@ -340,7 +339,7 @@ v_n &= w_n - \sum_{i=1}^{n-1}\frac{(v_i,w_n)}{v_i,v_i}v_i
 \end{align*}
 \end{theorem}
 
-\section{unitär und orthogonal}
+\section{Unitäre und orthogonale Matrizen}
 \begin{definition}
 Eine Matrix $A \in M_n(K)$ heißt \textbf{unitär}\index{Unitäre Matrix}, falls $AA^* = E$\\
 Falls $K = \mathbb{R}$ heißt $A$ \textbf{orthogonal}\index{Orthogonale Matrix} und $A^{-1} = A^t$
