@@ -90,7 +90,7 @@ Sei N $\vartriangleleft$ G ein Normalteiler und G/N = \{gN | g $\in$ G\}.
 \end{lemma}
 
 \begin{theorem}
-(\textbf{Homomorphiesatz} für Gruppen\index{Homomorphiesatz für Gruppen})
+(\textbf{Homomorphiesatz} für Gruppen\index{Hom. -satz für Gruppen})
 Seien G, H Gruppen und f: G $\to$ H ein Homomorphismus. Dann gibt es einen Epimorphismus $\pi$: G $\to$ G/ ker(f) und einen Monomorphismus h: G/ ker(f) $\to$ H mit f = h $\circ$ $\pi$ und im(f) = im(h).
 \end{theorem}
 
@@ -219,7 +219,7 @@ Sei R ein Ring. Eine Teilmenge $I \subseteq R, I \neq \emptyset$ heißt \textbf{
 \end{itemize}
 \end{remark}
 
-\isubsection{Integritätsbereich / Integritätsring}
+\subsection{Integritätsbereich / Integritätsring}\index{Integritätsbereich}\index{Integritätsring}
 Ein vom Nullring verschiedener nullteilerfreier kommutativer Ring mit dem neutralen Element.
 
 \isubsection{Polynomring}
@@ -419,7 +419,7 @@ Sei K ein Körper, $\mathcal{A}$ eine K-Algebra und c $\in$ A. Ist f(x) = $\sum\
 \begin{center}
 $\alpha = \alpha_c: K[x] \to A, f \mapsto f(c)$
 \end{center}
-ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshomomorphismus} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
+ist der \textbf{Einsetzungshomomorphismus}\index{Einsetzungshom.} (bzgl. c); $\alpha_c$ ist ein Homomorphismus von K-Algebren, d.h. $\alpha_c$ ist K-linear und es gilt $\alpha_c(f)\alpha_c(g) = \alpha_c(fg)$ für alle f,g $\in$ K[x].
 \end{definition}
 
 \begin{example}
@@ -458,19 +458,19 @@ In Körpern gelten viele der ‘üblichen’ \textbf{Rechenregeln}. Für a, b $\
 \end{enumerate}
 \end{example}
 
-\isubsection{Algebraische Abgeschlossenheit}
+\subsection{Algebraische Abgeschlossenheit}\index{Alg. Abgeschlossenheit}
 \begin{definition}
 Seien K $\subseteq$ L Körper und sei f $\in$ K[x]. Dann zerfällt f über L, falls es $a, c_1, …, c_n \in L$ gibt, so dass in L[x] gilt
 \begin{center}
 $f = a \prod\limits_{j=1}^{n}(x - c_j)$.
 \end{center}
-Ein Körper K ist \textbf{algebraisch abgeschlossen}\index{Algebraische Abgeschlossenheit}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
+Ein Körper K ist \textbf{algebraisch abgeschlossen}, falls jedes f $\in$ K[x] mit Grad(f) $\ge$ 1 in K eine Nullstelle hat (also über K zerfällt).
 \end{definition}
 
 \begin{remark}
 \leavevmode
 \begin{compactenum}
-\item Der \textbf{Fundamentalsatz der Algebra}\index{Fundamentalsatz der Algebra} besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
+\item Der \textbf{Fundamentalsatz der Algebra}\index{Fundamentalsatz d. Alg.} besagt, dass jedes f $\in$ $\mathbb{C}$[x] mit Grad(f) $\ge$ 1 in $\mathbb{C}$ einen Nullstelle besitzt. Also ist $\mathbb{C}$ algebraisch abgeschlossen. Insbesondere gilt: Sind K $\subseteq$ $\mathbb{C}$ Körper und ist f $\in$ K[x], so liegen alle Nullstellen von f in $\mathbb{C}$.
 \item Da $x^2 + 1 \in \mathbb{R}[x]$ keine reelle Nullstelle hat, ist $\mathbb{R}$ nicht algebraisch abgeschlossen.
 \item Sei K ein endlicher Körper mit |K| = q = p$^n$. Dann gilt c$^q$ = c für alle c $\in$ K. Also hat $f = x^q - x+1 \in K[x]$ keine Nullstelle in K und K ist nicht algebraisch abgeschlossen. Endliche Körper sind also nie algebraisch abgeschlossen.
 \item Ein Satz der Algebra besagt, dass es zu jedem Körper K einen algebraisch abgeschlossenen Körper L mit K $\subseteq$ L gibt.
