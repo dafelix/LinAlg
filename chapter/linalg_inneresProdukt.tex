@@ -1,4 +1,4 @@
-\chapter{Inneres Produkt (Skalarprodukt)}
+\chapter{Inneres Produkt und Bilinearform}
 \begin{definition}
 Sei V ein K-VR. Ein \textbf{inneres Produkt} (oder \textbf{Skalarprodukt}) ist eine Abbildung $\phi$ von $V \times V$ nach $K, \phi (v_1,v_2) = (v_1,v_2) \in K,~v_1,v_2 \in V$ mit folgenden Eigenschaften:
 \begin{enumerate}
@@ -45,6 +45,14 @@ Die unitären Abbildungen bilden eine Gruppe U(V). Für $u \in U(V)$ gilt:
 \end{compactitem}
 \end{theorem}
 
+\isection{Bilinearform}
+\begin{definition}
+Seien V, W K-VR. Eine Abbildung $\beta: V \times W \to K$ heißt Bilinearform, falls sie linear in jedem Argument ist, d.h.:
+\begin{enumerate}
+\item $\beta(\alpha_1 v_1 + \alpha_2 v_2, w) = \alpha_1 \beta(v_1, w) + \alpha_2 \beta(v_1, w)$
+\item $\beta(v, \alpha_1 w_1 + \alpha_2 w_2) = \alpha_1 \beta(v, w_1) + \alpha_2 \beta(v, w_2)$
+\end{enumerate}
+\end{definition}
 \isection{Bilinearform ausgeartet}
 \begin{definition}
 Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ \textbf{ausgeartet im 1.Argument}, falls es $0 \neq v \in V$ gibt, sodass $\beta(v,w) = 0$ $\forall w \in W$.\\
@@ -53,8 +61,8 @@ Sei $\beta: V \times W \to K$ eine Bilinearform. Dann heißt $\beta$ \textbf{aus
 \begin{remark}
 \leavevmode
 \begin{compactitem}
-\item Innere Produkte sind stets nicht-ausgeartet
+\item Innere Produkte sind stets nicht ausgeartet
 \item Bilinearform nicht ausgeartet $\Leftrightarrow$ die darstellende Matrix hat vollen Rang
-\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet.
+\item $V = \{ f: \mathbb{R} \to \mathbb{R} | f~stetig \}$, $\beta(f,g) = \displaystyle\int_0^1 f(x) g(x) dx$ ist ausgeartet
 \end{compactitem}
 \end{remark}
